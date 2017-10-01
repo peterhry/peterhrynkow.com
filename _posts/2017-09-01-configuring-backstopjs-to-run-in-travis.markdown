@@ -7,6 +7,8 @@ categories: [testing]
 
 If you see that message in your travis log, you’ll need to load the chrome beta addon and set `CHROME_PATH` so chrome-launcher knows where to find the beta.
 
+_@todo write more about this_
+
 ```yml
 addons:
   chrome: beta
