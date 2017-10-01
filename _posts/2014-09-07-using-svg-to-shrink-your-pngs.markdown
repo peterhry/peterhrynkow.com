@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Using SVG to Shrink Your PNGs"
+title:  "🔥 Using SVG to Shrink Your PNGs"
 date:   2014-09-07 17:50:00
 categories: [functional-programming]
 ---

@@ -1,5 +1,5 @@
 # Setup
-title: Peter Hrynkow
+title: peterhrynkow.com
 email: peter@labwire.ca
 description: > # this means to ignore newlines until "baseurl:"
   Write an awesome description for your new site here. You can edit this
@@ -10,17 +10,15 @@ baseurl: "/peterhrynkow.com"
 url: ""
 twitter_username: peterhry
 github_username:  peterhry
-paginate: 1
 
 # About/contact
 author:
   name: Peter Hrynkow
   url: http://peterhrynkow.com
-
-# Plugins
-plugins:
-  - jekyll-paginate
-
+  github: https://github.com/peterhry
+  linkedin: http://ca.linkedin.com/pub/peter-hrynkow/20/a90/580
+  codepen: https://codepen.io/peterhry
+  twitter: https://twitter.com/peterhry
 #Others
 markdown: kramdown
 theme: jekyll-theme-cayman

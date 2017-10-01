@@ -7,12 +7,12 @@ categories: [functional-programming]
 
 Here’s a handy functional programming technique I’ve been using lately. Say we have a function that adds two numbers:
 ```js
-  function add(a, b) {
-    return a + b;
-  }
+function add(a, b) {
+  return a + b;
+}
 
-  add(2, 4);
-  // 6
+add(2, 4);
+// 6
 ```
 
 With `Function.bind` we can create a new function from `add` that already has the first parameter applied. This is called [partial application](https://en.wikipedia.org/wiki/Partial_application) and is a process often-used in functional programming.
@@ -27,7 +27,7 @@ addTen(6);
 // 16
 ```
 
-If you’re wondering why this is useful, consider the following `forEach` loop:
+If you’re wondering how this is useful, consider the following `forEach` loop:
 
 ```js
 const numbers = [1, 2, 3, 4, 5];
