@@ -38,7 +38,7 @@ numbers.forEach((number, index) => {
 // [11, 12, 13, 14, 15]
 ```
 
-While there’s nothing particularly wrong with the code above, I think we can make it better. By using partial application and `map` instead of `forEach` the code is shorter and in my opinion easier to follow.
+While there’s nothing _wrong_ with the code above, I think we can make it better. By using partial application and `map` instead of `forEach` the code is shorter and in my opinion easier to follow.
 
 ```js
 const numbers = [1, 2, 3, 4, 5];
