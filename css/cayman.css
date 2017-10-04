@@ -95,13 +95,13 @@ a:hover { text-decoration: underline; }
         max-width: 64rem;
         padding: 4rem 6rem;
         margin: 0 auto;
-        font-size: 1.1rem;
+        font-size: 1.25rem;
     }
 }
 @media screen and (min-width: 42em) and (max-width: 64em) {
     .main-content {
         padding: 2rem 4rem;
-        font-size: 1.1rem;
+        font-size: 1.25rem;
     }
 }
 @media screen and (max-width: 42em) {
@@ -123,13 +123,13 @@ a:hover { text-decoration: underline; }
 .main-content h5,
 .main-content h6 {
     margin-top: 2rem;
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
     line-height: 1.25;
     font-weight: normal;
     color: #000;
 }
 .main-content p {
-    margin-bottom: 1em;
+    margin-bottom: 2rem;
 }
 .main-content code {
     padding: 2px 4px;
@@ -142,7 +142,7 @@ a:hover { text-decoration: underline; }
 .main-content pre {
     padding: 0.8rem;
     margin-top: 0;
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
     font: 1rem Consolas, "Liberation Mono", Menlo, Courier, monospace;
     color: #567482;
     word-wrap: normal;
@@ -201,6 +201,7 @@ a:hover { text-decoration: underline; }
 .main-content blockquote {
     padding: 0 1rem;
     margin-left: 0;
+    margin-bottom: 2rem;
     color: #819198;
     border-left: 0.3rem solid #dce6f0;
 }
@@ -237,7 +238,7 @@ a:hover { text-decoration: underline; }
 }
 .main-content dl dd {
     padding: 0;
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
 }
 .main-content hr {
     height: 2px;
