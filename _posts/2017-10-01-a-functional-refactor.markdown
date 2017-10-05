@@ -5,7 +5,7 @@ date:   2017-10-01 00:00:00
 categories: [functional-programming]
 ---
 
-In this post I’m going to show you some examples of imperative JavaScript and how you can refactor it to be more functional. I prefer a functional style because it produces code that is easier to reason about, easier to test, and in my opinion, more elegant.
+In this post I’m going to show you some examples of imperative JavaScript and how you can refactor it to be more functional. I prefer a functional style because it produces code that is easier to reason about, easier to test, and in my opinion more elegant.
 
 ### Using `map` instead of imperative loops
 
@@ -74,46 +74,57 @@ function sum(numbers) {
 >
 > – Jessica Kerr
 
-TBD
+Here we have a simple application where clicking a button increments a counter.
 
 ```js
-var counter = 0;
+class App {
+  constructor(button) {
+    this.counter = 0;
 
-// Impure
-function incrementBy(amount) {
-  counter += amount;
+    button.addEventListener('click', () => {
+      this.incrementBy(1);
+      this.addTen();
+    });
+  }
+
+  incrementBy(amount) {
+    this.counter += amount;
+  }
+
+  addTen() {
+    this.counter += 10;
+  }
 }
-
-// Impure
-function addTen() {
-  counter += 10;
-}
-
-// Impure
-button.addEventListener('click', () => {
-  incrementBy(1);
-  addTen();
-});
 ```
 
-TBD
+Let’s look at `incrementBy` and `addTen`. What do you notice about these functions?
+
+1. They modify a variable `this.counter` outside of their scope.
+2. They reference `this` which could be anything depending on how the function was called.
+
+In a simple program like this, we can easily tell what happens when the button is clicked. But a more complex application, _impure_ functions like these make it more difficult to keep track of our application state.
+
+We can’t always eliminate side-effects but we can keep them quarantined:
 
 
 ```js
-var counter = 0;
+class App {
+  constructor(button) {
+    this.counter = 0;
 
-// Pure
-function incrementBy(number, increment) {
-  return number + increment;
+    button.addEventListener('click', () => {
+      this.counter = this.addTen(this.incrementBy(this.counter, 1));
+    });
+  }
+
+  // Pure
+  incrementBy(number, increment) {
+    return number + increment;
+  }
+
+  // Pure
+  addTen(number) {
+    return number + 10;
+  }
 }
-
-// Pure
-function addTen(number) {
-  return number + 10;
-}
-
-// Impure
-button.addEventListener('click', () => {
-  counter = addTen(incrementBy(counter, 1));
-});
 ```
