@@ -6,9 +6,13 @@ icon:  💎
 categories: [functional-programming]
 ---
 
-In this post I’m going to show you some examples of imperative JavaScript and how you can refactor them to be more functional. I prefer a functional style because it produces code that is easier to reason about, easier to test, and more elegant.
+With the rise in popularity of libraries like React, a lot of JavaScript developers are learning about functional programming. Having wrote imperative code for most of my career, it took some time for me to get comfortable with functional programming. Now, it has completely changed the way I think about and write software.
 
-### Don’t mutate function arguments
+Functional code is cacheable, easy to test, easy to reason about, and more elegant than imperative code. In this post I’m going to show you some lessons I’ve learned and how you can refactor your JavaScript to be more functional.
+
+Before we get started, it’s important to know about pure functions. If you’re unsure what these are, there is a great chapter in [this book](https://drboolean.gitbooks.io/mostly-adequate-guide/content/ch3.html#oh-to-be-pure-again) on the topic.
+
+### 1. Don’t mutate function arguments
 
 Here we have a function that takes an array of numbers and adds `10` to each value. This function is impure because it has a side effect: It mutates the `numbers` array that we pass to it.
 
@@ -30,10 +34,7 @@ To make this function pure we need to return a new array, instead of mutating th
 
 
 ```js
-function addTen(numbers) {
-  return numbers.map(number => number + 10);
-}
-
+const addTen = numbers => numbers.map(number => number + 10);
 const numbers = [1, 2, 3, 4];
 const numbersPlusTen = addTen(numbers);
 
@@ -43,7 +44,7 @@ console.log(numbersPlusTen);
 // [11, 12, 13, 14]
 ```
 
-### Avoid control structures
+### 2. Avoid control structures
 
 This function is pure but written in an imperative style. Functional programming avoids control structures such as loops and conditional statements.
 
@@ -62,15 +63,16 @@ function sum(numbers) {
 Using `Array.reduce` is shorter and more elegant.
 
 ```js
-function sum(numbers) {
-  return numbers.reduce((total, number) => total + number);
-}
+const sum = numbers => numbers.reduce((total, number) => total + number);
 ```
 
 
-### Push side effects to the edges
+### 3. Push side effects to the edges
 
 Here we have a simple application where clicking a button updates a counter. The `incrementBy` and `addTen` functions are impure because they modify a variable outside of their scope.
+
+This program is simple enough that we can tell what happens when the button is clicked, but in a more complex application, impure functions and their side effects make it difficult to keep track of changes to state.
+
 
 ```js
 class App {
@@ -93,9 +95,8 @@ class App {
 }
 ```
 
-This program is simple enough that we can tell what happens when the button is clicked, but in a more complex application, impure functions and their side effects make it difficult to keep track of changes to state.
+Notice what happens when we refactor the application to use pure functions. We push the side effects to the edges. Now, `this.counter` is only changed in one place and the code is a little easier to reason about.
 
-What strategy can we use to improve this?
 ```js
 class App {
   constructor(button) {
@@ -118,8 +119,7 @@ class App {
 }
 ```
 
-By refactoring the application to use pure functions, we push the side effects to the edges. `this.counter` is now controlled by a single function.
-
+<!--
 <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">A functional style pushes side effects to the edges: &quot;gather information, make decisions, act.&quot;<br>A good plan in most life situations too.</p>&mdash; Jessica Kerr (@jessitron) <a href="https://twitter.com/jessitron/status/713432439746654209?ref_src=twsrc%5Etfw">March 25, 2016</a></blockquote>
 
 This tweet hits the nail on the head. How does this apply to the refactored code?
@@ -129,5 +129,5 @@ This tweet hits the nail on the head. How does this apply to the refactored code
 3. Act (assign new state)
 
 For a program to be useful, we can’t eliminate side effects entirely.
+ -->
 
-TBC
