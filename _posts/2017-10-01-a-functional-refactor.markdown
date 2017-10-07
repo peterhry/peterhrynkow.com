@@ -1,7 +1,8 @@
 ---
 layout: post
-title:  "💎 A Functional Refactor"
+title:  "A Functional Refactor"
 date:   2017-10-01 00:00:00
+icon:  💎
 categories: [functional-programming]
 ---
 
@@ -9,7 +10,7 @@ In this post I’m going to show you some examples of imperative JavaScript and 
 
 ### Don’t mutate function arguments
 
-Here we have a function that takes an array of numbers and adds `10` to each value. This function is said to be _impure_ because it has a side effect: It mutates the `numbers` array that we pass to it.
+Here we have a function that takes an array of numbers and adds `10` to each value. This function is impure because it has a side effect: It mutates the `numbers` array that we pass to it.
 
 ```js
 function addTen(numbers) {
@@ -25,7 +26,7 @@ console.log(numbers);
 // [11, 12, 13, 14]
 ```
 
-To make this function _pure_ we need to return a new array, instead of mutating the original. This is where `Array.map` comes in handy. It creates a new array with the results of calling a function on every element in the calling array.
+To make this function pure we need to return a new array, instead of mutating the original. This is where `Array.map` comes in handy. It creates a new array with the results of calling a function on every element in the calling array.
 
 
 ```js
@@ -44,7 +45,7 @@ console.log(numbersPlusTen);
 
 ### Avoid control structures
 
-This function is _pure_ but written in an imperative style. Functional programming avoids control structures such as loops and conditional statements.
+This function is pure but written in an imperative style. Functional programming avoids control structures such as loops and conditional statements.
 
 ```js
 function sum(numbers) {
@@ -69,7 +70,7 @@ function sum(numbers) {
 
 ### Push side effects to the edges
 
-Here we have a simple application where clicking a button updates a counter. The `incrementBy` and `addTen` functions are _impure_ because they modify a variable outside of their scope.
+Here we have a simple application where clicking a button updates a counter. The `incrementBy` and `addTen` functions are impure because they modify a variable outside of their scope.
 
 ```js
 class App {
@@ -92,7 +93,7 @@ class App {
 }
 ```
 
-This program is simple enough that we can tell what happens when the button is clicked, but in a more complex application, _impure_ functions and their side effects make it difficult to keep track of changes to state.
+This program is simple enough that we can tell what happens when the button is clicked, but in a more complex application, impure functions and their side effects make it difficult to keep track of changes to state.
 
 What strategy can we use to improve this?
 ```js
@@ -128,3 +129,5 @@ This tweet hits the nail on the head. How does this apply to the refactored code
 3. Act (assign new state)
 
 For a program to be useful, we can’t eliminate side effects entirely.
+
+TBC

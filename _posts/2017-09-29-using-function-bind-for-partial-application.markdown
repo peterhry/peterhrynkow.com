@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Using `Function.bind` for partial application"
+title:  "Partial application"
 date:   2017-09-29 00:00:00
 categories: [functional-programming]
 ---

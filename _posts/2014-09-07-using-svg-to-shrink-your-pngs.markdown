@@ -1,8 +1,9 @@
 ---
 layout: post
-title:  "🔥 Using SVG to Shrink Your PNGs"
+title:  "Using SVG to Shrink Your PNGs"
 date:   2014-09-07 00:00:00
 categories: [performance]
+icon: 🔥
 permalink: how-to-compress-a-png-like-a-jpeg/
 ---
 
@@ -19,13 +20,21 @@ First, I created two files. The first is a regular JPEG without any transparency
 Next, I created a little snippet of inline SVG:
 
 ```xml
-<svg preserveAspectRatio="xMinYMin" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 560 1388">
+<svg viewBox="0 0 560 1388">
   <defs>
     <mask id="canTopMask">
-      <image width="560" height="1388" xlink:href="img/can-top-alpha.png"></image>
+      <image
+        width="560"
+        height="1388"
+        xlink:href="img/can-top-alpha.png"></image>
     </mask>
   </defs>
-  <image mask="url(#canTopMask)" id="canTop" width="560" height="1388" xlink:href="can-top.jpg"></image>
+  <image
+    mask="url(#canTopMask)"
+    id="canTop"
+    width="560"
+    height="1388"
+    xlink:href="can-top.jpg"></image>
 </svg>
 ```
 
