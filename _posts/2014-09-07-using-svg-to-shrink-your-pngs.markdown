@@ -39,7 +39,7 @@ Next, I created a little snippet of inline SVG:
 ```
 
 Here I am loading the two images inside an SVG container. The alpha channel image is included as a mask which is then applied to the JPEG to create the transparent region. <span style="line-height: 1.5em;">The result? A transparent image with JPEG compression!</span>
-## Caveats
+### Caveats
 - [To work in most browsers](http://codepen.io/shshaw/full/IDbqC/) the SVG must be inline. You can’t move it into an external file and load it with an `<img>` tag.
 - No IE8 support
 - Masks don’t work in older versions of Android

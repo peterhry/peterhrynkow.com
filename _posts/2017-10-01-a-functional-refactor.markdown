@@ -2,17 +2,17 @@
 layout: post
 title:  "A Functional Refactor"
 date:   2017-10-01 00:00:00
-icon:  💎
 categories: [functional-programming]
 ---
 
-With the rise in popularity of libraries like React, a lot of JavaScript developers are learning about functional programming. Having wrote imperative code for most of my career, it took some time for me to get comfortable with functional programming. Now, it has completely changed the way I think about and write software.
+A few years ago, a colleague introduced me to something called a “pure function”, and so began my journey into the world of functional programming. Along the way, I discovered how to write software that is easier to reason about, easier to test, and more bulletproof.
 
-Functional code is cacheable, easy to test, easy to reason about, and more elegant than imperative code. In this post I’m going to show you some lessons I’ve learned and how you can refactor your JavaScript to be more functional.
+In this post I’m going to show you some lessons I’ve learned and how you can refactor your JavaScript to be more functional.
 
-Before we get started, it’s important to know about pure functions. If you’re unsure what these are, there is a great chapter in [this book](https://drboolean.gitbooks.io/mostly-adequate-guide/content/ch3.html#oh-to-be-pure-again) on the topic.
+### Pure functions
+A pure function is one which given the same input will always return the same output and has no observable side effect. Let’s look at some _impure_ functions and see how we can make them pure.
 
-### 1. Don’t mutate function arguments
+#### 1. Don’t mutate arguments
 
 Here we have a function that takes an array of numbers and adds `10` to each value. This function is impure because it has a side effect: It mutates the `numbers` array that we pass to it.
 
@@ -44,7 +44,56 @@ console.log(numbersPlusTen);
 // [11, 12, 13, 14]
 ```
 
-### 2. Avoid control structures
+
+#### 2. Declare all inputs as arguments
+
+This function is impure because it accesses the variable `prefix` outside of its scope. The return value of a pure function should be determined only by its input values. Notice how we are able to affect the return value of `greet` by changing the value of `prefix`.
+
+```js
+let prefix = 'Hello';
+
+function greet(name) {
+  return `${prefix}, ${name}!`;
+}
+
+greet('Jane');
+// Hello, Jane!
+
+prefix = 'Bonjour';
+
+greet('Jane');
+// Bonjour, Jane!
+```
+
+To make the function pure, we need to pass `prefix` as an argument.
+
+```js
+function greet(prefix, name) {
+  return `${prefix}, ${name}!`;
+}
+
+greet('Hello', 'Jane');
+// Hello, Jane!
+
+greet('Bonjour', 'Jane');
+// Bonjour, Jane!
+```
+
+
+#### 3. Given the same input, always return the same output
+
+TBC
+
+```js
+function randomNumber(min, max) {
+  return min + (max - min) * Math.random();
+}
+```
+
+TBC
+
+
+### Avoid control structures
 
 This function is pure but written in an imperative style. Functional programming avoids control structures such as loops and conditional statements.
 
@@ -67,7 +116,7 @@ const sum = numbers => numbers.reduce((total, number) => total + number);
 ```
 
 
-### 3. Push side effects to the edges
+### Push side effects to the edges
 
 Here we have a simple application where clicking a button updates a counter. The `incrementBy` and `addTen` functions are impure because they modify a variable outside of their scope.
 
