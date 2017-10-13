@@ -5,49 +5,14 @@ date:   2017-10-01 00:00:00
 categories: [functional-programming]
 ---
 
-A few years ago, a colleague introduced me to something called a “pure function”, and so began my journey into the world of functional programming. Along the way, I discovered how to write software that is easier to reason about, easier to test, and more bulletproof.
+Over the last couple of years, I’ve been on a journey to learn more about functional programming. Along the way, I’ve discovered how to write code that is easier to reason about, easier to test, and more bulletproof.
 
-In this post I’m going to show you some lessons I’ve learned and how you can refactor your JavaScript to be more functional.
+In this post I’m going to show you some lessons I’ve learned and how to write JavaScript in a more functional style.
 
-### 1. Pure functions
-A pure function is one which given the same input will always return the same output and has no observable side effect. Let’s look at some _impure_ functions and see how we can make them pure.
+### Leverage Pure functions
+A pure function is a function which given the same input will always return the same output and has no observable side effect. Let’s look at some _impure_ functions and see how we can rewrite them to be pure.
 
-#### Don’t mutate arguments
-
-Here we have a function that takes an array of numbers and adds `10` to each value. This function is impure because it has a side effect: It mutates the `numbers` array that we pass to it.
-
-```js
-function addTen(numbers) {
-  for (var i = 0; i < numbers.length; i++) {
-    numbers[i] += 10;
-  }
-}
-
-const numbers = [1, 2, 3, 4];
-
-addTen(numbers);
-console.log(numbers);
-// [11, 12, 13, 14]
-```
-
-To make this function pure we need to return a new array, instead of mutating the original. This is where `Array.map` comes in handy. It creates a new array with the results of calling a function on every element in the calling array.
-
-
-```js
-const addTen = numbers => numbers.map(number => number + 10);
-const numbers = [1, 2, 3, 4];
-const numbersPlusTen = addTen(numbers);
-
-console.log(numbers);
-// [1, 2, 3, 4]
-console.log(numbersPlusTen);
-// [11, 12, 13, 14]
-```
-
-
-#### Declare all inputs as arguments
-
-This function is impure because it accesses the variable `prefix` outside of its scope. The return value of a pure function should be determined only by its input values. Notice how we are able to affect the return value of `greet` by changing the value of `prefix`.
+Let’s start with an easy one. This function is impure because it accesses the variable `prefix` outside of its scope. The return value of a pure function should be determined only by its input values. Notice how we are able to affect the return value of `greet` by changing the global `prefix`.
 
 ```js
 let prefix = 'Hello';
@@ -65,7 +30,7 @@ greet('Jane');
 // Bonjour, Jane!
 ```
 
-To make the function pure, we need to pass `prefix` as an argument.
+To make the function pure, we can to pass `prefix` as an argument.
 
 ```js
 function greet(prefix, name) {
@@ -79,23 +44,77 @@ greet('Bonjour', 'Jane');
 // Bonjour, Jane!
 ```
 
+Next, we have a function that takes an array of numbers and adds `10` to each value. This function is impure because it has a side effect: It mutates the `numbers` array that we pass to it.
 
-#### Given the same input, always return the same output
+```js
+function addTen(numbers) {
+  for (var i = 0; i < numbers.length; i++) {
+    numbers[i] += 10;
+  }
+
+  return numbers;
+}
+
+const numbers = [1, 2, 3, 4];
+const numbersPlusTen = addTen(numbers);
+
+console.log(numbersPlusTen);
+// [11, 12, 13, 14]
+console.log(numbers);
+// [11, 12, 13, 14] // Oops
+```
+
+To make this function pure we need to return a _new_ array, instead of mutating the original. This is where `Array.map` comes in handy. It creates a new array with the results of calling a function on every element in the calling array.
+
+
+```js
+const addTen = numbers => numbers.map(number => number + 10);
+const numbers = [1, 2, 3, 4];
+const numbersPlusTen = addTen(numbers);
+
+console.log(numbersPlusTen);
+// [11, 12, 13, 14]
+console.log(numbers);
+// [1, 2, 3, 4]
+```
+
+
+
 
 TBC
 
 ```js
 function randomNumber(min, max) {
-  return min + (max - min) * Math.random();
+  return Math.round(min + (max - min) * Math.random());
 }
+
+console.log(randomNumber(10, 20));
+// 14
+console.log(randomNumber(10, 20));
+// 16
 ```
 
 TBC
 
 
-### 2. Avoid control structures
+```js
+function randomNumber(min, max, random) {
+  return Math.round(min + (max - min) * random);
+}
 
-This function is pure but written in an imperative style. Functional programming avoids control structures such as loops and conditional statements.
+const seed = Math.random();
+
+console.log(randomNumber(10, 20, seed));
+// 17
+console.log(randomNumber(10, 20, seed));
+// 17
+```
+
+
+
+### Avoid control structures
+
+This function is pure but written in an imperative style. Functional programming is declarative and typically avoids control structures such as loops and conditional statements.
 
 ```js
 function sum(numbers) {
@@ -109,14 +128,14 @@ function sum(numbers) {
 }
 ```
 
-Using `Array.reduce` is shorter and more elegant.
+Using `Array.reduce` is more concise and elegant.
 
 ```js
 const sum = numbers => numbers.reduce((total, number) => total + number);
 ```
 
 
-### 3. Push side effects to the edges
+### Push side effects to the edges
 
 Here we have a simple application where clicking a button updates a counter. The `incrementBy` and `addTen` functions are impure because they modify a variable outside of their scope.
 
@@ -144,7 +163,7 @@ class App {
 }
 ```
 
-Notice what happens when we refactor the application to use pure functions. We push the side effects to the edges. Now, `this.counter` is only changed in one place and the code is a little easier to reason about.
+Notice what happens when we refactor the application to use pure functions: we quarantine the impure code. Now `this.counter` is only changed in one place and the code is a little easier to follow.
 
 ```js
 class App {
