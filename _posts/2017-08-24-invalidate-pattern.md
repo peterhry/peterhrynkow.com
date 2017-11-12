@@ -24,8 +24,8 @@ class MyClass {
   }
 
   _render() {
-    this._domElement.style.width = `{this._width}px`;
-    this._domElement.style.height = `{this._height}px`;
+    this._domElement.style.width = `${this._width}px`;
+    this._domElement.style.height = `${this._height}px`;
   }
 }
 
