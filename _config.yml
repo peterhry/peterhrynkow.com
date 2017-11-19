@@ -21,9 +21,11 @@ author:
   twitter: https://twitter.com/peterhry
 #Others
 markdown: kramdown
+highlighter: rouge
 kramdown:
   input: GFM
   auto_ids: true
+  hard_wrap: false
 theme: jekyll-theme-cayman
 plugins:
   - jekyll-feed

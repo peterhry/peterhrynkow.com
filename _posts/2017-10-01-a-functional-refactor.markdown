@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "A Functional Refactor"
+title:  "A Functional Journey"
 date:   2017-10-01 00:00:00
 categories: [functional-programming]
 ---
@@ -10,9 +10,11 @@ Over the last couple of years, I’ve been on a journey to learn more about func
 In this post I’m going to show you some lessons I’ve learned and how to write JavaScript in a more functional style.
 
 ### Leverage Pure functions
-A pure function is a function which given the same input will always return the same output and has no observable side effect. Let’s look at some _impure_ functions and see how we can rewrite them to be pure.
+A pure function is a function which given the same input will always return the same output and has no observable side effect.
 
-Let’s start with an easy one. This function is impure because it accesses the variable `prefix` outside of its scope. The return value of a pure function should be determined only by its input values. Notice how we are able to affect the return value of `greet` by changing the global `prefix`.
+There are [plenty of reasons](https://drboolean.gitbooks.io/mostly-adequate-guide/content/ch3.html#the-case-for-purity) to write pure functions, but in my opinion, the biggest advantage is that they‘re easier to reason about. The input, logic, and output are entirely self-contained. Let’s look at some _impure_ functions and see how we can rewrite them to be pure.
+
+We’ll start with an easy one. This function is impure because it accesses the variable `prefix` outside of its scope. The return value of a pure function should be determined only by its input values. Notice how we are able to affect the return value of `greet` by changing the global `prefix`.
 
 ```js
 let prefix = 'Hello';
