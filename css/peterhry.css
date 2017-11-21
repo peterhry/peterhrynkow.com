@@ -209,3 +209,10 @@ pre code:after {
 .site-footer-credits {
     color: #999;
 }
+
+
+.screen-cap {
+    box-shadow: 0 2px 4px #ccc;
+    display: block;
+    margin: 3em auto;
+}

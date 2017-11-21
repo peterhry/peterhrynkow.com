@@ -4,9 +4,12 @@
   {% include head.html %}
 
   <body>
-    {% include page-header.html %}
-
     <section class="main-content">
+      <a href="{{ site.baseurl }}">
+        <img
+          src="{{ site.baseurl }}/images/logo.svg"
+          class="logo">
+      </a>
 
       {{ content }}
 
@@ -14,6 +17,10 @@
 
     </section>
 
-    <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+    <script
+      async
+      src="//platform.twitter.com/widgets.js"
+      charset="utf-8">
+    </script>
   </body>
 </html>
