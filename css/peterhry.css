@@ -81,7 +81,7 @@ body {
 }
 
 a {
-    color: #000;
+    color: #0099ff;
     text-decoration: none;
 }
 
@@ -186,7 +186,7 @@ pre code:after {
 @media (min-width: 64em) {
     .main-content {
         font-size: 1.1875rem;
-        max-width: 64rem;
+        max-width: 60rem;
         padding: 4rem 6rem;
     }
 }

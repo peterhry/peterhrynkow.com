@@ -5,14 +5,14 @@ date:   2017-10-01 00:00:00
 categories: [functional-programming]
 ---
 
-Over the last couple of years, I’ve been on a journey to learn more about functional programming. Along the way, I’ve discovered how to write code that is easier to reason about, easier to test, and more bulletproof.
+Over the last couple of years, I’ve been learning more and more about functional programming. Along the way, I’ve discovered how to write code that is easier to reason about, easier to test, and less error-prone.
 
 In this post I’m going to show you some lessons I’ve learned and how to write JavaScript in a more functional style.
 
 ### Leverage Pure functions
 A pure function is a function which given the same input will always return the same output and has no observable side effect.
 
-There are [plenty of reasons](https://drboolean.gitbooks.io/mostly-adequate-guide/content/ch3.html#the-case-for-purity) to write pure functions, but in my opinion, the biggest advantage is that they‘re easier to reason about. The input, logic, and output are entirely self-contained. Let’s look at some _impure_ functions and see how we can rewrite them to be pure.
+There are [plenty of reasons](https://drboolean.gitbooks.io/mostly-adequate-guide/content/ch3.html#the-case-for-purity) to write pure functions, but in my opinion, the biggest advantage is that they’re easier to reason about. The input, logic, and output are entirely self-contained. Let’s look at some _impure_ functions and see how we can rewrite them to be pure.
 
 We’ll start with an easy one. This function is impure because it accesses the variable `prefix` outside of its scope. The return value of a pure function should be determined only by its input values. Notice how we are able to affect the return value of `greet` by changing the global `prefix`.
 
@@ -46,7 +46,7 @@ greet('Bonjour', 'Jane');
 // Bonjour, Jane!
 ```
 
-Next, we have a function that takes an array of numbers and adds `10` to each value. This function is impure because it has a side effect: It mutates the `numbers` array that we pass to it.
+Next, let’s look at a function that takes an array of numbers and adds `10` to each value. This function is impure because it has a side effect: It mutates the `numbers` array that we pass to it.
 
 ```js
 function addTen(numbers) {
