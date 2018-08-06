@@ -2,7 +2,7 @@
 
 ## Peter
 
-Peter is a software engineer and tech leader from Vancouver, Canada. His passion is building great digital products and helping teams become highly effective. He currently works at a startup that develops a chat-driven research platform.
+Peter is a software engineer and tech leader living in Vancouver, Canada. His passion is building great digital products and helping teams become highly effective. He currently works at a startup that develops a chat-driven research platform.
 
 
 
