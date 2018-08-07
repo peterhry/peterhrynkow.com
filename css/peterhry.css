@@ -210,6 +210,15 @@ pre code:after {
     color: #999;
 }
 
+.circle-head {
+    display: block;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 3em auto;
+    width: 8em;
+    height: 8em;
+}
+
 .inline-img {
     display: block;
     margin: 3em auto;

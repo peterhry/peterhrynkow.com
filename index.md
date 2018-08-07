@@ -1,10 +1,8 @@
 # Peter writes code and words about code.
 
-## Peter
+Peter is a tech leader and software engineer living in Vancouver, Canada. His passion is building great digital products and coaching agile teams. He currently works for a startup developing a chat-driven market research platform.
 
-Peter is a software engineer and tech leader living in Vancouver, Canada. His passion is building great digital products and helping teams become highly effective. He currently works at a startup that develops a chat-driven research platform.
-
-
+![Peter Hrynkow]({{ site.baseurl }}/images/me.jpg){:class="circle-head"}
 
 ## Code
 - [CircleType.js](http://circletype.labwire.ca)
