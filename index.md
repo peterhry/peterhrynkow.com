@@ -1,6 +1,12 @@
-# Peter writes code and words about code.
 
-Peter is a tech leader and software engineer living in Vancouver, Canada. His passion is building great digital products and coaching agile teams. He currently works for a startup developing a chat-driven market research platform.
+# Peter is a tech leader and software engineer living in Vancouver. His passion is building great digital products and coaching agile teams.
+
+<a href="{{ site.author.github }}">GitHub</a> /
+<a href="{{ site.author.linkedin }}">LinkedIn</a> /
+<a href="{{ site.author.stackoverflow }}">Stackoverflow</a> /
+<a href="{{ site.author.codepen }}">CodePen</a> /
+<a href="{{ site.author.twitter }}">Twitter</a>
+
 
 ## Code
 - [CircleType.js](http://circletype.labwire.ca)

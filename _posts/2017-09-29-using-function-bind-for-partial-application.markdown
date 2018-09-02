@@ -28,7 +28,7 @@ addTen(6)
 
 If you’re wondering why this is useful, consider these examples:
 
-## Avoiding mutation
+### Avoiding mutation
 
 Say you want to take an array of numbers and produce a new array where each element has `10` added to it. One approach would be to use `forEach` like so:
 
@@ -59,7 +59,8 @@ console.log(numbersPlusTen)
 Since the new function `addTen` expects a single argument, you can pass it directly to the `map` function. The result is a new array where each element has `10` added to it.
 
 
-## Avoiding argument repetition
+### Avoiding argument repetition
+
 Here’s another situation where partial application comes in handy. Say you want to fetch three different resources from an API, you could write some code like this:
 
 ```js

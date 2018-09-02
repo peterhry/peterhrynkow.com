@@ -15,7 +15,7 @@ Firebase was the perfect fit. We used the Realtime Database to synchronize and p
 On the client-side, we chose [Create React App](https://github.com/facebook/create-react-app) for its simplicity and preconfigured tooling. Combining Firebase with Create React App is pretty straightforward but it can be tricky to get local development working correctly. Here’s how we did it.
 
 
-## Dev servers
+### Dev servers
 
 Assuming you plan to use Firebase Functions and Firebase Hosting, you’ll want to run the Create React App development server in parallel with the Firebase emulator. This allows you to emulate your HTTP Firebase Functions and Firebase Hosting environment while you develop your React app.
 
@@ -41,7 +41,7 @@ Now you can fire up both servers at the same time by running `yarn dev`. Your Re
 
 You might be wondering why this is necessary, but stay with me. In the next section it should start to make sense.
 
-## Implicit initialization
+### Implicit initialization
 
 When deploying your app to Firebase Hosting, I highly recommend using [implicit initialization](https://firebase.google.com/docs/web/setup#sdk_imports_and_implicit_initialization). Doing so eliminates the need to manually configure the SDK for each environment (staging, production, etc.)
 
@@ -83,7 +83,7 @@ You might be wondering about that `/__` directory. Since this path only exists i
 The [proxy](https://github.com/facebook/create-react-app/blob/master/packages/react-scripts/template/README.md#proxying-api-requests-in-development) field tells the React development server to proxy any unknown requests to the target URL. With this entry in place, the React development server will proxy any request that contains `/__`to the Firebase Hosting emulator running on port 4000.
 
 
-## Calling Firebase Functions from your app
+### Calling Firebase Functions from your app
 
 At some point you might want to call an HTTP Firebase Function from your React app. Since the function URL is different for each environment, you might be tempted to store the URLs in a config file, but Firebase Hosting provides a more elegant solution.
 
