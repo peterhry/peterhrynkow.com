@@ -74,7 +74,7 @@
 
 body {
     color: #666;
-    font: 1rem/1.6 Helvetica, Arial, sans-serif;
+    font: 1.125rem/1.6 Helvetica, Arial, sans-serif;
     margin: 0;
     padding: 0;
     -webkit-font-smoothing: antialiased;
@@ -178,7 +178,7 @@ pre code:after {
 
 @media (min-width: 42em) {
     .main-content {
-        font-size: 1.125rem;
+        /*font-size: 1.125rem;*/
         padding: 2rem 4rem;
     }
 }

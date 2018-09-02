@@ -143,8 +143,4 @@ Now the React development server will know what to do with that request. This ap
 
 Now any request that starts with `/functions` will be proxied to the Firebase Hosting emulator.
 
-## Deploying
-
-Coming soon
-
 
