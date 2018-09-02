@@ -148,7 +148,7 @@ pre code:after {
  * Logo
  */
 .logo {
-  width: 6rem;
+  width: 8rem;
   display: block;
 }
 
@@ -156,9 +156,9 @@ pre code:after {
   margin: 1.5rem 0 0 !important;
 }
 
-@media (min-width: 64em) {
+@media (min-width: 42em) {
   .logo {
-  width: 8rem;
+    width: 8rem;
   }
 }
 
@@ -168,6 +168,7 @@ pre code:after {
 .main-content {
   margin: 0 auto;
   padding: 2rem 1rem;
+  max-width: 60rem;
   word-wrap: break-word;
 }
 
@@ -183,7 +184,6 @@ pre code:after {
 
 @media (min-width: 64em) {
   .main-content {
-    max-width: 60rem;
     padding: 4rem 6rem;
   }
 }
