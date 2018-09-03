@@ -133,7 +133,7 @@ pre code:after {
 .main-content {
   margin: 0 auto;
   padding: 2rem 0;
-  max-width: 768px;
+  max-width: 720px;
   word-wrap: break-word;
   width: 85%;
 }
