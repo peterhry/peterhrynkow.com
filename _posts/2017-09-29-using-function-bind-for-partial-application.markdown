@@ -35,7 +35,7 @@ Say you want to take an array of numbers and produce a new array where each elem
 ```js
 const add = (a, b) => a + b
 const numbers = [1, 2, 3, 4, 5]
-numbersPlusTen = []
+const numbersPlusTen = []
 
 numbers.forEach((number) => {
   numbersPlusTen.push(add(number, 10))
