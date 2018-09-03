@@ -1,18 +1,18 @@
 *, *:before, *:after { box-sizing: border-box; }
 
 :root {
-  --ms-ratio: var(--minor-second)
+  --ms-ratio: var(--major-second)
 }
 
 @media (min-width: 576px) {
   :root {
-    --ms-ratio: var(--major-second);
+    --ms-ratio: var(--minor-third);
   }
 }
 
 @media (min-width: 720px) {
   :root {
-    --ms-ratio: var(--minor-third);
+    --ms-ratio: var(--major-third);
   }
 }
 
@@ -20,7 +20,7 @@ html {
   font-family: 'adelle-sans', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -webkit-text-size-adjust: none;
-  font-size: calc(18px + (22 - 18) * (100vw - 320px) / (768 - 320));
+  font-size: calc(18px + (21 - 18) * (100vw - 320px) / (768 - 320));
   line-height: 1.6;
 }
 
@@ -32,7 +32,7 @@ html {
 
 @media (min-width: 768px) {
   html {
-    font-size: 22px;
+    font-size: 21px;
   }
 }
 
