@@ -59,15 +59,15 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-  font-size: var(--ms4)
-}
-
-h2 {
   font-size: var(--ms3)
 }
 
-h3 {
+h2 {
   font-size: var(--ms2)
+}
+
+h3 {
+  font-size: var(--ms1)
 }
 
 p, ul, ol, dl, pre, blockquote {
@@ -132,7 +132,7 @@ pre code:after {
  */
 .main-content {
   margin: 0 auto;
-  padding: 1.5rem 0;
+  padding: 1rem 0;
   max-width: 768px;
   word-wrap: break-word;
   width: 85%;
