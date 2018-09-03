@@ -1,13 +1,13 @@
 *, *:before, *:after { box-sizing: border-box; }
 
 html {
-  font: 16px/1.6 'adelle-sans', Helvetica, Arial, sans-serif;
+  font: 18px/1.6 'adelle-sans', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
 }
 
 @media (min-width: 576px) {
   html {
-    font-size: 18px;
+    font-size: 19px;
     line-height: 1.7;
   }
 }
