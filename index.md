@@ -8,7 +8,7 @@
 <a href="{{ site.author.twitter }}">Twitter</a>
 
 
-## Code
+## Projects
 - [CircleType.js](http://circletype.labwire.ca)
 - `@todo write more code.`
 
