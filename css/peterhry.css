@@ -17,10 +17,10 @@
 }
 
 html {
-  font-family: 'adelle-sans', sans-serif;
+  font-family: 'Merriweather', sans-serif;
   -webkit-font-smoothing: antialiased;
   -webkit-text-size-adjust: none;
-  font-size: calc(17px + (20 - 17) * (100vw - 320px) / (768 - 320));
+  font-size: calc(17px + (19 - 17) * (100vw - 320px) / (768 - 320));
   line-height: 1.6;
 }
 
@@ -32,7 +32,7 @@ html {
 
 @media (min-width: 768px) {
   html {
-    font-size: 20px;
+    font-size: 19px;
   }
 }
 
@@ -55,8 +55,8 @@ a:hover {
 h1, h2, h3 {
   font-weight: 700;
   color: #101010;
-  margin: var(--ms2) 0 0 0;
-  line-height: 1.4;
+  margin: var(--ms5) 0 0 0;
+  /*line-height: 1.4;*/
 }
 
 h1 {
@@ -72,7 +72,7 @@ h3 {
 }
 
 p, ul, ol, dl, pre, blockquote {
-  margin: var(--ms1) 0 0 0;
+  margin: var(--ms2) 0 0 0;
 }
 
 ul {
@@ -124,7 +124,7 @@ pre code:after {
  * Logo
  */
 .logo {
-  width: var(--ms8);
+  width: 6rem;
   display: block;
 }
 
@@ -133,7 +133,7 @@ pre code:after {
  */
 .main-content {
   margin: 0 auto;
-  padding: 2rem 0;
+  padding: var(--ms5) 0;
   max-width: 768px;
   word-wrap: break-word;
   width: 85%;
@@ -155,9 +155,9 @@ pre code:after {
  * Footer
  */
 .site-footer {
-  font-size: 0.9rem;
-  margin-top: 2rem;
-  padding-top: 2rem;
+  font-size: var(--ms-1);
+  margin-top: var(--ms1);
+  padding-top: var(--ms1);
 }
 
 .site-footer-credits {
@@ -168,26 +168,26 @@ pre code:after {
   display: block;
   border-radius: 50%;
   overflow: hidden;
-  margin: 3rem 0 0;
-  width: 7rem;
-  height: 7rem;
+  margin: var(--ms4) 0 0;
+  width: var(--ms8);
+  height: var(--ms8);
 }
 
 /**
  * Content
  */
 .twitter-tweet {
-  margin: 1.5rem 0 0 !important;
+  margin: var(--ms4) auto !important;
 }
 
 .inline-img {
   display: block;
-  margin: 3rem auto;
+  margin: var(--ms4) auto;
 }
 
 .screen-cap {
   box-shadow: 0 2px 4px #ccc;
   display: block;
-  margin: 3rem auto;
+  margin: var(--ms4) auto;
 }
 
