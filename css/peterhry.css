@@ -185,8 +185,8 @@ pre code:after {
   border-radius: 50%;
   overflow: hidden;
   margin: var(--ms4) 0 0;
-  width: var(--ms8);
-  height: var(--ms8);
+  width: 6rem;
+  height: 6rem;
 }
 
 /**
