@@ -42,7 +42,7 @@ The [floating action button](https://material.io/guidelines/components/buttons-f
     type="video/mp4">
 </video>
 
-While the floating action button wasn’t designed for this purpose, with a few changes, it could be used to reveal the primary navigation for a wesbite. [View Codepen](https://codepen.io/peterhry/full/MYbQLN/). If you’re on a phone, notice how comfortable it is to access the menu with your thumb.
+While the floating action button wasn’t designed for this purpose, with a few changes, it could be used to reveal the primary navigation for a wesbite. [View Codepen](https://s.codepen.io/peterhry/debug/MYbQLN/mWkoNxzLewjA). If you’re on a phone, notice how comfortable it is to access the menu with your thumb.
 
 <video
   loop=""
