@@ -136,7 +136,7 @@ pre code:after {
   padding: 2rem 0;
   max-width: 768px;
   word-wrap: break-word;
-  width: 90%;
+  width: 85%;
 }
 
 @media (min-width: 480px) {
