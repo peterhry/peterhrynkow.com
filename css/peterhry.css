@@ -21,18 +21,20 @@ html {
   -webkit-font-smoothing: antialiased;
   -webkit-text-size-adjust: none;
   font-size: calc(17px + (19 - 17) * (100vw - 320px) / (768 - 320));
-  line-height: 1.6;
+  line-height: calc(1.6em + (1.7 - 1.6) * (100vw - 320px) / (768 - 320));
 }
 
 @media (max-width: 320px) {
   html {
     font-size: 17px;
+    line-height: 1.6em;
   }
 }
 
 @media (min-width: 768px) {
   html {
     font-size: 19px;
+    line-height: 1.7em;
   }
 }
 
@@ -56,7 +58,19 @@ h1, h2, h3 {
   font-weight: 700;
   color: #101010;
   margin: var(--ms5) 0 0 0;
-  /*line-height: 1.4;*/
+  line-height: calc(1.4em + (1.7 - 1.4) * (100vw - 320px) / (768 - 320));
+}
+
+@media (max-width: 320px) {
+  h1, h2, h3 {
+    line-height: 1.4em;
+  }
+}
+
+@media (min-width: 768px) {
+  h1, h2, h3 {
+    line-height: 1.6em;
+  }
 }
 
 h1 {
