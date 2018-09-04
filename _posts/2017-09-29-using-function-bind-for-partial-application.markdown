@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Practical partial application"
+title:  "Practical application in action"
 date:   2017-09-29 00:00:00
 categories: [functional-programming]
 ---
@@ -26,42 +26,9 @@ addTen(6)
 // 16
 ```
 
-If you’re wondering why this is useful, consider these examples:
+### How is this useful?
 
-### Avoiding mutation
-
-Say you want to take an array of numbers and produce a new array where each element has `10` added to it. One approach would be to use `forEach` like so:
-
-```js
-const add = (a, b) => a + b
-const numbers = [1, 2, 3, 4, 5]
-const numbersPlusTen = []
-
-numbers.forEach((number) => {
-  numbersPlusTen.push(add(number, 10))
-});
-
-console.log(numbersPlusTen)
-// [11, 12, 13, 14, 15]
-```
-
-The above code works but it mutates the `numbersPlusTen` array with each iteration. Not the end of the world but you could make it more concise and functional by using partial application.
-
-```js
-const add = (a, b) => a + b
-const addTen = add.bind(null, 10)
-const numbers = [1, 2, 3, 4, 5]
-const numbersPlusTen = numbers.map(addTen)
-console.log(numbersPlusTen)
-// [11, 12, 13, 14, 15]
-```
-
-Since the new function `addTen` expects a single argument, you can pass it directly to the `map` function. The result is a new array where each element has `10` added to it.
-
-
-### Avoiding argument repetition
-
-Here’s another situation where partial application comes in handy. Say you want to fetch three different resources from an API, you could write some code like this:
+Here’s a situation where partial application comes in handy. Say you want to fetch three different resources from an API, your code might look something like this:
 
 ```js
 const apiBaseUrl = 'https://api.myapp.com/api/v1'
