@@ -43,7 +43,23 @@ Promise.all([
 })
 ```
 
-By partially applying `getData`, you can avoid repeating the `apiBaseUrl` for each call and your code gets a little more concise.
+By partially applying `getData`, you can avoid repeating `apiBaseUrl` and your code gets a little more concise.
+
+```js
+const apiBaseUrl = 'https://api.myapp.com/api/v1'
+const getData = (baseUrl, path) => fetch(`${baseUrl}/${path}`)
+const getDataFromAPI = getData.bind(null, apiBaseUrl)
+
+Promise.all([
+  getDataFromAPI('products'),
+  getDataFromAPI('categories'),
+  getDataFromAPI('tags'),
+]).then((responses) => {
+  // Do stuff
+})
+```
+
+That looks better but let’s take it a step further. Since `getDataFromAPI` takes a single argument, you can use it to map over an array of resources to fetch.
 
 ```js
 const apiBaseUrl = 'https://api.myapp.com/api/v1'

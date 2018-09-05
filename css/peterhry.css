@@ -21,7 +21,7 @@ html {
   font-family: 'Merriweather', sans-serif;
   -webkit-font-smoothing: antialiased;
   -webkit-text-size-adjust: none;
-  font-size: calc(17px + (19 - 17) * (100vw - 320px) / (768 - 320));
+  font-size: calc(17px + (20 - 17) * (100vw - 320px) / (768 - 320));
   line-height: 1.6;
 }
 
@@ -39,7 +39,7 @@ html {
 
 @media (min-width: 768px) {
   html {
-    font-size: 19px;
+    font-size: 20px;
     line-height: 1.8;
   }
 }
@@ -64,7 +64,7 @@ h1, h2, h3 {
   font-weight: 700;
   color: #101010;
   margin: var(--ms5) 0 0 0;
-  line-height: 1.5;
+  line-height: 1.4;
 }
 
 h1 {
@@ -90,7 +90,7 @@ ul {
 
 blockquote {
   padding: 0 var(--ms1);
-  border-left: 0.25rem solid #eee;
+  border-left: 0.25rem solid #0099ff;
 }
 
 img {
