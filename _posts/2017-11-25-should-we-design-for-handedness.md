@@ -6,7 +6,7 @@ categories: [ux]
 icon: 🔥
 ---
 
-Lately I’ve been thinking a lot about the ergonomics of mobile websites and I wanted to know if left-handed people have more difficulty using some sites. If [80% of the world is right handed](https://www.scientificamerican.com/article/why-are-more-people-right/), do current mobile design patterns tend to favor right-handed users?
+Lately I’ve been thinking a lot about the ergonomics of mobile websites and I was curious if left-handed people have more difficulty using them. If [80% of the world is right handed](https://www.scientificamerican.com/article/why-are-more-people-right/), do current mobile design patterns tend to favor right-handed users?
 
 After doing some research, I realized that I was asking the wrong question. Surprisingly, one [study](http://www.uxmatters.com/mt/archives/2013/02/how-do-users-really-hold-mobile-devices.php) found that people actually switch between their left and right hand depending on the task, their posture, and environment. In other words, **hand being used ≠ handedness**.
 
