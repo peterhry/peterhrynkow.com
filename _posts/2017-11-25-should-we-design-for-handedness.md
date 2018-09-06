@@ -14,7 +14,7 @@ Later that day, I witnessed this fact while riding the bus. I was browsing twitt
 
 ### Can this experience be improved?
 
-We know that responsive design is about adapting our interfaces to different screen sizes and device capabilities, but what if we took it a step further and adapted our interfaces to human factors like which hand the phone is being held in. Could we design a flexible interface where important controls are placed on one side of the screen or the other to improve ergonomics?
+We know that responsive design is about adapting our interfaces to different screen sizes and device capabilities, but what if we took it a step further and adapted our interfaces to human factors like how the user is holding their device. Could we design a flexible interface where important controls are placed on one side of the screen or the other to improve ergonomics?
 
 ### Let’s write some code!
 
