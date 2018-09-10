@@ -91,6 +91,7 @@ ul {
 blockquote {
   padding: 0 var(--ms1);
   border-left: 0.25rem solid #0099ff;
+  font-style: italic;
 }
 
 img {
