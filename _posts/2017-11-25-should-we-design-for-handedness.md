@@ -6,9 +6,9 @@ categories: [ux]
 icon: 🔥
 ---
 
-Lately I’ve been thinking a lot about the ergonomics of mobile devices and I was curious if left-handed people have more difficulty using some websites. If [80% of the world is right handed](https://www.scientificamerican.com/article/why-are-more-people-right/), could mobile interfaces be favoring right-handed users?
+Lately I’ve been thinking a lot about the ergonomics of mobile devices and I wanted to know if left-handed people have more difficulty using some websites. If [80% of the world is right handed](https://www.scientificamerican.com/article/why-are-more-people-right/), could mobile interfaces be favoring right-handed users?
 
-After doing some research, I realized that I was asking the wrong question. One [study](http://www.uxmatters.com/mt/archives/2013/02/how-do-users-really-hold-mobile-devices.php) found that people actually switch  how they hold their phone depending on the task, their posture, and environment. In some cases, users cradle their phone in one hand while using the other to interact. In other words, **hand being used ≠ handedness**.
+After doing some research, I realized that I was asking the wrong question. One [study](http://www.uxmatters.com/mt/archives/2013/02/how-do-users-really-hold-mobile-devices.php) found that people actually switch  how they hold their phone depending on the task, their posture, and environment. People switch between their left and right hand, and in some cases, cradle their phone in one hand while using the other to interact. In other words, **hand being used ≠ handedness**.
 
 Later that day, I witnessed this fact while riding the bus. I was browsing twitter when I noticed that I was holding my phone in my left hand. It was definitely more difficult to use the interface. Things like navigation controls and close buttons were harder to reach.
 
