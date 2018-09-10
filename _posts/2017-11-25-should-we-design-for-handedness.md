@@ -10,7 +10,7 @@ Lately I’ve been thinking a lot about the ergonomics of mobile devices and I w
 
 After doing some research, I realized that I was asking the wrong question. One [study](http://www.uxmatters.com/mt/archives/2013/02/how-do-users-really-hold-mobile-devices.php) found that people actually switch  how they hold their phone depending on the task, their posture, and environment. People switch between their left and right hand, and in some cases, cradle their phone in one hand while using the other to interact. In other words, **hand being used ≠ handedness**.
 
-Later that day, I witnessed this fact while riding the bus. I was browsing twitter when I noticed that I was holding my phone in my left hand. It was definitely more difficult to use the interface. Things like navigation controls and close buttons were harder to reach.
+Later that day, I witnessed this fact while riding the bus. I was browsing twitter when I noticed that I was holding my phone in my left hand. I decided to pay special attention to the user experience while using my non-dominant hand. It was definitely more difficult to use the interface. Things like navigation controls and close buttons were harder to reach.
 
 ### Can this experience be improved?
 
