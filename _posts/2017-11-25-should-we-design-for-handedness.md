@@ -20,6 +20,8 @@ We know that responsive design is about adapting our interfaces to different scr
 
 First I wanted to see if it was even possible to detect how a user is holding their device, so I started playing with some JavaScript. What I found was that a swipe gesture can reveal which thumb is touching the screen by observing the start and end position of the swipe. You can [find the code on GitHub](https://github.com/peterhry/digits.js). One thing to note is that the algorithm works well when the user is holding their device in one hand but gets confused during two-handed use.
 
+The script could perhaps be improved by incorporating data from the [`DeviceOrientation`](https://developer.mozilla.org/en-US/docs/Web/Events/deviceorientation) API. Knowing the angle the device is held at might offer clues as to how the user is holding the device. For example, if the screen is angled downward, the user might be laying-down with the phone held above their head.
+
 ### Is it worth it?
 
 Is there potential to optimize interfaces based on how the user is holding their device? Maybe. But I think it gets complicated when you consider how often people change their Constantly changing the interface might just confuse people. What do you think? <a href="http://twitter.com/peterhry">Reach out to me on twitter</a> with your thoughts.
