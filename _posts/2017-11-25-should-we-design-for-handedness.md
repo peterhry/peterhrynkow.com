@@ -18,7 +18,7 @@ We know that responsive design is about adapting our interfaces to different scr
 
 ### Let’s write some code!
 
-I wanted to see if this was possible so I began by experimenting with some JavaScript that tries to detect which hand is being used by watching how the user touches the screen. What I found was that a simple swipe gesture can reveal which hand is being used by observing the start and end position of the thumb. You can find the code on GitHub. I call it [digits.js](https://github.com/peterhry/digits.js).
+First I wanted to see if it was even possible to detect how a user is holding their device, so I started playing with some JavaScript. What I found was that a swipe gesture can reveal which thumb is touching the screen by observing the start and end position of the swipe. You can [find the code on GitHub](https://github.com/peterhry/digits.js). The script is fairly accurate when the device is held in one hand but gets confused during two-handed use.
 
 
 ### Is it worth it?
