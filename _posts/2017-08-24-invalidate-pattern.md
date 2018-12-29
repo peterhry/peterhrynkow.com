@@ -5,6 +5,14 @@ date:   2017-08-24 00:00:00
 categories: [performance]
 ---
 
+Nowadays, when discussing component-based UIs, most people think about React or maybe web components. But the concept of component-based UIs is nothing new.
+
+My first exposure to UI components was in 2003 when the engineers at Macromedia shipped a component library called MX components with Flash MX. 
+
+Say what you will about Flash but the engineers at Macromedia had some great ideas about building UIs on the web.
+
+One particular pattern I still see used today is called the invalidate pattern.
+
 Say we have an object that controls the width and height of an element. It exposes some methods `setWidth` and `setHeight`. Each time one of these methods is called, the dimensions of the element are set.
 
 ```js
