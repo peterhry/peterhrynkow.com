@@ -24,4 +24,4 @@ The script could perhaps be improved by incorporating data from the [`DeviceOrie
 
 ### Is it worth it?
 
-Is there potential to optimize interfaces based on how the user is holding their device? Maybe. But I think it gets complicated when you consider how often people change their Constantly changing the interface might just confuse people. What do you think? <a href="http://twitter.com/peterhry">Reach out to me on twitter</a> with your thoughts.
+Is there potential to optimize an interface based on how the user is holding their device? Maybe. But I think it gets complicated when you consider how often people change their grip depending on their environment. If the interface changes too often, it might just confuse people. What do you think? <a href="http://twitter.com/peterhry">Reach out to me on twitter</a> with your thoughts.
