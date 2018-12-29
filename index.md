@@ -1,5 +1,5 @@
 
-# Peter is a tech leader with a passion for good design, building great products, and coaching agile teams.
+# Peter is a design-savvy tech leader with a passion for building great products, and coaching agile teams.
 
 <a href="{{ site.author.github }}">GitHub</a> /
 <a href="{{ site.author.linkedin }}">LinkedIn</a> /
