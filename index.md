@@ -9,7 +9,8 @@
 
 
 ## Projects
-- [CircleType.js](http://circletype.labwire.ca)
+- [CircleType.js](https://circletype.labwire.ca)
+- [Digits.js](https://peterhry.github.io/digits.js)
 - `@todo write more code.`
 
 ## Words
