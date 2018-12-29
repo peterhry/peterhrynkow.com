@@ -3,7 +3,7 @@ layout: post
 title:  "Mobile Navigation for Big Phones"
 date:   2015-01-10 00:00:00
 categories: [ux]
-icon: 🔥
+icon: 🧠
 ---
 
 > As smartphones continue to get larger but our hands don’t, what kinds of design solutions can ensure mobile interactions remain comfortable, quick, and easy on our thumbs?

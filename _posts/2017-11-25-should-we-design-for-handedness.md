@@ -3,7 +3,7 @@ layout: post
 title:  "Should We Design For Handedness?"
 date:   2017-11-25 00:00:00
 categories: [ux]
-icon: 🔥
+icon: 🙌
 ---
 
 Lately I’ve been thinking a lot about the ergonomics of mobile devices and I wanted to know if left-handed people have more difficulty using some websites. I wondered, if [80% of the world is right handed](https://www.scientificamerican.com/article/why-are-more-people-right/), could the design of mobile interfaces be favoring right-handed users?
