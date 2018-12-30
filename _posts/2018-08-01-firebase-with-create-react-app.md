@@ -39,7 +39,7 @@ Now, add these scripts to your `package.json` file:
 
 Now you can fire up both servers at the same time by running `yarn dev`. Your React app can be viewed at [http://localhost:3000](http://localhost:3000) while your Firebase project is emulated on port 4000.
 
-If you're wondering how these two pieces fit together, stay with me. In the next section it should start to make sense.
+If you're wondering how these two pieces fit together, stay with me for a bit. In the next section it should start to make sense.
 
 ### Implicit initialization
 
