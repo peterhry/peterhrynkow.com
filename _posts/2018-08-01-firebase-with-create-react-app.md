@@ -39,7 +39,7 @@ Now, add these scripts to your `package.json` file:
 
 Now you can fire up both servers at the same time by running `yarn dev`. Your React app can be viewed at [http://localhost:3000](http://localhost:3000) while your Firebase project is emulated on port 4000.
 
-You might be wondering why this is necessary, but stay with me. In the next section it should start to make sense.
+If you're wondering how these two pieces fit together, stay with me. In the next section it should start to make sense.
 
 ### Implicit initialization
 
@@ -66,7 +66,7 @@ Just load the auto-configured scripts from the hosting environment:
 <script src="/__/firebase/init.js"></script>
 ```
 
-Once deployed to Firebase Hosting, your app will be automagically configured for the current project environment.
+Once deployed to Firebase Hosting, your app will be automatically configured for the target project environment.
 
 You might be wondering about that `/__` directory. Since this path only exists in the Firebase Hosting environment, you’ll need to tell the React development server how to handle these requests. Just add this entry to your `package.json` file:
 
