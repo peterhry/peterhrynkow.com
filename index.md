@@ -1,5 +1,5 @@
 
-# Peter Hrynkow is a design-savvy tech leader with a passion for building great products and coaching agile teams.
+# {{ site.description }}
 
 <a href="{{ site.author.github }}">GitHub</a> /
 <a href="{{ site.author.linkedin }}">LinkedIn</a> /
