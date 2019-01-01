@@ -6,7 +6,7 @@ categories: [testing]
 icon: 🧠
 ---
 
-What is the best way to write tests for your React application so that you can be confident deploying it to production? This is something I’ve been pondering for a while now so I thought I’d share my thoughts on the subject.
+What is the best way to write tests for your React application so that you can feel confident deploying it to production? This is something I’ve been pondering for a while now so I thought I’d share my thoughts on the subject.
 
 ### Tools
 
