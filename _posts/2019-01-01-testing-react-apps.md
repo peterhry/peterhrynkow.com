@@ -10,8 +10,6 @@ What is the best way to write tests for your React application so that you can f
 
 ### Tools
 
-There are so many different tools available for testing React apps that it can be overwhelming when you start writing tests.
-
 For unit and integration tests, I like [react-testing-library](https://github.com/kentcdodds/react-testing-library) because its guiding principles encourage a black-box testing approach. By writing tests this way, you can easily refactor your code without breaking your tests. I’ve also used enzyme in the past but found its API confusing.
 
 For E2E test Cypress.io is pretty good.
