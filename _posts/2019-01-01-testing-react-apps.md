@@ -20,7 +20,7 @@ For E2E test Cypress.io is pretty good.
 
 I see a lot of Redux apps where components, actions, reducers, and selectors are tested as separate units. This is the approach described in the [Redux docs](https://redux.js.org/recipes/writing-tests) so it shouldn’t come as a surprise that a lot of teams follow this direction. I recommend a different approach, however.
 
-Testing these elements separately doesn’t ensure that your app will behave as expected when you put them together. Moreover, what I often see is that testing the integration between these elements is neglected. For this reason. I think unit tests make sense if you intend to package your code and publish it to npm, but for testing application behavior, integration tests are more likely to catch problems.
+Testing these elements separately doesn’t ensure that your app will behave as expected when you put them together. Moreover, what I often see is that testing the integration between these elements is neglected. I think unit tests make sense if you intend to package your code and publish it to npm, but for testing application behavior, integration tests are more likely to catch problems.
 
 ### Snapshots
 
