@@ -31,7 +31,7 @@ This is a great pice of wisdom from Guillermo Rauch.
 
 Think of it like this: Instead of writing a unit test for every atom in your application, zoom out a bit and write some integration tests for the molecules.
 
-I like to think of a component as a black box and test it from the UI. The component under test might be made up of many smaller components as well as dependencies (reducers, action creators, etc.) but what’s important is that the component functions as it should. With the help of a code coverage tool, you can easily verify that your component and its dependencies are covered by your tests.
+I like to think of a component as a black box and test it from the UI. The component under test might be made up of many smaller components as well as dependencies (reducers, action creators, etc.) but with the help of a code coverage tool, you can verify that these elements are covered by your tests.
 
 Unit tests make sense if you intend to package your code and publish it to npm, but for testing application behavior, integration tests are more likely to catch problems.
 
