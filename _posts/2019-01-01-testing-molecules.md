@@ -37,8 +37,7 @@ Unit tests still make sense if you intend to package your code and publish it to
 
 More to come.
 
-### Examples
-Coming soon
-
 ### Snapshot testing
-Coming soon
+One thing I’ve observed is that it’s easy to create a snapshot test for a component, but hard to debug it when it fails. The diff produced by a failing snapshot test can be difficult to read, particularly for large components. For this reason, I will avoid creating a snapshot test for a large branch of components.
+
+Perhaps a side effect of difficult debugging is that snapshots are often updated blindly during a refactor because the developer assumes the changes were intentional.
