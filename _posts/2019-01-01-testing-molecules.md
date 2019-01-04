@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "My approach to testing React apps"
+title:  "Testing Molecules"
 date:   2019-01-01 00:00:00
 categories: [testing]
 icon: 🧠
