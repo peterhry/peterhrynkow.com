@@ -27,9 +27,9 @@ Action creators, reducers, and selectors are component implementation details th
 > Write tests. Not too many. Mostly integration.<br>
 [@rauchg](https://twitter.com/@rauchg)
 
-This is a great pice of wisdom from Guillermo Rauch.
+This is a great piece of wisdom from Guillermo Rauch.
 
-Think of it like this: Instead of writing a unit test for every atom in your application, zoom out a bit and write some integration tests for the molecules.
+Think of it like this: Instead of writing a unit test for every _atom_ in your application, zoom out a bit and write some integration tests for the _molecules_. Action creators, reducers, and selectors are atoms that when combined form a connected component molecule. By testing a molecule you are also testing its atoms. But more importantly you're ensuring that those atoms work together.
 
 I like to think of a component as a black box and test it from the UI. The component under test might be made up of many smaller components as well as dependencies (reducers, action creators, etc.) but with the help of a code coverage tool, you can verify that these elements are covered by your tests.
 
