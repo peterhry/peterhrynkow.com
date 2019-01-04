@@ -6,7 +6,7 @@ categories: [testing]
 icon: 🧠
 ---
 
-What’s the best way to write tests for your React application so that you can feel confident deploying it to production? This is something I’ve been pondering for a while now so I thought I’d share my thoughts on the subject.
+What’s the best way to write tests for your React application so that you can feel confident deploying it to production? What tools should you use and where should you focus your testing effort? This is something I’ve been pondering for a while now so I thought I’d share my thoughts on the subject.
 
 ### Tools
 For unit and integration tests, I like [react-testing-library](https://github.com/kentcdodds/react-testing-library) because its guiding principles encourage a black-box testing approach. By writing tests this way, you can easily refactor your code without breaking your tests. In contrast, [Enzyme](https://airbnb.io/enzyme/) has methods like [`setState`](https://airbnb.io/enzyme/docs/api/ReactWrapper/setState.html) and [`state`](https://airbnb.io/enzyme/docs/api/ReactWrapper/state.html) that might tempt you to test a component’s internal implementation.
