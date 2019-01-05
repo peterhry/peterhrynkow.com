@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Testing Molecules"
+title:  "Testing React Apps"
 date:   2019-01-01 00:00:00
 categories: [testing]
 icon: 🧠
@@ -18,24 +18,17 @@ I see a lot of Redux apps where separate unit tests are created for components, 
 
 ![Files]({{ site.baseurl }}/images/unit-tests.jpg)
 
-Testing these elements separately, doesn’t gurantee that your app will behave as expected when you bring them together. For example, a unit test for an [async action creator](https://redux.js.org/recipes/writing-tests#async-action-creators) can assert that a particular action was dispatched, but it doesn’t gurantee that a reducer will handle said action. What's more, I typically find the code connecting a component to the store (`mapStateToProps`, `mapDispatchToProps`, etc.) is left untested.
+Testing these elements separately doesn’t guarantee that your app will behave as expected once they are combined. For example, a unit test for an [async action creator](https://redux.js.org/recipes/writing-tests#async-action-creators) asserts that a particular action is dispatched but doesn’t ensure that a reducer is configured to handle it. Similarily, a unit test for a [reducer](https://redux.js.org/recipes/writing-tests#reducers) asserts that a new state is returned for a given action but doesn’t ensure that the UI is updated to reflect the new state.
 
-Action creators, reducers, and selectors are component implementation details that shouldn’t be tested directly. So what should be tested?
+Most of these tests require you to mock other parts of the system, meaning you lose some confidence in the integration between what you’re testing and what’s being mocked. To be confident that your components, action creators, reducers, and selectors will work together, you need to test them together.
+
+Unit tests make sense if you intend to package your code and publish it to npm, but for testing application behavior, integration tests are more likely to catch problems.
 
 ### What to test
 
-> Write tests. Not too many. Mostly integration.<br>
-[@rauchg](https://twitter.com/@rauchg)
-
-This is a great piece of wisdom from Guillermo Rauch.
-
-Think of it like this: Instead of writing a unit test for every _atom_ in your application, zoom out a bit and write some integration tests for the _molecules_. Action creators, reducers, and selectors are atoms that when combined form a connected component molecule. By testing the molecule you’re also testing its atoms, but more importantly, you’re ensuring that those atoms work together.
+Instead of writing a unit test for every _atom_ in your application, zoom out a bit and write some integration tests for the _molecules_. Action creators, reducers, and selectors are atoms that when combined form a connected component molecule. By testing the molecule you’re also testing its atoms, but more importantly, you’re ensuring that those atoms work together.
 
 It’s best to think of a component as a black box and test its behavior from the UI. The component under test might be made up of many smaller components as well as dependencies (reducers, action creators, etc.) but with the help of a code coverage tool, you can verify that these elements are covered by your tests.
-
-Unit tests still make sense if you intend to package your code and publish it to npm, but for testing application behavior, integration tests are more likely to catch problems.
-
-More to come.
 
 ### Snapshot testing
 One thing I’ve observed is that it’s easy to create a snapshot test for a component, but hard to debug it when it fails. The diff produced by a failing snapshot test can be difficult to read, particularly for large components. For this reason, I will avoid creating a snapshot test for a large branch of components.
