@@ -28,7 +28,7 @@ Unit tests make sense if you intend to package your code and publish it to npm, 
 
 Action creators, reducers, and selectors are like _atoms_ that when combined form a connected component _molecule_. Instead of writing a unit test for every _atom_ in your application, zoom out a bit and write some integration tests for the _molecules_. By testing the molecule you’re also testing its atoms, but more importantly, you’re ensuring that those atoms work together.
 
-It’s best to think of a component as a black box and test its behavior from the outside using the UI. The component under test might be made up of many smaller components as well as dependencies (reducers, action creators, etc.) but with the help of a code coverage tool, you can verify that these elements are covered by your tests.
+It’s best to think of a component as a black box and test its behavior from the outside using the UI. The component under test might be made up of many smaller components as well as dependencies (reducers, action creators, etc.) but with the help of a code coverage tool, you can ensure that these elements are covered by your tests.
 
 ### Snapshot testing
 One thing I’ve observed is that it’s easy to create a snapshot test for a component, but hard to debug it when it fails. The diff produced by a failing snapshot test can be difficult to read, particularly for large components. For this reason, I will avoid creating a snapshot test for a large branch of components.
