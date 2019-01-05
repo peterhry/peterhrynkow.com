@@ -18,9 +18,9 @@ I see a lot of Redux apps where separate unit tests are created for components, 
 
 ![Files]({{ site.baseurl }}/images/unit-tests.jpg)
 
-Testing these elements separately, doesn’t gurantee that your app will behave as expected when you bring them together. For example, a unit test for an [async action creator](https://redux.js.org/recipes/writing-tests#async-action-creators) can assert that a particular action was dispatched, but it doesn’t gurantee that a reducer will handle said action. Moreover, what I often seen is that the code connecting a component to the store (`mapStateToProps`, `mapDispatchToProps`, etc.) is left untested.
+Testing these elements separately, doesn’t gurantee that your app will behave as expected when you bring them together. For example, a unit test for an [async action creator](https://redux.js.org/recipes/writing-tests#async-action-creators) can assert that a particular action was dispatched, but it doesn’t gurantee that a reducer will handle said action. Moreover, what I typically find is that the code connecting a component to the store (`mapStateToProps`, `mapDispatchToProps`, etc.) is left untested.
 
-Action creators, reducers, and selectors are component implementation details that shouldn’t be tested directly.
+Action creators, reducers, and selectors are component implementation details that shouldn’t be tested directly. So what should be tested?
 
 ### What to test
 
