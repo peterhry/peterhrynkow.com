@@ -9,7 +9,7 @@ icon: 🧠
 What’s the best way to write tests for your React application so that you can feel confident deploying it to production? Where should you focus your testing effort and what tools should you use? These are questions I’ve been pondering for a while now so I thought I’d share my thoughts on the subject.
 
 ### Tools
-For unit and integration tests, I use Jest with [react-testing-library](https://github.com/kentcdodds/react-testing-library). I like [react-testing-library](https://github.com/kentcdodds/react-testing-library) because its guiding principles encourage a black box testing approach. By following this method, you can easily refactor your code without breaking your tests. In contrast, [Enzyme](https://airbnb.io/enzyme/) has methods like [`setState`](https://airbnb.io/enzyme/docs/api/ReactWrapper/setState.html) and [`state`](https://airbnb.io/enzyme/docs/api/ReactWrapper/state.html) that might tempt you to test a component’s implementation details. Doing so makes refactoring more difficult.
+For unit and integration tests, I like [react-testing-library](https://github.com/kentcdodds/react-testing-library) because its guiding principles encourage a black box testing approach. By following this method, you can easily refactor your code without breaking your tests. In contrast, [Enzyme](https://airbnb.io/enzyme/) has methods like [`setState`](https://airbnb.io/enzyme/docs/api/ReactWrapper/setState.html) and [`state`](https://airbnb.io/enzyme/docs/api/ReactWrapper/state.html) that might tempt you to test a component’s implementation details. Doing so makes refactoring more difficult.
 
 <!-- I like to use [Jest DOM](https://www.npmjs.com/package/jest-dom) for making assertions about the state of a DOM element.
 
