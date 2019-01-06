@@ -9,7 +9,7 @@ Nowadays, you can’t have a discussion about component-based software design wi
 
 My first exposure to components was in 2003 when the engineers at Macromedia shipped a component library called MX components with Flash MX. 
 
-Say what you will about Flash but the engineers at Macromedia developed some clever patterns for improving a component’s rendering perfomance. One such pattern isp called the ”invalidate pattern” and you see it everywhere in today’s modern components.
+Say what you will about Flash but the engineers at Macromedia developed some clever patterns for improving a component’s rendering perfomance. One such pattern is called the “invalidate pattern” and you see it everywhere in today’s modern components.
 
 Say you have an object that controls the width and height of an element. It exposes some methods `setWidth` and `setHeight`. Each time one of these methods is called, the dimensions of the element are set.
 
