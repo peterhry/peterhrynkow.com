@@ -24,9 +24,9 @@ I see a lot of Redux apps where separate unit tests are created for components, 
 
 ![Files]({{ site.baseurl }}/images/unit-tests.jpg)
 
-Testing these elements separately doesn’t guarantee that your app will behave as expected once they are combined. For example, a unit test for an [async action creator](https://redux.js.org/recipes/writing-tests#async-action-creators) asserts that a particular action is dispatched but doesn’t ensure that a reducer is configured to handle it. Similarily, a unit test for a [reducer](https://redux.js.org/recipes/writing-tests#reducers) asserts that a new state is returned for a given action but doesn’t ensure that the UI is updated to reflect the new state.
+Testing these elements separately doesn’t guarantee that they will cooperate as a system. For example, a unit test for an [async action creator](https://redux.js.org/recipes/writing-tests#async-action-creators) asserts that a particular action is dispatched but doesn’t ensure that a reducer is configured to handle it. Similarily, a unit test for a [reducer](https://redux.js.org/recipes/writing-tests#reducers) asserts that a new state is returned for a given action but doesn’t ensure that the UI is updated to reflect the new state.
 
-Most of these tests require you to mock other parts of the system, meaning you lose some confidence in the integration between what you’re testing and what’s being mocked. To be confident that your components, action creators, reducers, and selectors will _work_ together, you need to _test_ them together using an integration test.
+Most of these tests require you to mock other parts of the system, meaning you lose some confidence in the integration between what you’re testing and the dependency being mocked. To be confident that your components, action creators, reducers, and selectors will _work_ together, you need to _test_ them together using an integration test.
 
 Unit tests make sense if you intend to package your code and publish it to npm, but for testing application behavior, integration tests are more likely to catch problems.
 
