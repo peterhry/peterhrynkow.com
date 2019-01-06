@@ -71,7 +71,7 @@ const Button = ({url, children}) => (
  <a href={url}><span>{children}</span></a>
 )
 ```
-Now you have to review the snapshot diff to determine if the change was intentional (requiring the snapshot to be updated) or accidental (requiring a bug to be fixed). The larger the snapshot, the more tedious this process becomes.
+Now you have to review the snapshot diff to determine if the change was intentional (requiring the snapshot to be updated) or accidental (requiring a bug to be fixed). The larger the snapshot and the more changes, the more tedious this process becomes.
 
 Snapshot testing is sort of like fishing with a giant net. Sure, you catch a lot of fish (bugs), but you catch a lot of other stuff, too. Then you have to sift through it all and decide what to keep and what to throw back.
 
