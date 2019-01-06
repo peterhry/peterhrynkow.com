@@ -32,7 +32,7 @@ Unit tests make sense if you intend to package your code and publish it to npm, 
 
 ### What to test
 
-Action creators, reducers, and selectors are like _atoms_ that when combined form a connected component _molecule_. Instead of writing a unit test for every _atom_ in your application, zoom out a bit and write some integration tests for the _molecules_. By testing the molecule you’re also testing its atoms, but more importantly, you’re ensuring that those atoms work together.
+Action creators, reducers, and selectors are like _atoms_ that when combined form a connected component _molecule_. Instead of writing a unit test for every _atom_ in your application, zoom out a bit and write some integration tests for the _molecules_. By testing a molecule you’re also testing its atoms, but more importantly, you’re ensuring that those atoms work together.
 
 It’s best to think of a component as a black box and test its behavior from the outside using the UI. The component under test might be made up of many smaller components as well as dependencies (reducers, action creators, etc.) but with the help of a code coverage tool, you can ensure that the code in these elements is covered by your tests.
 
