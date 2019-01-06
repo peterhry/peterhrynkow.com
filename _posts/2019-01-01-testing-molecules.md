@@ -20,11 +20,11 @@ Tools I avoid:
 - [Enzyme](https://airbnb.io/enzyme/) -->
 
 ### What not to test
-I see a lot of Redux apps where separate unit tests are created for components, action creators, reducers, and selectors. It shouldn’t come as a surprise that a lot of teams follow this approach since it’s what’s described in the [Redux docs](https://redux.js.org/recipes/writing-tests). But there’s a problem with this method.
+I see a lot of Redux apps where components, action creators, reducers, and selectors are tested separately. It shouldn’t come as a surprise that a lot of teams follow this approach since it’s what’s described in the [Redux docs](https://redux.js.org/recipes/writing-tests). But there’s a problem with this method.
 
 ![Files]({{ site.baseurl }}/images/unit-tests.jpg)
 
-Testing these elements separately doesn’t guarantee that they will cooperate as a system. For example, a unit test for an [async action creator](https://redux.js.org/recipes/writing-tests#async-action-creators) asserts that a particular action is dispatched but doesn’t ensure that a reducer is configured to handle it. Similarily, a unit test for a [reducer](https://redux.js.org/recipes/writing-tests#reducers) asserts that a new state is returned for a given action but doesn’t ensure that the UI is updated to reflect the new state.
+Creating unit tests for these elements doesn’t guarantee that they will cooperate as a system. For example, a unit test for an [async action creator](https://redux.js.org/recipes/writing-tests#async-action-creators) asserts that a particular action is dispatched but doesn’t ensure that a reducer is configured to handle it. Similarily, a unit test for a [reducer](https://redux.js.org/recipes/writing-tests#reducers) asserts that a new state is returned for a given action but doesn’t ensure that the UI is updated to reflect the new state.
 
 Most of these tests require you to mock other parts of the system, meaning you lose some confidence in the integration between what you’re testing and the dependency being mocked. To be confident that your components, action creators, reducers, and selectors will _work_ together, you need to _test_ them together using an integration test.
 
