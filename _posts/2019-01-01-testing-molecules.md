@@ -28,19 +28,19 @@ Firstly, creating unit tests for these elements doesn’t guarantee that they wi
 
 Secondly, most of these tests require you to mock some other part of the system, meaning you lose confidence in the integration between what you’re testing and the dependency being mocked. For example, the redux docs recommend using [redux-mock-store](https://github.com/dmitry-zaets/redux-mock-store) to test async action creators.
 
-This is an example of testing the _atoms_ in your application. Knowing that these modules are working in isolation is fine but if you want to feel confident that they will work as a system you should be testing the _molecules_. 
+This is an example of testing the _atoms_ in your application. Knowing that these chunks of code work in isolation is great, but if you want to be confident that they work as a system, you should be testing the _molecules_. 
 
 ### Testing the molecules 
 
-Action creators, reducers, and selectors are like _atoms_ that when combined with a component form a _molecule_. By testing a molecule you’re indirectly testing its atoms, but more importantly, you’re ensuring that the atoms work together.
+Action creators, reducers, and selectors are like atoms that when combined with a component form a molecule. By testing a molecule you’re indirectly testing its atoms, but more importantly, you’re ensuring that the atoms work together.
 
-So instead of writing a unit test for every _atom_ in your application, zoom out a bit and write some integration tests for the _molecules_. 
+So instead of writing a unit test for every atom in your application, zoom out a bit and write some integration tests for the _molecules_. 
 
-This means testing your components from UI event to UI update. 
+This means testing your connected components from UI event to UI update. 
 
 It’s best to think of a component as a black box and test its behavior from the outside using the UI. The component under test might be made up of many smaller components as well as dependencies (reducers, action creators, etc.) but with the help of a code coverage tool, you can ensure that the code in these elements is covered by your tests.
 
-Unit tests make sense if you intend to package your code and publish it to npm, but for testing application behavior, integration tests are more likely to catch problems.
+Unit tests still make sense if you intend to package your code and publish it to npm, but for testing application behavior, integration tests are more likely to catch problems.
 
 ### Fishing with a giant net
 
