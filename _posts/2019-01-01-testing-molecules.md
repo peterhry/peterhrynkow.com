@@ -31,10 +31,7 @@ import {connect} from 'react-redux'
 
 // Component (atom)
 export const Counter = ({count, onClick}) => (
-  <div>
-    <div>Count: {count}</div>
-    <button onClick={onClick}>Click Me</button>
-  </div>
+  <button title="Click Me" onClick={onClick}>Count: {count}</button>
 )
 
 // Action creator (atom)
