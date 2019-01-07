@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "Testing React Apps"
-date:   2019-01-01 00:00:00
+title: "Testing React Apps"
+date: 2019-01-01 00:00:00
 categories: [testing]
 icon: 🧠
 ---
@@ -19,26 +19,34 @@ Tools I avoid:
 - [redux-mock-store]()
 - [Enzyme](https://airbnb.io/enzyme/) -->
 
-### What not to test
-I see a lot of Redux apps where components, action creators, reducers, and selectors are tested separately. It shouldn’t come as a surprise that a lot of teams follow this approach since it’s what’s described in the [Redux docs](https://redux.js.org/recipes/writing-tests). But there’s a problem with this method.
+### Testing the atoms
+I see a lot of Redux apps where components, action creators, reducers, and selectors are tested separately. It shouldn’t come as a surprise that a lot of teams follow this approach since it’s what’s described in the [Redux docs](https://redux.js.org/recipes/writing-tests). But there problems with this method.
 
 ![Files]({{ site.baseurl }}/images/unit-tests.jpg)
 
-Creating unit tests for these elements doesn’t guarantee that they will cooperate as a system. For example, a unit test for an [async action creator](https://redux.js.org/recipes/writing-tests#async-action-creators) asserts that a particular action is dispatched but doesn’t ensure that a reducer is configured to handle it. Similarily, a unit test for a [reducer](https://redux.js.org/recipes/writing-tests#reducers) asserts that a new state is returned for a given action but doesn’t ensure that the UI is updated to reflect the new state.
+Firstly, creating unit tests for these elements doesn’t guarantee that they will work as a system. For example, a unit test for an [async action creator](https://redux.js.org/recipes/writing-tests#async-action-creators) asserts that a particular action is dispatched but doesn’t ensure that a reducer is configured to handle it. Similarily, a unit test for a [reducer](https://redux.js.org/recipes/writing-tests#reducers) asserts that a new state is returned for a given action but doesn’t ensure that the component UI is updated to reflect the new state.
 
-Most of these tests require you to mock other parts of the system, meaning you lose some confidence in the integration between what you’re testing and the dependency being mocked. To be confident that your components, action creators, reducers, and selectors will _work_ together, you need to _test_ them together using an integration test.
+Secondly, most of these tests require you to mock some other part of the system, meaning you lose confidence in the integration between what you’re testing and the dependency being mocked. For example, the redux docs recommend using [redux-mock-store](https://github.com/dmitry-zaets/redux-mock-store) to test async action creators.
 
-Unit tests make sense if you intend to package your code and publish it to npm, but for testing application behavior, integration tests are more likely to catch problems.
+This is an example of testing the _atoms_ in your application. Knowing that these modules are working in isolation is fine but if you want to feel confident that they will work as a system you should be testing the _molecules_. 
 
-### What to test
+### Testing the molecules 
 
-Action creators, reducers, and selectors are like _atoms_ that when combined form a connected component _molecule_. Instead of writing a unit test for every _atom_ in your application, zoom out a bit and write some integration tests for the _molecules_. By testing a molecule you’re also testing its atoms, but more importantly, you’re ensuring that those atoms work together.
+Action creators, reducers, and selectors are like _atoms_ that when combined with a component form a _molecule_. 
+
+Instead of writing a unit test for every _atom_ in your application, zoom out a bit and write some integration tests for the _molecules_. 
+
+This means testing your components from UI event to UI update. 
+
+By testing a molecule you’re indirectly testing its atoms, but more importantly, you’re ensuring that the atoms work together.
 
 It’s best to think of a component as a black box and test its behavior from the outside using the UI. The component under test might be made up of many smaller components as well as dependencies (reducers, action creators, etc.) but with the help of a code coverage tool, you can ensure that the code in these elements is covered by your tests.
 
-### Snapshot tests
+Unit tests make sense if you intend to package your code and publish it to npm, but for testing application behavior, integration tests are more likely to catch problems.
 
-Snapshot tests are useful whenever you want to make sure your UI does not change unexpectedly.
+### Fishing with a giant net
+
+According to the Jest documentation, snapshot tests are useful whenever you want to make sure your UI does not change unexpectedly.
 
 
 Let’s say you have a simple button component
@@ -60,7 +68,7 @@ it('renders correctly', () => {
   const tree = renderer
     .create(<Button href="https://myurl.com">My Label</Button>)
     .toJSON()
-  expect(tree).toMatchSnapshot();
+  expect(tree).toMatchSnapshot()
 })
 ```
 
@@ -71,7 +79,8 @@ const Button = ({url, children}) => (
  <a href={url}><span>{children}</span></a>
 )
 ```
-Now you have to review the snapshot diff to determine if the change was intentional (requiring the snapshot to be updated) or accidental (requiring a bug to be fixed). The larger the snapshot and the more changes, the more tedious this process becomes.
+Now you have to review the snapshot diff to determine if the change was intentional (requiring the snapshot to be updated) or accidental (requiring a bug to be fixed). The more changes to review,
+the more tedious and error-prone this process becomes.
 
 Snapshot testing is sort of like fishing with a giant net. Sure, you catch a lot of fish (bugs), but you catch a lot of other stuff, too. Then you have to sift through it all and decide what to keep and what to throw back.
 
