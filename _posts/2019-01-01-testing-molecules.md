@@ -32,13 +32,11 @@ This is an example of testing the _atoms_ in your application. Knowing that thes
 
 ### Testing the molecules 
 
-Action creators, reducers, and selectors are like _atoms_ that when combined with a component form a _molecule_. 
+Action creators, reducers, and selectors are like _atoms_ that when combined with a component form a _molecule_. By testing a molecule you’re indirectly testing its atoms, but more importantly, you’re ensuring that the atoms work together.
 
-Instead of writing a unit test for every _atom_ in your application, zoom out a bit and write some integration tests for the _molecules_. 
+So instead of writing a unit test for every _atom_ in your application, zoom out a bit and write some integration tests for the _molecules_. 
 
 This means testing your components from UI event to UI update. 
-
-By testing a molecule you’re indirectly testing its atoms, but more importantly, you’re ensuring that the atoms work together.
 
 It’s best to think of a component as a black box and test its behavior from the outside using the UI. The component under test might be made up of many smaller components as well as dependencies (reducers, action creators, etc.) but with the help of a code coverage tool, you can ensure that the code in these elements is covered by your tests.
 
