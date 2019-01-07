@@ -20,7 +20,7 @@ Tools I avoid:
 - [Enzyme](https://airbnb.io/enzyme/) -->
 
 ### Testing the atoms
-I see a lot of Redux apps where components, action creators, reducers, and selectors are tested separately. It shouldn’t come as a surprise that a lot of teams follow this approach since it’s what’s described in the [Redux docs](https://redux.js.org/recipes/writing-tests). But there problems with this method.
+I see a lot of Redux apps where components, action creators, reducers, and selectors are tested separately. It shouldn’t come as a surprise that a lot of teams follow this approach since it’s what’s described in the [Redux docs](https://redux.js.org/recipes/writing-tests). But there are problems with this method.
 
 ![Files]({{ site.baseurl }}/images/unit-tests.jpg)
 
