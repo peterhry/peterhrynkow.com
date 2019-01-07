@@ -13,11 +13,11 @@ I see a lot of Redux apps where components, action creators, reducers, and selec
 
 ![Files]({{ site.baseurl }}/images/unit-tests.jpg)
 
-Firstly, testing these elements in isolation doesn’t guarantee that they will work as a system. For example, a unit test for an [async action creator](https://redux.js.org/recipes/writing-tests#async-action-creators) asserts that a particular action is dispatched but doesn’t ensure that a reducer is configured to handle it. Similarily, a unit test for a [reducer](https://redux.js.org/recipes/writing-tests#reducers) asserts that a new state is returned for a given action but doesn’t ensure that the component UI is updated to reflect the new state.
+Firstly, testing these elements in isolation doesn’t guarantee that they will work together as a system. For example, a unit test for an [async action creator](https://redux.js.org/recipes/writing-tests#async-action-creators) asserts that a particular action is dispatched but doesn’t ensure that a reducer is configured to handle it. Similarily, a unit test for a [reducer](https://redux.js.org/recipes/writing-tests#reducers) asserts that a new state is returned for a given action but doesn’t ensure that the component UI is updated to reflect the new state.
 
-Secondly, most of these tests require you to mock some other part of the system, meaning you lose confidence in the integration between what you’re testing and the dependency being mocked. For example, the redux docs recommend using [redux-mock-store](https://github.com/dmitry-zaets/redux-mock-store) to test async action creators. Why not use a real store?
+Secondly, most of these tests require you to mock some other part of the system. For example, the redux docs recommend using [redux-mock-store](https://github.com/dmitry-zaets/redux-mock-store) to test async action creators. As a result, you lose confidence in the integration between what you’re testing and the dependency being mocked.
 
-This is an example of testing the _atoms_ in your application. Knowing that these chunks of code work in isolation is great, but if you want to be confident that they work as a system, you should be testing the _molecules_.
+This is an example of what I call testing the _atoms_ in your application. Knowing that these chunks of code work in isolation is great, but if you want to be confident that they work together, you should be testing _molecules_.
 
 ### Testing Molecules
 
