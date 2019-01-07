@@ -101,7 +101,7 @@ Unit tests still make sense if you intend to package your code and publish it to
 According to the Jest documentation, snapshot tests are useful whenever you want to make sure your UI does not change unexpectedly.
 
 
-Let’s say you have a simple button component
+Let’s say you have a simple button component:
 
 ```jsx
 const Button = ({href, children}) => (
@@ -109,7 +109,7 @@ const Button = ({href, children}) => (
 )
 ```
 
-You can create a snapshot test for it like so
+You can create a snapshot test for it like so:
 
 ```jsx
 import React from 'react'
