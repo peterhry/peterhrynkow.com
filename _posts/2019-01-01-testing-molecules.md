@@ -102,9 +102,9 @@ What might surprise you is that this test covers every line of code in the actio
 
 Perhaps more importantly, this test ensures that the atoms work together. For example, the test breaks if the reducer stops handling the action or the component stops dispatching it. 
 
-An integration test like this one should give you confidence beyond unit tests alone that your app will work as expected. So instead of writing a unit test for every atom in your application, zoom out a bit and write some integration tests for the molecules.
+An integration test like this one should give you confidence (beyond unit tests alone) that your app will work as expected when you deploy it to production. So instead of writing a unit test for every atom in your application, zoom out a bit and write some integration tests for the molecules.
 
-There are still scenarios where it is appropriate to write unit tests (shared libraries, modules
+Don't get me wrong, there are still scenarios where it is appropriate to write unit tests (shared libraries, modules
 published to npm etc.), but for testing the behaviour of your application, integration tests are more likely to catch problems.
 
 ### Fishing with a Giant Net
