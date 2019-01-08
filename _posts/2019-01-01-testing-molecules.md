@@ -102,7 +102,7 @@ What might surprise you is that this test covers every line of code in the actio
 
 Perhaps more importantly, this test verifies the relationship between atoms. For example, the test breaks if the reducer stops handling the `INCREMENT_COUNTER` action or the component stops dispatching it. 
 
-Integration tests like this one give you more confidence (beyond unit tests alone) that your app will work as expected when deployed to production. So instead of writing a unit test for every atom, zoom out a bit and write some integration tests for the molecules.
+Integration tests like this one give you more confidence (beyond unit tests alone) that your app will work as expected. So instead of writing a unit test for every atom in your app, zoom out a bit and write some integration tests for the molecules.
 
 Don't get me wrong, there are still scenarios where it makes sense to write unit tests (shared libraries, modules
 published to npm, etc.), but for testing the behaviour of your application, integration tests are more likely to catch problems.
