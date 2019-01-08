@@ -70,6 +70,7 @@ Here’s what the test looks like:
 import {createStore} from 'redux'
 import {Provider} from 'react-redux'
 import {render, getByTitle, fireEvent} from 'react-testing-library'
+import 'react-testing-library/cleanup-after-each'
 import 'jest-dom/extend-expect'
 
 import Counter, {incrementCounter, counterReducer} from '../'
