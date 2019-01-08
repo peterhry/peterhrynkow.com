@@ -60,7 +60,7 @@ export default connect(
 )(Counter)
 ```
 
-For the sake of brevity, I put the action creator, reducer, and component in the same file, but in a real application, these elements can be stored separately.
+For the sake of brevity, I put the action creator, reducer, and component in the same file, but in a real application, these elements would be stored separately.
 
 The component in this example renders a button element that when clicked, increments a counter. Notice that the default export is a connected component which is what you want to test.
 
