@@ -21,7 +21,7 @@ This is an example of what I call testing the _atoms_ in your application. Knowi
 
 ### Testing Molecules
 
-Action creators, reducers, and selectors are like atoms that when combined with a component create a connected component molecule.
+Components, action creators, reducers, and selectors are like atoms that when combined create a connected component _molecule_.
 
 Here's an example:
 
