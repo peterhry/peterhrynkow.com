@@ -1,10 +1,10 @@
 
 # {{ site.description }}
 
-<a href="{{ site.author.github }}">GitHub</a> /
-<a href="{{ site.author.linkedin }}">LinkedIn</a> /
-<a href="{{ site.author.stackoverflow }}">Stackoverflow</a> /
-<a href="{{ site.author.codepen }}">CodePen</a> /
+<a href="{{ site.author.github }}">GitHub</a> • 
+<a href="{{ site.author.linkedin }}">LinkedIn</a> • 
+<a href="{{ site.author.stackoverflow }}">Stackoverflow</a> • 
+<a href="{{ site.author.codepen }}">CodePen</a> • 
 <a href="{{ site.author.twitter }}">Twitter</a>
 
 
