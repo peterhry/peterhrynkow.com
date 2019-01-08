@@ -100,7 +100,7 @@ Notice that thisntest uses a real Redux store. This is so you can test the compo
 
 It might surprise you that this test covers every line of code in the action creator, reducer, and component. By testing a molecule, you are indirectly testing its atoms.
 
-Perhaps more importantly, this test verifies the relationship between atoms. For example, the test breaks if the reducer stops handling the `INCREMENT_COUNTER` action or if the component stops dispatching it.
+Perhaps more importantly, this test verifies the relationship between atoms. For example, the test breaks if the component's `onClick` prop is not mapped to the `incrementCounter` action creator or the reducer fails to handle the `INCREMENT_COUNTER` action.
 
 Integration tests like this one give you more confidence (beyond unit tests alone) that your app will work as expected. So instead of writing a unit test for every atom in your app, zoom out a bit and write some integration tests for the molecules.
 
