@@ -13,7 +13,7 @@ I see a lot of Redux apps where components, action creators, reducers, and selec
 
 ![Files]({{ site.baseurl }}/images/unit-tests.jpg)
 
-Firstly, testing these elements in isolation doesn’t guarantee that they will cooperate as a system. For example, a unit test for an [async action creator](https://redux.js.org/recipes/writing-tests#async-action-creators) asserts that a particular set of actions is dispatched but doesn’t ensure that a reducer is configured to handle it. Similarly, a unit test for a [reducer](https://redux.js.org/recipes/writing-tests#reducers) asserts that a new state is returned for a given action but doesn’t ensure that the component UI is updated to reflect the new state.
+Firstly, testing these elements in isolation doesn’t guarantee that they will cooperate when brought together. For example, a unit test for an [async action creator](https://redux.js.org/recipes/writing-tests#async-action-creators) asserts that a particular set of actions is dispatched but doesn’t ensure that a reducer is configured to handle it. Similarly, a unit test for a [reducer](https://redux.js.org/recipes/writing-tests#reducers) asserts that a new state is returned for a given action but doesn’t ensure that the component UI is updated to reflect the new state.
 
 Secondly, most of these tests require you to mock some other part of the system. For example, the redux docs recommend using [redux-mock-store](https://github.com/dmitry-zaets/redux-mock-store) to test async action creators. As a result, you lose confidence in the integration between what you’re testing and the dependency being mocked.
 
@@ -21,7 +21,7 @@ This is an example of what I call testing the _atoms_ in your application. Knowi
 
 ### Testing Molecules
 
-Action creators, reducers, and selectors are like atoms that when combined with a component create a molecule.
+Action creators, reducers, and selectors are like atoms that when combined with a component create a connected component molecule.
 
 Here's an example:
 
@@ -100,11 +100,11 @@ Notice that the test uses a real Redux store. This is so you can test the compon
 
 What might surprise you is that this test covers every line of code in the action creator, reducer, and component. By testing the molecule, you are indirectly testing its atoms. Just be sure to use a code coverage tool to ensure your tests are exhaustive.
 
-Perhaps more importantly, this test ensures that the atoms work together. For example, the test breaks if the reducer stops handling the action or the component stops dispatching it. 
+Perhaps more importantly, this test ensures that the atoms work together. For example, the test breaks if the reducer stops handling the `INCREMENT_COUNTER` action or the component stops dispatching it. 
 
-An integration test like this one should give you confidence (beyond unit tests alone) that your app will work as expected when you deploy it to production. So instead of writing a unit test for every atom in your application, zoom out a bit and write some integration tests for the molecules.
+An integration test like this one should give you more confidence (beyond unit tests alone) that your app will work as expected when you deploy it to production. So instead of writing a unit test for every atom in your application, zoom out a bit and write some integration tests for the molecules.
 
-Don't get me wrong, there are still scenarios where it is appropriate to write unit tests (shared libraries, modules
+Don't get me wrong, there are still scenarios where it makes sense to write unit tests (shared libraries, modules
 published to npm etc.), but for testing the behaviour of your application, integration tests are more likely to catch problems.
 
 ### Fishing with a Giant Net
