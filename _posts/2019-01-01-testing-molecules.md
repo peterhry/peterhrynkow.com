@@ -98,9 +98,9 @@ it('increments the counter', () => {
 
 Notice that the test uses a real Redux store. This is so you can test the component from UI event through to UI update. 
 
-What might surprise you is that this test covers every line of code in the action creator, reducer, and component. By testing the molecule, you are indirectly testing its atoms. Just be sure to use a code coverage tool to ensure your tests are exhaustive.
+What might surprise you is that this test covers every line of code in the action creator, reducer, and component. By testing a molecule, you are indirectly testing its atoms.
 
-Perhaps more importantly, this test ensures that the atoms work together. For example, the test breaks if the reducer stops handling the `INCREMENT_COUNTER` action or the component stops dispatching it. 
+Perhaps more importantly, this test verifies the relationship between atoms. For example, the test breaks if the reducer stops handling the `INCREMENT_COUNTER` action or the component stops dispatching it. 
 
 Integration tests like this one give you more confidence (beyond unit tests alone) that your app will work as expected when deployed to production. So instead of writing a unit test for every atom, zoom out a bit and write some integration tests for the molecules.
 
