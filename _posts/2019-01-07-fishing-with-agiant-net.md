@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Fishing with a Giant Net"
+title: "Snapshot Testing is Trawling for Bugs"
 date: 2019-01-07 00:00:00
 categories: [testing]
 icon: 🧠
@@ -31,19 +31,25 @@ it('renders correctly', () => {
 })
 ```
 
-Now any change to the component’s rendered output will cause the test to fail. Sounds great, right? But what if you change something innocuous, like this?
+Now any change to the component’s rendered output will cause the test to fail. Sounds great, right? 
+
+Well, let's say you add a new attribute `target` but accidentally name it `traget`.
 
 ```jsx
-const Button = ({url, children}) => (
- <a href={url}><span>{children}</span></a>
+const Button = ({href, target, children}) => (
+ <a href={href} traget={target}>{children}</a>
 )
 ```
-Now you have to review the snapshot diff to determine if the change was intentional (requiring the snapshot to be updated) or accidental (requiring a bug to be fixed). The more changes to review,
-the more tedious and error-prone this process becomes.
+
+You expect the test to fail since you changed the rendered output, but you don't notice the typo. In haste, you update the snapshot.
+
+What just happened?
+
+When a snapshot test fails, you have to review each change and decide if it was intentional (requiring the snapshot to be updated) or accidental (requiring a bug to be fixed). The more changes to review, the more tedious and error-prone this process becomes.
 
 Snapshot testing is sort of like fishing with a giant net. Sure, you catch a lot of fish, but you catch a lot of other stuff, too. Then you have to sift through it all and decide what to keep and what to throw back.
 
-The risk is that you update a snapshot thinking a change was intentional when it was in fact a bug that caused the test to fail. For this reason, I avoid creating snapshot tests for large branches of components.
+The risk is that you update a snapshot thinking a change was intentional when it was in fact accidental. For this reason, I avoid creating snapshot tests for large branches of components.
 
 <!--
 
