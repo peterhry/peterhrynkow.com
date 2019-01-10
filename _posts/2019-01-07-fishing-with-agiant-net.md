@@ -6,7 +6,7 @@ categories: [testing]
 icon: 🧠
 ---
 
-According to the Jest docs, snapshot tests are useful whenever you want to make sure your UI does not change unexpectedly. That sounds great in theory, but in this post, I will demonstrate some of the pain points and risks associated with snapshot testing.
+According to the [Jest docs](https://jestjs.io/docs/en/snapshot-testing), snapshot tests are useful whenever you want to make sure your UI does not change unexpectedly. That sounds great in theory, but in this post, I will demonstrate some of the pain points and risks associated with snapshot testing.
 
 Say you have a simple button component:
 
@@ -49,7 +49,7 @@ Now you have snapshot test that passes but makes the wrong assertion about your 
 
 When a snapshot test fails, you have to manually review each change and decide whether it's a bug or a valid change. This process is tedious and prone to human error, especially when there are lots of changes to review.
 
-Snapshot testing is sort of like fishing with a giant net. There's a certain kind of fish you want to catch (bugs), but you end up catching a lot of other stuff, too (valid changes). The hard part is sifting through your catch and deciding what to keep and what to throw back.
+Snapshot testing is sort of like fishing with a giant net. There's a certain kind of fish you want to catch (bugs), but you end up catching a lot of other stuff, too (valid changes). The hard part is sorting the catch and deciding what to keep and what to throw back.
 
 The risk is that you update a snapshot thinking a change was valid when it was in fact a bug.
 
@@ -65,10 +65,7 @@ After a while, engineers begin to experience something I call _snapshot fatigue_
 
 A good test should prevent you from accidentally breaking your component's API. By creating a snapshot test, you're essentially declaring that your component's _entire_ rendered output is part of its API.
 
-In some cases that might be what you want but I'd argue that it makes adding new features and refactoring painful.
-
-
-
+In some cases that might be what you want but I'd argue that it makes adding new features and refactoring painful. An alternative is to identify the elements of your component's UI that are critical to its function and test those specifically.
 
 
 
