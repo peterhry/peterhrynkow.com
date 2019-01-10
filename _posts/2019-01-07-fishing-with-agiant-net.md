@@ -49,6 +49,8 @@ Now you have snapshot test that passes but makes the wrong assertion about your 
 
 When a snapshot test fails, you have to manually review each change and decide whether it's a bug or a valid change. This process is tedious and prone to human error, especially when there are lots of changes to review.
 
+![Files]({{ site.baseurl }}/images/fish.jpg)
+
 Snapshot testing is sort of like fishing with a giant net. There's a certain kind of fish you want to catch (bugs), but you end up catching a lot of other stuff, too (valid changes). The hard part is sorting the catch and deciding what to keep and what to throw back.
 
 The risk is that you update a snapshot thinking a change was valid when it was in fact a bug.
