@@ -151,12 +151,20 @@ pre code:after {
   .main-content {
     width: 75%;
   }
+  
+  .main-content img {
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
-
-
 
 .main-content > :first-child {
   margin-top: 0;
+}
+
+.main-content img {
+  margin-left: -8.823529411764706%;
+  margin-right: -8.823529411764706%;
 }
 
 /**
@@ -191,8 +199,6 @@ pre code:after {
 .inline-img {
   display: block;
   margin: var(--ms4) auto;
-  margin-left: -8.823529411764706%;
-  margin-right: -8.823529411764706%;
 }
 
 .screen-cap {
