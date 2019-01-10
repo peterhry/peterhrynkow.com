@@ -12,7 +12,7 @@ Say you have a simple button component:
 
 ```jsx
 const Button = ({href, children}) => (
- <a href={href}>{children}</a>
+  <a href={href}>{children}</a>
 )
 ```
 
@@ -31,23 +31,25 @@ it('renders correctly', () => {
 })
 ```
 
-Wow, that was easy. Now any change to the component’s rendered output will cause the test to fail. Sounds great, right? 
+Wow, that was easy. Now any change to the component’s rendered output will cause the test to fail. Sounds great, right?
 
 Well, let me give you a scenario where things go off the rails. Say you decide to add a new attribute `target` but accidentally name it `traget`.
 
 ```jsx
 const Button = ({href, target, children}) => (
- <a href={href} traget={target}>{children}</a>
+  <a href={href} traget={target}>{children}</a>
 )
 ```
 
 In your mind, you already expect the test to fail, since by adding a new attribute, you've changed the component's rendered output. In haste, you review the diff but fail to notice the typo. After updating the snapshot you commit your changes and push them to GitHub.
 
-Now you have snapshot test that passes but makes the wrong assertion about your component's rendered output. WTF just happened?
+Now you have a snapshot test that passes but makes the wrong assertion about your component's rendered output. WTF just happened?
 
 ### Sorting the Catch
 
 When a snapshot test fails, you have to manually review each change and decide whether it's a bug or a valid change. This process is tedious and prone to human error, especially when there are lots of changes to review.
+
+![Files]({{ site.baseurl }}/images/fish.jpg)
 
 Snapshot testing is sort of like fishing with a giant net. There's a certain kind of fish you want to catch (bugs), but you end up catching a lot of other stuff, too (valid changes). The hard part is sorting the catch and deciding what to keep and what to throw back.
 
@@ -63,9 +65,9 @@ After a while, engineers begin to experience something I call _snapshot fatigue_
 
 ### Do You Need a Snapshot?
 
-A good test should prevent you from accidentally breaking your component's API. By creating a snapshot test, you're essentially declaring that your component's _entire_ rendered output is part of its API. In some cases that might be what you want but I'd argue that it makes adding new features and refactoring painful. 
+A good test should prevent you from accidentally breaking your component's API. By creating a snapshot test, you're essentially declaring that your component's _entire_ rendered output is part of its API. In some cases that might be what you want but I'd argue that it makes adding new features and refactoring painful.
 
-An alternative is to identify the elements of your component's UI that are critical to its function and test those specifically:
+As an alternative you can identify the elements of your component's UI that are critical to its function and test those specifically:
 
 ```jsx
 import React from 'react'
@@ -77,11 +79,11 @@ import 'jest-dom/extend-expect'
 it('renders correctly', () => {
   const {container} = render(<Button href="https://myurl.com" target="_blank">My Label</Button>)
   const button = getByText(container, 'My Label')
-  
+
   expect(button).toHaveAttribute('target', '_blank')
   expect(button).toHaveAttribute('href', 'https://myurl.com')
 })
 ```
 
-This method requires a little more forethought but eliminates the burden and risk of manually reviewing snapshots.
+This method requires a little more forethought but eliminates the burden and risk of manually reviewing snapshots down the road.
 
