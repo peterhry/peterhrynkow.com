@@ -65,7 +65,7 @@ After a while, engineers begin to experience something I call _snapshot fatigue_
 
 A good test should prevent you from accidentally breaking your component's API. By creating a snapshot test, you're essentially declaring that your component's _entire_ rendered output is part of its API. In some cases that might be what you want but I'd argue that it makes adding new features and refactoring painful. 
 
-An alternative is to identify the elements of your component's UI that are critical to its function and test those specifically. This requires a little more forethought but pays off over time.
+An alternative is to identify the elements of your component's UI that are critical to its function and test those specifically. 
 
-
+This method requires a little more forethought but eliminates the burden and risk of manually reviewing snapshots.
 
