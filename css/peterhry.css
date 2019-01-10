@@ -135,6 +135,7 @@ pre code:after {
 .logo {
   width: 6rem;
   display: block;
+  margin: 0;
 }
 
 /**
