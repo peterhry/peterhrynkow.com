@@ -65,7 +65,23 @@ After a while, engineers begin to experience something I call _snapshot fatigue_
 
 A good test should prevent you from accidentally breaking your component's API. By creating a snapshot test, you're essentially declaring that your component's _entire_ rendered output is part of its API. In some cases that might be what you want but I'd argue that it makes adding new features and refactoring painful. 
 
-An alternative is to identify the elements of your component's UI that are critical to its function and test those specifically. 
+An alternative is to identify the elements of your component's UI that are critical to its function and test those specifically:
+
+```jsx
+import React from 'react'
+import Button from '../'
+import {render, getByText} from 'react-testing-library'
+import 'react-testing-library/cleanup-after-each'
+import 'jest-dom/extend-expect'
+
+it('renders correctly', () => {
+  const {container} = render(<Button href="https://myurl.com" target="_blank">My Label</Button>)
+  const button = getByText(container, 'My Label')
+  
+  expect(button).toHaveAttribute('target', '_blank')
+  expect(button).toHaveAttribute('href', 'https://myurl.com')
+})
+```
 
 This method requires a little more forethought but eliminates the burden and risk of manually reviewing snapshots.
 
