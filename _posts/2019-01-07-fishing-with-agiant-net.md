@@ -41,17 +41,13 @@ const Button = ({href, target, children}) => (
 )
 ```
 
-In your mind, you already expect the test to fail, since by adding a new attribute, you've changed the component's rendered output. 
+In your mind, you already expect the test to fail, since by adding a new attribute, you've changed the component's rendered output. In haste, you review the diff but fail to notice the typo. After updating the snapshot you commit your changes and push them to GitHub.
 
-In haste, you review the diff but fail to notice the typo. After updating the snapshot you commit your changes and push them to GitHub.
-
-Now the snapshot test passes but makes the wrong assertion about your component's rendered output. Yikes.
-
-WTF just happened?
+Now you have snapshot test that passes but makes the wrong assertion about your component's rendered output. WTF just happened?
 
 ### Sorting the Catch
 
-When a snapshot test fails, you have to manually review each change and decide whether it's a bug or valid change. This process is tedious and prone to human error, especially when there are lots of changes to review.
+When a snapshot test fails, you have to manually review each change and decide whether it's a bug or a valid change. This process is tedious and prone to human error, especially when there are lots of changes to review.
 
 Snapshot testing is sort of like fishing with a giant net. There's a certain kind of fish you want to catch (bugs), but you end up catching a lot of other stuff, too (valid changes). The hard part is sifting through your catch and deciding what to keep and what to throw back.
 
