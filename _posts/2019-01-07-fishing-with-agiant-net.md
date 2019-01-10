@@ -31,7 +31,7 @@ it('renders correctly', () => {
 })
 ```
 
-Wow, that was easy. Now any change to the component’s rendered output will cause the test to fail. Sounds great, right? 
+Wow, that was easy. Now any change to the component’s rendered output will cause the test to fail. Sounds great, right?
 
 Well, let me give you a scenario where things go off the rails. Say you decide to add a new attribute `target` but accidentally name it `traget`.
 
@@ -63,9 +63,9 @@ After a while, engineers begin to experience something I call _snapshot fatigue_
 
 ### Do You Need a Snapshot?
 
-A good test should prevent you from accidentally breaking your component's API. By creating a snapshot test, you're essentially declaring that your component's _entire_ rendered output is part of its API. In some cases that might be what you want but I'd argue that it makes adding new features and refactoring painful. 
+A good test should prevent you from accidentally breaking your component's API. By creating a snapshot test, you're essentially declaring that your component's _entire_ rendered output is part of its API. In some cases that might be what you want but I'd argue that it makes adding new features and refactoring painful.
 
-An alternative is to identify the elements of your component's UI that are critical to its function and test those specifically:
+As an alternative you can identify the elements of your component's UI that are critical to its function and test those specifically:
 
 ```jsx
 import React from 'react'
@@ -77,11 +77,11 @@ import 'jest-dom/extend-expect'
 it('renders correctly', () => {
   const {container} = render(<Button href="https://myurl.com" target="_blank">My Label</Button>)
   const button = getByText(container, 'My Label')
-  
+
   expect(button).toHaveAttribute('target', '_blank')
   expect(button).toHaveAttribute('href', 'https://myurl.com')
 })
 ```
 
-This method requires a little more forethought but eliminates the burden and risk of manually reviewing snapshots.
+This method requires a little more forethought but eliminates the burden and risk of manually reviewing snapshots down the road.
 
