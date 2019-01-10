@@ -57,13 +57,17 @@ Things get worse if you use [jest-styled-components](https://github.com/styled-c
 
 ### Snapshot Fatigue
 
-After a while, engineers begin to experience something I call _snapshot fatigue_ and start blindly updating failed snapshots. Once that happens, your snapshot tests are pretty much useless.
+Snapshot tests are easy to create, requiring almost no forethought. That's because they place all of the cognitive burden on the reviewer.
+
+After a while, engineers begin to experience something I call _snapshot fatigue_ and start blindly updating failed snapshots without reviewing them. Once that happens, your snapshot tests are pretty much useless.
 
 ### Do You Need a Snapshot?
 
 A good test should prevent you from accidentally breaking your component's API. By creating a snapshot test, you're essentially declaring that your component's _entire_ rendered output is part of its API.
 
-In some cases that might be what you want, but often, you want some flexibility to add new features and refactor without breaking your tests. 
+In some cases that might be what you want but I'd argue that it makes adding new features and refactoring painful.
+
+
 
 
 
