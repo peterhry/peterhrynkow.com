@@ -33,7 +33,7 @@ it('renders correctly', () => {
 
 Wow, that was easy. Now any change to the component’s rendered output will cause the test to fail. Sounds great, right? 
 
-Well, let me give you a scenario where things go wrong. Say you decide to add a new attribute `target` but accidentally name it `traget`.
+Well, let me give you a scenario where things go off the rails. Say you decide to add a new attribute `target` but accidentally name it `traget`.
 
 ```jsx
 const Button = ({href, target, children}) => (
