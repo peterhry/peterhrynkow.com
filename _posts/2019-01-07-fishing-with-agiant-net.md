@@ -6,9 +6,7 @@ categories: [testing]
 icon: 🧠
 ---
 
-According to the Jest docs, snapshot tests are useful whenever you want to make sure your UI does not change unexpectedly.
-
-This sounds great in theory, but in this post, I will demonstrate some of the pain points and risks associated with snapshot testing.
+According to the Jest docs, snapshot tests are useful whenever you want to make sure your UI does not change unexpectedly. This sounds great in theory, but in this post, I will demonstrate some of the pain points and risks associated with snapshot testing.
 
 Say you have a simple button component:
 
