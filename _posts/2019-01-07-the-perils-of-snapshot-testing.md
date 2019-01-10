@@ -43,7 +43,7 @@ const Button = ({href, target, children}) => (
 
 In your mind, you already expect the test to fail, since by adding a new attribute, you've changed the component's rendered output. In haste, you review the diff but fail to notice the typo. After updating the snapshot you commit your changes and push them to GitHub.
 
-Now you have snapshot test that passes but makes the wrong assertion about your component's rendered output. WTF just happened?
+Now you have a snapshot test that passes but makes the wrong assertion about your component's rendered output. WTF just happened?
 
 ### Sorting the Catch
 
