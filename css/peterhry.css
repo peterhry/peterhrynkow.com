@@ -191,6 +191,8 @@ pre code:after {
 .inline-img {
   display: block;
   margin: var(--ms4) auto;
+  margin-left: -8.823529411764706%;
+  margin-right: -8.823529411764706%;
 }
 
 .screen-cap {
