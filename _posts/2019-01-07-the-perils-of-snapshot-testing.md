@@ -12,7 +12,7 @@ Say you have a simple button component:
 
 ```jsx
 const Button = ({href, children}) => (
- <a href={href}>{children}</a>
+  <a href={href}>{children}</a>
 )
 ```
 
@@ -37,7 +37,7 @@ Well, let me give you a scenario where things go off the rails. Say you decide t
 
 ```jsx
 const Button = ({href, target, children}) => (
- <a href={href} traget={target}>{children}</a>
+  <a href={href} traget={target}>{children}</a>
 )
 ```
 
