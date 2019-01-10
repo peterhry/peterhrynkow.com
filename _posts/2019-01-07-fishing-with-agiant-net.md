@@ -1,12 +1,14 @@
 ---
 layout: post
-title: "Snapshot Testing is Trawling for Bugs"
+title: "The Perils of Snapshot Testing"
 date: 2019-01-07 00:00:00
 categories: [testing]
 icon: 🧠
 ---
 
-According to the Jest docs, snapshot tests are useful whenever you want to make sure your UI does not change unexpectedly. Let's see just how useful they really are.
+According to the Jest docs, snapshot tests are useful whenever you want to make sure your UI does not change unexpectedly.
+
+This sounds great in theory, but in this post, I will demonstrate some of the pain points and risks associated with snapshot testing.
 
 Say you have a simple button component:
 
@@ -33,7 +35,7 @@ it('renders correctly', () => {
 
 Wow, that was easy. Now any change to the component’s rendered output will cause the test to fail. Sounds great, right? 
 
-Well, let's say you add a new attribute `target` but accidentally name it `traget`.
+Well, let me give you a scenario where things go wrong. Say you decide to add a new attribute `target` but accidentally name it `traget`.
 
 ```jsx
 const Button = ({href, target, children}) => (
@@ -41,22 +43,34 @@ const Button = ({href, target, children}) => (
 )
 ```
 
-You already expect the test to fail, since by adding a new attribute, you've changed the rendered output. You review the diff but fail to notice the typo. In haste, you update the snapshot.
+In your mind, you already expect the test to fail, since by adding a new attribute, you've changed the component's rendered output. 
 
-What just happened?
+In haste, you review the diff but fail to notice the typo. After updating the snapshot you commit your changes and push them to GitHub.
 
-When a snapshot test fails, you have to review each change and decide which category it falls under:
+Now the snapshot test passes but makes the wrong assertion about your component's rendered output. Yikes.
 
-1. An intentional change (requiring the snapshot to be updated) 
-1. An accidental change (requiring a bug to be fixed). 
-1. An intentional change that introduces a new bug. These ones can be hard to spot.
+WTF just happened?
 
-This process is tedious and prone to human error, especially when there are lots of changes to review. In this case, an intentional change (adding an attribute) introduced a new bug but was confused with the first category.
+### Sorting the Catch
 
-Snapshot testing is sort of like fishing with a giant net. There's a certain kind of fish you want to catch (bugs), but you end up catching a lot of other stuff, too (intentional changes). The hard part is sifting through your catch and deciding what to keep and what to throw back.
+When a snapshot test fails, you have to manually review each change and decide whether it's a bug or valid change. This process is tedious and prone to human error, especially when there are lots of changes to review.
 
-The risk is that you update a snapshot thinking a change was intentional when it was in fact accidental.
+Snapshot testing is sort of like fishing with a giant net. There's a certain kind of fish you want to catch (bugs), but you end up catching a lot of other stuff, too (valid changes). The hard part is sifting through your catch and deciding what to keep and what to throw back.
 
-<!--
-[jest-styled-components]() includes a component’s style rules in the snapshot. So using `toMatchSnapshot(tree)` will cause the test to fail if _any_ CSS rule has changed.
--->
+The risk is that you update a snapshot thinking a change was valid when it was in fact a bug.
+
+Things get worse if you use [jest-styled-components](https://github.com/styled-components/jest-styled-components) because it stores your component's style rules with the snapshot. That means having to review every line of CSS that changes, too.
+
+### Snapshot Fatigue
+
+After a while, engineers begin to experience something I call _snapshot fatigue_ and start blindly updating failed snapshots. Once that happens, your snapshot tests are pretty much useless.
+
+### Do You Need a Snapshot?
+
+A good test should prevent you from accidentally breaking your component's API. By creating a snapshot test, you're essentially declaring that your component's _entire_ rendered output is part of its API.
+
+In some cases that might be what you want, but often, you want some flexibility to add new features and refactor without breaking your tests. 
+
+
+
+
