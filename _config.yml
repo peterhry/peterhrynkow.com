@@ -5,14 +5,14 @@ description: > # this means to ignore newlines until "baseurl:"
   Peter Hrynkow is a design-savvy tech leader with a passion for building great products and coaching agile teams.
 tagline: Peter writes code and words about code.
 # baseurl: "/peterhrynkow.com"
-url: ""
+url: "https://peterhrynkow.com"
 twitter_username: peterhry
 github_username:  peterhry
 
 # About/contact
 author:
   name: Peter Hrynkow
-  url: http://peterhrynkow.com
+  url: https://peterhrynkow.com
   github: https://github.com/peterhry
   stackoverflow: https://stackoverflow.com/users/1345271/peterhry
   linkedin: http://ca.linkedin.com/pub/peter-hrynkow/20/a90/580
@@ -28,4 +28,3 @@ kramdown:
 theme: jekyll-theme-cayman
 plugins:
   - jekyll-feed
-
