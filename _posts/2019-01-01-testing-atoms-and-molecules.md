@@ -13,7 +13,7 @@ I see a lot of React-Redux apps where components, action creators, and reducers 
 
 ![Files]({{ site.baseurl }}/images/unit-tests.jpg)
 
-Firstly, testing these elements in isolation doesn’t guarantee that they will cooperate when you bring them together. For example, a unit test for an [async action creator](https://redux.js.org/recipes/writing-tests#async-action-creators) asserts that a particular set of actions is dispatched but doesn’t ensure that a reducer is configured to handle it. Similarly, a unit test for a [reducer](https://redux.js.org/recipes/writing-tests#reducers) asserts that a new state is returned for a given action but doesn’t ensure that the component UI is updated to reflect the new state.
+Firstly, testing these elements in isolation doesn’t guarantee that they will work together. For example, a unit test for an [async action creator](https://redux.js.org/recipes/writing-tests#async-action-creators) asserts that a particular set of actions is dispatched but doesn’t ensure that a reducer is configured to handle it. Similarly, a unit test for a [reducer](https://redux.js.org/recipes/writing-tests#reducers) asserts that a new state is returned for a given action but doesn’t ensure that the component UI is updated to reflect the new state.
 
 Secondly, most of these tests require you to mock some other part of the system. For example, the redux docs recommend using [redux-mock-store](https://github.com/dmitry-zaets/redux-mock-store) to test async action creators. As a result, you lose confidence in the integration between what you’re testing and the dependency being mocked.
 
