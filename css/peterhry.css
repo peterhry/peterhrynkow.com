@@ -137,12 +137,6 @@ pre code:after {
   display: block;
 }
 
-.post img {
-  margin-left: -7.5vw;
-  max-width: none;
-  width: 100vw;
-}
-
 /**
  * Main content
  */
@@ -156,12 +150,6 @@ pre code:after {
 @media (min-width: 480px) {
   .main-content {
     width: 75%;
-  }
-  
-  .post img {
-    margin-left: auto;
-    width: auto;
-    max-width: 100%;
   }
 }
 
