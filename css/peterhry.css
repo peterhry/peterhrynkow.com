@@ -137,6 +137,12 @@ pre code:after {
   display: block;
 }
 
+.post img {
+  margin-left: -7.5vw;
+  max-width: none;
+  width: 100vw;
+}
+
 /**
  * Main content
  */
@@ -160,12 +166,6 @@ pre code:after {
 
 .main-content > :first-child {
   margin-top: 0;
-}
-
-.post img {
-  margin-left: -7.5vw;
-  max-width: none;
-  width: 100vw;
 }
 
 /**
