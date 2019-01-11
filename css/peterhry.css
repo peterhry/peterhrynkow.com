@@ -135,7 +135,6 @@ pre code:after {
 .logo {
   width: 6rem;
   display: block;
-  /*margin: 0;*/
 }
 
 /**
@@ -153,7 +152,7 @@ pre code:after {
     width: 75%;
   }
   
-  .main-content img {
+  .post img {
     margin-left: auto;
     margin-right: auto;
   }
@@ -163,13 +162,9 @@ pre code:after {
   margin-top: 0;
 }
 
-.main-content img {
-  max-width: auto;
-  /*
+.post img {
   margin-left: -8.823529411764706%;
   margin-right: -8.823529411764706%;
-  */
-  
 }
 
 /**
