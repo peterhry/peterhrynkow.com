@@ -161,6 +161,7 @@ pre code:after {
   .post img {
     margin-left: auto;
     width: auto;
+    max-width: 100%;
   }
 }
 
