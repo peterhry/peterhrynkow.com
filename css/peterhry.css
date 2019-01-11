@@ -137,8 +137,7 @@ pre code:after {
   display: block;
 }
 
-.post img,
-.post .highlight {
+.post img {
   margin-left: -7.5vw;
   max-width: none;
   width: 100vw;
@@ -159,8 +158,7 @@ pre code:after {
     width: 75%;
   }
   
-  .post img,
-  .post .highlight {
+  .post img {
     margin-left: auto;
     width: auto;
     max-width: 100%;
