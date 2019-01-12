@@ -13,7 +13,7 @@ add(2, 4)
 // 6
 ```
 
-With `Function.bind` you can create a new function from `add` that already has the first argument applied. This technique is called [partial application](https://en.wikipedia.org/wiki/Partial_application) and is used often in functional programming.
+With `Function.bind` you can create a new function based on `add` that has the first argument `a` applied. The new function takes just one argument `b`. This technique is called [partial application](https://en.wikipedia.org/wiki/Partial_application).
 
 ```js
 const add = (a, b) => a + b
