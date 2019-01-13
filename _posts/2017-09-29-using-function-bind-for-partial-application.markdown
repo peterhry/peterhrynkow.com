@@ -5,7 +5,7 @@ date:   2017-09-29 00:00:00
 categories: [functional-programming]
 ---
 
-Here’s a handy functional programming technique I’ve been using lately. Say you have a function that adds two numbers:
+Have you ever found yourself calling the same function with the same argument, over and over again? Here’s a technique that can help reduce the amount of repetition in your code. Say you have a function that adds two numbers:
 ```js
 const add = (a, b) => a + b
 
@@ -13,7 +13,7 @@ add(2, 4)
 // 6
 ```
 
-With `Function.bind` you can create a new function based on `add` that has the first argument `a` applied. The new function takes just one argument `b`. This technique is called [partial application](https://en.wikipedia.org/wiki/Partial_application).
+Using `Function.bind` you can create a new function based on `add` that has the first argument `a` applied. The new function takes just one argument `b`. This technique is called [partial application](https://en.wikipedia.org/wiki/Partial_application).
 
 ```js
 const add = (a, b) => a + b
@@ -28,7 +28,7 @@ addTen(6)
 
 ### How is this useful?
 
-Here’s a situation where partial application comes in handy. Say you want to fetch three different resources from an API, your code might look something like this:
+Say you want to fetch three different resources from an API, your code might look something like this:
 
 ```js
 const apiBaseUrl = 'https://api.myapp.com/api/v1'
