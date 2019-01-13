@@ -59,7 +59,7 @@ Promise.all([
 })
 ```
 
-That looks better but let’s take it a step further. Since `getDataFromAPI` takes a single argument, you can use it to map over an array of resources to fetch.
+That looks better but you can take it a step further. Since `getDataFromAPI` takes a single argument, you can use it to map over an array of resources to fetch.
 
 ```js
 const apiBaseUrl = 'https://api.myapp.com/api/v1'
