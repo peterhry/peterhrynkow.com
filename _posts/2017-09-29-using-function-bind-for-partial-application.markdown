@@ -5,7 +5,7 @@ date:   2017-09-29 00:00:00
 categories: [functional-programming]
 ---
 
-Have you ever found yourself calling the same function with the same argument, over and over again? Well, I have some good news for you, there's a simple technique called [partial application](https://en.wikipedia.org/wiki/Partial_application). that can help you reduce this kind of repetition in your code. Say you have a function that adds two numbers:
+Have you ever found yourself calling the same function with the same argument, over and over again? Well, I have some good news for you, there's a simple technique called [partial application](https://en.wikipedia.org/wiki/Partial_application) that can help you reduce this kind of repetition in your code. Say you have a function that adds two numbers:
 
 ```js
 const add = (a, b) => a + b
