@@ -14,7 +14,7 @@ add(2, 4)
 // 6
 ```
 
-Using `Function.prototype.bind` you can partially apply `add` by giving it just the first argument `a`. The result is a new function that takes the remaining argument `b`.
+Using `Function.prototype.bind` allows you to partially apply a function. If you partially apply `add` with just the first argument `a`, the result is a new function `addTen` that adds `10` to the remaining argument `b`.
 
 ```js
 const add = (a, b) => a + b
@@ -48,7 +48,7 @@ Promise.all([
 
 Notice that `getData` and the first argument `apiBaseUrl` are repeated. You can use partial application to remove this repetition. 
 
-First, you partially apply `getData` by passing it the first argument `baseUrl`. The result is a new function `getDataFromAPI` that takes just one argument `resource`:
+If you partially apply `getData` with just the first argument `baseUrl`, the result is a new function `getDataFromAPI` that takes the remaining  argument `resource`:
 
 ```js
 const apiBaseUrl = 'https://api.myapp.com/api/v1'
@@ -64,7 +64,7 @@ Promise.all([
 })
 ```
 
-That's a bit better. Now `apiBaseUrl` is no longer repeated. Next, I'll show you how to take it a step further and remove the repeated calls to `getDataFromAPI`.
+That's a bit better. `apiBaseUrl` is no longer repeated but you can take it a step further by removing the repeated calls to `getDataFromAPI`.
 
 ### Reducing function call repetition 
 
