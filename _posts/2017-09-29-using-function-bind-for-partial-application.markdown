@@ -14,7 +14,9 @@ add(2, 4)
 // 6
 ```
 
-in JavaScript, `Function.prototype.bind` allows you to partially apply a function. If you partially apply `add`,  fixing the first argument with a value of `10`, the result is a new function that adds `10` to the remaining argument.
+`Function.prototype.bind` allows you to partially apply a function by passing it the arguments you want to fix.
+
+For example, if you partially apply `add`,  fixing the first argument with a value of `10`, the result is a new function `addTen` that adds `10` to the remaining argument.
 
 ```js
 const add = (a, b) => a + b
@@ -27,7 +29,7 @@ addTen(6)
 // 16
 ```
 
-This is a trivial example of partial application. Now I'll show you a more practical example:
+This is a common example of partial application but it’s not that useful in the real world. Here is a more practical example:
 
 ### Reducing argument repetition 
 
@@ -68,7 +70,7 @@ That's a bit better. `apiBaseUrl` is no longer repeated but you can take it a st
 
 ### Reducing function call repetition 
 
-By using partial application, you were able to create a new function `getDataFromAPI` that takes a single argument. This allows you to pass it to the `map` function of an array, like so:
+By using partial application, you created a new function `getDataFromAPI` that takes a single argument. This allows you to pass it to the `map` function of an array, like so:
 
 ```js
 const apiBaseUrl = 'https://api.myapp.com/api/v1'
@@ -81,4 +83,6 @@ Promise.all(['products', 'categories', 'tags'].map(getDataFromAPI)).then(
   }
 )
 ```
+
+Now there is no repetition. The code is concise but is it more readable? Let me know what you think.
 
