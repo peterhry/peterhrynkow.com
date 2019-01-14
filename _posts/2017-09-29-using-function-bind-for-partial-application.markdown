@@ -14,7 +14,7 @@ add(2, 4)
 // 6
 ```
 
-Using `Function.prototype.bind` allows you to partially apply a function. If you partially apply `add` with just the first argument `a`, the result is a new function `addTen` that adds `10` to the remaining argument `b`.
+in JavaScript, `Function.prototype.bind` allows you to partially apply a function. If you partially apply `add`,  fixing the first argument with a value of `10`, the result is a new function that adds `10` to the remaining argument.
 
 ```js
 const add = (a, b) => a + b
@@ -48,7 +48,7 @@ Promise.all([
 
 Notice that `getData` and the first argument `apiBaseUrl` are repeated. You can use partial application to remove this repetition. 
 
-If you partially apply `getData` with just the first argument `baseUrl`, the result is a new function `getDataFromAPI` that takes the remaining  argument `resource`:
+If you partially apply `getData`, fixing the first argument with `apiBaseUrl`, the result is a new function that takes the remaining argument `resource`:
 
 ```js
 const apiBaseUrl = 'https://api.myapp.com/api/v1'
