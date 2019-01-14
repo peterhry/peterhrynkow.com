@@ -5,7 +5,8 @@ date:   2017-09-29 00:00:00
 categories: [functional-programming]
 ---
 
-Have you ever found yourself calling the same function with the same argument, over and over again? Here’s a technique that can help reduce the amount of repetition in your code. Say you have a function that adds two numbers:
+Have you ever found yourself calling the same function with the same argument, over and over again? Well, I have some good news for you, there's a simple technique called [partial application](https://en.wikipedia.org/wiki/Partial_application). that can help you reduce this kind of repetition in your code. Say you have a function that adds two numbers:
+
 ```js
 const add = (a, b) => a + b
 
@@ -13,7 +14,7 @@ add(2, 4)
 // 6
 ```
 
-Using `Function.bind` you can create a new function based on `add` that has the first argument `a` applied. The new function takes just one argument `b`. This technique is called [partial application](https://en.wikipedia.org/wiki/Partial_application).
+Using `Function.prototype.bind` you can partially apply `add` by giving it just the first argument `a`. The result is a new function that takes the remaining argument `b`.
 
 ```js
 const add = (a, b) => a + b
@@ -26,13 +27,15 @@ addTen(6)
 // 16
 ```
 
-### How is this useful?
+This is a trivial example of partial application. Now I'll show you a more practical example:
+
+### Reducing argument repetition 
 
 Say you want to fetch three different resources from an API, your code might look something like this:
 
 ```js
 const apiBaseUrl = 'https://api.myapp.com/api/v1'
-const getData = (baseUrl, path) => fetch(`${baseUrl}/${path}`)
+const getData = (baseUrl, resource) => fetch(`${baseUrl}/${resource}`)
 
 Promise.all([
   getData(apiBaseUrl, 'products'),
@@ -43,15 +46,17 @@ Promise.all([
 })
 ```
 
-By partially applying `getData`, you can avoid repeating `apiBaseUrl` and your code gets a little more concise.
+Notice that `getData` and the first argument `apiBaseUrl` are repeated. You can use partial application to remove this repetition. 
+
+First, you partially apply `getData` by passing it the first argument `baseUrl`. The result is a new function `getDataFromAPI` that takes just one argument `resource`:
 
 ```js
 const apiBaseUrl = 'https://api.myapp.com/api/v1'
-const getData = (baseUrl, path) => fetch(`${baseUrl}/${path}`)
+const getData = (baseUrl, resource) => fetch(`${baseUrl}/${resource}`)
 const getDataFromAPI = getData.bind(null, apiBaseUrl)
 
 Promise.all([
-  getDataFromAPI('products'),
+  ('products'),
   getDataFromAPI('categories'),
   getDataFromAPI('tags'),
 ]).then((responses) => {
@@ -59,7 +64,11 @@ Promise.all([
 })
 ```
 
-That looks better but you can take it a step further. Since `getDataFromAPI` takes a single argument, you can use it to map over an array of resources to fetch.
+That's a bit better. Now `apiBaseUrl` is no longer repeated. Next, I'll show you how to take it a step further and remove the repeated calls to `getDataFromAPI`.
+
+### Reducing function call repetition 
+
+By using partial application, you were able to create a new function `getDataFromAPI` that takes a single argument. This allows you to pass it to the `map` function of an array, like so:
 
 ```js
 const apiBaseUrl = 'https://api.myapp.com/api/v1'
