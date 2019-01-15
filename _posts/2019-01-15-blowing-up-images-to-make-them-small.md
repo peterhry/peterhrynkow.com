@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Blowing Images to Make them Small"
+title: "Blowing Images to Make Them Small"
 date: 2019-01-13 00:00:00
 categories: [performance]
 icon: 🔥
