@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Blowing up Tiny Images for Fun and Profit"
+title: "Blowing Images to Make them Small"
 date: 2019-01-13 00:00:00
 categories: [performance]
 icon: 🔥
