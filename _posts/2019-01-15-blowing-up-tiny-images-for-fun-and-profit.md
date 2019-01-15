@@ -56,8 +56,8 @@ Before you get too excited, this this technique does have one limitation. It wor
 <img src="{{ site.baseurl }}/images/1920x1080-3.jpg" />
 `1920x1080-3.jpg (337 KB)`
 
-<img src="{{ site.baseurl }}/images/16x9-3.png" style="width: 100%; height auto;" />
-`16x9-3.png (21 KB)`
+<img src="{{ site.baseurl }}/images/128x72-2.png" style="width: 100%; height auto;" />
+`128x72-2.png (21 KB)`
 
 ### What’s going on here?
 
