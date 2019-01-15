@@ -10,13 +10,13 @@ Normally, an image looks distorted or pixelated after being enlarged — especia
 Let’s say you want to use this image as a full page background on your website:
 
 <img src="{{ site.baseurl }}/images/1920x1080.jpg" />
-`1920x1080.jpg (23 KB)`
+`1920x1080.jpg (22 KB)`
 
-`23 KB` isn't too bad, but stick a few images like this on the page and things start to add up.
+`22 KB` isn't too bad, but stick a few images like this on the page and things start to add up.
 
 Here’s how you can significantly reduce the file size:
 1. Downsample the image so its dimensions are `32x18`
-1. Export the image as a PNG. The resulting file <img src="{{ site.baseurl }}/images/16x9.png" /> should be around `1 KB`.
+1. Export the image as a PNG. The resulting file <img src="{{ site.baseurl }}/images/32x18.png" /> should be around `1 KB`.
 1. Use the `32x18` image as a CSS background image:
 ```css
 .my-background {
