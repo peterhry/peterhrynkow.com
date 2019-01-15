@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "Hacking Image Interpolation for Fun and Profit"
-date:   2019-01-13 00:00:00
+title: "Blowing Up Tiny Images for Fun and Profit"
+date: 2019-01-13 00:00:00
 categories: [performance]
 icon: 🔥
 ---
@@ -14,7 +14,7 @@ Let’s say you want to use this image as a full page background on your website
 
 `23 KB` isn't too bad, but stick a few images like this on the page and things start to add up.
 
-Here’s how you can significantly reduce the image’s file size:
+Here’s how you can significantly reduce the file size:
 1. Downsample the image so its dimensions are `16x9`
 1. Export the image as a PNG. The resulting file <img src="{{ site.baseurl }}/images/16x9.png" /> should be under `1 KB`.
 1. Use the `16x9` image as a CSS background image:
@@ -37,7 +37,7 @@ Here is the result:
 `16x9.png (307 bytes)`
 
 
-Can you tell the difference? As you can see the upsampled image looks almost identical to the original. [Click here]() for a side by side comparison. Now the background image is only `307 bytes` — that’s a `98.6%`reduction 🎉.
+Can you tell the difference? As you can see, the upsampled image looks almost identical to the original. [Click here]() for a side by side comparison. Now the background image is only `307 bytes` — that’s a `98.6%`reduction 🎉.
 
 Here is another example:
 
@@ -51,7 +51,7 @@ Notice how this image has a bit more detail than the previous one. In this case,
 
 ### Limitations
 
-Before you get too excited, this this technique has some limitations. It works well for images with smooth gradients and few details but look what happens when you blow up this image:
+Before you get too excited, this this technique does have one limitation. It works well for images with smooth gradients and few details but look what happens when you blow up this image:
 
 <img src="{{ site.baseurl }}/images/1920x1080-3.jpg" />
 `1920x1080-3.jpg (337 KB)`
@@ -59,14 +59,15 @@ Before you get too excited, this this technique has some limitations. It works w
 <img src="{{ site.baseurl }}/images/16x9-3.png" style="width: 100%; height auto;" />
 `16x9-3.png (21 KB)`
 
-
 ### What’s going on here?
 
 _Disclaimer: I know very little about image scaling algorithms so please excuse my ignorance when I try to explain how this works._
 
-When the small image is enlarged, the browser uses an [interpolation algorithm](https://en.wikipedia.org/wiki/Image_scaling#Algorithms) to fill in the missing image data. Images with few details yield better results because the interpolated pixels are a closer match the original ones.
+When the small image is enlarged, the browser uses an [interpolation algorithm](https://en.wikipedia.org/wiki/Image_scaling#Algorithms) to fill in the missing image data. Images with few details yield better results because the interpolated pixels are closer to the original ones.
 
 ### Final thoughts
 
-This technique is great for reducing the file size of background images and textures which typically contain few details. Give it a try the next time you're about to export a huge background image from Photoshop or Sketch — you might be surprised how well it works.
+This technique is great for reducing the file size of background images which typically contain few details. It's also great for rendering lightweight mesh gradients — something you can't do with SVG or CSS.
+
+So the next time you're about to export a big background image from Photoshop or Sketch — give this technique a try — you might be surprised how well it works.
 
