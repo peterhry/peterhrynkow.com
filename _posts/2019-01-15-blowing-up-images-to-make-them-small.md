@@ -15,29 +15,29 @@ Let’s say you want to use this image as a full page background on your website
 `23 KB` isn't too bad, but stick a few images like this on the page and things start to add up.
 
 Here’s how you can significantly reduce the file size:
-1. Downsample the image so its dimensions are `16x9`
-1. Export the image as a PNG. The resulting file <img src="{{ site.baseurl }}/images/16x9.png" /> should be under `1 KB`.
-1. Use the `16x9` image as a CSS background image:
+1. Downsample the image so its dimensions are `32x18`
+1. Export the image as a PNG. The resulting file <img src="{{ site.baseurl }}/images/16x9.png" /> should be around `1 KB`.
+1. Use the `32x18` image as a CSS background image:
 ```css
 .my-background {
   width: 1920px;
   height: 1080px;
-  background: url(16x9.png);
+  background: url(32x18.png);
   background-size: cover;
 }
 ```
 or as an `<img>` element:
 ```xml
-  <img src="16x9.png" style="width: 100%; height auto;" />
+  <img src="32x18.png" style="width: 100%; height auto;" />
 ```
 
 Here is the result:
 
-<img src="{{ site.baseurl }}/images/16x9.png" style="width: 100%; height auto;" />
-`16x9.png (307 bytes)`
+<img src="{{ site.baseurl }}/images/32x18.png" style="width: 100%; height auto;" />
+`32x18.png (1443 bytes)`
 
 
-Can you tell the difference? As you can see, the upsampled image looks almost identical to the original. [Click here]() for a side by side comparison. Now the background image is only `307 bytes` — that’s a `98.6%`reduction 🎉.
+Can you tell the difference? As you can see, the upsampled image looks almost identical to the original. [Click here](https://codepen.io/peterhry/pen/maaXZX) for a side by side comparison. Now the background image is only `1443 bytes` — that’s a `97%`reduction 🎉.
 
 Here is another example:
 
