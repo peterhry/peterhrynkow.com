@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Blowing Up Tiny Images for Fun and Profit"
+title: "Blowing up Tiny Images for Fun and Profit"
 date: 2019-01-13 00:00:00
 categories: [performance]
 icon: 🔥
