@@ -5,7 +5,7 @@ date:   2019-01-13 00:00:00
 categories: [performance]
 icon: 🔥
 ---
-Normally, a small image that has been enlarged looks terrible — especially if it contains a graphic like a logo or text — but the technique I'm about to show you is all about blowing up tiny images and the results might surprise you.
+Normally, an image looks distorted or pixelated after being enlarged — especially if it contains a graphic like a logo or text — but the technique I'm about to show you is all about blowing up tiny images and the results might surprise you.
 
 Let’s say you want to use this image as a full page background on your website:
 
@@ -66,5 +66,5 @@ When the small image is enlarged, the browser uses an [interpolation algorithm](
 
 ### Final thoughts
 
-Consider this technique the next time you export a huge background image from Photoshop or Sketch. If the image contains few details, you might be able to significantly reduce its file size.
+You might want to consider this technique the next time you export a huge background image from Photoshop or Sketch. If the image contains few details, you might be able to reduce its file size.p
 
