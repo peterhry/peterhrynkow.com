@@ -46,8 +46,8 @@ Here is another example:
 
 Notice how this image has a bit more detail than the previous one. In this case, the small image will need to be a bit larger `(128x72)` to capture the detail. Finding the right size takes some experimenting.
 
-<img src="{{ site.baseurl }}/images/16x9-2.png" style="width: 100%; height auto;" />
-`16x9-2.png (7 KB)`
+<img src="{{ site.baseurl }}/images/128x72.png" style="width: 100%; height auto;" />
+`128x72.png (7 KB)`
 
 ### Limitations
 
