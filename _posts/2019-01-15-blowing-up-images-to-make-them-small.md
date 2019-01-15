@@ -37,7 +37,7 @@ Here is the result:
 `32x18.png (1443 bytes)`
 
 
-Can you tell the difference? As you can see, the upsampled image looks almost identical to the original. [Click here](https://codepen.io/peterhry/pen/maaXZX) for a side by side comparison. Now the background image is only `1.4KB` 🎉.
+Can you tell the difference? As you can see, the upsampled image looks almost identical to the original. [Click here](https://codepen.io/peterhry/pen/maaXZX) for a side by side comparison. Now the background image is only `1.4KB` — that's a 93.6% decrease 🎉.
 
 Here is another example:
 
