@@ -51,7 +51,7 @@ Notice how this image has a bit more detail than the previous one. In this case,
 
 ### Limitations
 
-Before you get too excited, this this technique does have one limitation. It works well for images with smooth gradients and few details but look what happens when you blow up this image:
+Before you get too excited, this this technique does have one limitation. It works well for images with smooth gradients and few details but look what happens if you blow up this image:
 
 <img src="{{ site.baseurl }}/images/1920x1080-3.jpg" />
 `1920x1080-3.jpg (337 KB)`
