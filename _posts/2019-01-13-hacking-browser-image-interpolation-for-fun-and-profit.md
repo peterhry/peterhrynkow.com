@@ -14,7 +14,7 @@ Let’s say you want to use this image as a full page background on your website
 
 `23 KB` isn't too bad, but stick a few images like this on the page and things start to add up.
 
-Here’s how you can significantly reduce the file size:
+Here’s how you can significantly reduce the image’s file size:
 1. Downsample the image so its dimensions are `16x9`
 1. Export the image as a PNG. The resulting file <img src="{{ site.baseurl }}/images/16x9.png" /> should be under `1 KB`.
 1. Use the `16x9` image as a CSS background image:
@@ -37,7 +37,7 @@ Here is the result:
 `16x9.png (307 bytes)`
 
 
-Can you tell the difference? As you can see, when the browser upsamples the small image, the result looks almost identical to the original. Now the background image is only `307 bytes` — that’s a `98.6%`reduction 🎉.
+Can you tell the difference? As you can see the upsampled image looks almost identical to the original. [Click here]() for a side by side comparison. Now the background image is only `307 bytes` — that’s a `98.6%`reduction 🎉.
 
 Here is another example:
 
