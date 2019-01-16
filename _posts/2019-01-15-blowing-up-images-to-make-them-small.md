@@ -49,6 +49,14 @@ Notice how this image has a bit more detail than the previous one. In this case,
 <img src="{{ site.baseurl }}/images/128x72.png" style="width: 100%; height auto;" />
 `128x72.png (7 KB)`
 
+It also works great for blurry background photos — the kind you might see with text overlayed on top. In this case, saving the image as a jpeg yielded a smaller file size.
+
+<img src="{{ site.baseurl }}/images/1920x1080-4.jpg" />
+`1920x1080-4.jpg (199 KB)`
+
+<img src="{{ site.baseurl }}/images/256x144-4.jpg" style="width: 100%; height auto;" />
+`256x144-4.jpg (10 KB)`
+
 ### Limitations
 
 Before you get too excited, this technique does have one limitation. It works well for images with smooth gradients and few details but look what happens if you blow up this image:
