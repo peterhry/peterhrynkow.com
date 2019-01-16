@@ -17,7 +17,7 @@ Let’s say you want to use this image as a full page background on your website
 Here’s how you can significantly reduce the file size:
 1. Downsample the image so its dimensions are `32x18`
 1. Export the image as a PNG. The resulting file <img src="{{ site.baseurl }}/images/32x18.png" /> should be around `1 KB`.
-1. Use the `32x18` image as a CSS background image:
+1. Use the `32x18` image as a CSS background image that covers its container:
 ```css
 .my-background {
   width: 1920px;
@@ -28,7 +28,7 @@ Here’s how you can significantly reduce the file size:
 ```
 or as an `<img>` element:
 ```xml
-  <img src="32x18.png" style="width: 100%; height auto;" />
+  <img src="32x18.png" style="width: 100%; height: auto;" />
 ```
 
 Here is the result:
@@ -37,7 +37,7 @@ Here is the result:
 `32x18.png (1443 bytes)`
 
 
-Can you tell the difference? As you can see, the upsampled image looks almost identical to the original. [Click here](https://codepen.io/peterhry/pen/maaXZX) for a side by side comparison. Now the background image is only `1.4KB` — that's a 93.6% reduction 🎉.
+Can you tell the difference? As you can see, the stretched image looks almost identical to the original. [Click here](https://codepen.io/peterhry/pen/maaXZX) for a side by side comparison. Now the background image is only `1.4KB` — that's a 93.6% reduction 🎉.
 
 Here is another example:
 
