@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Blowing Up Images to Make Them Small"
+title: "Using Image Interpolation to Create Lightweight, Scalable Raster Images"
 date: 2019-01-13 00:00:00
 categories: [performance]
 icon: 🔥
