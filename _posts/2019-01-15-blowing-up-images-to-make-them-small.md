@@ -75,7 +75,7 @@ When the downsampled image is enlarged, the browser uses an [interpolation algor
 
 ### Final thoughts
 
-This technique is great for reducing the file size of background images which typically contain less detail. It's also great for rendering lightweight mesh gradients — something you can't do with SVG or CSS.
+This technique is great for reducing the file size of background images which typically contain less detail. It's also great for rendering lightweight, scalable mesh gradients — something you can't do with SVG or CSS.
 
 So the next time you're about to export a big background image from Photoshop or Sketch — give this technique a try — you might be surprised how well it works.
 
