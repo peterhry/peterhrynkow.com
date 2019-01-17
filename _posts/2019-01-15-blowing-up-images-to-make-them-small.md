@@ -5,16 +5,18 @@ date: 2019-01-13 00:00:00
 categories: [performance]
 icon: 🔥
 ---
-Normally, a raster image looks distorted or pixelated after being enlarged — especially if it contains graphics or text — but the technique I'm about to show you is all about blowing up tiny images and the results might surprise you.
+Normally, raster images look distorted or pixelated when enlarged — especially if they contain graphics or text — but the technique I'm about to show you is all about blowing up tiny images and the results might surprise you.
 
 Let’s say you want to use this image as a full page background on your website:
 
 <img src="{{ site.baseurl }}/images/1920x1080.jpg" />
 `1920x1080.jpg (22 KB)`
 
-`22 KB` isn't too bad, but stick a few images like this on the page and things start to add up.
+To reduce the file size and support scaling, it would be ideal to use a vector format, but sadly mesh gradients are not supported in SVG or CSS.
 
-Here’s how you can significantly reduce the file size:
+Thankfully, there's another way to achieve both a small file size and scaling using a raster image.
+
+Here’s how it works:
 1. Downsample the image so its dimensions are `32x18`
 1. Export the image as a PNG. The resulting file <img src="{{ site.baseurl }}/images/32x18.png" /> should be around `1 KB`.
 1. Use the `32x18` image as a CSS background image that covers its container:
@@ -36,8 +38,8 @@ Here is the result:
 <img src="{{ site.baseurl }}/images/32x18.png" style="width: 100%; height auto;" />
 `32x18.png (1443 bytes)`
 
-
-Can you tell the difference? As you can see, the stretched image looks almost identical to the original. In fact, it scales up infinitely without any loss in fidelity. [Click here](https://codepen.io/peterhry/pen/maaXZX) for a side by side comparison. The new background image is only `1.4KB` — that's a 93.6% reduction 🎉.
+Can you tell the difference? As you can see, the stretched image looks almost identical to the original. In fact, it scales up infinitely without any loss in fidelity. Better yet,
+the new image is only `1.4KB` — that's a 93.6% reduction 🎉. [Click here](https://codepen.io/peterhry/pen/maaXZX) for a side by side comparison.
 
 Here is another example:
 
