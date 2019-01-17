@@ -37,7 +37,7 @@ Here is the result:
 `32x18.png (1443 bytes)`
 
 
-Can you tell the difference? As you can see, the stretched image looks almost identical to the original. [Click here](https://codepen.io/peterhry/pen/maaXZX) for a side by side comparison. Now the background image is only `1.4KB` — that's a 93.6% reduction 🎉.
+Can you tell the difference? As you can see, the stretched image looks almost identical to the original. In fact, it scales infinitely without any loss in fidelity. [Click here](https://codepen.io/peterhry/pen/maaXZX) for a side by side comparison. The new background image is only `1.4KB` — that's a 93.6% reduction 🎉.
 
 Here is another example:
 
