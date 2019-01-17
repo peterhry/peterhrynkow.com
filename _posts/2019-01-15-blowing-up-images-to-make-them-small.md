@@ -49,7 +49,7 @@ Notice how this image has a bit more detail than the previous one. In this case,
 <img src="{{ site.baseurl }}/images/128x72.png" style="width: 100%; height auto;" />
 `128x72.png (7 KB)`
 
-It also works great for blurry background photos — the kind you might see with text overlayed on top. In this case, saving the image as a jpeg yielded a smaller file size.
+This technique is also suitable for blurred background photos — the kind you typically see with a text overlay. In this case, saving the image as a jpeg yielded a smaller file size.
 
 <img src="{{ site.baseurl }}/images/1920x1080-4.jpg" />
 `1920x1080-4.jpg (199 KB)`
@@ -71,11 +71,11 @@ Before you get too excited, this technique does have one limitation. It works we
 
 _Disclaimer: I know very little about image scaling algorithms so please excuse my ignorance when I try to explain how this works._
 
-When the small image is enlarged, the browser uses an [interpolation algorithm](https://en.wikipedia.org/wiki/Image_scaling#Algorithms) to fill in the missing image data. Images with few details yield better results because the interpolated pixels are closer to the original ones.
+When the downsampled image is enlarged, the browser uses an [interpolation algorithm](https://en.wikipedia.org/wiki/Image_scaling#Algorithms) to fill in the missing image data. Images with less detail yield better results because the interpolated pixels end up being closer to the original ones.
 
 ### Final thoughts
 
-This technique is great for reducing the file size of background images which typically contain few details. It's also great for rendering lightweight mesh gradients — something you can't do with SVG or CSS.
+This technique is great for reducing the file size of background images which typically contain less detail. It's also great for rendering lightweight mesh gradients — something you can't do with SVG or CSS.
 
 So the next time you're about to export a big background image from Photoshop or Sketch — give this technique a try — you might be surprised how well it works.
 
