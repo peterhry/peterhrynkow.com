@@ -12,9 +12,9 @@ Let’s say you want to use this image as a full page background on your website
 <img src="{{ site.baseurl }}/images/1920x1080.jpg" />
 `1920x1080.jpg (22 KB)`
 
-To reduce the file size and support scaling, it would be ideal to use a vector format, but sadly mesh gradients are not supported in SVG or CSS.
+To reduce the file size and support scaling, it would be ideal to use a vector format. Sadly, mesh gradients are not supported in SVG or CSS.
 
-Thankfully, there's another way to achieve both a small file size and scaling using a raster image.
+Fortunately, there's another way to achieve both a small file size and scaling using a raster image.
 
 Here’s how it works:
 1. Downsample the image so its dimensions are `32x18`
