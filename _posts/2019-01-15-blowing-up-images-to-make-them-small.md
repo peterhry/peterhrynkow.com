@@ -49,7 +49,7 @@ Notice how this image has a bit more detail than the previous one. In this case,
 <img src="{{ site.baseurl }}/images/128x72.png" style="width: 100%; height auto;" />
 `128x72.png (7 KB)`
 
-This technique is also suitable for blurred background photos — the kind you typically see with a text overlay. In this case, saving the image as a jpeg yielded a smaller file size.
+This technique is also suitable for blurred background photos — the kind you typically see with a text overlay. In this case, saving the image as a jpeg yields a smaller file size.
 
 <img src="{{ site.baseurl }}/images/1920x1080-4.jpg" />
 `1920x1080-4.jpg (199 KB)`
