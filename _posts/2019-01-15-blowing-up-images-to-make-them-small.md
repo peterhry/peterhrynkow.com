@@ -71,7 +71,7 @@ Before you get too excited, this technique does have one limitation. It works we
 
 ### What’s going on here?
 
-When the downsampled image is enlarged, the browser uses an [interpolation algorithm](https://en.wikipedia.org/wiki/Image_scaling#Algorithms) to fill in the missing image data. Images with less detail yield better results because the interpolated pixels end up being closer to the original ones.
+When the downsampled image is enlarged, the browser uses an [interpolation algorithm](https://en.wikipedia.org/wiki/Image_scaling#Algorithms) — usually bilinear — to fill in the missing image data. Smooth images with less detail can be upsampled without any distortion or pixelation because the interpolated pixels blend in with the real ones.
 
 ### Final thoughts
 
