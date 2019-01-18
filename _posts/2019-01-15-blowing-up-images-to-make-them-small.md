@@ -14,7 +14,7 @@ Let’s say you want to use this image as a full page background on your website
 
 To reduce the file size and support resolution-independent scaling, it would be ideal to use a vector format. Sadly, mesh gradients are not supported in SVG or CSS.
 
-Fortunately, there's another way to achieve both a small file size and scaling using a raster image.
+Fortunately, there's another way to achieve both a small file size and vector-like scaling using a raster image.
 
 Here’s how it works:
 1. Downsample the image so its dimensions are `32x18`
