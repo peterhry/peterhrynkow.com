@@ -12,7 +12,7 @@ Let’s say you want to use this image as a full page background on your website
 <img src="{{ site.baseurl }}/images/1920x1080.jpg" />
 `1920x1080.jpg (22 KB)`
 
-Using SVG or CSS to render the image would be ideal for reducing the file size and providing resolution-independent scaling. Sadly, neither technology supports mesh gradients at this time.
+Using SVG or CSS to render the image would be ideal for reducing the file size and providing resolution-independent scaling. Sadly, [neither technology supports mesh gradients](https://stackoverflow.com/questions/14926189/creating-a-gradient-mesh-in-css-jquery) at this time. 
 
 Fortunately, there's another way to achieve both a small file size and vector-like scaling using a raster image.
 
@@ -75,7 +75,7 @@ When the downsampled image is enlarged, the browser uses an [interpolation algor
 
 ### Final thoughts
 
-This technique is great for reducing the file size of background images which typically contain less detail. It's also great for rendering lightweight, scalable mesh gradients — something you can't do with SVG or CSS.
+This technique is great for reducing the file size of background images which often contain less detail. It's also great for rendering lightweight, scalable mesh gradients — something you can't do with SVG or CSS. Mesh gradients were originally planned for SVG 2.0 but [the feature has since been removed](http://libregraphicsworld.org/blog/entry/gradient-meshes-and-hatching-to-be-removed-from-svg-2-0) from the spec.
 
 So the next time you're about to export a big background image from Photoshop or Sketch — give this technique a try — you might be surprised how well it works.
 
