@@ -43,3 +43,5 @@ Here I am loading the two images inside an SVG container. The alpha channel imag
 - [To work in most browsers](http://codepen.io/shshaw/full/IDbqC/) the SVG must be inline. You can’t move it into an external file and load it with an `<img>` tag.
 - No IE8 support
 - Masks don’t work in older versions of Android
+
+Next up: [Using Image Interpolation to Create Lightweight, Scalable Raster Images](https://peterhrynkow.com/performance/2019/01/15/2019-01-15-blowing-up-images-to-make-them-small.md)
