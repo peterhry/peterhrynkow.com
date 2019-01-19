@@ -61,7 +61,7 @@ This technique is also suitable for blurred background photos — the kind you t
 
 ### Limitations
 
-Before you get too excited, this technique does have one limitation. It works well for images with smooth gradients and few details but look what happens if you blow up this image:
+Before you get too excited, this technique does have one limitation. It works well for smooth gradients and images with less contrast but look what happens if you blow up this image:
 
 <img src="{{ site.baseurl }}/images/1920x1080-3.jpg" />
 `1920x1080-3.jpg (337 KB)`
@@ -71,7 +71,7 @@ Before you get too excited, this technique does have one limitation. It works we
 
 ### What’s going on here?
 
-When the downsampled image is enlarged, the browser uses an [interpolation algorithm](https://en.wikipedia.org/wiki/Image_scaling#Algorithms) — usually bilinear — to fill in the missing image data. Smooth images with less detail can be upsampled without any distortion or pixelation because the interpolated pixels blend in with the real ones.
+When the downsampled image is enlarged, the browser uses an [interpolation algorithm](https://en.wikipedia.org/wiki/Image_scaling#Algorithms) to fill in the missing image data. Smooth images with less contrast can be upsampled without any distortion or pixelation because the interpolated pixels blend in with the original ones.
 
 ### Final thoughts
 
