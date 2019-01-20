@@ -103,6 +103,8 @@ It might surprise you that this test covers every line of code in the action cre
 
 More importantly, this test verifies the relationship between atoms. For example, the test breaks if the component's `onClick` prop is not mapped to the `incrementCounter` action creator or if the reducer fails to handle the `INCREMENT_COUNTER` action.
 
+In some cases it is still necessary to mock dependencies that live outside the molecule. For instance, you might need to mock the `fetch` API if your action creator makes an HTTP request. This is unavoidable unless you use a framework like Cypress or Selenium to test your app from end to end — more on that later.
+
 Integration tests like this one give you more confidence (beyond unit tests alone) that your app will work as expected. So instead of writing a unit test for every atom in your application, zoom out a bit, and write some integration tests for the molecules.
 
 There are still scenarios where it makes sense to write unit tests (shared libraries, modules
