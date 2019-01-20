@@ -73,7 +73,7 @@ Before you get too excited, this technique does have one limitation. It works we
 
 When the downsampled image is enlarged, the browser uses an [interpolation algorithm](https://en.wikipedia.org/wiki/Image_scaling#Algorithms) to fill in the missing image data. Smooth images with less contrast can be upsampled without any distortion or pixelation because the interpolated pixels blend in with the original ones.
 
-### Final thoughts
+### How is this useful?
 
 This technique is great for reducing the file size of background images which often contain less detail. It's also great for rendering lightweight, scalable mesh gradients — something you can't do with SVG or CSS. Mesh gradients were originally planned for SVG 2.0 but [the feature has since been removed](http://libregraphicsworld.org/blog/entry/gradient-meshes-and-hatching-to-be-removed-from-svg-2-0) from the spec.
 
