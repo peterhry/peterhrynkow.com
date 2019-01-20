@@ -13,7 +13,7 @@ Wouldn’t it be great if you could get the compression of a JPEG with the trans
 
 Notice how the beer can on the Sapporo website has a transparent area (it’s hard to notice but there’s a video playing behind it). As a PNG, the beer can graphic would have been over 1.2 MB! So how did I get it down to 271KB?
 
-First, I created two files. The first is a regular JPEG without any transparency. You can compress this one as much as you like. The second is an 8-bit PNG (alpha mask). This is just a black and white image that represents the transparent areas of the beer can. Notice how the PNG is only 11KB; that’s because it contains so few colors and no transparency.
+First, I created two files. The first is a regular JPEG without any transparency. You can compress this one as much as you like. The second is an 8-bit PNG (alpha mask). This is just a grayscale image that represents the transparent areas of the beer can. Notice how the PNG is only 11KB; that’s because it contains so few colors and no transparency.
 
 ![Files]({{ site.baseurl }}/images/2files1.jpg)
 
