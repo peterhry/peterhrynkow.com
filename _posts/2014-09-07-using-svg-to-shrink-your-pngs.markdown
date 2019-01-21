@@ -7,7 +7,7 @@ icon: 🔥
 permalink: how-to-compress-a-png-like-a-jpeg/
 ---
 
-Wouldn’t it be great if you could get the compression of a JPEG with the transparency of a PNG? Well — you can — sort of. Here’s a little trick that I discovered while working on the new<a href="http://sapporobeer.ca" target="_blank"> Sapporo Beer website.</a>
+Wouldn’t it be great if you could get the compression of a JPEG with the transparency of a PNG? Well, you can, sort of. Here’s a little trick that I discovered while working on the new<a href="http://sapporobeer.ca" target="_blank"> Sapporo Beer website.</a>
 
 ![Saporro Beer]({{ site.baseurl }}/images/sapporo.jpg)
 
