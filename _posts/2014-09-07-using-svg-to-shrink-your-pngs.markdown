@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "Using SVG to Shrink Your PNGs"
-date:   2014-09-07 00:00:00
+title: "Using SVG to Shrink Your PNGs"
+date: 2014-09-07 00:00:00
 categories: [performance]
 icon: 🔥
 permalink: how-to-compress-a-png-like-a-jpeg/
