@@ -108,8 +108,10 @@ In some cases it is still necessary to mock dependencies that live outside the m
 
 Integration tests like this one give you more confidence (beyond unit tests alone) that your app will work as expected. So instead of writing a unit test for every atom in your application, zoom out a bit, and write some integration tests for the molecules.
 
-There are still scenarios where it makes sense to write unit tests (shared libraries, modules
+There are scenarios where unit tests are appropriate (shared libraries, modules
 published to npm, etc.) but for testing the behaviour of your application, integration tests are more likely to catch problems.
+
+
 
 ### Tools
 For unit and integration tests, I like [react-testing-library](https://github.com/kentcdodds/react-testing-library) because its guiding principles encourage a black box testing approach. By following this method, you can easily refactor your code without breaking your tests. In contrast, [Enzyme](https://airbnb.io/enzyme/) has methods like [`setState`](https://airbnb.io/enzyme/docs/api/ReactWrapper/setState.html) and [`state`](https://airbnb.io/enzyme/docs/api/ReactWrapper/state.html) that might tempt you to test a component’s implementation details. Doing so makes refactoring more difficult.
