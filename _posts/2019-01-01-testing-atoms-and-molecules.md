@@ -72,7 +72,7 @@ import {render, getByTitle, fireEvent} from 'react-testing-library'
 import 'react-testing-library/cleanup-after-each'
 import 'jest-dom/extend-expect'
 
-import Counter, {incrementCounter, counterReducer} from '../'
+import Counter, {counterReducer} from '../'
 
 // Create a real redux store
 const store = createStore(counterReducer, {
