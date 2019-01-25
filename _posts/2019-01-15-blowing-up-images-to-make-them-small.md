@@ -9,16 +9,18 @@ Normally, raster images look distorted or pixelated when enlarged — especially
 
 Let’s say you want to use this image as a full page background on your website:
 
-<img src="{{ site.baseurl }}/images/1920x1080.jpg" />
+<a href="{{ site.baseurl }}/images/1920x1080.jpg">
+  <img src="{{ site.baseurl }}/images/1920x1080.jpg" />
+</a>
 `1920x1080.jpg (22 KB)`
 
-Using SVG or CSS to render the image would be ideal for reducing the file size and providing resolution-independent scaling. Sadly, [neither technology supports mesh gradients](https://stackoverflow.com/questions/14926189/creating-a-gradient-mesh-in-css-jquery) at this time. 
+Using SVG or CSS to render the image would be ideal for reducing the file size and providing resolution-independent scaling. Sadly, [neither technology supports mesh gradients](https://stackoverflow.com/questions/14926189/creating-a-gradient-mesh-in-css-jquery) at this time.
 
 Fortunately, there's another way to achieve both a small file size and vector-like scaling using a raster image.
 
 Here’s how it works:
 1. Downsample the image so its dimensions are `32x18`
-1. Export the image as a PNG. The resulting file <img src="{{ site.baseurl }}/images/32x18.png" /> should be around `1 KB`.
+1. Export the image as a PNG. The resulting file <a href="{{ site.baseurl }}/images/32x18.png"><img src="{{ site.baseurl }}/images/32x18.png" /></a> should be around `1 KB`.
 1. Use the `32x18` image as a CSS background image that covers its container:
 ```css
 .my-background {
@@ -30,12 +32,14 @@ Here’s how it works:
 ```
 or as an `<img>` element:
 ```xml
-  <img src="32x18.png" style="width: 100%; height: auto;" />
+<img src="32x18.png" style="width: 100%; height: auto;" />
 ```
 
 Here is the result:
 
-<img src="{{ site.baseurl }}/images/32x18.png" style="width: 100%; height auto;" />
+<a href="{{ site.baseurl }}/images/32x18.png">
+  <img src="{{ site.baseurl }}/images/32x18.png" style="width: 100%; height auto;" />
+</a>
 `32x18.png (1443 bytes)`
 
 Can you tell the difference? As you can see, the stretched image looks almost identical to the original. In fact, it scales up infinitely without any loss in fidelity. Better yet,
@@ -43,20 +47,28 @@ the new image is only `1.4KB` — that's a 93.6% reduction 🎉. [Click here](ht
 
 Here is another example:
 
-<img src="{{ site.baseurl }}/images/1920x1080-2.jpg" />
+<a href="{{ site.baseurl }}/images/1920x1080-2.jpg">
+  <img src="{{ site.baseurl }}/images/1920x1080-2.jpg" />
+</a>
 `1920x1080-2.jpg (143 KB)`
 
 Notice how this image has a bit more detail than the previous one. In this case, the small image will need to be a bit larger `(128x72)` to capture the detail. Finding the right size takes some experimenting.
 
-<img src="{{ site.baseurl }}/images/128x72.png" style="width: 100%; height auto;" />
+<a href="{{ site.baseurl }}/images/128x72.png">
+  <img src="{{ site.baseurl }}/images/128x72.png" style="width: 100%; height auto;" />
+</a>
 `128x72.png (7 KB)`
 
 This technique is also suitable for blurred background photos — the kind you typically see combined with a text overlay. In this case, saving the image as a jpeg yields a smaller file size.
 
-<img src="{{ site.baseurl }}/images/1920x1080-4.jpg" />
+<a href="{{ site.baseurl }}/images/1920x1080-4.jpg">
+  <img src="{{ site.baseurl }}/images/1920x1080-4.jpg" />
+</a>
 `1920x1080-4.jpg (199 KB)`
 
-<img src="{{ site.baseurl }}/images/256x144-4.jpg" style="width: 100%; height auto;" />
+<a href="{{ site.baseurl }}/images/256x144-4.jpg">
+  <img src="{{ site.baseurl }}/images/256x144-4.jpg" style="width: 100%; height auto;" />
+</a>
 `256x144-4.jpg (10 KB)`
 
 ### Limitations
