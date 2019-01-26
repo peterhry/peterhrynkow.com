@@ -96,7 +96,7 @@ it('increments the counter', () => {
 })
 ```
 
-Notice that this test uses a real Redux store instead of [redux-mock-store](https://github.com/dmitry-zaets/redux-mock-store). This is so you can test the component from UI event through to UI update. 
+Notice that this test uses a real Redux store instead of [redux-mock-store](https://github.com/dmitry-zaets/redux-mock-store). This is so you can test the component from UI event through to UI update.
 
 It might surprise you that this test covers every line of code in the action creator, reducer, and component. By testing a molecule, you are indirectly testing its atoms.
 
@@ -115,6 +115,6 @@ For unit and integration tests, I like [react-testing-library](https://github.co
 
 ### In Summary
 
-Integration tests give you more confidence in the reliability of your application because they verify the relationships between units of code. 
+Integration tests give you more confidence in the reliability of your application because they verify the relationships between units of code.
 
 Unit tests are better for testing shared libraries or packages that you intend to distribute.
