@@ -1,6 +1,10 @@
-Much has been written about how to _implement_ components on the web— how to build feature X using technology Y — but considerably less has been written about component API design.
+Much has been written about  _implementing_ components on the web — how to build feature X using technology Y. Should you use CSS modules or styled components? Should #usetheplatform and go with Polymer or stick with good old React? This is the _how_ of building components and it's what engineers tend to get most excited about.
 
-Component API design largely transcends technology. In many cases, you can design the API for a component before selecting a technology to implement it.
+Considerably less has been written about component API design — the _why_ and the _what_ — which is strange because I think it's actually more important. 
+
+Component API design largely transcends technology. In many cases, you can design the API for a component before selecting a language and technology to implement it.
+
+Component implementation is largely driven by non-functional requirements like performance, reliability, etc. 
 
 ### Component API Characteristics
 
