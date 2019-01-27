@@ -1,39 +1,63 @@
 ---
 layout: post
-title:  "The Elements of Component API Design"
+title:  "The Forces of Component Design"
 date:   2019-01-26 00:00:00
 categories: [api]
 ---
 
-Should you use CSS modules or styled components? Stick with React or [#usetheplatform](https://twitter.com/polymer)? Much has been written on the subject of implementing components — how to build feature X using technology Y. This is the _how_ of building components and it's what engineers tend to get most excited about. After all, decisions around component implementation are largely driven by requirements like performance, reliability, and even developer experience — the sort of things engineers love to argue about.
+Should you use CSS modules or styled components, go with React or [#usetheplatform](https://twitter.com/polymer)? Choosing technology X to build feature Y — the _how_ of building components — is something engineers spend a lot of time and energy thinking about. After all, decisions around component implementation are largely driven by requirements like performance, reliability, and developer experience — the sort of things engineers love to argue about.
 
-Less has been written about component API design — the _what_ and _why_ of building components — which is strange because it’s actually pretty darn important. Just as there are many ways to _implement_ a component, there are many ways to _design its interface_, and the decisions you make have the potential to impact the success of your project.
+Considerably less time and energy is spent thinking about component _design_ — the _what_ of building components — which is strange because it's pretty darn important. Just as there are many ways to _implement_ a component, there are many ways to _design its API_, and the decisions you make can greatly impact the success of your project, whether it's an application or component library.
 
-After working on two different component library projects — one in Polymer and one in React — I’ve become aware of what works and doesn’t work when it comes to component API design. This post is my attempt to describe the forces that come into play when designing component APIs and to help you avoid some of the pitfalls I’ve encountered.
+After working on two different component library projects — one in Polymer and one in React — I’ve come to learn that within organizations, there are forces that — for better or worse — have the potential to influence the design of component APIs. In this post I will shed some light on these forces and the problems they can cause.
+
+Component API design largely transcends technology. In many cases, you can design the API for a component before selecting a language and technology to implement it.
+
+### Forces
+
+#### Consistency
+
+A consistent is an important 
+
+#### Customizability
+
+#### Prop-driven vs Composition-driven
+
+#### Idealism
+
+#### Pragmatism
+
+Should the design of component API follow the ideals of web standards or break free?
+
+
+### 
+
+Is it better to have one component that does ten things or ten components that do one thing?
+
+### Static vs Dynamic 
 
 
 
 ### What is a Component API?
 
-For a component to be useful it needs to expose an API. The API allows the consumer — that’s you — to control and interact with the component. The API can have inputs — props, children, and methods — and outputs — rendered UI, callbacks, and side effects.
+For a component to be useful it needs to expose an API. The API allows the consumer to control and interact with the component. The API has inputs — props, children, events, and methods — and outputs — rendered UI, events, callbacks, and side effects.
 
 
 #### Props or attributes
 What props or attributes does the component accept? What types?
 
 #### Children
-What children does the component accept? What types, how many? Render props?
+What children does the component accept? What types, how many, does order matter?
 
 #### Instance methods
-Does the component instance expose public methods? This is common for web components
+Does the component expose instance methods? This is common and idiomatic for web components but unheard of in React.
 
 #### Callbacks or events
-What props or attributes does the component accept? What types?
 
 #### Rendered UI
 What UI elements can the user interact with? Buttons, text inputs, drop down menus — these are all part of the component's API.
 
-
+When distributing versioned components, it's easy to introduce new features but much harder to take them away./
 
 There are often diametrically opposed ideas of what a consumer should be allowed to do with a component.
 
@@ -52,8 +76,6 @@ Should the component API expose options for styling and customization or should 
 
 Perhaps the purpose of the component library is to ensure design consistency.
 
-
-Component API design largely transcends technology. In many cases, you can design the API for a component before selecting a language and technology to implement it.
 
 
 
