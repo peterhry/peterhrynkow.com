@@ -5,38 +5,27 @@ date:   2019-01-26 00:00:00
 categories: [api]
 ---
 
-Should you use CSS modules or styled components, go with React or [#usetheplatform](https://twitter.com/polymer)? Choosing technology X to build feature Y — the _how_ of building components — is something engineers spend a lot of time and energy thinking about. After all, decisions around component implementation are largely driven by requirements like performance, reliability, and developer experience — the sort of things engineers love to argue about.
+Should you use CSS modules or styled components, React or Polymer? The _how_ of building components is something engineers spend a lot of time and energy talking about. We pit one technology against another and get into flame wars about which is better. After all, decisions around component implementation are largely driven by requirements like performance and developer experience — the sort of things engineers love to argue about.
 
-Considerably less time and energy is spent thinking about component _design_ — the _what_ of building components — which is strange because it's pretty darn important. Just as there are many ways to _implement_ a component, there are many ways to _design its API_, and the decisions you make can greatly impact the success of your project, whether it's an application or component library.
+Considerably less time and energy is spent thinking about component _design_ — the _why_ and _what_ of building components. Component design largely transcends technology — in many cases, you can design the API for a component long before selecting a technology to implement it. Just as there are many ways to _implement_ a component, there are many ways to _design its API_ — and whether you're building an application or component library — the decisions you make can greatly impact the success of your project.
 
-After working on two different component library projects — one in Polymer and one in React — I’ve come to learn that within organizations, there are forces that — for better or worse — have the potential to influence the design of component APIs. In this post I will shed some light on these forces and the problems they can cause.
+After working on two different component library projects — one in Polymer and one in React — I’ve come to learn that within organizations, there are forces that — for better or worse — influence the design of component APIs. In this post I will shed some light on these forces and the problems they can create.
 
-Component API design largely transcends technology. In many cases, you can design the API for a component before selecting a language and technology to implement it.
+#### Consistency/Uniformity
 
-### Forces
+Some designers might want to ensure that whenever a component is used, its design and experience are consistent. While other designers might resist this idea and want more control.
 
-#### Consistency
+Perhaps the purpose of the component library is to ensure design consistency.
 
-A consistent is an important 
+#### Customization/Theming
 
-#### Customizability
-
-#### Prop-driven vs Composition-driven
+Should the component API expose options for styling and customization or should it limit the consumer to choosing a predefined theme (light, dark, etc.)?
 
 #### Idealism
 
 #### Pragmatism
 
-Should the design of component API follow the ideals of web standards or break free?
-
-
-### 
-
 Is it better to have one component that does ten things or ten components that do one thing?
-
-### Static vs Dynamic 
-
-
 
 ### What is a Component API?
 
@@ -57,24 +46,16 @@ Does the component expose instance methods? This is common and idiomatic for web
 #### Rendered UI
 What UI elements can the user interact with? Buttons, text inputs, drop down menus — these are all part of the component's API.
 
-When distributing versioned components, it's easy to introduce new features but much harder to take them away./
 
-There are often diametrically opposed ideas of what a consumer should be allowed to do with a component.
-
+When distributing versioned components, it's easy to introduce new features but much harder to take them away.
 
 
 
-Some designers might want to ensure that whenever a component is used, its design and experience is consistent. While other designers
 
 
-A
-What are the guiding principals behind the API design?
 
 
-#### Styling
-Should the component API expose options for styling and customization or should it limit the consumer to choosing a predefined theme (light, dark, etc.)?
-
-Perhaps the purpose of the component library is to ensure design consistency.
+What are the guiding principals behind the API desig
 
 
 
