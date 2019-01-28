@@ -17,13 +17,17 @@ Consistent vs flexible, abstract vs concrete — these are some of the factors t
 
 Should the component allow the consumer to override its appearance and behaviour? If so, to what degree? Every team I've worked on has struggled with this question.
 
-Should the component allow its internal elements to be styled with CSS or limit the consumer to choosing a predefined theme (i.e. light, dark)?
+Should the component allow its internal elements to be styled directly or limit the consumer to choosing a predefined theme (i.e. light, dark)?
 
 ### Abstract vs Concrete
 
 Is it better to have one component that does five things or five components that do one thing?
 
 Let me give you a specific example. Is it better to have one universal video player component or one for YouTube, Vimeo, Twitch, etc.?
+
+### Static vs Dynamic
+
+TBC
 
 ### Versioned vs Evergreen
 
