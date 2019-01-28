@@ -11,13 +11,17 @@ Less time is spent thinking about component _design_ — the _why_ and _what_ of
 
 After working on two major component library projects — one built in Polymer, the other in React — I’ve come to understand the importance of deliberate and thoughtful component design. 
 
-Consistent vs flexible, abstract vs concrete — these are some of the factors that influence the design of your components and people within your organization will have different opinions about their priority.
+Consistent vs flexible, abstract vs concrete — it can be a challenge to balance these dichotomies when designing your components.
+
+People within your organization are likely to have different opinions about their priority.
 
 ### Consistent vs Flexible
 
-Should the component allow the consumer to override its appearance and behaviour? If so, to what degree? Every team I've worked on has struggled with this question.
+Should the component allow the consumer to override its appearance and behaviour? If so, to what degree? Every team I've been on has struggled with this question.
 
 Should the component allow its internal elements to be styled directly or limit the consumer to choosing a predefined theme (i.e. light, dark)?
+
+TBC
 
 ### Abstract vs Concrete
 
@@ -25,11 +29,15 @@ Is it better to have one component that does five things or five components that
 
 Let me give you a specific example. Is it better to have one universal video player component or one for YouTube, Vimeo, Twitch, etc.?
 
+TBC 
+
 ### Static vs Dynamic
 
-
+TBC
 
 ### Versioned vs Evergreen
+
+When distributing components, it's easy to introduce new features but much harder to take them away.
 
 TBC
 
@@ -40,7 +48,6 @@ TBC
 ### Props vs Children 
 
 TBC
-
 
 ### What is a Component API?
 
@@ -62,7 +69,7 @@ Does the component expose instance methods? This is idiomatic for web components
 What UI elements can the user interact with? Buttons, text inputs, drop down menus — these are all part of the component's API.
 
 
-When distributing versioned components, it's easy to introduce new features but much harder to take them away.
+
 
 
 
