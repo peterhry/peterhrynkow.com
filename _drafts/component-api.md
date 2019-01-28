@@ -5,29 +5,37 @@ date:   2019-01-26 00:00:00
 categories: [api]
 ---
 
-Should you use CSS modules or styled components, React or Polymer? The _how_ of building UI components is something engineers spend a lot of time thinking about. After all, decisions around component _implementation_ are largely driven by factors like performance and developer experience — the sort of things engineers love to debate.
+Should you use CSS modules or styled components, React or Polymer? The _how_ of building components is something engineers spend a lot of time thinking about. After all, decisions around component _implementation_ are largely driven by factors like performance and developer experience — the sort of things engineers love to debate.
 
 Less time is spent thinking about component _design_ — the _why_ and _what_ of building components. Just as there are many ways to implement a component, there are many ways to design its API. Whether you're building an application or component library, the decisions you make with regards to component design can greatly impact the success of your project.
 
-After working on two major component library projects — one built in Polymer and the other in React — I’ve come to understand the importance of deliberate and thoughtful component design. 
+After working on two major component library projects — one built in Polymer, the other in React — I’ve come to understand the importance of deliberate and thoughtful component design. 
 
-Consistency, flexibility, reusability — these elements have the potential to influence the design of your components and people within your organization will have different opinions about what’s most important.
+Consistent vs flexible, abstract vs concrete — these are some of the factors that influence the design of your components and people within your organization will have different opinions about their priority.
 
-### Consistency
+### Consistent vs Flexible
 
-Should the component enforce a consistent design or allow the consumer to override its appearance?
-
-### Flexibility
+Should the component allow the consumer to override its appearance and behaviour? If so, to what degree? Every team I've worked on has struggled with this question.
 
 Should the component allow its internal elements to be styled with CSS or limit the consumer to choosing a predefined theme (i.e. light, dark)?
 
-### Reusability
+### Abstract vs Concrete
 
-Is it better to have one component that does ten things or ten components that do one thing?
+Is it better to have one component that does five things or five components that do one thing?
 
-### Maintainability
+Let me give you a specific example. Is it better to have one universal video player component or one for YouTube, Vimeo, Twitch, etc.?
 
+### Versioned vs Evergreen
 
+TBC
+
+### Boolean vs Enum
+
+TBC
+
+### Props vs Children 
+
+TBC
 
 
 ### What is a Component API?
@@ -42,7 +50,7 @@ What props or attributes does the component accept? What types?
 What children does the component accept? What types, how many, does order matter?
 
 #### Instance methods
-Does the component expose instance methods? This is common and idiomatic for web components but unheard of in React.
+Does the component expose instance methods? This is idiomatic for web components but unheard of in React.
 
 #### Callbacks or events
 
