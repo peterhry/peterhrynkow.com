@@ -1,25 +1,22 @@
 ---
 layout: post
-title:  "The Forces of Component Design"
+title:  "The Elements of Component Design"
 date:   2019-01-26 00:00:00
 categories: [api]
 ---
 
-Should you use CSS modules or styled components, React or Polymer? The _how_ of building UI components is something engineers spend a lot of time thinking about. After all, decisions around component implementation are largely driven by requirements like performance and developer experience — the sort of things engineers love to debate.
+Should you use CSS modules or styled components, React or Polymer? The _how_ of building UI components is something engineers spend a lot of time thinking about. After all, decisions around component _implementation_ are largely driven by factors like performance and developer experience — the sort of things engineers love to debate.
 
-Considerably less time is spent thinking about component _design_ — the _why_ and _what_ of building components. Component design largely transcends technology — in some cases, you can design the API for a component before selecting a technology for implementation. Just as there are many ways to _implement_ a component, there are many ways to _design its API_ and — whether you're building an application or component library — the decisions you make with regards to component design can greatly impact the success of your project.
+Less time is spent thinking about component _design_ — the _why_ and _what_ of building components. Just as there are many ways to implement a component, there are many ways to design its API. Whether you're building an application or component library, the decisions you make with regards to component design can greatly impact the success of your project.
 
-After working on two major component library projects — one built in Polymer, the other in React — I’ve come to understand the importance of deliberate and thoughtful component API design. People within an organization will have different reasons for wanting a component library and it's important to reconcile these differences early on.
+After working on two major component library projects — one built in Polymer and the other in React — I’ve come to understand the importance of deliberate and thoughtful component design. Consistency, flexibility, reusability — these elements have the potential to influence the design of your components and people within your organization will have different opinions about what’s most important.
 
-### Why Build a Component Library Anyway?
 
-#### Uniformity
+### The Elements
 
-Some designers might want to ensure that whenever a component is used, its design and experience is  consistent. While other designers might resist this idea and want more control.
+#### Consistency
 
-Perhaps the purpose of the component library is to ensure design consistency.
-
-#### Cost-saving
+Does the component library _encourage_ or _enforce_ a consistent design?
 
 #### Flexibility
 
@@ -29,7 +26,8 @@ Should the component API expose options for styling and customization or should 
 
 Is it better to have one component that does ten things or ten components that do one thing?
 
-#### Idealism/Purism
+#### Maintainability
+
 
 
 
