@@ -11,7 +11,7 @@ Less time is spent thinking about component _design_ — the _why_ and _what_ of
 
 After working on two major component library projects — one built in Polymer, the other in React — I’ve come to understand the importance of deliberate and thoughtful component design. The process is not without it's challenges, though.
 
-Consistent vs flexible, abstract vs concrete — it can be difficult to balance these dichotomies when designing your components. Furthermore, people within an organization are likely to have different opinions about what's most important.
+Consistency vs flexibility, abstraction vs concretion — it can be difficult to balance these dichotomies when designing components. Furthermore, people within an organization are likely to disagree about how to balance them.
 
 ### Consistent vs Flexible
 
@@ -65,21 +65,6 @@ Does the component expose instance methods? This is idiomatic for web components
 
 #### Rendered UI
 What UI elements can the user interact with? Buttons, text inputs, drop down menus — these are all part of the component's API.
-
-
-
-
-
-
-
-
-
-
-What are the guiding principals behind the API desig
-
-
-
-
 
 The design of a component's API has huge implications for the consumer:
 
