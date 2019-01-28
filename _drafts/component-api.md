@@ -5,11 +5,13 @@ date:   2019-01-26 00:00:00
 categories: [api]
 ---
 
-Should you use CSS modules or styled components, React or Polymer? The _how_ of building components is something engineers spend a lot of time and energy talking about. We pit one technology against another and get into flame wars about which is better. After all, decisions around component implementation are largely driven by requirements like performance and developer experience — the sort of things engineers love to argue about.
+Should you use CSS modules or styled components, React or Polymer? The _how_ of building UI components is something engineers spend a lot of time thinking about. After all, decisions around component implementation are largely driven by requirements like performance and developer experience — the sort of things engineers love to debate.
 
-Considerably less time and energy is spent thinking about component _design_ — the _why_ and _what_ of building components. Component design largely transcends technology — in many cases, you can design the API for a component long before selecting a technology to implement it. Just as there are many ways to _implement_ a component, there are many ways to _design its API_ — and whether you're building an application or component library — the decisions you make can greatly impact the success of your project.
+Considerably less time is spent thinking about component _design_ — the _why_ and _what_ of building components. Component design largely transcends technology — in some cases, you can design the API for a component before selecting a technology for implementation. Just as there are many ways to _implement_ a component, there are many ways to _design its API_ — and whether you're building an application or component library — the decisions you make can greatly impact the success of your project.
 
-After working on two different component library projects — one in Polymer and one in React — I’ve come to learn that within organizations, there are forces that — for better or worse — influence the design of component APIs. In this post I will shed some light on these forces and the problems they can create.
+After working on two major component library projects — one in Polymer and one in React — I’ve come to understand the importance of deliberate and thoughtful component design. People within an organization will have different goals in mind when starting a component library project and it's important to reconcile these different goals before writing any code.
+
+In this post I will shed some light on these goals and how they can — for better or worse — impact the success of a component library.
 
 #### Consistency/Uniformity
 
