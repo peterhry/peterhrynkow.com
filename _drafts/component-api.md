@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "The Elements of Component Design"
-date:   2019-01-26 00:00:00
+title: "The Elements of Component Design"
+date: 2019-01-26 00:00:00
 categories: [api]
 ---
 
@@ -27,7 +27,7 @@ Let me give you a specific example. Is it better to have one universal video pla
 
 ### Static vs Dynamic
 
-TBC
+
 
 ### Versioned vs Evergreen
 
