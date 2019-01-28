@@ -9,11 +9,9 @@ Should you use CSS modules or styled components, React or Polymer? The _how_ of 
 
 Less time is spent thinking about component _design_ — the _why_ and _what_ of building components. Just as there are many ways to implement a component, there are many ways to design its API. Whether you're building an application or component library, the decisions you make with regards to component design can greatly impact the success of your project.
 
-After working on two major component library projects — one built in Polymer, the other in React — I’ve come to understand the importance of deliberate and thoughtful component design. 
+After working on two major component library projects — one built in Polymer, the other in React — I’ve come to understand the importance of deliberate and thoughtful component design. The process is not without it's challenges, though.
 
-Consistent vs flexible, abstract vs concrete — it can be a challenge to balance these dichotomies when designing your components.
-
-People within your organization are likely to have different opinions about their priority.
+Consistent vs flexible, abstract vs concrete — it can be difficult to balance these dichotomies when designing your components. Furthermore, people within an organization are likely to have different opinions about what's most important.
 
 ### Consistent vs Flexible
 
