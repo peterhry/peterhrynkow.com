@@ -7,7 +7,7 @@ categories: [api]
 
 Should you use CSS modules or styled components, React or Polymer? The _how_ of building UI components is something engineers spend a lot of time thinking about. After all, decisions around component implementation are largely driven by requirements like performance and developer experience — the sort of things engineers love to debate.
 
-Considerably less time is spent thinking about component _design_ — the _why_ and _what_ of building components. Component design largely transcends technology — in some cases, you can design the API for a component before selecting a technology for implementation. Just as there are many ways to _implement_ a component, there are many ways to _design its API_ — and whether you're building an application or component library — the decisions you make can greatly impact the success of your project.
+Considerably less time is spent thinking about component _design_ — the _why_ and _what_ of building components. Component design largely transcends technology — in some cases, you can design the API for a component before selecting a technology for implementation. Just as there are many ways to _implement_ a component, there are many ways to _design its API_ and — whether you're building an application or component library — the decisions you make can greatly impact the success of your project.
 
 After working on two major component library projects — one in Polymer and one in React — I’ve come to understand the importance of deliberate and thoughtful component design. People within an organization will have different goals in mind when starting a component library project and it's important to reconcile these different goals before writing any code.
 
@@ -19,7 +19,7 @@ Some designers might want to ensure that whenever a component is used, its desig
 
 Perhaps the purpose of the component library is to ensure design consistency.
 
-#### Customization/Theming
+#### Flexibility/Themability
 
 Should the component API expose options for styling and customization or should it limit the consumer to choosing a predefined theme (light, dark, etc.)?
 
