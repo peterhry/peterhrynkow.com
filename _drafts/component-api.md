@@ -7,13 +7,22 @@ categories: [api]
 
 Should you use CSS modules or styled components, React or Polymer? The _how_ of building components is something engineers spend a lot of time thinking about. After all, decisions around component _implementation_ are largely driven by factors like performance and developer experience — the sort of things engineers love to debate.
 
-Less time is spent thinking about component _design_ — the _why_ and _what_ of building components. Just as there are many ways to implement a component, there are many ways to design its API. Whether you're building an application or component library, the decisions you make with regards to component design can greatly impact the success of your project.
+Less time is spent thinking about component _design_ — the _why_ and _what_ of building components. Just as there are many ways to implement a component, there are many ways to design its API. 
 
-After working on two major component library projects — one built in Polymer, the other in React — I’ve come to understand the importance of deliberate and thoughtful component design. The process is not without it's challenges, though.
+Whether you're building an application or component-based design system, the decisions you make with regards to component design can greatly impact the success of your project.
 
-Consistency vs flexibility, abstraction vs concretion — it can be difficult to balance these dichotomies when designing components. Furthermore, people within an organization are likely to disagree about how to balance them.
+Having worked on two major component library projects — one built in Polymer, the other in React — I’ve come to understand the importance of deliberate and thoughtful component API design.
 
-### Consistent vs Flexible
+
+
+// why?
+
+The process is not without it's challenges, though.
+
+Flexibility, abstractness, dynamism — it can be difficult to balance these characteristics when designing components. Furthermore, people within an organization are likely to disagree about their priorities.
+
+
+### Flexibility 
 
 Should the component allow the consumer to override its appearance and behaviour? If so, to what degree? Every team I've been on has struggled with this question.
 
@@ -21,7 +30,7 @@ Should the component allow its internal elements to be styled directly or limit 
 
 TBC
 
-### Abstract vs Concrete
+### Abstractness
 
 Is it better to have one component that does five things or five components that do one thing?
 
@@ -29,11 +38,11 @@ Let me give you a specific example. Is it better to have one universal video pla
 
 TBC 
 
-### Static vs Dynamic
+### Dynamism
 
 TBC
 
-### Versioned vs Evergreen
+### Versioning
 
 When distributing components, it's easy to introduce new features but much harder to take them away.
 
