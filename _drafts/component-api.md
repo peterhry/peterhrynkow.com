@@ -13,7 +13,7 @@ Whether you're building an application or component-based design system, the dec
 
 ### Customization
 
-It can be difficult to balance dichotomies like uniformity and customization. For instance, how do you a design a component API for a brand team that wants visual consistency and a project owner who wants customization?
+It can be difficult to balance dichotomies like customization and uniformity. For instance, how do you a design a component API for a brand team that wants visual consistency and a project owner who wants customization?
 
 Should the component allow the consumer to override its appearance and behaviour? If so, to what degree?
 
