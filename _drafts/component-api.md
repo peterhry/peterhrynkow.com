@@ -5,25 +5,29 @@ date: 2019-01-26 00:00:00
 categories: [api]
 ---
 
-Should you use CSS modules or styled components, React or Polymer? The _how_ of building UI components is something engineers spend a lot of time thinking, talking, and arguing about. After all, decisions around component _implementation_ are largely driven by factors like performance and developer experience — the sort of things engineers love to optimize.
+Should you use CSS modules or styled components, React or Polymer? The _how_ of building UI components is something engineers spend a lot of time thinking about. After all, decisions around component _implementation_ are largely driven by factors like performance and developer experience — the sort of things engineers love to optimize.
 
-Just as there are many ways to _implement_ a component, there are many ways to _design its API_. Having worked on two major component library projects — one built in Polymer, the other in React — I’ve come to understand the importance of deliberate and thoughtful API design.
+Just as there are many ways to _implement_ a component, there are many ways to _design its API_, and yet, engineers seem to invest less time in this area. Having worked on two major component library projects — one built in Polymer, the other in React — I’ve come to understand the importance of deliberate and thoughtful API design.
 
-Whether you're building an application or component-based design system, the decisions you make with regards to API design can have a lasting impact on your project. A thoughtfully designed API provides useful abstractions. It's simple yet powerful, well-documented yet intuitive, and in general helps the consumer achieve some goal. Component API design is not without it's challenges, though.
+Whether you're building an application or component-based design system, the decisions you make with regards to API design can have a lasting impact on your project. A thoughtfully designed API provides useful abstractions, is simple yet powerful, well-documented yet intuitive, and in general helps the consumer achieve some goal. Component API design is not without it's challenges, though.
 
 ### Customization
 
-It can be difficult to balance dichotomies like customization and uniformity. For instance, how do you a design a component API for a brand team that wants visual consistency and a project owner who wants customization?
+It can be difficult to balance requirements like consistency and customization. For instance, how do you a design a component API for a brand team that wants visual consistency and a project owner who wants customization?
 
 Should the component allow the consumer to override its appearance and behaviour? If so, to what degree?
 
 Should the component allow its internal elements to be styled directly or limit the consumer to choosing a predefined theme (i.e. light, dark)?
 
+Should the component allow parts or all of its template to be customized?
+
 TBC
 
 ### Abstractness
 
-Is it better to have one component that does five things or five components that do one thing? For instance, is it better to have one universal video player component or one for YouTube, Vimeo, Twitch, etc.?
+Is it better to have one component that does five things or five components that do one thing? 
+
+For instance, you could create one video component that handles video from multiple sources (YouTube, Vimeo, Twitch, etc.) or multiple video components that each handle video from a single source.
 
 TBC
 
@@ -56,7 +60,9 @@ TBC
 
 ### Versioning
 
-When distributing components, it's easy to introduce new features but much harder to take them away.
+When distributing your component library, it's easy to introduce new features but much harder to take them away.
+
+
 
 TBC
 
