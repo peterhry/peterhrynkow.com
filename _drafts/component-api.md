@@ -19,7 +19,7 @@ Should the component allow the consumer to override its appearance and behaviour
 
 Should the component allow its internal elements to be styled directly or limit the consumer to choosing a predefined theme (i.e. light, dark)?
 
-Should the component allow parts or all of its template to be customized?
+Should the component allow parts of its template to be customized?
 
 TBC
 
@@ -27,7 +27,7 @@ TBC
 
 Is it better to have one component that does five things or five components that do one thing? 
 
-For instance, you could create one video component that handles video from multiple sources (YouTube, Vimeo, Twitch, etc.) or multiple video components that each handle video from a single source.
+For instance, you could create one video component that handles video from multiple sources (YouTube, Vimeo, Twitch, etc.) or multiple video components that each handle one source.
 
 TBC
 
@@ -60,9 +60,7 @@ TBC
 
 ### Versioning
 
-When distributing your component library, it's easy to introduce new features but much harder to take them away.
-
-
+When distributing your component library, it's easy to introduce a new feature but much harder to remove it once consumers depend on it.
 
 TBC
 
