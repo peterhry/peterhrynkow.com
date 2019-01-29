@@ -1,30 +1,21 @@
 ---
 layout: post
-title: "The Elements of Component Design"
+title: "The Elements of Component API Design"
 date: 2019-01-26 00:00:00
 categories: [api]
 ---
 
-Should you use CSS modules or styled components, React or Polymer? The _how_ of building components is something engineers spend a lot of time thinking about. After all, decisions around component _implementation_ are largely driven by factors like performance and developer experience — the sort of things engineers love to debate.
+Should you use CSS modules or styled components, React or Polymer? The _how_ of building UI components is something engineers spend a lot of time thinking about. After all, decisions around component _implementation_ are largely driven by factors like performance and developer experience — the sort of things engineers love to optimize.
 
-Less time is spent thinking about component _design_ — the _why_ and _what_ of building components. Just as there are many ways to implement a component, there are many ways to design its API. 
+Just as there are many ways to _implement_ a component, there are many ways to _design its API_. Having worked on two major component library projects — one built in Polymer, the other in React — I’ve come to understand the importance of deliberate and thoughtful API design.
 
-Whether you're building an application or component-based design system, the decisions you make with regards to component design can greatly impact the success of your project.
+Whether you're building an application or component-based design system, the decisions you make with regards to API design can have a lasting impact on your project. A thoughtfully designed API provides useful abstractions. It is simple yet powerful, well-documented yet intuitive, and in general helps the consumer achieve some goal. Component API design is not without it's challenges, though.
 
-Having worked on two major component library projects — one built in Polymer, the other in React — I’ve come to understand the importance of deliberate and thoughtful component API design.
+### Customization
 
+It can be difficult to balance dichotomies like uniformity and customization. For instance, how do you a design a component API for a brand team that wants visual consistency and a project owner who wants customization?
 
-
-// why?
-
-The process is not without it's challenges, though.
-
-Flexibility, abstractness, dynamism — it can be difficult to balance these characteristics when designing components. Furthermore, people within an organization are likely to disagree about their priorities.
-
-
-### Flexibility 
-
-Should the component allow the consumer to override its appearance and behaviour? If so, to what degree? Every team I've been on has struggled with this question.
+Should the component allow the consumer to override its appearance and behaviour? If so, to what degree?
 
 Should the component allow its internal elements to be styled directly or limit the consumer to choosing a predefined theme (i.e. light, dark)?
 
@@ -32,13 +23,34 @@ TBC
 
 ### Abstractness
 
-Is it better to have one component that does five things or five components that do one thing?
+Is it better to have one component that does five things or five components that do one thing? For instance, is it better to have one universal video player component or one for YouTube, Vimeo, Twitch, etc.?
 
-Let me give you a specific example. Is it better to have one universal video player component or one for YouTube, Vimeo, Twitch, etc.?
+TBC
 
-TBC 
+### Composition
 
-### Dynamism
+Composition via props:
+```jsx
+<Tabs items={[
+  {label: 'One'},
+  {label: 'Two'},
+  {label: 'Three'}
+]} />
+```
+
+Composition via children:
+
+```jsx
+<Tabs>
+  <Tab>One</Tab>
+  <Tab>Two</Tab>
+  <Tab>Three</Tab>
+</Tabs>
+```
+
+TBC
+
+### Static vs Dynamic
 
 TBC
 
@@ -48,13 +60,12 @@ When distributing components, it's easy to introduce new features but much harde
 
 TBC
 
+
+<!--
 ### Boolean vs Enum
 
 TBC
 
-### Props vs Children 
-
-TBC
 
 ### What is a Component API?
 
@@ -157,3 +168,4 @@ Finding the right balance is difficult.
 
 
 
+ -->
