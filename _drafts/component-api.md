@@ -25,12 +25,11 @@ TBC
 
 ### Abstractness
 
-Is it better to have one component that does five things or five components that do one thing? 
+Is it better to have one component that does five things or five components that each do one thing? 
 
-For example, you could create one video component that supports multiple video providers (i.e. YouTube, Vimeo, Twitch) or multiple video components that each handle one provider.
+For example, you could create one video component that supports multiple video providers (i.e. YouTube, Vimeo, Twitch) or multiple video components that each support one provider.
 
 Engineers gravitate toward higher levels of abstractions because they allow repeated code to be combined. This reduces file size as well as testing and maintenance effort, but abstraction comes at a cost — especially if done incorrectly.
-
 
 TBC
 
@@ -46,7 +45,13 @@ Composition via children is idiomatic in React and web components.
 </Tabs>
 ```
 
-One thing to note about this pattern, is that it gives the illusion that the component will simply slot the children into its template somewhere. That's not always the case.
+One thing to note about this pattern, is that it gives the illusion that the component will slot the children into its template as is, but that's not always the case.
+
+A component can iterate over its children and render different components in their place:
+
+// add example
+
+
 
 Composition via props is unorthodox:
 
