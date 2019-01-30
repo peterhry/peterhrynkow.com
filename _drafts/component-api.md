@@ -9,7 +9,7 @@ Should you use CSS modules or styled components, React or Polymer? The _how_ of 
 
 Just as there are many ways to _implement_ a component, there are many ways to _design its API_, and yet, engineers seem to invest less time in this area. Having worked on two major component library projects — one built in Polymer, the other in React — I’ve come to understand the importance of deliberate and thoughtful API design.
 
-Whether you're building an application or component-based design system, the decisions you make with regards to API design can have a lasting impact on your project. A thoughtfully designed API provides useful abstractions, is simple yet powerful, well-documented yet intuitive, and in general helps the consumer achieve some goal. Component API design is not without it's challenges, though.
+Whether you're building an application or component-based design system, the decisions you make with regards to API design can have a lasting impact on your project. A thoughtfully designed API provides useful abstractions, is simple yet powerful, well-documented yet intuitive, and in general, helps the consumer achieve some goal. Component API design is not without it's challenges, though.
 
 ### Customization
 
@@ -19,7 +19,7 @@ Should the component allow the consumer to override its appearance and behaviour
 
 Should the component allow its internal elements to be styled directly or limit the consumer to choosing a predefined theme (i.e. light, dark)?
 
-Should the component allow parts of its template to be customized?
+Should the component allow any part of its template to be customized?
 
 TBC
 
