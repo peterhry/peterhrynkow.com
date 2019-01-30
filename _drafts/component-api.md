@@ -27,22 +27,16 @@ TBC
 
 Is it better to have one component that does five things or five components that do one thing? 
 
-For instance, you could create one video component that handles video from multiple sources (YouTube, Vimeo, Twitch, etc.) or multiple video components that each handle one source.
+For example, you could create one video component that supports multiple video providers (i.e. YouTube, Vimeo, Twitch) or multiple video components that each handle one provider.
+
+Engineers gravitate toward higher levels of abstractions because they allow repeated code to be combined. This reduces file size as well as testing and maintenance effort, but abstraction comes at a cost — especially if done incorrectly.
+
 
 TBC
 
 ### Composition
 
-Composition via props:
-```jsx
-<Tabs items={[
-  {label: 'One'},
-  {label: 'Two'},
-  {label: 'Three'}
-]} />
-```
-
-Composition via children:
+Composition via children is idiomatic in React and web components.
 
 ```jsx
 <Tabs>
@@ -50,6 +44,18 @@ Composition via children:
   <Tab>Two</Tab>
   <Tab>Three</Tab>
 </Tabs>
+```
+
+One thing to note about this pattern, is that it gives the illusion that the component will simply slot the children into its template somewhere. That's not always the case.
+
+Composition via props is unorthodox:
+
+```jsx
+<Tabs items={[
+  {label: 'One'},
+  {label: 'Two'},
+  {label: 'Three'}
+]} />
 ```
 
 TBC
@@ -60,7 +66,7 @@ TBC
 
 ### Versioning
 
-When distributing your component library, it's easy to introduce a new feature but much harder to remove it once consumers depend on it.
+When distributing your component library, it's easy to introduce new features but much harder to remove then once consumers depend on them.
 
 TBC
 
