@@ -11,31 +11,25 @@ Just as there are many ways to _implement_ a component, there are many ways to _
 
 Whether you're building an application or component-based design system, the decisions you make with regards to API design can have a lasting impact on your project. A thoughtfully designed API provides useful abstractions, is simple yet powerful, well-documented yet intuitive, and most importantly, helps the consumer achieve some goal. Component API design is not without it's challenges, though.
 
-In this post, I will highlight some common problems that engineers face when designing component-based design systems, and share my experience on how to solve them.
+In this post, I will highlight some common problems that engineers face when designing component APIs and give you some questions to think about.
 
 ### Customization
 
-Component-based design systems improve user experience by allowing design patterns and brand elements to be shared and reused across many sites.
+Component-based design systems improve user experience by increasing visual and functional consistency. However, consumers often want to customize the appearance and/or behavior of components. It can be difficult to reconcile these two opposing ideas.
 
-It can be difficult to reconcile ideas like consistency and customization. For instance, how do you a design a component API for a brand team that wants visual consistency and a project owner who wants customization?
+Should a component enforce visual consistency by restricting access to its template and styles, or is it the role of humans within the organization to police visual consistency?
 
-Should the component library enforce visual consistency or is it the role of humans within the company to enforce this?
+If customization is supported, to what degree should a component allow the consumer to override its appearance and/or behaviour? Should a component allow its internal elements to be styled directly or limit the consumer to choosing a predefined theme (i.e. light, dark)? Should a component allow any part of its template to be customized?
 
-Should the component allow the consumer to override its appearance and/or behaviour? If so, to what degree?
-
-Should the component allow its internal elements to be styled directly or limit the consumer to choosing a predefined theme (i.e. light, dark)?
-
-Should the component allow any part of its template to be customized?
-
-TBC
+How you answer these questions is likely to impact the design of your component APIs.
 
 ### Abstractness
 
-Is it better to have one component that does five things or five components that each do one thing? 
+Is it better to have one component that does five things or five components that each do one thing?
 
 For example, you could create one video component that supports multiple video providers (i.e. YouTube, Vimeo, Twitch) or multiple video components that each support one provider.
 
-Engineers often gravitate toward higher levels of abstractions because they allow repeated code to be combined. This reduces file size as well as testing and maintenance effort, but abstraction comes at a cost — especially if done incorrectly.
+Engineers gravitate toward higher levels of abstractions because they reduce the amout of code repetition. This reduces file size as well as testing and maintenance effort, but abstraction comes at a cost — especially if done incorrectly.
 
 TBC
 
@@ -73,6 +67,12 @@ Composition via props is unorthodox:
 
 Composition via render props
 ```jsx
+const items = [
+  {id: 1, label: 'One'},
+  {id: 2, label: 'Two'},
+  {id: 3, label: 'Three'}
+]
+
 <Tabs renderItems={(selected) =>
   items.map(item =>
     <CoolTab selected={item.id === selected}>{item.label}</CoolTab>
@@ -91,7 +91,7 @@ If your components are used to render static documents like blog posts or docume
 
 ### Versioning
 
-When distributing your component library, it's easy to introduce new features but much harder to remove then once consumers depend on them.
+When distributing your component library, it's easy to introduce a new feature but much harder to remove it once a consumer depends on it.
 
 
 
