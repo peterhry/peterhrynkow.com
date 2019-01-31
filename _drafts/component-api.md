@@ -17,10 +17,9 @@ Component API design is not without its challenges, though. In this post, I will
 
 For a component to be useful, it needs to expose an API. The API allows the consumer to control and interact with the component. It has inputs — props, children, events, and methods — as well as outputs — rendered UI, events, and callbacks.
 
-
 #### Props
 
-Components typically accept input from props. The name and type of each prop is included in the component API.
+The name, type, and shape of each prop (also known as attributes in Polymer) is part of the API.
 
 ```html
 <Button disabled type="submit">Submit</Button>
@@ -28,7 +27,7 @@ Components typically accept input from props. The name and type of each prop is 
 
 #### Children
 
-Components often accept child components. The type and order of child components is part of the API.
+The accepted type and order of children is part of the API.
 
 ```html
 <Tabs>
@@ -40,15 +39,17 @@ Components often accept child components. The type and order of child components
 
 #### Instance methods
 
-Instance methods are common for web components but unheard of in React.
+Instance methods like `play` or `pause`. These are common for web components but unheard of in React.
+
+// add example 
 
 #### Callbacks or events
 
-In React, callbacks are supplied to the component as props. In Polymer, components fire events.
+In React, callbacks are supplied to a component as props. In Polymer, components fire events.
 
 #### Rendered UI
 
-The UI rendered by a component can be considered part of its API.
+In some cases, the UI rendered by a component can be considered part of its API.
 
 
 ### What Impacts Component API Design?
