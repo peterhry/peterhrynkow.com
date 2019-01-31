@@ -9,17 +9,17 @@ Should you use CSS modules or styled components, React or Polymer? The _how_ of 
 
 Just as there are many ways to _implement_ a component, there are many ways to _design its API_, and yet, engineers seem to invest less time in this area. Having worked on two major component library projects — one built in Polymer, the other in React — I’ve come to understand the importance of deliberate and thoughtful API design.
 
-Whether you're building an application or component-based design system, the decisions you make with regards to API design can have a lasting impact on your project. A thoughtfully designed API provides useful abstractions, is simple yet powerful, well-documented yet intuitive, and most importantly, helps the consumer achieve some goal. Component API design is not without it's challenges, though.
+Whether you're building an application or component-based design system, the decisions you make with regards to API design can have a lasting impact on the success of your project. A thoughtfully designed API provides useful abstractions, is simple yet powerful, well-documented yet intuitive — and most importantly — helps the consumer achieve some goal.
 
-In this post, I will highlight some common problems that engineers face when designing component APIs and give you some questions to think about.
+Component API design is not without its challenges, though. In this post, I will share my experience with solving some common problems that engineering teams face when designing component APIs.
 
 ### Customization
 
-Component-based design systems improve user experience by increasing visual and functional consistency. That being said, consumers often want to customize the appearance and/or behavior of components. It can be difficult to reconcile these two opposing ideas.
+It’s no secret that component-based design systems improve user experience by increasing visual consistency. That being said, consumers often want to customize the appearance of components, and it can be difficult to reconcile these two opposing ideas.
 
 Should a component enforce visual consistency by restricting access to its template and styles, or is it the role of humans within the organization to police visual consistency?
 
-If customization is supported, to what degree should a component allow the consumer to override its appearance and/or behaviour? Should a component allow its internal elements to be styled directly or limit the consumer to choosing a predefined theme (i.e. light, dark)? Should a component allow any part of its template to be customized?
+If customization is supported, to what degree should a component allow the consumer to override its appearance? Should a component allow its internal elements to be styled directly or limit the consumer to choosing a predefined theme (i.e. light, dark)? Should a component allow any part of its template to be customized?
 
 How you answer these questions is likely to impact the design of your component APIs.
 
