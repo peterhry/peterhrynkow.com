@@ -13,7 +13,40 @@ Whether you're building an application or component-based design system, the dec
 
 Component API design is not without its challenges, though. In this post, I will share my experience with solving some common problems that engineering teams face when designing component APIs.
 
-### Customization
+### What is a Component API?
+
+For a component to be useful, it needs to expose an API. The API allows the consumer to control and interact with the component. It has inputs — props, children, events, and methods — as well as outputs — rendered UI, events, and callbacks.
+
+
+#### Props or attributes
+What props or attributes does the component accept? What types?
+```html
+<Button disabled type="submit">Submit</Button>
+```
+
+#### Children
+What children does the component accept? What types, how many, does order matter?
+```html
+<Tabs>
+  <Tab id="1">One</Tab>
+  <Tab id="2">Two</Tab>
+  <Tab id="3">Three</Tab>
+</Tabs>
+```
+
+#### Instance methods
+Does the component expose instance methods? Instance methods are common for web components but unheard of in React.
+
+#### Callbacks or events
+In React, callbacks are supplied to the component as props. In Polymer, components fire events.
+
+#### Rendered UI
+What UI elements can the user interact with? Buttons, text inputs, drop down menus — these are all part of the component's API.
+
+
+### What Impacts Component API Design?
+
+#### Customization
 
 It’s no secret that component-based design systems improve user experience by increasing visual consistency. That being said, consumers often want to customize the appearance of components, and it can be difficult to reconcile these two opposing ideas.
 
@@ -23,7 +56,7 @@ If customization is supported, to what degree should a component allow the consu
 
 How you answer these questions is likely to impact the design of your component APIs.
 
-### Abstractness
+#### Abstractness
 
 Is it better to have one component that does five things or five components that each do one thing?
 
@@ -33,7 +66,7 @@ Engineers gravitate toward higher levels of abstractions because they reduce the
 
 TBC
 
-### Composition
+#### Composition
 
 How should your component API support composition?
 
@@ -82,14 +115,14 @@ const items = [
 
 TBC
 
-### Static vs Dynamic
+#### Static vs Dynamic
 
 Do you even need a client-side library to render your component?
 
 If your components are used to render static documents like blog posts or documentation pages, you might not need a client-side component library.
 
 
-### Versioning
+#### Versioning
 
 When distributing your component library, it's easy to introduce a new feature but much harder to remove it once a consumer depends on it.
 
@@ -104,24 +137,6 @@ TBC
 TBC
 
 
-### What is a Component API?
-
-For a component to be useful, it needs to expose an API. The API allows the consumer to control and interact with the component. The API has inputs — props, children, events, and methods — and outputs — rendered UI, events, callbacks, and side effects.
-
-
-#### Props or attributes
-What props or attributes does the component accept? What types?
-
-#### Children
-What children does the component accept? What types, how many, does order matter?
-
-#### Instance methods
-Does the component expose instance methods? This is idiomatic for web components but unheard of in React.
-
-#### Callbacks or events
-
-#### Rendered UI
-What UI elements can the user interact with? Buttons, text inputs, drop down menus — these are all part of the component's API.
 
 The design of a component's API has huge implications for the consumer:
 
