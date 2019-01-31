@@ -15,7 +15,7 @@ In this post, I will highlight some common problems that engineers face when des
 
 ### Customization
 
-Component-based design systems improve user experience by increasing visual and functional consistency. However, consumers often want to customize the appearance and/or behavior of components. It can be difficult to reconcile these two opposing ideas.
+Component-based design systems improve user experience by increasing visual and functional consistency. That being said, consumers often want to customize the appearance and/or behavior of components. It can be difficult to reconcile these two opposing ideas.
 
 Should a component enforce visual consistency by restricting access to its template and styles, or is it the role of humans within the organization to police visual consistency?
 
@@ -29,7 +29,7 @@ Is it better to have one component that does five things or five components that
 
 For example, you could create one video component that supports multiple video providers (i.e. YouTube, Vimeo, Twitch) or multiple video components that each support one provider.
 
-Engineers gravitate toward higher levels of abstractions because they reduce the amout of code repetition. This reduces file size as well as testing and maintenance effort, but abstraction comes at a cost — especially if done incorrectly.
+Engineers gravitate toward higher levels of abstractions because they reduce the amount of code repetition. But abstraction comes at a cost — especially if done incorrectly.
 
 TBC
 
