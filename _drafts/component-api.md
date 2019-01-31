@@ -35,7 +35,7 @@ What children does the component accept? What types, how many, does order matter
 ```
 
 #### Instance methods
-Does the component expose instance methods? Instance methods are common for web components but unheard of in React.
+Does the component instance expose public methods? Instance methods are common for web components but unheard of in React.
 
 #### Callbacks or events
 In React, callbacks are supplied to the component as props. In Polymer, components fire events.
