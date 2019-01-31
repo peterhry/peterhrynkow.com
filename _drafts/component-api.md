@@ -9,13 +9,19 @@ Should you use CSS modules or styled components, React or Polymer? The _how_ of 
 
 Just as there are many ways to _implement_ a component, there are many ways to _design its API_, and yet, engineers seem to invest less time in this area. Having worked on two major component library projects — one built in Polymer, the other in React — I’ve come to understand the importance of deliberate and thoughtful API design.
 
-Whether you're building an application or component-based design system, the decisions you make with regards to API design can have a lasting impact on your project. A thoughtfully designed API provides useful abstractions, is simple yet powerful, well-documented yet intuitive, and in general, helps the consumer achieve some goal. Component API design is not without it's challenges, though.
+Whether you're building an application or component-based design system, the decisions you make with regards to API design can have a lasting impact on your project. A thoughtfully designed API provides useful abstractions, is simple yet powerful, well-documented yet intuitive, and most importantly, helps the consumer achieve some goal. Component API design is not without it's challenges, though.
+
+In this post, I will highlight some common problems that engineers face when designing component-based design systems, and share my experience on how to solve them.
 
 ### Customization
 
-It can be difficult to balance requirements like consistency and customization. For instance, how do you a design a component API for a brand team that wants visual consistency and a project owner who wants customization?
+Component-based design systems improve user experience by allowing design patterns and brand elements to be shared and reused across many sites.
 
-Should the component allow the consumer to override its appearance and behaviour? If so, to what degree?
+It can be difficult to reconcile ideas like consistency and customization. For instance, how do you a design a component API for a brand team that wants visual consistency and a project owner who wants customization?
+
+Should the component library enforce visual consistency or is it the role of humans within the company to enforce this?
+
+Should the component allow the consumer to override its appearance and/or behaviour? If so, to what degree?
 
 Should the component allow its internal elements to be styled directly or limit the consumer to choosing a predefined theme (i.e. light, dark)?
 
@@ -29,11 +35,15 @@ Is it better to have one component that does five things or five components that
 
 For example, you could create one video component that supports multiple video providers (i.e. YouTube, Vimeo, Twitch) or multiple video components that each support one provider.
 
-Engineers gravitate toward higher levels of abstractions because they allow repeated code to be combined. This reduces file size as well as testing and maintenance effort, but abstraction comes at a cost — especially if done incorrectly.
+Engineers often gravitate toward higher levels of abstractions because they allow repeated code to be combined. This reduces file size as well as testing and maintenance effort, but abstraction comes at a cost — especially if done incorrectly.
 
 TBC
 
 ### Composition
+
+How should your component API support composition?
+
+https://twitter.com/brad_frost/status/1090733766950223878?s=21
 
 Composition via children is idiomatic in React and web components.
 
@@ -45,13 +55,11 @@ Composition via children is idiomatic in React and web components.
 </Tabs>
 ```
 
-One thing to note about this pattern, is that it gives the illusion that the component will slot the children into its template as is, but that's not always the case.
+One thing to note about this pattern, is that it gives the impression that the component will slot the children into its template as is, but that's not always the case.
 
 A component can iterate over its children and render different components in their place:
 
 // add example
-
-
 
 Composition via props is unorthodox:
 
@@ -63,15 +71,29 @@ Composition via props is unorthodox:
 ]} />
 ```
 
+Composition via render props
+```jsx
+<Tabs renderItems={(selected) =>
+  items.map(item =>
+    <CoolTab selected={item.id === selected}>{item.label}</CoolTab>
+  )
+} />
+```
+
 TBC
 
 ### Static vs Dynamic
 
-TBC
+Do you even need a client-side library to render your component?
+
+If your components are used to render static documents like blog posts or documentation pages, you might not need a client-side component library.
+
 
 ### Versioning
 
 When distributing your component library, it's easy to introduce new features but much harder to remove then once consumers depend on them.
+
+
 
 TBC
 
