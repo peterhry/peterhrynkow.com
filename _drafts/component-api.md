@@ -131,30 +131,17 @@ If your components are used to render static documents like blog posts or docume
 
 When distributing your component library, it's easy to introduce a new feature but much harder to remove it once consumers depend on it.
 
-
-
 TBC
-
 
 <!--
 ### Boolean vs Enum
 
 TBC
 
-
-
-Can the theme be customized?
-
 Does the component support dependency injection?
-
-Flexibility makes a component more powerful but often comes at the cost of additional complexity.
-
-#### Simplicity
-
 
 #### Consistency
 Are property names consistent?
-
 
 How about across the whole system?
 
@@ -171,29 +158,6 @@ A component exposes a certain amount of API surface area.
 The more surface area is exposed, the more complex the API becomes and consequently the more testing is required.
 
 Finding the right balance is difficult.
-
-
-```jsx
-<Tabs />
-```
-
-```jsx
-<Tabs items={[
-  {label: 'One'},
-  {label: 'Two'},
-  {label: 'Three'}
-]} />
-```
-
-```jsx
-<Tabs>
-  <Tab>One</Tab>
-  <Tab>Two</Tab>
-  <Tab>Three</Tab>
-</Tabs>
-```
-
-
 
 
  -->
