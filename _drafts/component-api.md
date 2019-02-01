@@ -45,11 +45,11 @@ The accepted type and order of children.
 
 #### Callbacks
 
-Callbacks and their signature,  supplied as function props.
+Callbacks and their signatures,  supplied as function props.
 
 #### Rendered Output
 
-Anything rendered by the component. In some cases this can include its styles.
+Anything rendered by the component. In some cases this includes its styles.
 
 ### API Design Problems
 
