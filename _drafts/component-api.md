@@ -9,7 +9,7 @@ Should you use CSS modules or styled components, React or Polymer? The _how_ of 
 
 Just as there are many ways to _implement_ a component, there are many ways to _design its API_. Having worked on two major component library projects — one built in Polymer, the other in React — I’ve come to understand the importance of deliberate and thoughtful API design.
 
-The decisions you make with regards to API design are likely to have a lasting impact on the success and adoption of your component library. A well designed API provides useful abstractions, is simple yet powerful, well-documented yet intuitive, and in general, empowers the user to get things done. In contrast, a poorly designed API is complicated, intimidating, and unpredictable.
+The decisions you make with respect to API design are likely to have a lasting impact on the success and adoption of your component library. A well designed API provides useful abstractions, is simple yet powerful, well-documented yet intuitive, and empowers the user to build interfaces quickly and with ease. In contrast, a poorly designed API is complicated, intimidating, and unpredictable.
 
 <!-- ![BMW Interior]({{ site.baseurl }}/images/bmw-interior.jpg)
 
@@ -17,11 +17,11 @@ Which of these interfaces would you want to use?
 
 ![Tesla Interior]({{ site.baseurl }}/images/tesla-interior.jpg)
  -->
-Component API design is not without its challenges, though. In this post, I will share my thoughts on solving some common problems that teams face when designing component APIs.
+Component API design is not without its challenges, though. In this post, I will describe some common themes that impact API design and share some ideas for solving the problems they present.
 
 ### What is a Component API?
 
-For a component to be useful, it needs to expose an API. The API allows the consumer or user to control and interact with the component. In React, it includes the component's props, children, callbacks, and rendered output. In Polymer, it includes other things like instance methods and events but I won't cover those here.
+For a component to be useful, it needs to expose an API. The API allows the consumer to control and interact with the component. In React, it includes the component's props, children, callbacks, and rendered output. In Polymer, it includes other things like instance methods and events but I won't cover those here.
 
 #### Props
 
@@ -126,7 +126,6 @@ One thing to note about this approach, is that it gives the impression that the 
 A component can iterate over its children and render different components in their place:
 
 // example TBD
-
 
 Composition via render props
 ```jsx
