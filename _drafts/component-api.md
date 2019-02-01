@@ -94,7 +94,7 @@ How should your component API handle composition?
 
 https://twitter.com/brad_frost/status/1090733766950223878?s=21
 
-Composition via children is idiomatic in React and web components.
+Using the `children` prop to perform composition is idiomatic in React.
 
 ```jsx
 <Tabs>
@@ -103,6 +103,8 @@ Composition via children is idiomatic in React and web components.
   <Tab>Three</Tab>
 </Tabs>
 ```
+
+This pattern _lifts_ the responsibility of creating each child component, thus allowing the user to specify the type of component and its props.
 
 One thing to note about this approach, is that it gives the impression that the component will slot the children into its template as is, but that's not always the case.
 
