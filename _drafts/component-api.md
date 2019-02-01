@@ -92,6 +92,22 @@ TBC
 
 How should your component API handle composition?
 
+Using an array or object prop to perform composition is one approach:
+
+```jsx
+<Tabs items={[
+  {label: 'One'},
+  {label: 'Two'},
+  {label: 'Three'}
+]} />
+```
+
+It might seem natural to pass an `array` or `object` to your component if your data is already in this format, but this approach has several drawbacks:
+
+1. The user has no control over how each child component is created so there is no opportunity to specify its type and props.
+1. Documenting the required data structure, its properties, and shape can be cumbersome.
+1. It's unorthodox since no native HTML element receives data in this way.
+
 https://twitter.com/brad_frost/status/1090733766950223878?s=21
 
 Using the `children` prop to perform composition is idiomatic in React.
@@ -104,29 +120,14 @@ Using the `children` prop to perform composition is idiomatic in React.
 </Tabs>
 ```
 
-This pattern _lifts_ the responsibility of creating each child component, thus allowing the user to specify the type of component and its props.
+This pattern _lifts_ the responsibility of creating each child component, thus allowing the user to specify the type of child and its props.
 
 One thing to note about this approach, is that it gives the impression that the component will slot the children into its template as is, but that's not always the case.
 
 A component can iterate over its children and render different components in their place:
 
-// add example
+// example TBD
 
-Composition via props is another approach:
-
-```jsx
-<Tabs items={[
-  {label: 'One'},
-  {label: 'Two'},
-  {label: 'Three'}
-]} />
-```
-
-It might seem natural to hand your component an `array` or `object` if your data is already in this format, but this approach has several drawbacks:
-
-1. The user has no control over the child components that get created
-1. No native HTML element receives data in this way
-1. The data structure, its properties, and shape must be documented somehow.
 
 Composition via render props
 ```jsx
@@ -154,14 +155,18 @@ TBC
 
 #### Static vs Dynamic
 
+<!--
 Do you even need a client-side library to render your component?
 
 If your components are used to render static documents like blog posts or documentation pages, you might not need a client-side component library.
+-->
+
+TBC
 
 
 #### Versioning
-
-When distributing your component library, it's easy to introduce a new feature but much harder to remove it once consumers depend on it.
+<!--
+When distributing your component library, it's easy to introduce a new feature but much harder to remove it once consumers depend on it.-->
 
 TBC
 
