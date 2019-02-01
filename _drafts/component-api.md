@@ -9,11 +9,11 @@ Should you use CSS modules or styled components, React or Polymer? The _how_ of 
 
 Just as there are many ways to _implement_ a component, there are many ways to _design its API_, and yet, engineers seem to invest less time in this area. Having worked on two major component library projects — one built in Polymer, the other in React — I’ve come to understand the importance of deliberate and thoughtful API design.
 
-When building an component-based design system, the decisions you make with regards to API design can have a lasting impact on the success and adoption of your project. A well designed API provides useful abstractions, is simple yet powerful, well-documented yet intuitive.
+The decisions you make with regards to API design are likely to have a lasting impact on the success and adoption of your component-based design system. A well designed API provides useful abstractions, is simple yet powerful, well-documented yet intuitive, and generally empowers the consumer. In contrast, a poorly designed API is complicated, intimidating, and unpredictable.
 
 ![BMW Interior]({{ site.baseurl }}/images/bmw-interior.jpg)
 
-Which of these interfaces do you want to use?
+Which of these interfaces would you want to use?
 
 ![Tesla Interior]({{ site.baseurl }}/images/tesla-interior.jpg)
 
@@ -87,7 +87,7 @@ Composition via children is idiomatic in React and web components.
 </Tabs>
 ```
 
-One thing to note about this pattern, is that it gives the impression that the component will slot the children into its template as is, but that's not always the case.
+One thing to note about this approach, is that it gives the impression that the component will slot the children into its template as is, but that's not always the case.
 
 A component can iterate over its children and render different components in their place:
 
@@ -142,31 +142,6 @@ TBC
 TBC
 
 
-
-The design of a component's API has huge implications for the consumer:
-
-A well designed API is intuitive.
-
-#### Encapsulation
-A well designed API hides complexity without restricting the consumer from achieving their 
-
-The BMW exposes complexity which makes its interface feel overwhelming. In contrast, the Tesla — which has more capabilities than the BMW —  hides complexity behind its touch screen which makes its interface feel less intimidating.
-
-A well designed component API is flexible in that it can be configured and used in different places without the exposing too many options as to overwhelm the consumer.
-
-
-
-
-
-### Component API Characteristics
-
-#### Encapsulation
-Does the component hide its implementation details or expose them in some way?
-
-Does the component have external dependencies that are not bundled with the component?
-
-#### Flexibility
-Can the component be reused in different ways and in different places?
 
 Can the theme be customized?
 
