@@ -55,9 +55,9 @@ Anything rendered by the component. In some cases this includes its styles.
 
 #### Customization
 
-It’s no secret that component-based design systems improve user experience by increasing visual consistency. That being said, consumers often want to customize the appearance of components and it can be difficult to reconcile these two opposing ideas.
+It’s no secret that component-based design systems improve user experience by increasing visual and functional consistency. That being said, consumers often want to customize the appearance of components and it can be difficult to reconcile these two opposing ideas.
 
-Should a component enforce visual consistency by restricting access to its template and styles, or is it the role of humans within the organization to police visual consistency?
+Should a component enforce visual consistency by restricting access to its template and styles, or is it the role of people in the organization to ensure visual consistency?
 
 If customization is supported, to what degree should a component allow the consumer to override its appearance? Should a component allow its internal elements to be styled directly or limit the consumer to choosing a predefined theme (i.e. light, dark)? Should a component allow any part of its template to be customized?
 
@@ -73,7 +73,7 @@ TBC
 
 #### Composition
 
-How should your component API support composition?
+How should your component API handle composition?
 
 https://twitter.com/brad_frost/status/1090733766950223878?s=21
 
@@ -93,7 +93,7 @@ A component can iterate over its children and render different components in the
 
 // add example
 
-Composition via props is unorthodox:
+Composition via props is another approach:
 
 ```jsx
 <Tabs items={[
@@ -102,6 +102,11 @@ Composition via props is unorthodox:
   {label: 'Three'}
 ]} />
 ```
+
+It might seem natural to hand your component an `array` or `object` because your data is stored in this format, but this approach has several drawbacks:
+
+1. No native HTML element receives data in this way so it's a bit unorthodox
+1. The data structure, its properties, and shape must be documented somehow
 
 Composition via render props
 ```jsx
