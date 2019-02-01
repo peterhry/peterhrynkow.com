@@ -7,9 +7,9 @@ categories: [api]
 
 Should you use CSS modules or styled components, React or Polymer? The _how_ of building UI components is something engineers seem to spend a lot of time thinking about. After all, decisions around component _implementation_ are largely driven by factors like performance and developer experience — the sort of things engineers love to geek out on.
 
-Just as there are many ways to _implement_ a component, there are many ways to _design its API_, and yet, engineers seem to invest less time in this area. Having worked on two major component library projects — one built in Polymer, the other in React — I’ve come to understand the importance of deliberate and thoughtful API design.
+Just as there are many ways to _implement_ a component, there are many ways to _design its API_. Having worked on two major component library projects — one built in Polymer, the other in React — I’ve come to understand the importance of deliberate and thoughtful API design.
 
-The decisions you make with regards to API design are likely to have a lasting impact on the success and adoption of your component library. A well designed API provides useful abstractions, is simple yet powerful, well-documented yet intuitive, and in general empowers the user to get things done. In contrast, a poorly designed API is complicated, intimidating, and unpredictable.
+The decisions you make with regards to API design are likely to have a lasting impact on the success and adoption of your component library. A well designed API provides useful abstractions, is simple yet powerful, well-documented yet intuitive, and in general, empowers the user to get things done. In contrast, a poorly designed API is complicated, intimidating, and unpredictable.
 
 <!-- ![BMW Interior]({{ site.baseurl }}/images/bmw-interior.jpg)
 
@@ -17,7 +17,7 @@ Which of these interfaces would you want to use?
 
 ![Tesla Interior]({{ site.baseurl }}/images/tesla-interior.jpg)
  -->
-Component API design is not without its challenges, though. In this post, I will share my experience with solving some common problems that teams face when designing component APIs.
+Component API design is not without its challenges, though. In this post, I will share my thoughts on solving some common problems that teams face when designing component APIs.
 
 ### What is a Component API?
 
@@ -48,13 +48,12 @@ The accepted type and order of children.
 Callback functions and their signatures, supplied as props.
 
 ```jsx
-const onClick = (event) => {
+const onClick = (arg1, arg2) => {
   // Do something
 }
 
 <Button onClick={onClick}>Submit</Button>
 ```
-
 
 #### Rendered Output
 
@@ -64,13 +63,13 @@ Anything rendered by the component. In some cases this includes its styles.
 
 #### Customization
 
-It’s no secret that component-based design systems improve user experience by increasing visual and functional consistency. That being said, users often want to customize the appearance of components. How do you reconcile these opposing ideas?
+It’s no secret that component-based design systems improve user experience by increasing visual and functional consistency. That being said, users often want to customize the appearance of components. How do you reconcile these two opposing ideas?
 
 Should a component enforce visual consistency by restricting access to its template and styles, or is it the role of people in the organization to police consistency?
 
-There right answer to this question really comes down to whether your component library prioritizes consistency or customization. 
+The right answer to this question really comes down to whether your component library prioritizes consistency or customization. It's hard to have both.
 
-If customization is suppported, to what degree should a component allow the user to override its appearance?
+If customization is supported, to what degree should a component allow the user to override its appearance?
 
 Should a component allow its internal elements to be styled directly or only allow the user to choose a predefined theme (i.e. light, dark)?
 
@@ -84,7 +83,7 @@ Is it better to have one component that does five things or five components that
 
 For example, you could create one video component that supports multiple video providers (i.e. YouTube, Vimeo, Twitch) or multiple video components that each support one provider.
 
-Engineers gravitate toward higher levels of abstractions because they reduce the amount of code repetition. But abstraction comes at a cost.
+Engineers gravitate toward higher levels of abstractions because they reduce the amount of code repetition.
 
 TBC
 
@@ -120,7 +119,7 @@ Using the `children` prop to perform composition is idiomatic in React.
 </Tabs>
 ```
 
-This pattern _lifts_ the responsibility of creating each child component, thus allowing the user to specify the type of child and its props.
+This pattern delegates the responsibility of creating each child component to the user, thus allowing them to specify the type of child and its props.
 
 One thing to note about this approach, is that it gives the impression that the component will slot the children into its template as is, but that's not always the case.
 
