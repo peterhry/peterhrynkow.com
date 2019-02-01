@@ -60,7 +60,7 @@ const onClick = (event) => {
 
 Anything rendered by the component. In some cases this includes its styles.
 
-### API Design Problems
+### API Design Themes
 
 #### Customization
 
@@ -68,9 +68,9 @@ It’s no secret that component-based design systems improve user experience by 
 
 Should a component enforce visual consistency by restricting access to its template and styles, or is it the role of people in the organization to police consistency?
 
-There right answer to this question comes down to whether your component library prioritizes consistency or flexibility. 
+There right answer to this question really comes down to whether your component library prioritizes consistency or customization. 
 
-If customization is supported, to what degree should a component allow the user to override its appearance?
+If customization is suppported, to what degree should a component allow the user to override its appearance?
 
 Should a component allow its internal elements to be styled directly or only allow the user to choose a predefined theme (i.e. light, dark)?
 
@@ -92,7 +92,7 @@ TBC
 
 How should your component API handle composition?
 
-Using an array or object prop to perform composition is one approach:
+Using an `array` or `object` prop to perform composition is one approach:
 
 ```jsx
 <Tabs items={[
@@ -153,48 +153,8 @@ TBC
 
 - large teams?
 
-#### Static vs Dynamic
-
-<!--
-Do you even need a client-side library to render your component?
-
-If your components are used to render static documents like blog posts or documentation pages, you might not need a client-side component library.
--->
-
-TBC
-
-
 #### Versioning
 <!--
 When distributing your component library, it's easy to introduce a new feature but much harder to remove it once consumers depend on it.-->
 
 TBC
-
-<!--
-### Boolean vs Enum
-
-TBC
-
-Does the component support dependency injection?
-
-#### Consistency
-Are property names consistent?
-
-How about across the whole system?
-
-#### Ergonomics
-
-Do you have to constantly reference the documentation or can you intuit other properties of the API?
-
-
-
-### API surface area
-
-A component exposes a certain amount of API surface area.
-
-The more surface area is exposed, the more complex the API becomes and consequently the more testing is required.
-
-Finding the right balance is difficult.
-
-
- -->
