@@ -5,23 +5,23 @@ date: 2019-01-26 00:00:00
 categories: [api]
 ---
 
-Should you use CSS modules or styled components, React or Polymer? The _how_ of building UI components is something engineers spend a lot of time thinking about. After all, decisions around component _implementation_ are largely driven by factors like performance and developer experience — the sort of things engineers love to geek out on.
+Should you use CSS modules or styled components, React or Polymer? The _how_ of building UI components is something engineers seem to spend a lot of time thinking about. After all, decisions around component _implementation_ are largely driven by factors like performance and developer experience — the sort of things engineers love to geek out on.
 
 Just as there are many ways to _implement_ a component, there are many ways to _design its API_, and yet, engineers seem to invest less time in this area. Having worked on two major component library projects — one built in Polymer, the other in React — I’ve come to understand the importance of deliberate and thoughtful API design.
 
-The decisions you make with regards to API design are likely to have a lasting impact on the success and adoption of your component-based design system. A well designed API provides useful abstractions, is simple yet powerful, well-documented yet intuitive, and generally empowers the consumer. In contrast, a poorly designed API is complicated, intimidating, and unpredictable.
+The decisions you make with regards to API design are likely to have a lasting impact on the success and adoption of your component library. A well designed API provides useful abstractions, is simple yet powerful, well-documented yet intuitive, and in general empowers the user to get things done. In contrast, a poorly designed API is complicated, intimidating, and unpredictable.
 
-![BMW Interior]({{ site.baseurl }}/images/bmw-interior.jpg)
+<!-- ![BMW Interior]({{ site.baseurl }}/images/bmw-interior.jpg)
 
 Which of these interfaces would you want to use?
 
 ![Tesla Interior]({{ site.baseurl }}/images/tesla-interior.jpg)
-
+ -->
 Component API design is not without its challenges, though. In this post, I will share my experience with solving some common problems that teams face when designing component APIs.
 
 ### What is a Component API?
 
-For a component to be useful, it needs to expose an API. The API allows the consumer to control and interact with the component. In React, it includes the component's props, children, callbacks, and rendered output. In Polymer, it includes other things like instance methods and events but I won't cover those here.
+For a component to be useful, it needs to expose an API. The API allows the consumer or user to control and interact with the component. In React, it includes the component's props, children, callbacks, and rendered output. In Polymer, it includes other things like instance methods and events but I won't cover those here.
 
 #### Props
 
@@ -45,7 +45,16 @@ The accepted type and order of children.
 
 #### Callbacks
 
-Callbacks and their signatures,  supplied as function props.
+Callback functions and their signatures, supplied as props.
+
+```jsx
+const onClick = (event) => {
+  // Do something
+}
+
+<Button onClick={onClick}>Submit</Button>
+```
+
 
 #### Rendered Output
 
@@ -55,11 +64,15 @@ Anything rendered by the component. In some cases this includes its styles.
 
 #### Customization
 
-It’s no secret that component-based design systems improve user experience by increasing visual and functional consistency. That being said, consumers often want to customize the appearance of components and it can be difficult to reconcile these two opposing ideas.
+It’s no secret that component-based design systems improve user experience by increasing visual and functional consistency. That being said, users often want to customize the appearance of components and it can be difficult to reconcile these two opposing ideas.
 
-Should a component enforce visual consistency by restricting access to its template and styles, or is it the role of people in the organization to ensure visual consistency?
+Should a component enforce visual consistency by restricting access to its template and styles, or is it the role of people in the organization to ensure consistency?
 
-If customization is supported, to what degree should a component allow the consumer to override its appearance? Should a component allow its internal elements to be styled directly or limit the consumer to choosing a predefined theme (i.e. light, dark)? Should a component allow any part of its template to be customized?
+If customization is supported, to what degree should a component allow the user to override its appearance?
+
+Should a component allow its internal elements to be styled directly or limit the user to choosing a predefined theme (i.e. light, dark)?
+
+Should a component allow any part of its template to be customized?
 
 #### Abstractness
 
@@ -67,7 +80,7 @@ Is it better to have one component that does five things or five components that
 
 For example, you could create one video component that supports multiple video providers (i.e. YouTube, Vimeo, Twitch) or multiple video components that each support one provider.
 
-Engineers gravitate toward higher levels of abstractions because they reduce the amount of code repetition. But abstraction comes at a cost — especially if carried out incorrectly.
+Engineers gravitate toward higher levels of abstractions because they reduce the amount of code repetition. But abstraction comes at a cost.
 
 TBC
 
@@ -126,7 +139,7 @@ const items = [
 TBC
 
 
-#### Consistency 
+#### Consistency
 
 - large teams?
 
