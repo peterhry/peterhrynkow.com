@@ -5,13 +5,19 @@ date: 2019-01-26 00:00:00
 categories: [api]
 ---
 
-Should you use CSS modules or styled components, React or Polymer? The _how_ of building UI components is something engineers spend a lot of time thinking about. After all, decisions around component _implementation_ are largely driven by factors like performance and developer experience — the sort of things engineers love to optimize.
+Should you use CSS modules or styled components, React or Polymer? The _how_ of building UI components is something engineers spend a lot of time thinking about. After all, decisions around component _implementation_ are largely driven by factors like performance and developer experience — the sort of things engineers love to geek out on.
 
 Just as there are many ways to _implement_ a component, there are many ways to _design its API_, and yet, engineers seem to invest less time in this area. Having worked on two major component library projects — one built in Polymer, the other in React — I’ve come to understand the importance of deliberate and thoughtful API design.
 
-Whether you're building an application or component-based design system, the decisions you make with regards to API design can have a lasting impact on the success of your project. A well designed API provides useful abstractions, is simple yet powerful, well-documented yet intuitive — and most importantly — helps the consumer achieve some goal.
+When building an component-based design system, the decisions you make with regards to API design can have a lasting impact on the success and adoption of your project. A well designed API provides useful abstractions, is simple yet powerful, well-documented yet intuitive.
 
-Component API design is not without its challenges, though. In this post, I will share my experience with solving some common problems that engineering teams face when designing component APIs.
+![BMW Interior]({{ site.baseurl }}/images/bmw-interior.jpg)
+
+Which of these interfaces do you want to use?
+
+![Tesla Interior]({{ site.baseurl }}/images/tesla-interior.jpg)
+
+Component API design is not without its challenges, though. In this post, I will share my experience with solving some common problems that teams face when designing component APIs.
 
 ### What is a Component API?
 
@@ -55,15 +61,13 @@ Should a component enforce visual consistency by restricting access to its templ
 
 If customization is supported, to what degree should a component allow the consumer to override its appearance? Should a component allow its internal elements to be styled directly or limit the consumer to choosing a predefined theme (i.e. light, dark)? Should a component allow any part of its template to be customized?
 
-How you answer these questions is likely to impact the design of your component APIs.
-
 #### Abstractness
 
 Is it better to have one component that does five things or five components that each do one thing?
 
 For example, you could create one video component that supports multiple video providers (i.e. YouTube, Vimeo, Twitch) or multiple video components that each support one provider.
 
-Engineers gravitate toward higher levels of abstractions because they reduce the amount of code repetition. But abstraction comes at a cost — especially if done incorrectly.
+Engineers gravitate toward higher levels of abstractions because they reduce the amount of code repetition. But abstraction comes at a cost — especially if carried out incorrectly.
 
 TBC
 
@@ -125,7 +129,7 @@ If your components are used to render static documents like blog posts or docume
 
 #### Versioning
 
-When distributing your component library, it's easy to introduce a new feature but much harder to remove it once a consumer depends on it.
+When distributing your component library, it's easy to introduce a new feature but much harder to remove it once consumers depend on it.
 
 
 
@@ -144,11 +148,7 @@ The design of a component's API has huge implications for the consumer:
 A well designed API is intuitive.
 
 #### Encapsulation
-A well designed API hides complexity without restricting the consumer from achieving their goal. Compare these two car interiors.
-
-![BMW Interior]({{ site.baseurl }}/images/bmw-interior.jpg)
-
-![Tesla Interior]({{ site.baseurl }}/images/tesla-interior.jpg)
+A well designed API hides complexity without restricting the consumer from achieving their 
 
 The BMW exposes complexity which makes its interface feel overwhelming. In contrast, the Tesla — which has more capabilities than the BMW —  hides complexity behind its touch screen which makes its interface feel less intimidating.
 
