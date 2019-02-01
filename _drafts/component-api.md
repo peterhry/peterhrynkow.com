@@ -120,6 +120,11 @@ const items = [
 
 TBC
 
+
+#### Consistency 
+
+- large teams?
+
 #### Static vs Dynamic
 
 Do you even need a client-side library to render your component?
