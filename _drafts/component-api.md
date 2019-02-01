@@ -64,15 +64,19 @@ Anything rendered by the component. In some cases this includes its styles.
 
 #### Customization
 
-It’s no secret that component-based design systems improve user experience by increasing visual and functional consistency. That being said, users often want to customize the appearance of components and it can be difficult to reconcile these two opposing ideas.
+It’s no secret that component-based design systems improve user experience by increasing visual and functional consistency. That being said, users often want to customize the appearance of components. How do you reconcile these opposing ideas?
 
-Should a component enforce visual consistency by restricting access to its template and styles, or is it the role of people in the organization to ensure consistency?
+Should a component enforce visual consistency by restricting access to its template and styles, or is it the role of people in the organization to police consistency?
+
+There right answer to this question comes down to whether your component library prioritizes consistency or flexibility. 
 
 If customization is supported, to what degree should a component allow the user to override its appearance?
 
-Should a component allow its internal elements to be styled directly or limit the user to choosing a predefined theme (i.e. light, dark)?
+Should a component allow its internal elements to be styled directly or only allow the user to choose a predefined theme (i.e. light, dark)?
 
 Should a component allow any part of its template to be customized?
+
+TBC
 
 #### Abstractness
 
@@ -116,10 +120,11 @@ Composition via props is another approach:
 ]} />
 ```
 
-It might seem natural to hand your component an `array` or `object` because your data is stored in this format, but this approach has several drawbacks:
+It might seem natural to hand your component an `array` or `object` if your data is already in this format, but this approach has several drawbacks:
 
-1. No native HTML element receives data in this way so it's a bit unorthodox
-1. The data structure, its properties, and shape must be documented somehow
+1. The user has no control over the child components that get created
+1. No native HTML element receives data in this way
+1. The data structure, its properties, and shape must be documented somehow.
 
 Composition via render props
 ```jsx
@@ -135,6 +140,8 @@ const items = [
   )
 } />
 ```
+
+Composition using a render prop gives the most control to the user.
 
 TBC
 
