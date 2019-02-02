@@ -89,9 +89,11 @@ TBC
 
 #### Composition
 
-How should your component API handle composition?
+The solutions that exist for managing composition, delegate varying degrees of control to the consumer.
 
-Using an `array` or `object` prop to perform composition is one approach:
+This thread from Brad Frost highlights some of the trade offs.
+
+Using an `array` or `object` prop to manage composition is one approach. Here the component is saying "Please give me the data —I'll take care of rendering".
 
 ```jsx
 <Tabs items={[
@@ -101,15 +103,15 @@ Using an `array` or `object` prop to perform composition is one approach:
 ]} />
 ```
 
-It might seem natural to pass an `array` or `object` to your component if your data is already in this format, but this approach has several drawbacks:
+It might seem natural to pass an `array` or `object` to your component if your data is already in this format, but this method has several drawbacks:
 
-1. The user has no control over how each child component is created so there is no opportunity to specify its type and props.
+1. The consumer has no control over how each child component is created so there is no opportunity to specify its type and props.
 1. Documenting the required data structure, its properties, and shape can be cumbersome.
 1. It's unorthodox since no native HTML element receives data in this way.
 
-https://twitter.com/brad_frost/status/1090733766950223878?s=21
+`children` prop 
 
-Using the `children` prop to perform composition is idiomatic in React.
+Using the `children` prop to manage composition is idiomatic in React. Here the component is saying "Please give me the children and I'll slot them in somewhere".
 
 ```jsx
 <Tabs>
@@ -119,11 +121,14 @@ Using the `children` prop to perform composition is idiomatic in React.
 </Tabs>
 ```
 
-This pattern is more flexible since it allows the consumer to specify the type of child component and its props.
+This pattern is more flexible since it allows the consumer to specify the type of each child component and its props.
 
-// example TBD
 
-Using a render prop to perform composition is an advanced pattern that delegates all aspects of rendering to the consumer. 
+Render Prop
+
+Using a render prop to manage composition is an advanced pattern that delegates all aspects of rendering to the consumer. Furthermore, it allows the consumer to receive information about the component's state before rendering the children.
+
+Here the component is saying "Please render the children — and by the way — here is some information about my state in case you need it."
 
 ```jsx
 const items = [
@@ -139,8 +144,7 @@ const items = [
 } />
 ```
 
-TBC
-
+What approach is best? It depends. Does you component prioritize consistency or flexibility.
 
 #### Consistency
 
