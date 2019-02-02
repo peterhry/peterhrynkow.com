@@ -160,16 +160,4 @@ const items = [
 } />
 ```
 
-What approach is best? Again, It depends whether your component library prioritizes consistency or flexibility.
-
-### Consistency
-
-<!-- - large teams? -->
-
-TBC
-
-### Versioning
-<!--
-When distributing your component library, it's easy to introduce a new feature but much harder to remove it once consumers depend on it.-->
-
-TBC
+What approach is best? Again, it depends whether your component library prioritizes consistency or flexibility. If you want to lock down the design then maybe an `array` prop is best. If you want ultimate flexibility then go for a render prop.
