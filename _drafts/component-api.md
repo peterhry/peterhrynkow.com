@@ -5,42 +5,55 @@ date: 2019-01-26 00:00:00
 categories: [api]
 ---
 
-Should you use CSS modules or styled components, React or Polymer? The _how_ of building UI components is something engineers spend a lot of time thinking about. After all, decisions around component _implementation_ are largely driven by factors like performance and developer experience — the sort of things engineers love to geek out on.
+Should you use React or Polymer, CSS modules or styled components? The _how_ of building UI components is something engineers spend a lot of time thinking about. After all, decisions around component _implementation_ are largely driven by factors like performance and developer experience — the sort of things engineers love to geek out on.
 
 Just as there are many ways to _implement_ a component, there are many ways to _design its API_. Having worked on two major component library projects — one built in Polymer, the other in React — I’ve come to understand the importance of deliberate and thoughtful API design.
 
-The decisions you make with respect to API design are likely to have a lasting impact on the success and adoption of your component library. A well designed API provides useful abstractions, is simple yet powerful, well-documented yet intuitive, and empowers the user to build interfaces quickly and with ease. In contrast, a poorly designed API is complicated, intimidating, and unpredictable.
+The design of your API can have a lasting impact on the success and adoption of your component library. A well designed API is simple yet powerful, well-documented yet intuitive, and empowers the user to build interfaces quickly and with ease. In contrast, a poorly designed API is complicated, unintuitive, and frustrating to use.
 
-Component API design is not without its challenges, though. In this post, I will describe some common themes that impact API design and share some ideas for solving the problems they present.
+Component API design is not without its challenges, though. In this post, I will share my thoughts on some common API design problems.
 
 ### What is a Component API?
 
-For a component to be useful, it needs to expose an API. The API allows the consumer to control and interact with the component. In React, it includes:
+A component API is a contract between the component and consumer that describes how the two parties can communicate. In React, a component API includes, but is not limited to:
 
-#### Props
+#### The name and type of each prop
 
-The name, type, and shape of each prop. This component exposes a `boolean` prop called `disabled` and a `string` prop called `type`.
-
-```jsx 
-<Button disabled type="submit">Submit</Button>
+This `Button` component expects the receive `boolean` value for its `disabled` props and a `string` value for its `type` prop.
+```jsx
+() => <Button disabled type="submit">Submit</Button>
 ```
 
-The signature of `function` props is also included in the API.
+#### The shape of object and array props
 
-```jsx 
+This `List` component expects its `items` prop to be an `array` where each element is an object with an `id: number` and `label: string` property.
+
+```jsx
+() => <List items={[
+  {id: 1, label: 'One'},
+  {id: 2, label: 'Two'}
+]} />
+```
+
+
+#### The signature of function props
+
+The consumer expects this component to call `onClick` with `arg1` and `arg2`.
+
+```jsx
 const onClick = (arg1, arg2) => {
-  // This function expects to be called with arg1 and arg2
+  // Do something
 }
 
-<Button onClick={onClick}>Submit</Button>
+() => <Button onClick={onClick}>Submit</Button>
 ```
 
-#### Children
+#### The accepted type of children
 
-The accepted type of children.
+This component accepts `Tab` components as children.
 
-```html
-<Tabs>
+```jsx
+() => <Tabs>
   <Tab id="1">One</Tab>
   <Tab id="2">Two</Tab>
   <Tab id="3">Three</Tab>
@@ -49,9 +62,9 @@ The accepted type of children.
 
 #### Rendered Output
 
-Anything rendered by the component. In some cases this includes its styles.
+This may include parts or all of the component's rendered output.
 
-### API Design Themes
+### API Design Problems
 
 #### Customization
 
@@ -101,7 +114,7 @@ It might seem natural to pass an `array` or `object` to your component if your d
 1. Documenting the required data structure, its properties, and shape can be cumbersome.
 1. It's unorthodox since no native HTML element receives data in this way.
 
-`children` prop 
+`children` prop
 
 Using the `children` prop to manage composition is idiomatic in React. Here the component is saying "Please give me the children and I'll slot them in somewhere".
 

@@ -87,9 +87,8 @@ p, ul, ol, dl, pre, blockquote {
   margin: var(--ms2) 0 0 0;
 }
 
-ul {
-  padding: 0;
-  list-style: none;
+ul, ol {
+  padding-left: var(--ms1);
 }
 
 blockquote {
@@ -139,6 +138,18 @@ pre code:after {
 .logo {
   width: 6rem;
   display: block;
+}
+
+/**
+ * Article list
+ */
+.article-list {
+  list-style: none;
+  padding: 0;
+}
+
+.article-list li {
+  margin-bottom: var(--ms2);
 }
 
 /**
