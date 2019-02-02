@@ -9,9 +9,9 @@ Should you use React or Polymer, CSS modules or styled components?  Engineers sp
 
 Just as there are many ways to _implement_ a component, there are many ways to _design its API_. Having worked on two major component library projects — one built in Polymer, the other in React — I’ve come to understand the importance of deliberate and thoughtful API design.
 
-The design of your API can have a lasting impact on the success and adoption of your component library. A well designed API is simple yet powerful, well-documented yet intuitive, and empowers the user to build interfaces quickly and with ease. In contrast, a poorly designed API is complicated, unintuitive, and frustrating to use.
+The design of your API can have a lasting impact on the success and adoption of your component library. A well designed API is simple yet powerful, well-documented yet intuitive, and empowers the user to build interfaces quickly and with ease. In contrast, a poorly designed API is complicated, unintuitive, and frustrating.
 
-Component API design is not without its challenges, though. In this post, I will share my thoughts on some common API design problems. All of these problems boil down to a single question: Does your component library prioritize flexibility or consistency?
+Component API design is not without its challenges, though. In this post, I will share my thoughts on some common API design problems, all of these problems boil down to a single question: Does your component library prioritize flexibility or consistency?
 
 First, let’s go over the various parts of a component API.
 
