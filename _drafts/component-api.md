@@ -11,29 +11,33 @@ Just as there are many ways to _implement_ a component, there are many ways to _
 
 The decisions you make with respect to API design are likely to have a lasting impact on the success and adoption of your component library. A well designed API provides useful abstractions, is simple yet powerful, well-documented yet intuitive, and empowers the user to build interfaces quickly and with ease. In contrast, a poorly designed API is complicated, intimidating, and unpredictable.
 
-<!-- ![BMW Interior]({{ site.baseurl }}/images/bmw-interior.jpg)
-
-Which of these interfaces would you want to use?
-
-![Tesla Interior]({{ site.baseurl }}/images/tesla-interior.jpg)
- -->
 Component API design is not without its challenges, though. In this post, I will describe some common themes that impact API design and share some ideas for solving the problems they present.
 
 ### What is a Component API?
 
-For a component to be useful, it needs to expose an API. The API allows the consumer to control and interact with the component. In React, it includes the component's props, children, callbacks, and rendered output. In Polymer, it includes other things like instance methods and events but I won't cover those here.
+For a component to be useful, it needs to expose an API. The API allows the consumer to control and interact with the component. In React, it includes:
 
 #### Props
 
-The name, type, and shape of each prop.
+The name, type, and shape of each prop. This component exposes a `boolean` prop called `disabled` and a `string` prop called `type`.
 
-```html
+```jsx 
 <Button disabled type="submit">Submit</Button>
+```
+
+The signature of `function` props is also included in the API.
+
+```jsx 
+const onClick = (arg1, arg2) => {
+  // This function expects to be called with arg1 and arg2
+}
+
+<Button onClick={onClick}>Submit</Button>
 ```
 
 #### Children
 
-The accepted type and order of children.
+The accepted type of children.
 
 ```html
 <Tabs>
@@ -41,18 +45,6 @@ The accepted type and order of children.
   <Tab id="2">Two</Tab>
   <Tab id="3">Three</Tab>
 </Tabs>
-```
-
-#### Callbacks
-
-Callback functions and their signatures, supplied as props.
-
-```jsx
-const onClick = (arg1, arg2) => {
-  // Do something
-}
-
-<Button onClick={onClick}>Submit</Button>
 ```
 
 #### Rendered Output
@@ -89,7 +81,7 @@ TBC
 
 #### Composition
 
-The solutions that exist for managing composition, delegate varying degrees of control to the consumer.
+The solutions that exist for managing composition offer the consumer varying degrees of control over the children being rendered.
 
 This thread from Brad Frost highlights some of the trade offs.
 
