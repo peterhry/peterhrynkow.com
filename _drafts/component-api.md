@@ -5,7 +5,7 @@ date: 2019-01-26 00:00:00
 categories: [api]
 ---
 
-Should you use CSS modules or styled components, React or Polymer? The _how_ of building UI components is something engineers seem to spend a lot of time thinking about. After all, decisions around component _implementation_ are largely driven by factors like performance and developer experience — the sort of things engineers love to geek out on.
+Should you use CSS modules or styled components, React or Polymer? The _how_ of building UI components is something engineers spend a lot of time thinking about. After all, decisions around component _implementation_ are largely driven by factors like performance and developer experience — the sort of things engineers love to geek out on.
 
 Just as there are many ways to _implement_ a component, there are many ways to _design its API_. Having worked on two major component library projects — one built in Polymer, the other in React — I’ve come to understand the importance of deliberate and thoughtful API design.
 
@@ -119,15 +119,11 @@ Using the `children` prop to perform composition is idiomatic in React.
 </Tabs>
 ```
 
-This pattern provides a bit more flexibility by allowing the consumer to specify the type of child component and its props.
-
-One thing to note about this approach, is that it gives the impression that the component will slot the children into its template as is, but that's not always the case.
-
-A component can iterate over its children and render different components in their place:
+This pattern is more flexible since it allows the consumer to specify the type of child component and its props.
 
 // example TBD
 
-Using a render prop to perform composition is an advanced pattern that delegates all aspects of rendering to the consumer.
+Using a render prop to perform composition is an advanced pattern that delegates all aspects of rendering to the consumer. 
 
 ```jsx
 const items = [
@@ -142,8 +138,6 @@ const items = [
   )
 } />
 ```
-
-Composition using a render prop gives the most control to the user.
 
 TBC
 
