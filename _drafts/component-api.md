@@ -11,11 +11,11 @@ Just as there are many ways to _implement_ a component, there are many ways to _
 
 The design of your API can have a lasting impact on the success and adoption of your component library. A well designed API is simple yet powerful, well-documented yet intuitive, and empowers the user to build interfaces quickly and with ease. In contrast, a poorly designed API is complicated, unintuitive, and frustrating to use.
 
-Component API design is not without its challenges, though. In this post, I will share my thoughts on some common API design themes.
+Component API design is not without its challenges, though. In this post, I will share my thoughts on some common API design problems.
 
 ### What is a Component API?
 
-A component API is a contract between the component and consumer that governs how the two parties can communicate. In React, a component API includes, but is not limited to:
+A component API is a contract between the component and its consumer that governs how the two parties can communicate. In React, a component API includes, but is not limited to:
 
 #### The name and type of each prop
 
@@ -35,17 +35,16 @@ This `List` component expects its `items` prop to be an `array` where each eleme
 ]} />
 ```
 
-
 #### The signature of function props
 
-The consumer expects this component to call `onClick` with `arg1` and `arg2`.
+The consumer expects this component to call `onProgress` with `loaded: number` and `total: number`.
 
 ```jsx
-const onClick = (arg1, arg2) => {
-  // Do something
+const onProgress = (loaded, total) => {
+  const percentage = loaded / total
 }
 
-() => <Button onClick={onClick}>Submit</Button>
+() => <Loader onProgress={onProgress}></Loader>
 ```
 
 #### The accepted type of children
@@ -60,11 +59,11 @@ This component expects to receive `Tab` components as children.
 </Tabs>
 ```
 
-### API Design Themes
+### API Design Problems
 
 #### Customization
 
-It’s no secret that component-based design systems improve user experience by increasing visual and functional consistency. That being said, users often want to customize the appearance of components. How do you reconcile these two opposing ideas?
+It’s no secret that component-based design systems improve user experience by increasing visual and functional consistency. That being said, users often want to customize the appearance and behaviour of components. How do you reconcile these two opposing ideas?
 
 Should a component enforce visual consistency by restricting access to its template and styles, or is it the role of people in the organization to police consistency?
 
