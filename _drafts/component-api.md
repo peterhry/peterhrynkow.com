@@ -5,7 +5,7 @@ date: 2019-01-26 00:00:00
 categories: [api]
 ---
 
-Should you use React or Polymer, CSS modules or styled components?  Engineers seem to obsess over the _how_ of building UI components. After all, decisions around component _implementation_ are largely driven by factors like performance and developer experience — the sort of things engineers love to optimize.
+Should you use React or Polymer, CSS modules or styled components?  Engineers spend a lot of time thinking about the _how_ of building UI components. After all, decisions around component _implementation_ are largely driven by factors like performance and developer experience — the sort of things engineers love to optimize.
 
 Just as there are many ways to _implement_ a component, there are many ways to _design its API_. Having worked on two major component library projects — one built in Polymer, the other in React — I’ve come to understand the importance of deliberate and thoughtful API design.
 
