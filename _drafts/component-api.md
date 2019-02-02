@@ -11,11 +11,11 @@ Just as there are many ways to _implement_ a component, there are many ways to _
 
 The design of your API can have a lasting impact on the success and adoption of your component library. A well designed API is simple yet powerful, well-documented yet intuitive, and empowers the user to build interfaces quickly and with ease. In contrast, a poorly designed API is complicated, unintuitive, and frustrating to use.
 
-Component API design is not without its challenges, though. In this post, I will share my thoughts on some common API design problems.
+Component API design is not without its challenges, though. In this post, I will share my thoughts on some common API design themes.
 
 ### What is a Component API?
 
-A component API is a contract between the component and consumer that describes how the two parties can communicate. In React, a component API includes, but is not limited to:
+A component API is a contract between the component and consumer that governs how the two parties can communicate. In React, a component API includes, but is not limited to:
 
 #### The name and type of each prop
 
@@ -50,7 +50,7 @@ const onClick = (arg1, arg2) => {
 
 #### The accepted type of children
 
-This component accepts `Tab` components as children.
+This component expects to receive `Tab` components as children.
 
 ```jsx
 () => <Tabs>
@@ -60,11 +60,7 @@ This component accepts `Tab` components as children.
 </Tabs>
 ```
 
-#### Rendered Output
-
-This may include parts or all of the component's rendered output.
-
-### API Design Problems
+### API Design Themes
 
 #### Customization
 
@@ -72,11 +68,11 @@ It’s no secret that component-based design systems improve user experience by 
 
 Should a component enforce visual consistency by restricting access to its template and styles, or is it the role of people in the organization to police consistency?
 
-The right answer to this question really comes down to whether your component library prioritizes consistency or customization. It's hard to have both.
+The right answer to this question really boils down to whether your component library prioritizes consistency or customization. It's hard to have both.
 
-If customization is supported, to what degree should a component allow the user to override its appearance?
+If customization is supported, to what degree should a component allow the consumer to override its appearance?
 
-Should a component allow its internal elements to be styled directly or only allow the user to choose a predefined theme (i.e. light, dark)?
+Should a component allow its internal elements to be styled directly or only allow the consumer to choose a predefined theme (i.e. light, dark)?
 
 Should a component allow any part of its template to be customized?
 
@@ -94,11 +90,11 @@ TBC
 
 #### Composition
 
-The solutions that exist for managing composition offer the consumer varying degrees of control over the children being rendered.
+The solutions that exist for managing composition in React provide the consumer with varying degrees of control over the children being rendered.
 
-This thread from Brad Frost highlights some of the trade offs.
+This thread from Brad Frost highlights some of the trade offs between different approaches.
 
-Using an `array` or `object` prop to manage composition is one approach. Here the component is saying "Please give me the data —I'll take care of rendering".
+Using an `array` or `object` prop to manage composition is an approach that is suitable for design systems that prioritize consistency over customization. Here the component is saying "Just give me the data —I'll take care of rendering".
 
 ```jsx
 <Tabs items={[
@@ -108,15 +104,18 @@ Using an `array` or `object` prop to manage composition is one approach. Here th
 ]} />
 ```
 
-It might seem natural to pass an `array` or `object` to your component if your data is already in this format, but this method has several drawbacks:
+Pros:
+- Ensures that the correct type of child component is created.
+- The consumer doesn't need to know what type of child component to supply.
 
-1. The consumer has no control over how each child component is created so there is no opportunity to specify its type and props.
-1. Documenting the required data structure, its properties, and shape can be cumbersome.
-1. It's unorthodox since no native HTML element receives data in this way.
+Cons:
+- The consumer has no control over how each child component is created so there is no opportunity to specify its type and props.
+- Documenting the required data structure, its properties, and shape can be cumbersome.
+- It's unorthodox since no native HTML element receives data this way.
 
 `children` prop
 
-Using the `children` prop to manage composition is idiomatic in React. Here the component is saying "Please give me the children and I'll slot them in somewhere".
+Using the `children` prop to manage composition is idiomatic in React. Here the component is saying "Give me the children and I'll slot them in somewhere".
 
 ```jsx
 <Tabs>
@@ -126,7 +125,11 @@ Using the `children` prop to manage composition is idiomatic in React. Here the 
 </Tabs>
 ```
 
-This pattern is more flexible since it allows the consumer to specify the type of each child component and its props.
+Pros: 
+- Allows the consumer to specify the type of each child component and its props.
+
+Cons:
+- The consumer might pass in the wrong type of component.
 
 
 Render Prop
@@ -149,7 +152,7 @@ const items = [
 } />
 ```
 
-What approach is best? It depends. Does you component prioritize consistency or flexibility.
+What approach is best? Again, It depends. Does you component prioritize consistency or flexibility.
 
 #### Consistency
 
