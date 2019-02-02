@@ -11,7 +11,7 @@ Just as there are many ways to _implement_ a component, there are many ways to _
 
 The design of your API can have a lasting impact on the success and adoption of your component library. A well designed API is simple yet powerful, well-documented yet intuitive, and empowers the user to build interfaces quickly and with ease. In contrast, a poorly designed API is complicated, unintuitive, and frustrating.
 
-Component API design is not without its challenges, though. In this post, I will share my thoughts on some common API design problems, all of these problems boil down to a single question: Does your component library prioritize flexibility or consistency?
+Component API design is not without its challenges, though. In this post, I will share my thoughts on some common API design problems — all of which boil down to a single question: Does your component library prioritize flexibility or consistency?
 
 First, let’s go over the various parts of a component API.
 
@@ -69,7 +69,7 @@ Should a component enforce visual consistency by restricting access to its templ
 
 Is it the role of technology or people to police consistency?
 
-The right answer to this question really boils down to whether your component library prioritizes consistency or customization. It's hard to have both.
+The right answer to this question really boils down to whether your component library prioritizes flexibility or customization.
 
 If customization is supported, to what degree should a component allow the consumer to override its appearance?
 
