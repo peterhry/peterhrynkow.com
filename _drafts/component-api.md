@@ -11,7 +11,9 @@ Just as there are many ways to _implement_ a component, there are many ways to _
 
 The design of your API can have a lasting impact on the success and adoption of your component library. A well designed API is simple yet powerful, well-documented yet intuitive, and empowers the user to build interfaces quickly and with ease. In contrast, a poorly designed API is complicated, unintuitive, and frustrating to use.
 
-Component API design is not without its challenges, though. In this post, I will share my thoughts on some common API design problems.
+Component API design is not without its challenges, though. In this post, I will share my thoughts on some common API design problems. All of these problems boil down to a single question: Does your component library prioritize flexibility or consistency?
+
+First, let’s go over the various parts of a component API.
 
 ### What is a Component API?
 
@@ -59,9 +61,7 @@ This component expects to receive `Tab` components as children.
 </Tabs>
 ```
 
-### API Design Problems
-
-#### Customization
+### Customization
 
 It’s no secret that component-based design systems improve user experience by increasing visual and functional consistency. That being said, users often want to customize the appearance and behaviour of components. How do you reconcile these two opposing ideas?
 
@@ -79,7 +79,7 @@ Should a component allow any part of its template to be customized?
 
 TBC
 
-#### Abstractness
+### Abstractness
 
 Is it better to have one component that does five things or five components that each do one thing?
 
@@ -87,23 +87,29 @@ For example, you could create one video component that supports multiple video p
 
 Engineers gravitate toward higher levels of abstractions because they reduce the amount of code repetition.
 
+When it comes to component design, it’s best to follow the single responsibility principle.
+
+Instead of creating a single video component, you could consolidate the common pieces of the component — the control bar,
+
 TBC
 
-#### Composition
+### Composition
 
 In React, solutions for managing composition provide the consumer with varying degrees of control over the children being rendered.
 
 This thread from Brad Frost highlights some of the trade offs between different approaches.
 
-Using an `array` or `object` prop to manage composition is suitable for component libraries that prioritize consistency over customization. 
+#### Array or object prop
 
-Here the component is saying "Just give me the data —I'll take care of rendering".
+Using an `array` or `object` prop to manage composition is suitable for component libraries that prioritize consistency over customization.
+
+Here the component is saying "Just give me the data —I'll take care of the rendering".
 
 ```jsx
-<Tabs items={[
-  {label: 'One'},
-  {label: 'Two'},
-  {label: 'Three'}
+() => <Tabs items={[
+  {id: 1, label: 'One'},
+  {id: 2, label: 'Two'},
+  {id: 3, label: 'Three'}
 ]} />
 ```
 
@@ -116,26 +122,25 @@ Cons:
 - Documenting the required data structure, its properties, and shape can be cumbersome.
 - It's unorthodox since no native HTML element receives data this way.
 
-`children` prop
+#### Children Prop
 
 Using the `children` prop to manage composition is idiomatic in React. Here the component is saying "Give me the children and I'll slot them in somewhere".
 
 ```jsx
-<Tabs>
-  <Tab>One</Tab>
-  <Tab>Two</Tab>
-  <Tab>Three</Tab>
+() => <Tabs>
+  <Tab id="1">One</Tab>
+  <Tab id="2">Two</Tab>
+  <Tab id="3">Three</Tab>
 </Tabs>
 ```
 
-Pros: 
+Pros:
 - Allows the consumer to specify the type of each child component and its props.
 
 Cons:
 - The consumer might pass in the wrong type of component.
 
-
-Render Prop
+#### Render Prop
 
 Using a render prop to manage composition is an advanced pattern that delegates all aspects of rendering to the consumer. Furthermore, it allows the consumer to receive information about the component's state before rendering the children.
 
@@ -148,20 +153,22 @@ const items = [
   {id: 3, label: 'Three'}
 ]
 
-<Tabs renderItems={(selected) =>
+() => <Tabs renderItems={(selectedId) =>
   items.map(item =>
-    <CoolTab selected={item.id === selected}>{item.label}</CoolTab>
+    <Tab key={item.id} selected={item.id === selectedId}>{item.label}</Tab>
   )
 } />
 ```
 
 What approach is best? Again, It depends whether your component library prioritizes consistency or flexibility.
 
-#### Consistency
+### Consistency
 
-- large teams?
+<!-- - large teams? -->
 
-#### Versioning
+TBC
+
+### Versioning
 <!--
 When distributing your component library, it's easy to introduce a new feature but much harder to remove it once consumers depend on it.-->
 
