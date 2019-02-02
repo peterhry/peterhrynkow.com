@@ -19,7 +19,7 @@ A component API is a contract between the component and consumer that describes 
 
 #### The name and type of each prop
 
-This `Button` component expects the receive `boolean` value for its `disabled` props and a `string` value for its `type` prop.
+This `Button` component expects a `boolean` value for its `disabled` prop and a `string` value for its `type` prop.
 ```jsx
 () => <Button disabled type="submit">Submit</Button>
 ```
