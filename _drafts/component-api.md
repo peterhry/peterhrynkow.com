@@ -119,7 +119,7 @@ Using the `children` prop to perform composition is idiomatic in React.
 </Tabs>
 ```
 
-This pattern delegates the responsibility of creating each child component to the user, thus allowing them to specify the type of child and its props.
+This pattern provides a bit more flexibility by allowing the consumer to specify the type of child component and its props.
 
 One thing to note about this approach, is that it gives the impression that the component will slot the children into its template as is, but that's not always the case.
 
@@ -127,7 +127,8 @@ A component can iterate over its children and render different components in the
 
 // example TBD
 
-Composition via render props
+Using a render prop to perform composition is an advanced pattern that delegates all aspects of rendering to the consumer.
+
 ```jsx
 const items = [
   {id: 1, label: 'One'},
