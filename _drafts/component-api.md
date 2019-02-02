@@ -94,7 +94,7 @@ The solutions that exist for managing composition in React provide the consumer 
 
 This thread from Brad Frost highlights some of the trade offs between different approaches.
 
-Using an `array` or `object` prop to manage composition is an approach that is suitable for design systems that prioritize consistency over customization. Here the component is saying "Just give me the data —I'll take care of rendering".
+Using an `array` or `object` prop to manage composition is suitable for component libraries that prioritize consistency over customization. Here the component is saying "Just give me the data —I'll take care of rendering".
 
 ```jsx
 <Tabs items={[
@@ -105,7 +105,7 @@ Using an `array` or `object` prop to manage composition is an approach that is s
 ```
 
 Pros:
-- Ensures that the correct type of child component is created.
+- Ensures that the correct type of child component is rendered.
 - The consumer doesn't need to know what type of child component to supply.
 
 Cons:
