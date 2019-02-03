@@ -93,7 +93,6 @@ https://material-ui.com/guides/api/
 
 Low-level components afford more flexibility because the consumer can combine them in more ways.
 
-
 Engineers gravitate toward higher levels of abstractions because they reduce the amount of code repetition.
 
 
