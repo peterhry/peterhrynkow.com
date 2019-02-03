@@ -100,15 +100,15 @@ TBC
 
 ### Composition
 
-In React, solutions for managing composition provide the consumer with varying degrees of control over the children being rendered.
+In React, there are several ways to compose child elements. Some solutions offer more flexibility than others.
 
 This thread from Brad Frost highlights some of the trade offs between different approaches.
 
 #### Array or object prop
 
-Using an `array` or `object` prop to manage composition is suitable for component libraries that prioritize consistency over flexibility.
+Using an `array` or `object` prop to compose child elements might be suitable for component libraries that prioritize consistency over flexibility.
 
-Here the component is saying "Just give me the data —I'll take care of the rendering".
+Here the component is saying “Just give me the data —I'll take care of rendering the children".
 
 ```jsx
 () => <Tabs items={[
@@ -129,9 +129,9 @@ Cons:
 
 #### Children Prop
 
-Using the `children` prop to manage composition is idiomatic in React. 
+Using the `children` prop to compose child elements is idiomatic in React. 
 
-Here the component is saying "Give me the children and I'll slot them in somewhere".
+Here the component is saying “Give me the children and I'll slot them in somewhere".
 
 ```jsx
 () => <Tabs>
@@ -151,7 +151,7 @@ Cons:
 
 Using a render prop to manage composition is an advanced pattern that delegates all aspects of rendering to the consumer. Furthermore, it allows the consumer to receive information about the component's state before rendering its children.
 
-Here the component is saying "Please render the children — and by the way — here is some information about my state in case you need it."
+Here the component is saying “Render the children when I tell you to — and by the way — here is some information about my state in case you need it."
 
 ```jsx
 const items = [
