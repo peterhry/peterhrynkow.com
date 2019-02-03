@@ -1,11 +1,12 @@
 ---
 layout: post
-title: "The Elements of Component API Design"
+title: "Does Your Component Library Prioritize Consistency or Flexibility?"
 date: 2019-01-26 00:00:00
 categories: [api]
 ---
 
-Should you use React or Polymer, CSS modules or styled components?  Engineers spend a lot of time thinking about the _how_ of building UI components. After all, decisions around component _implementation_ are largely driven by factors like performance and developer experience — the sort of things engineers love to optimize.
+Should you use React or Polymer, CSS modules or styled components?  Engineers spend a lot of time
+thinking about the _how_ of building components and  debating the merits of different tools and technologies. After all, decisions around component _implementation_ are largely driven by factors like performance and developer experience — the sort of things engineers love to optimize.
 
 Just as there are many ways to _implement_ a component, there are many ways to _design its API_. Having worked on two major component library projects — one built in Polymer, the other in React — I’ve come to understand the importance of deliberate and thoughtful API design.
 
@@ -14,13 +15,13 @@ The design of your API can have a lasting impact on the success and adoption of 
 > API design is hard because you can make it seem simple but it's actually deceptively complex, or make it actually simple but seem complex.
 [sebmarkbage](https://twitter.com/sebmarkbage/status/728433349337841665)
 
-As [@sebmarkbage](https://twitter.com/sebmarkbage) points out, API design is not without its challenges. In this post, I will share my thoughts on some common component API design problems — all of which boil down to a single question: Does your component library prioritize flexibility or consistency?
+As [@sebmarkbage](https://twitter.com/sebmarkbage) points out, API design is not without its challenges. In this post, I will share my thoughts on some common component API design problems. What I've found is that they often boil down to a single question: Does your component library prioritize flexibility or consistency?
 
 But first, let’s go over the various parts of a component API.
 
 ### What is a Component API?
 
-A component API is a contract between the component and its consumer that governs how the two parties communicate. In React, a component API includes, but is not limited to:
+A component API is a contract between the component and its consumer that governs how the two parties communicate. In React, a component API includes:
 
 #### The name and type of each prop
 
@@ -68,17 +69,17 @@ This component expects to receive `Tab` components as children.
 
 It’s no secret that component-based design systems improve user experience by increasing visual and functional consistency. That being said, users often want to customize the appearance and behaviour of components. How do you reconcile these two opposing ideas?
 
+🧘‍♀️🗿
+
 Should a component enforce visual consistency by restricting access to its template and styles, or give the consumer options for overriding its appearance?
 
 Is it the role of technology or people to police consistency?
 
-The right answer to this question really boils down to whether your component library prioritizes flexibility or customization.
+I think the answer to this question boils down to whether your component library prioritizes flexibility or customization.
 
 If customization is supported, to what degree should a component allow the consumer to override its appearance?
 
 Should a component allow its internal elements to be styled directly or only allow the consumer to choose a predefined theme (i.e. light, dark)?
-
-Should a component allow any part of its template to be customized?
 
 TBC
 
@@ -95,10 +96,6 @@ Low-level components afford more flexibility because the consumer can combine th
 
 Engineers gravitate toward higher levels of abstractions because they reduce the amount of code repetition.
 
-
-
-Instead of creating a single video component, you could consolidate the common pieces of the component — the control bar,
-
 TBC
 
 ### Composition
@@ -109,7 +106,7 @@ This thread from Brad Frost highlights some of the trade offs between different 
 
 #### Array or object prop
 
-Using an `array` or `object` prop to manage composition is suitable for component libraries that prioritize consistency over customization.
+Using an `array` or `object` prop to manage composition is suitable for component libraries that prioritize consistency over flexibility.
 
 Here the component is saying "Just give me the data —I'll take care of the rendering".
 
@@ -126,13 +123,15 @@ Pros:
 - The consumer doesn't need to know what type of child component to supply.
 
 Cons:
-- The consumer has no control over how each child component is created so there is no opportunity to specify its type and props.
+- The consumer has no control over child component being rendered so there is no opportunity to specify its type and props.
 - Documenting the required data structure, its properties, and shape can be cumbersome.
 - It's unorthodox since no native HTML element receives data this way.
 
 #### Children Prop
 
-Using the `children` prop to manage composition is idiomatic in React. Here the component is saying "Give me the children and I'll slot them in somewhere".
+Using the `children` prop to manage composition is idiomatic in React. 
+
+Here the component is saying "Give me the children and I'll slot them in somewhere".
 
 ```jsx
 () => <Tabs>
@@ -168,4 +167,4 @@ const items = [
 } />
 ```
 
-What approach is best? Again, it depends whether your component library prioritizes consistency or flexibility. If you want to lock down the design then maybe an `array` prop is best. If you want ultimate flexibility then go for a render prop.
+What approach is best? Again, it depends whether your component library prioritizes consistency or flexibility. If you want to lock-down the design then maybe an `array` prop is best. If you want ultimate flexibility then go for a render prop.
