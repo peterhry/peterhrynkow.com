@@ -11,9 +11,12 @@ Just as there are many ways to _implement_ a component, there are many ways to _
 
 The design of your API can have a lasting impact on the success and adoption of your component library. A well designed API is simple yet powerful, well-documented yet intuitive, and empowers the user to build interfaces quickly and with ease. In contrast, a poorly designed API is complicated, unintuitive, and frustrating.
 
-Component API design is not without its challenges, though. In this post, I will share my thoughts on some common API design problems — all of which boil down to a single question: Does your component library prioritize flexibility or consistency?
+> API design is hard because you can make it seem simple but it's actually deceptively complex, or make it actually simple but seem complex.
+[sebmarkbage](https://twitter.com/sebmarkbage/status/728433349337841665)
 
-First, let’s go over the various parts of a component API.
+As [@sebmarkbage](https://twitter.com/sebmarkbage) points out, API design is not without its challenges. In this post, I will share my thoughts on some common component API design problems — all of which boil down to a single question: Does your component library prioritize flexibility or consistency?
+
+But first, let’s go over the various parts of a component API.
 
 ### What is a Component API?
 
@@ -83,11 +86,17 @@ TBC
 
 Is it better to have one component that does five things or five components that each do one thing?
 
-For example, you could create one video component that supports multiple video providers (i.e. YouTube, Vimeo, Twitch) or multiple video components that each support one provider.
+For example, you could create one video component that supports multiple video providers (i.e. YouTube, Vimeo, Twitch) or multiple video components that each support one provider. The former provides a higher-level of abstraction because it hides away details about the video provider.
+
+> We are providing low-level components to maximize composition capabilities.
+https://material-ui.com/guides/api/
+
+Low-level components afford more flexibility because the consumer can combine them in more ways.
+
 
 Engineers gravitate toward higher levels of abstractions because they reduce the amount of code repetition.
 
-When it comes to component design, it’s best to follow the single responsibility principle.
+
 
 Instead of creating a single video component, you could consolidate the common pieces of the component — the control bar,
 
@@ -142,7 +151,7 @@ Cons:
 
 #### Render Prop
 
-Using a render prop to manage composition is an advanced pattern that delegates all aspects of rendering to the consumer. Furthermore, it allows the consumer to receive information about the component's state before rendering the children.
+Using a render prop to manage composition is an advanced pattern that delegates all aspects of rendering to the consumer. Furthermore, it allows the consumer to receive information about the component's state before rendering its children.
 
 Here the component is saying "Please render the children — and by the way — here is some information about my state in case you need it."
 
