@@ -5,9 +5,9 @@ date: 2019-01-26 00:00:00
 categories: [api]
 ---
 
-Component-based design systems improve user experience by increasing visual and functional consistency. It’s no secret that consistency is an important design principle. But how far should you go to prevent users from changing the appearance and behavior of components in your design system?
+It’s no secret that component-based design systems improve user experience by increasing visual and functional consistency. Most designers will tell you that consistency is an important design principle. But how far should you go to prevent users from changing the appearance and behavior of components in your design system?
 
-Should a component enforce visual consistency by restricting access to its template and styles, or give the user options for overriding its appearance? Is it the role of technology or people within an organization to enforce consistency?
+Should a component enforce visual consistency by restricting access to its template and styles, or give the user options for overriding its appearance? Is it the role of technology (your components) or people within your organization to police consistency?
 
 If you’ve ever worked on a pattern library project, you might have found yourself asking some of these questions. And they're good questions to ask, because the decisions you make in this regard, will no doubt inform the design of your component APIs.
 
@@ -76,7 +76,7 @@ Cons:
 
 #### Render Prop
 
-Using a render prop to compose child elements is an advanced pattern that delegates rendering to the consumer. Furthermore, it allows the consumer to receive information about the component's state before rendering. This is an example of [Inversion of Control](https://en.wikipedia.org/wiki/Inversion_of_control#Examples).
+Using a render prop to compose child elements is an advanced pattern that delegates all aspects of child rendering to the consumer. Furthermore, it allows the consumer to receive information about the component's state before rendering the children. This is an example of [Inversion of Control](https://en.wikipedia.org/wiki/Inversion_of_control#Examples).
 
 Here the component is saying “Render the children when I tell you to, and by the way, here is some information about my state in case you need it."
 
