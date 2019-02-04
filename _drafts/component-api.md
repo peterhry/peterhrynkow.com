@@ -67,9 +67,11 @@ This component expects to receive `Tab` components as children.
 
 ### Customization
 
-It’s no secret that component-based design systems improve user experience by increasing visual and functional consistency. That being said, users often want to customize the appearance and behaviour of components. How do you reconcile these two opposing ideas?
+Component-based design systems improve user experience by increasing visual and functional consistency. It’s no wonder so many organizations design, build, and publish their own component library.
 
-🧘‍♀️🗿
+Consistency is great but what about users who want to customize the appearance and behaviour of components. How do you reconcile these two opposing ideas?
+
+🗿------------------🧘‍♀️
 
 Should a component enforce visual consistency by restricting access to its template and styles, or give the consumer options for overriding its appearance?
 
@@ -94,13 +96,15 @@ https://material-ui.com/guides/api/
 
 Low-level components afford more flexibility because the consumer can combine them in more ways.
 
-Engineers gravitate toward higher levels of abstractions because they reduce the amount of code repetition.
+Engineers gravitate toward higher levels of abstractions because they reduce the amount of code repetition. 
+
+But that doesn't mean you need to 
 
 TBC
 
 ### Composition
 
-In React, there are several ways to compose child elements. Some solutions offer more flexibility than others.
+In React, there are several ways to compose child elements. Some solutions provide the consumer with more control and flexibility than others.
 
 This thread from Brad Frost highlights some of the trade offs between different approaches.
 
@@ -108,7 +112,7 @@ This thread from Brad Frost highlights some of the trade offs between different 
 
 Using an `array` or `object` prop to compose child elements might be suitable for component libraries that prioritize consistency over flexibility.
 
-Here the component is saying “Just give me the data —I'll take care of rendering the children".
+Here the component is saying “Just give me the data — I'll take care of rendering the children".
 
 ```jsx
 () => <Tabs items={[
@@ -119,19 +123,19 @@ Here the component is saying “Just give me the data —I'll take care of rende
 ```
 
 Pros:
-- Ensures that the correct type of child component is rendered.
+- Ensures that the correct type of child component is always rendered.
 - The consumer doesn't need to know what type of child component to supply.
 
 Cons:
 - The consumer has no control over child component being rendered so there is no opportunity to specify its type and props.
-- Documenting the required data structure, its properties, and shape can be cumbersome.
+- Documenting the required data structure, its properties, and shape is cumbersome
 - It's unorthodox since no native HTML element receives data this way.
 
 #### Children Prop
 
 Using the `children` prop to compose child elements is idiomatic in React. 
 
-Here the component is saying “Give me the children and I'll slot them in somewhere".
+Here the component is saying “Give me the children — props and all — and I'll slot them in somewhere".
 
 ```jsx
 () => <Tabs>
@@ -145,13 +149,13 @@ Pros:
 - Allows the consumer to specify the type of each child component and its props.
 
 Cons:
-- The consumer might pass in the wrong type of component.
+- The consumer could pass in the wrong type of component.
 
 #### Render Prop
 
-Using a render prop to manage composition is an advanced pattern that delegates all aspects of rendering to the consumer. Furthermore, it allows the consumer to receive information about the component's state before rendering its children.
+Using a render prop to manage composition is an advanced pattern that delegates all aspects of rendering to the consumer. Furthermore, it allows the consumer to receive information about the component's state before rendering its children. This pattern is known as "inversion of control".
 
-Here the component is saying “Render the children when I tell you to — and by the way — here is some information about my state in case you need it."
+Here the component is saying “Render the children when I tell you to, and here is some information about my state in case you need it."
 
 ```jsx
 const items = [
