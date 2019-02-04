@@ -119,13 +119,13 @@ Is it better to have one component that does five things or five components that
 
 For example, you could create one video component that supports multiple video providers (i.e. YouTube, Vimeo, Twitch) or multiple video components that each support one provider. The former provides a higher-level of abstraction because it hides away details about the video provider.
 
-Material-ui and Polymer’s Paper Elements are general purpose component libraries, designed for a wide-range of consumers. They provide a default appearance and behaviour that can customized by the consumer. They prioritize flexibility over consistency.
-
 > We are providing low-level components to maximize composition capabilities.
-https://material-ui.com/guides/api/
+[Material-UI API Design Approach](https://material-ui.com/guides/api/)
+
+Material-ui and Polymer’s Paper Elements are general purpose component libraries, designed for a wide-range of consumers. 
+
+They provide low-level components that can be easily composed into different things.
+
+This is an example of prioritizing flexibility over consistency.
 
 Low-level components afford more flexibility because the consumer can combine them in more ways.
-
-Engineers gravitate toward higher levels of abstractions because they reduce the amount of code repetition.
-
-TBC
