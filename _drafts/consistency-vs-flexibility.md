@@ -7,11 +7,11 @@ categories: [api]
 
 Component-based design systems improve user experience by increasing visual and functional consistency. It’s no secret that consistency is an important design principle. But how far should you go to prevent users from changing the appearance and behavior of components in your design system?
 
-Should a component enforce visual consistency by restricting access to its template and styles, or give the user some options for overriding its appearance? Is it the role of technology or people within an organization to enforce consistency?
+Should a component enforce visual consistency by restricting access to its template and styles, or give the user options for overriding its appearance? Is it the role of technology or people within an organization to enforce consistency?
 
-If you’ve ever worked on a pattern library project, you might have found yourself asking some of these questions. These are good questions to think about, because the decisions you make in this regard, will no doubt inform the design of your component APIs.
+If you’ve ever worked on a pattern library project, you might have found yourself asking some of these questions. And they're good questions to ask, because the decisions you make in this regard, will no doubt inform the design of your component APIs.
 
-In this post I will discuss two areas of component API design where consistency and flexibility come into play.
+In this post I will discuss two areas of component API design where consistency and flexibility come into play. 
 
 ### Composition
 
@@ -19,7 +19,7 @@ In React, there are several ways to compose child elements. Some solutions provi
 
 #### Array or object prop
 
-Using an `array` or `object` prop to compose child elements might be suitable for pattern libraries that prioritize consistency over flexibility.
+Using an `array` or `object` prop to compose child elements is suitable for component libraries that prioritize consistency over flexibility.
 
 Here the component is saying “Just give me the data — I'll take care of rendering the children".
 
@@ -40,12 +40,12 @@ render(
 ```
 
 Pros:
-- Ensures that the correct type of child component is always rendered.
+- Ensures that the correct type of child component is rendered.
 - The consumer doesn't need to know what type of child component to supply.
 
 Cons:
 - The consumer has no control over child component being rendered so there is no opportunity to specify its type and props.
-- Documenting the required data structure, its properties, and shape is cumbersome
+- Documenting the required data structure is awkward.
 
 #### Children Prop
 
@@ -76,7 +76,7 @@ Cons:
 
 #### Render Prop
 
-Using a render prop to manage composition is an advanced pattern that delegates some aspects of rendering to the consumer. Furthermore, it allows the consumer to receive information about the component's state before rendering. This is an example of [Inversion of Control](https://en.wikipedia.org/wiki/Inversion_of_control#Examples).
+Using a render prop to compose child elements is an advanced pattern that delegates rendering to the consumer. Furthermore, it allows the consumer to receive information about the component's state before rendering. This is an example of [Inversion of Control](https://en.wikipedia.org/wiki/Inversion_of_control#Examples).
 
 Here the component is saying “Render the children when I tell you to, and by the way, here is some information about my state in case you need it."
 
@@ -110,8 +110,7 @@ In this example, the `Tab` component delegates rendering of its tabs to the cons
 
 #### Which approach is best?
 
-It depends whether your component library prioritizes consistency or flexibility. If you want to lock-down the design of your components then maybe an `array` prop is best. If you want ultimate flexibility then go for a render prop.
-
+It depends whether your component library prioritizes consistency or flexibility. If you want to lock-down the design and behaviour of your components then an `array` prop is best. If you want ultimate flexibility then go for a render prop.
 
 
 ### Abstractness
