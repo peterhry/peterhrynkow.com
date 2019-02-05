@@ -11,9 +11,9 @@ Should a component enforce visual consistency by restricting access to its templ
 
 If you’ve ever worked on a pattern library project, you might have found yourself asking some of these questions. And they're good questions to ask, because the decisions you make in this regard, will no doubt inform the design of your component APIs.
 
-In this post I will discuss an area of component API design where consistency and flexibility almost always come into play. The approach you take will most likely depend on the level of flexibility with which you intend to provide your component consumers.
+In this post I will discuss an area of component API design where consistency and flexibility almost always come into play. The approach you take will likely depend on the level of flexibility with which you intend to provide your component consumers.
 
-### Composition
+### Child Composition
 
 In React, there are several ways to compose child elements. Some solutions provide the consumer with more flexibility than others. Let's look at a few options.
 
