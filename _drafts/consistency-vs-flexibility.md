@@ -5,17 +5,17 @@ date: 2019-01-26 00:00:00
 categories: [api]
 ---
 
-It’s no secret that component-based design systems improve user experience by increasing visual and functional consistency. Most designers will tell you that consistency is an important design principle. But how far should you go to prevent users from changing the appearance and behavior of components in your design system?
+Pattern libraries, component-based design systems — whatever you want to call them — it’s no secret that they improve user experience by increasing visual and functional consistency. Most designers will tell you that consistency is a key design principle. But how far should you go to prevent users from changing the appearance and behavior of your components?
 
-Should a component enforce visual consistency by restricting access to its template and styles, or give the user options for overriding its appearance? Is it the role of technology (your components) or people within your organization to police consistency?
+Should a component enforce visual consistency by restricting access to its template and styles, or give the user options for overriding its appearance? Is it the role of technology (your components) or people within your organization to enforce consistency?
 
 If you’ve ever worked on a pattern library project, you might have found yourself asking some of these questions. And they're good questions to ask, because the decisions you make in this regard, will no doubt inform the design of your component APIs.
 
-In this post I will discuss two areas of component API design where consistency and flexibility come into play. 
+In this post I will discuss an area of component API design where consistency and flexibility almost always come into play. The approach you take will most likely depend on the level of flexibility with which you intend to provide your component consumers.
 
 ### Composition
 
-In React, there are several ways to compose child elements. Some solutions provide the consumer with more flexibility than others.
+In React, there are several ways to compose child elements. Some solutions provide the consumer with more flexibility than others. Let's look at a few options.
 
 #### Array or object prop
 
