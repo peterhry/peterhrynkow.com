@@ -40,7 +40,7 @@ render(
 ```
 
 Pros:
-- Ensures that the correct type of child component is rendered.
+- Ensures that the same type of child component is always rendered.
 - The consumer doesn't need to know what type of child component to supply.
 
 Cons:
