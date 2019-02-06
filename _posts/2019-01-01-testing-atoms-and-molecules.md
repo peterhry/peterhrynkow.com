@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Testing Your React App with Confidence"
+title: "Testing Atoms & Molecules"
 date: 2019-01-01 00:00:00
 categories: [testing]
 icon: 🧠
