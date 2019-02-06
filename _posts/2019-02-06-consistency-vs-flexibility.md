@@ -74,6 +74,8 @@ ReactDOM.render(
 
 [Live Demo](https://codepen.io/peterhry/pen/ErbYLL?editors=1010)
 
+In this example, the consumer provides an array of items and the `Tabs` component decides what to render. This makes it difficult for the consumer to override the appearance and behavior of the tabs.
+
 #### Children Prop
 
 Using the `children` prop to compose child elements is idiomatic in React. This approach is a bit more flexible because it lets the consumer render the children. However, the result is a tight coupling between the component and its children. For the component to control its children, they must expose the necessary props.
