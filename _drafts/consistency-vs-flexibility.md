@@ -11,7 +11,7 @@ Should a component enforce visual consistency by restricting access to its templ
 
 If you’ve ever worked on a pattern library project, you might have found yourself asking some of these questions. And they're good questions to ask, because the decisions you make in this regard, will no doubt inform the design of your component APIs.
 
-In this post I will discuss an area of component API design where consistency and flexibility comes into play. The approach you take will likely depend on the level of flexibility you intend to provide.
+In this post I will discuss an area of component API design where the struggle between consistency and flexibility come into play. The approach you take will likely depend on the level of flexibility you intend to provide.
 
 ### Child Composition
 
@@ -102,7 +102,7 @@ class Tabs extends Component {
 
 #### Render Prop
 
-Using a render prop to compose child elements is an advanced pattern that delegates all aspects of rendering to the consumer. Furthermore, it provides the consumer with details about the component's state that can be mapped to the desired child prop. The result is a loose coupling between the component and its children.
+Using a render prop to compose child elements is an advanced pattern that delegates all aspects of rendering to the consumer. Furthermore, it provides the consumer with details about the component's state that can be mapped to the desired child props. The result is a loose coupling between the component and its children.
 
 Here the component is saying “Render the children when I call this function. I'll pass you some information about my state in case you need it."
 
@@ -131,10 +131,10 @@ render(
 )
 ```
 
-In this example, the `Tab` component delegates rendering of its tabs to the consumer. When the component is ready to render, it calls the `renderTabs` function and passes it `selectedTabId`. This allows the consumer to render `CustomTab` children and set the `selected` prop on the appropriate child.
+In this example, the `Tab` component delegates rendering of its tabs to the consumer. When the component is ready to render, it calls the `renderTabs` function and passes it `selectedTabId`. This allows the consumer to render `CustomTab` children and set the `active` prop on the appropriate child.
 
 See also: [Inversion of Control](https://en.wikipedia.org/wiki/Inversion_of_control#Examples)
 
 #### Which approach is best?
 
-It depends whether your component library prioritizes consistency or flexibility. If you want to lock-down the design and behaviour of your components then an `array` prop is best. If you want ultimate flexibility then go for a render prop.
+It depends whether your component library prioritizes consistency or flexibility. If you want to lock-down the design and behaviour of your components then an `array` prop might be best. If you want to provide your users with ultimate flexibility, then go for a render prop.
