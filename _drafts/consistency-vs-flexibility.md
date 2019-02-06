@@ -5,7 +5,7 @@ date: 2019-01-26 00:00:00
 categories: [api]
 ---
 
-Pattern libraries, component-based design systems — whatever you want to call them — it’s no secret that they improve user experience by increasing visual and functional consistency. Most designers will tell you that consistency is a key design principle. But how far should you go to prevent users from changing the appearance and behavior of your components?
+Pattern libraries, component-based design systems — whatever you want to call them — it’s no secret that they improve user experience by increasing visual and functional consistency. Most designers will tell you that consistency is a key design principle, but how far should you go to prevent users from changing the appearance and behavior of your components?
 
 Should a component enforce visual consistency by restricting access to its template and styles, or give the user options for overriding its appearance? Is it the role of technology (your components) or people within your organization to enforce consistency?
 
@@ -39,21 +39,21 @@ render(
 )
 ```
 
-Pros:
+<!-- Pros:
 - Ensures that the same type of child component is always rendered.
 - The consumer doesn't need to know what type of child component to supply.
 
 Cons:
 - The consumer has no control over child component being rendered so there is no opportunity to specify its type and props.
 - Documenting the required data structure is awkward.
-
+ -->
 #### Children Prop
 
-Using the `children` prop to compose child elements is idiomatic in React. This approach is a bit more flexible because it lets the consumer render the children. 
+Using the `children` prop to compose child elements is idiomatic in React. This approach is a bit more flexible because it lets the consumer render the children.
 
-However, the result is a tight coupling between the component and its children. For the component to control its children, they must expose the correct props.
+However, the result is a tight coupling between the component and its children. For the component to control its children, they must expose the necessary props.
 
-Here the component is saying “Give me the children and I'll slot them in somewhere. But make sure they implement _these_ props in case I need to set them".
+Here the component is saying “Give me the children and I'll slot them in somewhere. But make sure they expose these props in case I need to set them".
 
 ```jsx
 import {render} from 'react-dom'
@@ -70,17 +70,39 @@ render(
 )
 ```
 
-Pros:
-- Allows the consumer to specify the type of each child component and its props.
+```jsx
+import {Component, cloneElement} from 'react'
 
-Cons:
-- Unless you define a custom `propType` function, the consumer could pass in the wrong type of child component.
+class Tabs extends Component {
+  constructor() {
+    super()
+
+    this.state = {
+      selectedTabId: null
+    }
+  }
+
+  render() {
+    return (
+      <ul>
+        {this.props.children.map((tab) => {
+          const clone = cloneElement(tab)
+          return clone
+        })}
+      </ul>
+    )
+  }
+}
+```
+
+<!-- Note: It’s possible to define a custom `propType` function that verifies the children are of the correct type. This effectively dials back the amount of control offered to the consumer.
+ -->
 
 #### Render Prop
 
-Using a render prop to compose child elements is an advanced pattern that delegates all aspects of rendering to the consumer. Furthermore, it provides the consumer with details about the component's state that can be mapped to child props. The result is a loose coupling between the component and its children.
+Using a render prop to compose child elements is an advanced pattern that delegates all aspects of rendering to the consumer. Furthermore, it provides the consumer with details about the component's state that can be mapped to the desired child prop. The result is a loose coupling between the component and its children.
 
-Here the component is saying “Render the children when I call this function. I'll send you some information about my state in case you need it."
+Here the component is saying “Render the children when I call this function. I'll pass you some information about my state in case you need it."
 
 ```jsx
 import {render} from 'react-dom'
