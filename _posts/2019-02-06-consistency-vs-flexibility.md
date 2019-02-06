@@ -23,56 +23,19 @@ Using an `array` or `object` prop to compose child elements is the least flexibl
 
 Here the component is saying: **Just give me the data — I'll take care of rendering the children.**
 
-```jsx
-const Tab = ({children, selected, onClick}) => {
-  const style = {
-    background: selected ? '#fff' : '#ccc'
-  }
-
-  return (
-    <li onClick={onClick} style={style}>
-      {children}
-    </li>
-  )
-}
-
-class Tabs extends React.Component {
-  constructor() {
-    super()
-
-    this.state = {
-      selectedIndex: 0
-    }
-  }
-
-  setSelectedIndex = (index) => {
-    this.setState({selectedIndex: index})
-  }
-
-  render() {
-    return (
-      <ul>
-        {this.props.items.map((item, index) => (
-          <Tab
-            key={index}
-            onClick={() => this.setSelectedIndex(index)}
-            selected={index === this.state.selectedIndex}
-          >
-            {item.label}
-          </Tab>
-        ))}
-      </ul>
-    )
-  }
-}
-
-ReactDOM.render(
-  <Tabs items={[{label: 'One'}, {label: 'Two'}, {label: 'Three'}]} />,
-  document.getElementById('root')
-)
-```
-
-[Live Demo](https://codepen.io/peterhry/pen/ErbYLL?editors=1010)
+<p
+  class="codepen"
+  data-height="416"
+  data-theme-id="dark"
+  data-default-tab="js"
+  data-user="peterhry"
+  data-slug-hash="ErbYLL"
+  style="height: 416px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid black; margin: 1em 0; padding: 1em;"
+  data-pen-title="React Child Composition Methods - Array Prop">
+  <span>See the Pen <a href="https://codepen.io/peterhry/pen/ErbYLL/">
+  React Child Composition Methods - Array Prop</a> by Peter Hrynkow (<a href="https://codepen.io/peterhry">@peterhry</a>)
+  on <a href="https://codepen.io">CodePen</a>.</span>
+</p>
 
 In this example, the consumer provides an array of items and the `Tabs` component decides what to render. This makes it difficult for the consumer to override the appearance and behavior of the tabs.
 
@@ -82,59 +45,19 @@ Using the `children` prop to compose child elements is idiomatic in React. This 
 
 Here the component is saying: **Give me the children and I'll slot them in somewhere. Just make sure they expose the required props so I can set them**.
 
-```jsx
-const FancyTab = ({children, selected, onClick}) => {
-  const style = {
-    background: selected ? '#0099ff' : '#ccc'
-  }
-
-  return (
-    <li onClick={onClick} style={style}>
-      {children}
-    </li>
-  )
-}
-
-class Tabs extends React.Component {
-  constructor() {
-    super()
-
-    this.state = {
-      selectedIndex: 0
-    }
-  }
-
-  setSelectedIndex = (index) => {
-    this.setState({selectedIndex: index})
-  }
-
-  render() {
-    return (
-      <ul>
-        {this.props.children.map((child, index) =>
-          React.cloneElement(child, {
-            key: index,
-            onClick: () => this.setSelectedIndex(index),
-            selected: index === this.state.selectedIndex
-          })
-        )}
-      </ul>
-    )
-  }
-}
-
-ReactDOM.render(
-  <Tabs>
-    <FancyTab>One</FancyTab>
-    <FancyTab>Two</FancyTab>
-    <FancyTab>Three</FancyTab>
-  </Tabs>,
-  document.getElementById('root')
-)
-```
-
-[Live Demo](https://codepen.io/peterhry/pen/ErbYLL?editors=1010)
-
+<p
+  class="codepen"
+  data-height="416"
+  data-theme-id="dark"
+  data-default-tab="js"
+  data-user="peterhry"
+  data-slug-hash="omowzK"
+  style="height: 416px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid black; margin: 1em 0; padding: 1em;"
+  data-pen-title="React Child Composition Methods - Children Prop">
+  <span>See the Pen <a href="https://codepen.io/peterhry/pen/omowzK/">
+  React Child Composition Methods - Children Prop</a> by Peter Hrynkow (<a href="https://codepen.io/peterhry">@peterhry</a>)
+  on <a href="https://codepen.io">CodePen</a>.</span>
+</p>
 
 In this example, the consumer wants to use `FancyTab` components. The only reason this works is because `FancyTab` exposes the required props `selected` and `onClick`.
 
@@ -144,63 +67,21 @@ Using a render prop to compose child elements is an advanced pattern that delega
 
 Here the component is saying: **Render the children when I call this function. I'll expose an API to help you integrate your super-custom child components.**
 
-```jsx
-const HoverTab = ({children, active, onMouseEnter}) => {
-  const style = {
-    background: active ? '#fff' : '#ccc',
-    fontStyle: active ? 'italic' : 'unset'
-  }
+<p
+  class="codepen"
+  data-height="416"
+  data-theme-id="dark"
+  data-default-tab="js"
+  data-user="peterhry"
+  data-slug-hash="bzYRBW"
+  style="height: 416px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid black; margin: 1em 0; padding: 1em;"
+  data-pen-title="React Child Composition Methods - Render Prop">
+  <span>See the Pen <a href="https://codepen.io/peterhry/pen/bzYRBW/">
+  React Child Composition Methods - Render Prop</a> by Peter Hrynkow (<a href="https://codepen.io/peterhry">@peterhry</a>)
+  on <a href="https://codepen.io">CodePen</a>.</span>
+</p>
 
-  return (
-    <li onMouseEnter={onMouseEnter} style={style}>
-      {children}
-    </li>
-  )
-}
-
-class Tabs extends React.Component {
-  constructor() {
-    super()
-
-    this.state = {
-      selectedIndex: 0
-    }
-  }
-
-  setSelectedIndex = (index) => {
-    this.setState({selectedIndex: index})
-  }
-
-  render() {
-    return (
-      <ul>{this.props.children(this.setSelectedIndex, this.state.selectedIndex)}</ul>
-    )
-  }
-}
-
-const items = [{label: 'One'}, {label: 'Two'}, {label: 'Three'}]
-
-ReactDOM.render(
-  <Tabs>
-    {(setSelectedIndex, selectedIndex) =>
-      items.map((item, index) => (
-        <HoverTab
-          key={index}
-          onMouseEnter={() => setSelectedIndex(index)}
-          active={index === selectedIndex}
-        >
-          {item.label}
-        </HoverTab>
-      ))
-    }
-  </Tabs>,
-  document.getElementById('root')
-)
-```
-
-[Live Demo](https://codepen.io/peterhry/pen/ErbYLL?editors=1010)
-
-In this example, the consumer wants to use custom `HoverTab` components, but there’s one problem: The `HoverTab` component exposes an `onMouseEnter` prop instead of `onClick` and an `active` prop instead of `selected`. The consumer needs a way to adapt one API to another. This is where render props come in handy.
+In this example, the consumer wants to use custom `HoverTab` components, but there’s one problem: The `HoverTab` component exposes an `onMouseEnter` prop instead of `onClick` and an `active` prop instead of `selected`. The consumer needs a way to adapt one API to another. **This is where render props come in handy.**
 
 When the `Tabs` component is rendering, it invokes the `children` prop (now a function) and passes it `selectedIndex` and `setSelectedIndex`. This allows the consumer to map the `HoverTab` props to the API provided by the `Tabs` component.
 

@@ -87,7 +87,7 @@ h4 {
   font-size: var(--ms0);
 }
 
-p, ul, ol, dl, pre, blockquote {
+p, ul, ol, dl, pre, blockquote, .cp_embed_wrapper {
   margin: var(--ms2) 0 0 0;
 }
 
