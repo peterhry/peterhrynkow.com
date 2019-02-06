@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Consistency vs Flexibility in Design Systems"
+title: "Consistency vs Flexibility in Pattern Libraries"
 date: 2019-01-26 00:00:00
 categories: [api]
 ---
@@ -11,7 +11,7 @@ Should a component enforce visual consistency by restricting access to its templ
 
 If you’ve ever worked on a pattern library project, you might have found yourself asking some of these questions. And they're good questions to ask, because the decisions you make in this regard, will no doubt inform the design of your component APIs.
 
-In this post I will discuss an area of component API design where consistency and flexibility come into play. The approach you take will likely depend on the level of flexibility you intend to provide your consumers with.
+In this post I will discuss an area of component API design where consistency vs flexibility comes into play. The approach you take will likely depend on the level of flexibility you intend to provide.
 
 ### Child Composition
 
@@ -53,7 +53,7 @@ Using the `children` prop to compose child elements is idiomatic in React. This 
 
 However, the result is a tight coupling between the component and its children. For the component to control its children, they must expose the correct props.
 
-Here the component is saying “Give me the children and I'll slot them in somewhere. But make sure they implement _these_ props so I can set them".
+Here the component is saying “Give me the children and I'll slot them in somewhere. But make sure they implement _these_ props in case I need to set them".
 
 ```jsx
 import {render} from 'react-dom'
@@ -78,9 +78,9 @@ Cons:
 
 #### Render Prop
 
-Using a render prop to compose child elements is an advanced pattern that delegates all aspects of rendering to the consumer. Furthermore, it provides the consumer with details about the component's state that can be mapped to specific child props. The result is a loose coupling between the component and its children.
+Using a render prop to compose child elements is an advanced pattern that delegates all aspects of rendering to the consumer. Furthermore, it provides the consumer with details about the component's state that can be mapped to child props. The result is a loose coupling between the component and its children.
 
-Here the component is saying “Render the children when I tell you to, and by the way, here is some information about my state in case you need it."
+Here the component is saying “Render the children when I call this function. I'll send you some information about my state in case you need it."
 
 ```jsx
 import {render} from 'react-dom'
