@@ -11,7 +11,7 @@ Should a component enforce visual consistency by restricting access to its templ
 
 If you’ve ever worked on a pattern library project, you might have found yourself asking some of these questions. And they're good questions to ask, because the decisions you make in this regard, will no doubt inform the design of your component APIs.
 
-In this post I will discuss an area of component API design where the struggle between consistency and flexibility come into play. The approach you take will likely depend on the level of flexibility you intend to provide.
+In this post I will discuss an area of component API design where the struggle between consistency and flexibility comes into play. The approach you take will likely depend on the level of flexibility you intend to provide.
 
 ### Child Composition
 
