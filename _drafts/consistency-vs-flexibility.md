@@ -19,7 +19,7 @@ In React, there are several ways to compose child elements. Some solutions provi
 
 #### Array or object prop
 
-Using an `array` or `object` prop to compose child elements is suitable for component libraries that prioritize consistency over flexibility.
+Using an `array` or `object` prop to compose child elements offers very little flexibility because the component controls how the children are rendered. This approach is suitable for component libraries that prioritize consistency over flexibility.
 
 Here the component is saying “Just give me the data — I'll take care of rendering the children".
 
@@ -49,9 +49,11 @@ Cons:
 
 #### Children Prop
 
-Using the `children` prop to compose child elements is idiomatic in React.
+Using the `children` prop to compose child elements is idiomatic in React. This approach is a bit more flexible because it lets the consumer to render the children. 
 
-Here the component is saying “Give me the children and I'll slot them in somewhere".
+However, the results is a tight coupling between the component and its children. For the component to control its children, they must expose the correct props.
+
+Here the component is saying “Give me the children and I'll slot them in somewhere. Make sure they implement these props so I can control them".
 
 ```jsx
 import {render} from 'react-dom'
@@ -76,7 +78,7 @@ Cons:
 
 #### Render Prop
 
-Using a render prop to compose child elements is an advanced pattern that delegates all aspects of child rendering to the consumer. Furthermore, it allows the consumer to receive information about the component's state before rendering the children. This is an example of [Inversion of Control](https://en.wikipedia.org/wiki/Inversion_of_control#Examples).
+Using a render prop to compose child elements is an advanced pattern that delegates all aspects of child rendering to the consumer. Furthermore, it provides the consumer with details about the component's state that can be mapped specific child props. This is an example of [Inversion of Control](https://en.wikipedia.org/wiki/Inversion_of_control#Examples).
 
 Here the component is saying “Render the children when I tell you to, and by the way, here is some information about my state in case you need it."
 
@@ -105,7 +107,7 @@ render(
 )
 ```
 
-In this example, the `Tab` component delegates rendering of its tabs to the consumer. When the component is ready to render, it calls the `renderTabs` function and passes it `selectedTabId`. This allows the consumer to render `CustomTab` components.
+In this example, the `Tab` component delegates rendering of its tabs to the consumer. When the component is ready to render, it calls the `renderTabs` function and passes it `selectedTabId`. This allows the consumer to render `CustomTab` children and set the `selected` prop on the appropriate child.
 
 
 #### Which approach is best?
@@ -130,3 +132,4 @@ Is it better to have one component that does five things or five components that
 
 For example, you could create one video component that supports multiple video providers (i.e. YouTube, Vimeo, Twitch) or multiple video components that each support one provider. The former provides a higher-level of abstraction because it hides away details about the video provider.
 -->
+Material-ui and Polymer’s Paper Elements are general purpose component libraries, designed for a wide-range of applications. They provide low-
