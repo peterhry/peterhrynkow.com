@@ -59,7 +59,7 @@ Here the component is saying: **Give me the children and I'll slot them in somew
   on <a href="https://codepen.io">CodePen</a>.</span>
 </p>
 
-In this example, the consumer wants to use `FancyTab` components. The only reason this works is because `FancyTab` exposes the required props `selected` and `onClick`.
+In this example, the consumer wants to use `FancyTab` components instead of `Tab` components. The only reason this works is because `FancyTab` exposes the required props `selected` and `onClick`.
 
 #### Render Prop
 
