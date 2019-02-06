@@ -19,7 +19,7 @@ In React, there are several ways to compose child elements. Some solutions provi
 
 #### Array or object prop
 
-Using an `array` or `object` prop to compose child elements is the least flexible option because the component controls what type of child is rendered and its props. This approach is suitable for component libraries that prioritize consistency over flexibility because the component controls all aspects of rendering.
+Using an `array` or `object` prop to compose child elements is the least flexible option because the component controls the type of child that is rendered and its props. This approach is suitable for component libraries that prioritize consistency over flexibility because the component controls all aspects of rendering.
 
 Here the component is saying: **Just give me the data — I'll take care of rendering the children.**
 
