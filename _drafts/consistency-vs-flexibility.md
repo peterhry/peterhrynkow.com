@@ -11,7 +11,7 @@ Should a component enforce visual consistency by restricting access to its templ
 
 If you’ve ever worked on a pattern library project, you might have found yourself asking some of these questions. And they're good questions to ask, because the decisions you make in this regard, will no doubt inform the design of your component APIs.
 
-In this post I will discuss an area of component API design where consistency and flexibility almost always come into play. The approach you take will likely depend on the level of flexibility with which you intend to provide your component consumers.
+In this post I will discuss an area of component API design where consistency and flexibility come into play. The approach you take will likely depend on the level of flexibility you intend to provide your consumers with.
 
 ### Child Composition
 
@@ -19,7 +19,7 @@ In React, there are several ways to compose child elements. Some solutions provi
 
 #### Array or object prop
 
-Using an `array` or `object` prop to compose child elements offers very little flexibility because the component controls how the children are rendered. This approach is suitable for component libraries that prioritize consistency over flexibility.
+Using an `array` or `object` prop to compose child elements is the least flexible option because the component controls what type of child is rendered and its props. This approach is suitable for component libraries that prioritize consistency over flexibility because the component controls all aspect of rendering.
 
 Here the component is saying “Just give me the data — I'll take care of rendering the children".
 
@@ -49,11 +49,11 @@ Cons:
 
 #### Children Prop
 
-Using the `children` prop to compose child elements is idiomatic in React. This approach is a bit more flexible because it lets the consumer to render the children. 
+Using the `children` prop to compose child elements is idiomatic in React. This approach is a bit more flexible because it lets the consumer render the children. 
 
-However, the results is a tight coupling between the component and its children. For the component to control its children, they must expose the correct props.
+However, the result is a tight coupling between the component and its children. For the component to control its children, they must expose the correct props.
 
-Here the component is saying “Give me the children and I'll slot them in somewhere. Make sure they implement these props so I can control them".
+Here the component is saying “Give me the children and I'll slot them in somewhere. But make sure they implement _these_ props so I can set them".
 
 ```jsx
 import {render} from 'react-dom'
@@ -78,7 +78,7 @@ Cons:
 
 #### Render Prop
 
-Using a render prop to compose child elements is an advanced pattern that delegates all aspects of child rendering to the consumer. Furthermore, it provides the consumer with details about the component's state that can be mapped specific child props. This is an example of [Inversion of Control](https://en.wikipedia.org/wiki/Inversion_of_control#Examples).
+Using a render prop to compose child elements is an advanced pattern that delegates all aspects of rendering to the consumer. Furthermore, it provides the consumer with details about the component's state that can be mapped to specific child props. The result is a loose coupling between the component and its children.
 
 Here the component is saying “Render the children when I tell you to, and by the way, here is some information about my state in case you need it."
 
@@ -97,7 +97,7 @@ render(
   <Tabs
     renderTabs={(selectedTabId) =>
       items.map((item) => (
-        <CustomTab key={item.id} selected={item.id === selectedTabId}>
+        <CustomTab key={item.id} active={item.id === selectedTabId}>
           {item.label}
         </CustomTab>
       ))
@@ -109,6 +109,7 @@ render(
 
 In this example, the `Tab` component delegates rendering of its tabs to the consumer. When the component is ready to render, it calls the `renderTabs` function and passes it `selectedTabId`. This allows the consumer to render `CustomTab` children and set the `selected` prop on the appropriate child.
 
+See also: [Inversion of Control](https://en.wikipedia.org/wiki/Inversion_of_control#Examples)
 
 #### Which approach is best?
 
