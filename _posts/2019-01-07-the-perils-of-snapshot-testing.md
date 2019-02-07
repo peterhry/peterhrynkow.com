@@ -63,7 +63,7 @@ Snapshot tests are easy to create, requiring almost no forethought. That's becau
 
 After a while, engineers begin to experience something I call _snapshot fatigue_ and start blindly updating failed snapshots without reviewing them. Once that happens, your snapshot tests are pretty much useless.
 
-### Do You Need a Snapshot?
+### Do You Even Need a Snapshot?
 
 A good test should prevent you from accidentally breaking your component's API. By creating a snapshot test, you're essentially declaring that your component's _entire_ rendered output is part of its API. In some cases that might be what you want but I'd argue that it makes adding new features and refactoring painful.
 
