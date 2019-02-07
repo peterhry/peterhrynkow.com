@@ -19,6 +19,8 @@ In React, there are several ways to compose child elements. Some solutions provi
 
 #### Array or object prop
 
+Flexibility: 🧘‍♂️
+
 Using an `array` or `object` prop to compose child elements is the least flexible option because the component controls the type of child that is rendered and its props. This approach is suitable for component libraries that prioritize consistency over flexibility because the component controls all aspects of rendering.
 
 Here the component is saying: **Just give me the data — I'll take care of rendering the children.**
@@ -41,6 +43,8 @@ In this example, the consumer provides an array of items and the `Tabs` componen
 
 #### Children Prop
 
+Flexibility: 🧘‍♂️ 🧘‍♂️ 🧘‍♂️
+
 Using the `children` prop to compose child elements is idiomatic in React. This approach is a bit more flexible because it lets the consumer render the children. However, the result is a tight coupling between the component and its children. For the component to control its children, they must expose the necessary props.
 
 Here the component is saying: **Give me the children and I'll slot them in somewhere. Just make sure they expose the required props so I can set them**.
@@ -62,6 +66,8 @@ Here the component is saying: **Give me the children and I'll slot them in somew
 In this example, the consumer wants to use `FancyTab` components instead of `Tab` components. The only reason this works is because `FancyTab` exposes the required props `selected` and `onClick`.
 
 #### Render Prop
+
+Flexibility: 🧘‍♂️ 🧘‍♂️ 🧘‍♂️ 🧘‍♂️ 🧘‍♂️
 
 Using a render prop to compose child elements is an advanced pattern that delegates all aspects of rendering to the consumer. Furthermore, it allows the consumer to render children with an otherwise incompatible API. The result is a loose coupling between the component and its children.
 
