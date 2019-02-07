@@ -9,7 +9,7 @@ Pattern libraries, component-based design systems — whatever you want to call 
 
 <!--Should a component enforce visual consistency by restricting access to its template and styles, or give the user options for overriding its appearance? Is it the role of technology (your components) or people within your organization to enforce consistency?-->
 
-If you’ve ever worked on a pattern library project, you might have found yourself asking this question. And it's a good questions to ask, because the decisions you make, in this regard, will no doubt inform the design of your component APIs.
+If you’ve ever worked on a pattern library project, you might have found yourself asking this question. And it's a good question to ask, because the decisions you make, in this regard, will no doubt inform the design of your component APIs.
 
 In this post I will discuss an area of component API design where the balance between consistency and flexibility comes into play. The approach you take will likely depend on the level of flexibility you intend to provide.
 
