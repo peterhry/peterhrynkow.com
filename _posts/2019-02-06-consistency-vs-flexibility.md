@@ -5,7 +5,7 @@ date: 2019-02-06 00:00:00
 categories: [api]
 ---
 
-Pattern libraries, component-based design systems — whatever you want to call them — it’s no secret that they improve user experience by increasing visual and functional consistency. Most designers will tell you that consistency is an important design principle, so how much flexibility if any should be afforded to consumers who want to change the appearance and behavior of your components?
+Pattern libraries, component-based design systems — whatever you want to call them — it’s no secret that they improve user experience by increasing visual and functional consistency. Most designers will tell you that consistency is an important design principle, so how much flexibility, if any, should be afforded to users who want to customize the components in your design system?
 
 <!--Should a component enforce visual consistency by restricting access to its template and styles, or give the user options for overriding its appearance? Is it the role of technology (your components) or people within your organization to enforce consistency?-->
 
