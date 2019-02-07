@@ -1,15 +1,13 @@
 ---
 layout: post
-title: "Consistency vs Flexibility in Pattern Libraries"
+title: "Flexibility in Component API Design"
 date: 2019-02-06 00:00:00
 categories: [api]
 ---
 
-Pattern libraries, component-based design systems — whatever you want to call them — it’s no secret that they improve user experience by increasing visual and functional consistency. Most designers will tell you that consistency is a key design principle. But how far should you go to prevent users from changing the appearance and behavior of components in your design system?
+Pattern libraries, component-based design systems — whatever you want to call them — it’s no secret that they improve user experience by increasing visual and functional consistency. Most designers will tell you that consistency is a key design principle, but how far should you go to prevent users from changing the appearance and behavior of components in your design system? Should a component enforce visual consistency by restricting access to its template and styles, or give the user options for overriding its appearance? <!--Is it the role of technology (your components) or people within your organization to enforce consistency?-->
 
-Should a component enforce visual consistency by restricting access to its template and styles, or give the user options for overriding its appearance? Is it the role of technology (your components) or people within your organization to enforce consistency?
-
-If you’ve ever worked on a pattern library project, you might have found yourself asking some of these questions. And they're good questions to ask, because the decisions you make, in this regard, will no doubt inform the design of your component APIs.
+If you’ve ever worked on a pattern library project, you might have found yourself asking these questions. And they're good questions to ask, because the decisions you make, in this regard, will no doubt inform the design of your component APIs.
 
 In this post I will discuss an area of component API design where the balance between consistency and flexibility comes into play. The approach you take will likely depend on the level of flexibility you intend to provide.
 
