@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Flexibility in Component API Design"
+title: "Component API Flexibility"
 date: 2019-02-06 00:00:00
 categories: [api]
 ---
