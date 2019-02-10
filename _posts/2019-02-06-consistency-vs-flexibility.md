@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Component API Flexibility"
+title: "Component API Flexibility in React"
 date: 2019-02-06 00:00:00
 categories: [api]
 ---
