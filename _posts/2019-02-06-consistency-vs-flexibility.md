@@ -5,7 +5,7 @@ date: 2019-02-06 00:00:00
 categories: [api]
 ---
 
-Pattern libraries, component-based design systems — whatever you want to call them — it’s no secret that they improve user experience by increasing visual and functional consistency. Most designers will tell you that consistency is an key design principle, so how much flexibility, if any, should be afforded to users who want to customize the components in your design system?
+Pattern libraries, component-based design systems — whatever you want to call them — it’s no secret that they improve user experience by increasing visual and functional consistency. Most designers will tell you that consistency is a key design principle, so how much flexibility, if any, should be afforded to users who want to customize the components in your design system?
 
 <!--If you’ve ever worked on a pattern library project, you might have found yourself asking this question. And it's a good question to ask, because the decisions you make, in this regard, will no doubt inform the design of your component APIs.-->
 
