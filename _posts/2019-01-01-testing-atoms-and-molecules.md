@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Testing Atoms & Molecules"
+title: "‪A Better Way to Test Your React-Redux App‬"
 date: 2019-01-01 00:00:00
 categories: [testing]
 icon: 🔬
