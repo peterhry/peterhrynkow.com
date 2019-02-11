@@ -122,7 +122,7 @@ For unit and integration tests, I like [react-testing-library](https://github.co
 
 ### In Summary
 
-- Unit tests don't cover the connection between a component, action creator, and reducer. 
+- Unit tests don't cover the connections between components, action creators, and reducers. 
 - Integration tests give you more confidence in the reliability of your application because they verify the relationships between units of code.
 - Integration tests don't have to be wide in scope. You can use them to test the connection between just a handful of modules. 
 - Unit tests are better for testing shared libraries or packages that you intend to distribute.
