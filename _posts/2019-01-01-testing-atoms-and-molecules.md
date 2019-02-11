@@ -99,7 +99,7 @@ it('increments the counter', () => {
 })
 ```
 
-Notice that this test uses a real Redux store instead of [redux-mock-store](https://github.com/dmitry-zaets/redux-mock-store). **Using a real Redux store in your testS effectively closes the loop between UI event and UI update.** In most cases, your tests can use the same store configuration that is used in your application.
+Notice that this test uses a real Redux store instead of [redux-mock-store](https://github.com/dmitry-zaets/redux-mock-store). **Using a real Redux store in your tests effectively closes the loop between UI event and UI update.** In most cases, your tests can use the same store configuration that is used in your application.
 
 It might surprise you that this test covers every line of code in the action creator, reducer, and component. **By testing a molecule, you are indirectly testing its atoms.** Just be sure to use a code coverage tool to ensure all your branches are covered.
 
