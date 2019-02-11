@@ -4,6 +4,7 @@ title: "Testing Atoms & Molecules"
 date: 2019-01-01 00:00:00
 categories: [testing]
 icon: 🧠
+
 ---
 
 I come across a lot of React-Redux apps where components, action creators, and reducers are tested separately using unit tests. Does this sound familiar? It shouldn’t come as a surprise that a lot of teams follow this approach since it’s what’s described in the [Redux docs](https://redux.js.org/recipes/writing-tests). 
