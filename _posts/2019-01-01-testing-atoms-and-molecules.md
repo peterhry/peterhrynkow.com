@@ -13,7 +13,7 @@ In this post I'll demonstrate why this method alone is insufficient when it come
 
 ### Testing Atoms
 
-So what wrong with testing components, action creators, and reducers separately?
+So what's wrong with testing components, action creators, and reducers separately?
 
 Firstly, testing these elements in isolation doesn’t guarantee that they will work together. For example, a unit test for an [async action creator](https://redux.js.org/recipes/writing-tests#async-action-creators) asserts that a set of actions is dispatched but doesn’t ensure that a reducer is set up to handle them. Similarly, a unit test for a [reducer](https://redux.js.org/recipes/writing-tests#reducers) asserts that a new state is returned for a given action but doesn’t ensure that the component UI is updated to reflect the new state. 
 
