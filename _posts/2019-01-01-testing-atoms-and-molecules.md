@@ -4,19 +4,20 @@ title: "Testing Atoms & Molecules"
 date: 2019-01-01 00:00:00
 categories: [testing]
 icon: 🧠
----
 
-What’s the best way to write tests for your React application so that you can feel confident deploying it to production? Where should you focus your testing effort and what tools should you use? These are questions I’ve been pondering for a while now so I thought I’d share my thoughts on the subject.
+I come across a lot of React-Redux apps where components, action creators, and reducers are tested separately using unit tests. Does this sound familiar? It shouldn’t come as a surprise that a lot of teams follow this approach since it’s what’s described in the [Redux docs](https://redux.js.org/recipes/writing-tests). 
+
+In this post I'll demonstrate why this method alone is insufficient when it comes to ensuring the stability of your application. I'll also show you a better way to test your React-Redux app that will give you confidence deploying it to production.
 
 ### Testing Atoms
 
-I see a lot of React-Redux apps where components, action creators, and reducers are tested separately. It shouldn’t come as a surprise that a lot of teams follow this approach since it’s what’s described in the [Redux docs](https://redux.js.org/recipes/writing-tests). But is this the best method?
+So what wrong with testing components, action creators, and reducers separately?
 
-Firstly, testing these elements in isolation doesn’t guarantee that they will work together. For example, a unit test for an [async action creator](https://redux.js.org/recipes/writing-tests#async-action-creators) asserts that a set of actions is dispatched but doesn’t ensure that a reducer is set up to handle them. Similarly, a unit test for a [reducer](https://redux.js.org/recipes/writing-tests#reducers) asserts that a new state is returned for a given action but doesn’t ensure that the component UI is updated to reflect the new state.
+Firstly, testing these elements in isolation doesn’t guarantee that they will work together. For example, a unit test for an [async action creator](https://redux.js.org/recipes/writing-tests#async-action-creators) asserts that a set of actions is dispatched but doesn’t ensure that a reducer is set up to handle them. Similarly, a unit test for a [reducer](https://redux.js.org/recipes/writing-tests#reducers) asserts that a new state is returned for a given action but doesn’t ensure that the component UI is updated to reflect the new state. 
 
 Secondly, many of these tests require you to mock some other part of the system. For example, the redux docs recommend using [redux-mock-store](https://github.com/dmitry-zaets/redux-mock-store) to test async action creators. As a result, you lose confidence in the integration between what you’re testing and the dependency being mocked.
 
-This is an example of what I call testing the _atoms_ in your application. Knowing that these chunks of code work in isolation is great, but if you want to be confident that they work together, you should be testing the _molecules_.
+This is an example of what I call testing the _atoms_ in your application. Knowing that these chunks of code work in isolation is great, but if you want to be confident that they work For together, you should be testing the _molecules_.
 
 ### Testing Molecules
 
@@ -59,7 +60,7 @@ export default connect(
 )(Counter)
 ```
 
-For the sake of brevity, I put the action creator, reducer, component, and connected component in the same file, but in a real application, these elements would be stored separately.
+For the sake of brevity, I put the action creator, reducer, component, and connected component in the same file, but in a real application, these would be separate modules.
 
 The component in this example renders a button element that when clicked, increments a counter. Notice that the default export is a connected component which is what you should test.
 
@@ -96,17 +97,22 @@ it('increments the counter', () => {
 })
 ```
 
-Notice that this test uses a real Redux store instead of [redux-mock-store](https://github.com/dmitry-zaets/redux-mock-store). This is so you can test the component from UI event through to UI update.
+Notice that this test uses a real Redux store instead of [redux-mock-store](https://github.com/dmitry-zaets/redux-mock-store). **Using a real Redux store in your tests effectively closes the loop between UI event and UI update.** In most cases, you tests can use the same store configuration that is used in your application.
 
-It might surprise you that this test covers every line of code in the action creator, reducer, and component. By testing a molecule, you are indirectly testing its atoms.
+It might surprise you that this test covers every line of code in the action creator, reducer, and component. **By testing a molecule, you are indirectly testing its atoms.** Just be sure to use a code coverage tool to ensure all your branches are covered.
 
 More importantly, this test verifies the relationship between atoms. For example, the test breaks if the component's `onClick` prop is not mapped to the `incrementCounter` action creator or if the reducer fails to handle the `INCREMENT_COUNTER` action.
+
+What you have here is a kind of mini integration test.
+
+> Many people assume integration tests are necessarily broad in scope, while they can be more effectively done with a narrower scope.
+- Martin Fowler
 
 In some cases it is still necessary to mock dependencies that live outside the molecule. For instance, you might need to mock the `fetch` API if your action creator makes an HTTP request. This is unavoidable unless you use a framework like Cypress or Selenium to test your app from end to end — more on that later.
 
 Integration tests like this one give you more confidence (beyond unit tests alone) that your app will work as expected. So instead of writing a unit test for every atom in your application, zoom out a bit, and write some integration tests for the molecules.
 
-There are scenarios where unit tests are appropriate (shared libraries, modules
+There are scenarios where unit tests are still appropriate (shared libraries, modules
 published to npm, etc.) but for testing the behaviour of your application, integration tests are more likely to catch problems.
 
 ### Tools
@@ -115,6 +121,4 @@ For unit and integration tests, I like [react-testing-library](https://github.co
 
 ### In Summary
 
-Integration tests give you more confidence in the reliability of your application because they verify the relationships between units of code.
-
-Unit tests are better for testing shared libraries or packages that you intend to distribute.
+Integration tests give you more confidence in the reliability of your application because they verify the relationships between units of code. Unit tests are better for testing shared libraries or packages that you intend to distribute.
