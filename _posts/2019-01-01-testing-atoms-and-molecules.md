@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Stop Testing Atoms and Start Testing Molecules"
+title: "Testing Atoms & Molecules"
 date: 2019-01-01 00:00:00
 categories: [testing]
 icon: 🔬
