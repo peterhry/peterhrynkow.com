@@ -107,7 +107,7 @@ More importantly, this test verifies the relationship between atoms. For example
 What you have here is a kind of mini integration test.
 
 > Many people assume integration tests are necessarily broad in scope, while they can be more effectively done with a narrower scope.
-- Martin Fowler
+— Martin Fowler
 
 In some cases it is still necessary to mock dependencies that live outside the molecule. For instance, you might need to mock the `fetch` API if your action creator makes an HTTP request. This is unavoidable unless you use a framework like Cypress or Selenium to test your app from end to end — more on that later.
 
