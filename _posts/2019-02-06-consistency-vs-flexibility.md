@@ -65,7 +65,7 @@ In this example, the consumer wants to use `FancyTab` components instead of `Tab
 
 Flexibility: 🧘‍♂️ 🧘‍♂️ 🧘‍♂️ 🧘‍♂️ 🧘‍♂️
 
-Using a render prop to compose child elements is an advanced pattern that delegates all aspects of rendering to the consumer. Furthermore, it allows the consumer to render children with an otherwise incompatible API. The result is a loose coupling between the component and its children.
+Using a render prop to compose child elements is an advanced pattern that delegates all aspects of rendering to the consumer. Furthermore, it results in a loose coupling between the component and its children, allowing the consumer to render children with an otherwise incompatible API.
 
 Here the component is saying: **Render the children when I call this function. I'll expose an API to help you integrate your super-custom child components.**
 
