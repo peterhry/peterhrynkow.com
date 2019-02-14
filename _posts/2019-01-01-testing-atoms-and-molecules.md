@@ -7,9 +7,9 @@ icon: 🔬
 
 ---
 
-I come across a lot of React-Redux apps where components, action creators, and reducers are tested separately using unit tests. Does this sound familiar? It shouldn’t come as a surprise that a lot of teams follow this approach since it’s what’s described in the [Redux docs](https://redux.js.org/recipes/writing-tests). 
+I come across a lot of React-Redux apps where components, action creators, and reducers are tested separately using unit tests. Does this sound familiar? It shouldn’t come as a surprise that a lot of teams follow this approach since it’s what’s described in the [Redux docs](https://redux.js.org/recipes/writing-tests).
 
-In this post I'll demonstrate why this method alone is insufficient when it comes to ensuring the stability of your application. I'll also show you a better way to test your React-Redux app that will give you confidence deploying it to production.
+In this post I'll demonstrate why this method is insufficient when it comes to ensuring the stability of your application. I'll also show you a better way to test your React-Redux app that will give you confidence deploying it to production.
 
 ### Testing Atoms
 
