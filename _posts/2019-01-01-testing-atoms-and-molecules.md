@@ -9,7 +9,7 @@ icon: 🔬
 
 I come across a lot of React-Redux apps where components, action creators, and reducers are tested separately using unit tests. Does this sound familiar? It shouldn’t come as a surprise that a lot of teams follow this approach since it’s what’s described in the [Redux docs](https://redux.js.org/recipes/writing-tests).
 
-In this post I'll demonstrate why this method is insufficient when it comes to ensuring the stability of your application. I'll also show you a better way to test your React-Redux app that will give you confidence deploying it to production.
+But in this post I'll demonstrate why this method is insufficient when it comes to ensuring the stability of your application. I'll also show you a better — and frankly easier — way to test your React-Redux app that will give you more confidence deploying it to production.
 
 ### Testing Atoms
 
@@ -19,7 +19,7 @@ Firstly, testing these elements in isolation doesn’t guarantee that they will 
 
 Secondly, many of these tests require you to mock some other part of the system. For example, the redux docs recommend using [redux-mock-store](https://github.com/dmitry-zaets/redux-mock-store) to test async action creators. As a result, you lose confidence in the integration between what you’re testing and the dependency being mocked.
 
-This is an example of what I call testing the _atoms_ in your application. Knowing that these chunks of code work in isolation is great, but if you want to be confident that they work together, you should be testing the _molecules_.
+This is an example of what I call testing the _atoms_ in your application. Knowing that these tiny chunks of code work in isolation is great, but if you want to be confident that they work together, you should be testing the _molecules_.
 
 ### Testing Molecules
 
