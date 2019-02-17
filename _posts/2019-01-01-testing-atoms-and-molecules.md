@@ -17,7 +17,9 @@ So what's wrong with testing components, action creators, and reducers separatel
 
 Firstly, testing these elements in isolation doesn’t guarantee that they will work together. For example, a unit test for an [async action creator](https://redux.js.org/recipes/writing-tests#async-action-creators) asserts that a set of actions is dispatched but doesn’t ensure that a reducer is set up to handle them. Similarly, a unit test for a [reducer](https://redux.js.org/recipes/writing-tests#reducers) asserts that a new state is returned for a given action but doesn’t ensure that the component UI is updated to reflect the new state. 
 
-Secondly, many of these tests require you to mock some other part of the system. For example, the redux docs recommend using [redux-mock-store](https://github.com/dmitry-zaets/redux-mock-store) to test async action creators. As a result, you lose confidence in the integration between what you’re testing and the dependency being mocked.
+Secondly, many of these tests require you to mock other parts of the system. As a result, you lose confidence in the integration between what you’re testing and the dependency being mocked. For example, the Redux docs recommend using [redux-mock-store](https://github.com/dmitry-zaets/redux-mock-store) to test async action creators. A common source of confusion when writing tests because the state of the mock store is static.
+
+Finally, these tests are so narrow in scope that it makes refactoring nearly impossible. Reducers and action creators should be considered component implementation details. You should be free to refactor them without having to update your tests.
 
 This is an example of what I call testing the _atoms_ in your application. Knowing that these tiny chunks of code work in isolation is great, but if you want to be confident that they work together, you should be testing the _molecules_.
 
