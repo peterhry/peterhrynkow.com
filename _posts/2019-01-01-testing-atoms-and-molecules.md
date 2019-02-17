@@ -7,7 +7,7 @@ icon: 🔬
 
 ---
 
-I come across a lot of React-Redux apps where components, action creators, and reducers are tested separately using unit tests. Does this sound familiar? It shouldn’t come as a surprise that a lot of teams follow this approach since it’s what’s described in the [Redux docs](https://redux.js.org/recipes/writing-tests).
+I come across a lot of React-Redux apps where components, action creators, and reducers are tested as separate units. Does this sound familiar? It shouldn’t come as a surprise that a lot of teams follow this approach since it’s what’s described in the [Redux docs](https://redux.js.org/recipes/writing-tests).
 
 But in this post I'll demonstrate why this method is insufficient when it comes to ensuring the stability of your application. I'll also show you a better — and frankly easier — way to test your React-Redux app that will give you more confidence deploying it to production.
 
@@ -15,11 +15,11 @@ But in this post I'll demonstrate why this method is insufficient when it comes 
 
 So what's wrong with testing components, action creators, and reducers separately?
 
-Firstly, testing these elements in isolation doesn’t guarantee that they will work together. For example, a unit test for an [async action creator](https://redux.js.org/recipes/writing-tests#async-action-creators) asserts that a set of actions is dispatched but doesn’t ensure that a reducer is set up to handle them. Similarly, a unit test for a [reducer](https://redux.js.org/recipes/writing-tests#reducers) asserts that a new state is returned for a given action but doesn’t ensure that the component UI is updated to reflect the new state. 
+Firstly, testing these elements in isolation doesn’t guarantee that they will work together. The relationships between these elements are not covered by unit tests. For example, a unit test for an [action creator](https://redux.js.org/recipes/writing-tests#action-creators) asserts that an action is created but doesn't verify that the action is ever dispatched. Similarly, a unit test for a [reducer](https://redux.js.org/recipes/writing-tests#reducers) asserts that a new state is returned for a given action but doesn’t ensure that the component UI is updated to reflect the new state. 
 
-Secondly, many of these tests require you to mock other parts of the system. As a result, you lose confidence in the integration between what you’re testing and the dependency being mocked. For example, the Redux docs recommend using [redux-mock-store](https://github.com/dmitry-zaets/redux-mock-store) to test async action creators. A common source of confusion when writing tests because the state of the mock store is static.
+Secondly, because these tests require you to mock other parts of the system, you lose confidence in the integration between what you’re testing and the dependency being mocked. For instance, the Redux docs recommend using [redux-mock-store](https://github.com/dmitry-zaets/redux-mock-store) to test async action creators. A mock store _looks_ like a real store, but unlike a real store, its state is completely static. You can verify that certain actions are dispatched but there's no telling how those actions will transform the state of your application when a real store is used.
 
-Finally, these tests are so narrow in scope that it makes refactoring nearly impossible. Reducers and action creators should be considered component implementation details. You should be free to refactor them without having to update your tests.
+Finally, these tests are so narrow in scope that it makes refactoring nearly impossible. Any small change to the code in these elements requires the tests to be updated.
 
 This is an example of what I call testing the _atoms_ in your application. Knowing that these tiny chunks of code work in isolation is great, but if you want to be confident that they work together, you should be testing the _molecules_.
 
@@ -101,13 +101,13 @@ it('increments the counter', () => {
 })
 ```
 
-Notice that this test uses a real Redux store instead of [redux-mock-store](https://github.com/dmitry-zaets/redux-mock-store). **Using a real Redux store in your tests effectively closes the loop between UI event and UI update.** In most cases, your tests can use the same store configuration that is used in your application.
+Notice that this test uses a real Redux store instead of [redux-mock-store](https://github.com/dmitry-zaets/redux-mock-store). **Using a real Redux store in your tests effectively closes the loop between UI event and UI update.** In most cases, your tests can use the same store configuration used by your production application.
 
 It might surprise you that this test covers every line of code in the action creator, reducer, and component. **By testing a molecule, you are indirectly testing its atoms.** Just be sure to use a code coverage tool to ensure all your branches are covered.
 
 More importantly, this test verifies the relationship between atoms. For example, the test breaks if the component's `onClick` prop is not mapped to the `incrementCounter` action creator or if the reducer fails to handle the `INCREMENT_COUNTER` action.
 
-What you have here is a kind of mini integration test.
+What you have here is a narrow integration test where the component API represents the only testing surface. Everything inside your component — including its reducers and action creators — is  an implementation detail. Now you are free to refactor the guts of your component without having to update your tests.
 
 > Many people assume integration tests are necessarily broad in scope, while they can be more effectively done with a narrower scope.<br>— Martin Fowler
 
