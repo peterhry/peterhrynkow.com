@@ -15,7 +15,7 @@ But in this post I'll demonstrate why this method is insufficient when it comes 
 
 So what's wrong with testing components, action creators, and reducers separately?
 
-First of all, testing these elements in isolation doesn’t guarantee that they work together. For example, a unit test for an [action creator](https://redux.js.org/recipes/writing-tests#action-creators) asserts that an action is created but doesn't verify that the action is ever dispatched. Similarly, a unit test for a [reducer](https://redux.js.org/recipes/writing-tests#reducers) asserts that a new state is returned for a given action but doesn’t ensure that the component UI is updated to reflect the new state. **Unit tests do not verify the relationships between these elements.**
+First of all, testing these elements in isolation doesn’t guarantee that they work together. For example, a unit test for an [action creator](https://redux.js.org/recipes/writing-tests#action-creators) asserts that an action is created but doesn't verify that the action is ever dispatched. Similarly, a unit test for a [reducer](https://redux.js.org/recipes/writing-tests#reducers) asserts that a new state is returned for a given action but doesn’t ensure that the component UI is updated to reflect the new state.
 
 Second, because these tests require you to mock other parts of the system, you lose confidence in the integration between what you’re testing and the dependency being mocked. For instance, the Redux docs recommend using [redux-mock-store](https://github.com/dmitry-zaets/redux-mock-store) to test async action creators. A mock store _looks_ like a real Redux store, but unlike a real store, its state is completely static. It allows you to verify that certain actions are dispatched but there's no telling how those actions will transform the state of your application when a real store is used.
 
@@ -124,7 +124,7 @@ More importantly, though, this test verifies the connections between atoms. For 
 
 It might surprise you that this test covers every line of code in the action creator, reducer, and component. **By testing a molecule, you are indirectly testing its atoms.** Just be sure to use a code coverage tool to ensure all of your branches are covered.
 
-This is an example of a narrow integration test. The component API (its props and UI) serves as the testing surface. The elements inside the component — including its reducer and action creators — are implementation details. Using this method, you are free to refactor the guts of the component without having to update the tests. 
+This is an example of a narrow integration test. The component's API (its props and UI) serves as the testing surface. The elements inside the component — including its reducer and action creators — are implementation details. Using this method, you are free to refactor the guts of the component without having to update the tests. 
 
 > Many people assume integration tests are necessarily broad in scope, while they can be more effectively done with a narrower scope.<br>— Martin Fowler
 
