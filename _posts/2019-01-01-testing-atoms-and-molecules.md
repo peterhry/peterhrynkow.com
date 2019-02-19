@@ -9,7 +9,7 @@ icon: 🔬
 
 I come across a lot of React-Redux apps where components, action creators, and reducers are tested as separate units. Does this sound familiar? It shouldn’t come as a surprise that a lot of teams follow this approach since it’s what’s described in the [Redux docs](https://redux.js.org/recipes/writing-tests).
 
-But in this post I'll demonstrate why this method is insufficient when it comes to ensuring the stability of your application. I'll also show you a better — and frankly easier — way to test your React-Redux app that will give you more confidence deploying it to production.
+But in this post, I'll show you why following this method is not enough to ensure the stability of your application. I'll also show you a better — and frankly easier — way to test your app that will give you more confidence that your code is bug-free.
 
 ### Testing Atoms
 
@@ -25,7 +25,7 @@ This is an example of what I call testing the _atoms_ in your application. Knowi
 
 ### Testing Molecules
 
-Components, action creators, and reducers are like atoms that when combined create a connected component _molecule_. By testing a molecule you can verify the relationships between its atoms.
+Components, action creators, and reducers are like atoms that when combined create a connected component _molecule_. By testing a molecule you can verify the connections between its atoms.
 
 Here's an example:
 
@@ -116,24 +116,24 @@ it('increments the counter', () => {
 
 OK, let's break this down.
 
-First, notice that this test uses a real Redux store instead of [redux-mock-store](https://github.com/dmitry-zaets/redux-mock-store). **Using a real Redux store effectively closes the loop between UI event and UI update.** In other words, you can fire an event (click, keypress, etc.) then assert that the UI is updated to reflect some new state. With a mock store, you can only assert that actions are dispatched. 
+First, notice that the connected component is the only module being tested. Even so, the test covers every line of code in the action creator, reducer, and component. **By testing a molecule, you are indirectly testing its atoms.** Just be sure to use a code coverage tool to ensure all of your branches are covered.
 
-Why does this matter? Since this test isn't concerned with _how_ the UI is updated, you can easily refactor the atoms without breaking the test.
+More importantly, this test verifies the connections between atoms. For example, the test breaks if the component's `onClick` prop is not mapped to the `incrementCounter` action creator or if the reducer fails to handle the `INCREMENT_COUNTER` action.
 
-More importantly, though, this test verifies the connections between atoms. For example, the test breaks if the component's `onClick` prop is not mapped to the `incrementCounter` action creator or if the reducer fails to handle the `INCREMENT_COUNTER` action. 
+Next, notice that this test uses a real Redux store instead of [redux-mock-store](https://github.com/dmitry-zaets/redux-mock-store). **Using a real Redux store effectively closes the loop between UI event and UI update.** In other words, you can fire an event (click, keypress, etc.) then assert that the UI is updated to reflect some new state. With a mock store, you can only assert that actions are dispatched. 
 
-It might surprise you that this test covers every line of code in the action creator, reducer, and component. **By testing a molecule, you are indirectly testing its atoms.** Just be sure to use a code coverage tool to ensure all of your branches are covered.
+Why does this matter? Since this test isn't concerned with _how_ the UI is updated, you can easily refactor the atoms without breaking the test. The only testing surface is the component's API (its props and UI). The elements inside the component — its reducer and action creators — are implementation details.
 
-This is an example of a narrow integration test. The component's API (its props and UI) serves as the testing surface. The elements inside the component — including its reducer and action creators — are implementation details. Using this method, you are free to refactor the guts of the component without having to update the tests. 
+> Many people assume integration tests are necessarily broad in scope, while they can be more effectively done with a narrower scope.<br>-- Martin Fowler
 
-> Many people assume integration tests are necessarily broad in scope, while they can be more effectively done with a narrower scope.<br>— Martin Fowler
+Integration tests like this one give you more confidence that your app will work as expected because they verify the connections between units of code. So instead of writing a unit test for every atom in your application, zoom out a bit, and write some integration tests for the molecules.
 
-In some cases it is still necessary to mock dependencies that live outside the molecule. For instance, you might need to mock the `fetch` API if your action creator makes an HTTP request. This is unavoidable unless you use a framework like Cypress or Selenium to test your app from end to end — more on that later.
-
-Integration tests like this one give you more confidence (beyond unit tests alone) that your app will work as expected. So instead of writing a unit test for every atom in your application, zoom out a bit, and write some integration tests for the molecules.
-
-There are scenarios where unit tests are still appropriate (shared libraries, modules
+There are scenarios where unit tests are appropriate (shared libraries, modules
 published to npm, etc.) but for testing the behaviour of your application, integration tests are more likely to catch problems.
+
+Quick side note:
+
+In some cases you still need to mock dependencies that live outside the molecule. For instance, you might need to mock the `fetch` API if your action creator makes an HTTP request. This is unavoidable unless you use a framework like Cypress or Selenium to test your app from end to end -- more on that later.
 
 ### Tools
 
