@@ -139,7 +139,7 @@ In some cases you still need to mock dependencies that live outside the molecule
 
 For unit and integration tests, I like [react-testing-library](https://github.com/kentcdodds/react-testing-library) because its guiding principles encourage a black box testing approach. By following this method, you can easily refactor your code without breaking your tests. In contrast, [Enzyme](https://airbnb.io/enzyme/) has methods like [`setState`](https://airbnb.io/enzyme/docs/api/ReactWrapper/setState.html) and [`state`](https://airbnb.io/enzyme/docs/api/ReactWrapper/state.html) that might tempt you to test a component’s implementation details. Doing so makes refactoring more difficult.
 
-### In Summary
+### Summary
 
 - Unit tests don't cover the connections between components, action creators, and reducers. 
 - Integration tests give you more confidence in the reliability of your application because they verify the relationships between units of code.
