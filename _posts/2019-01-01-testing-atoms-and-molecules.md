@@ -19,7 +19,7 @@ First of all, testing these elements in isolation doesn’t guarantee that they 
 
 Second, because these tests require you to mock other parts of the system, you lose confidence in the integration between what you’re testing and the dependency being mocked. For instance, the Redux docs recommend using [redux-mock-store](https://github.com/dmitry-zaets/redux-mock-store) to test async action creators. A mock store _looks_ like a real Redux store, but unlike a real store, its state is completely static. It allows you to verify that certain actions are dispatched but there's no telling how those actions will transform the state of your application when a real store is used.
 
-Finally, these tests are so narrow in scope that it makes refactoring nearly impossible. Any small change to the code in these elements requires the tests to be updated. This slows down development and increases the chance of introducing a bug.
+Finally, these tests are so narrow in scope that it makes refactoring nearly impossible. Any small change to the code in these elements requires the tests to be updated. This slows down development and increases the chance of introducing bugs.
 
 This is an example of what I call testing the _atoms_ in your application. Knowing that these tiny chunks of code work in isolation is great, but if you want to be confident that they work together, you should be testing the _molecules_.
 
