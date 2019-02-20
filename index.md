@@ -1,3 +1,6 @@
+---
+title: "Home"
+---
 
 # {{ site.description }}
 
