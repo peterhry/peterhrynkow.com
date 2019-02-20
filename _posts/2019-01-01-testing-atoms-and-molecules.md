@@ -121,18 +121,18 @@ More importantly, this test verifies the connections between atoms. For example,
 
 Next, notice that this test uses a real Redux store instead of [redux-mock-store](https://github.com/dmitry-zaets/redux-mock-store). **Using a real Redux store effectively closes the loop between UI event and UI update.** In other words, you can fire an event (click, keypress, etc.) then assert that the UI is updated to reflect some new state. With a mock store, you can only assert that actions are dispatched.
 
-Why does this matter? Since this test isn't concerned with _how_ the UI is updated, you can easily refactor the atoms without breaking the test. The only testing surface is the component's API (its props and UI). The elements inside the component — its reducer and action creators — are implementation details.
+Why does this matter? Since this test isn't concerned with _how_ the UI is updated, you can easily refactor the atoms without breaking the test. The elements inside the component — its reducer and action creator — are implementation details.
 
 > Many people assume integration tests are necessarily broad in scope, while they can be more effectively done with a narrower scope.<br>-- Martin Fowler
 
-Integration tests like this one give you more confidence that your app will work as expected because they verify the connections between units of code. So instead of writing a unit test for every atom in your application, zoom out a bit, and write some integration tests for the molecules.
+Integration tests like this one give you more confidence in the stability of your application because they verify the connections between units of code. So instead of writing a unit test for every atom in your application, zoom out a bit, and write some integration tests for the molecules.
 
 There are scenarios where unit tests are still appropriate (shared libraries, modules
 published to npm, etc.) but for testing the overall behaviour of your application, integration tests are more likely to catch problems.
 
-Quick side note:
+<!--Quick side note:
 
-You still need to mock dependencies that live outside the molecule. For instance, you might need to mock the `fetch` API if your action creator makes an HTTP request. This is unavoidable unless you use a framework like Cypress or Selenium to test your app from end to end — more on that later.
+You still need to mock dependencies that live outside the molecule. For instance, you might need to mock the `fetch` API if your action creator makes an HTTP request. This is unavoidable unless you use a framework like Cypress or Selenium to test your app from end to end — more on that later.-->
 
 ### Tools
 
