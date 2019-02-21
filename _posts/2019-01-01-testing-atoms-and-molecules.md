@@ -123,9 +123,12 @@ Next, notice that this test uses a real Redux store instead of [redux-mock-store
 
 Why does this matter? Since this test isn't concerned with _how_ the UI is updated, you can easily refactor the atoms without breaking the test. The elements inside the component — its reducer and action creator — are implementation details.
 
-> Many people assume integration tests are necessarily broad in scope, while they can be more effectively done with a narrower scope.<br>-- Martin Fowler
+> Many people assume integration tests are necessarily broad in scope, while they can be more effectively done with a narrower scope.<br>[@martinfowler](https://twitter.com/martinfowler)
 
 Integration tests like this one give you more confidence in the stability of your application because they verify the connections between units of code. So instead of writing a unit test for every atom in your application, zoom out a bit, and write some integration tests for the molecules.
+
+> Write tests. Not too many. Mostly integration.<br>
+[@rauchg](https://twitter.com/rauchg)
 
 There are scenarios where unit tests are still appropriate (shared libraries, modules
 published to npm, etc.) but for testing the overall behaviour of your application, integration tests are more likely to catch problems.
