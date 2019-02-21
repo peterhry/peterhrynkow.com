@@ -119,7 +119,7 @@ First, notice that the connected component is the only module being tested. Even
 
 More importantly, this test verifies the connections between atoms. For example, the test breaks if the component's `onClick` prop is not mapped to the `incrementCounter` action creator or if the reducer fails to handle the `INCREMENT_COUNTER` action.
 
-Next, notice that this test uses a real Redux store instead of [redux-mock-store](https://github.com/dmitry-zaets/redux-mock-store). **Using a real Redux store effectively closes the loop between UI event and UI update.** In other words, you can fire an event (click, keypress, etc.) then assert that the UI is updated to reflect some new state. With a mock store, you can only assert that actions are dispatched.
+Next, notice that this test uses a real Redux store instead of [redux-mock-store](https://github.com/dmitry-zaets/redux-mock-store). **Using a real Redux store effectively closes the loop between UI event (input) and UI update (output).** In other words, you can fire an event (click, keypress, etc.) then assert that the UI is updated to reflect some new state. With a mock store, you can only assert that actions are dispatched.
 
 Why does this matter? Since this test isn't concerned with _how_ the UI is updated, you can easily refactor the atoms without breaking the test. The elements inside the component — its reducer and action creator — are implementation details.
 
