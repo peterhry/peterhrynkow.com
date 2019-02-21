@@ -9,7 +9,7 @@ icon: 🔬
 
 I come across a lot of React-Redux apps where components, action creators, and reducers are tested as separate units. Does this sound familiar? It shouldn’t come as a surprise that a lot of teams follow this approach since it’s what’s described in the [Redux docs](https://redux.js.org/recipes/writing-tests). But there's a better way...
 
-In this post, I'll show you why this method is not only insufficient when it comes to ensuring the stability of your application, but also makes refactoring nearly impossible. I'll also show you a better — and frankly easier — way to test your app that will improve your workflow and give you confidence that your code is bug-free.
+In this post, I'll show you why this method is not only insufficient when it comes to ensuring the stability of your application, but also makes refactoring nearly impossible. I'll also show you a better — and frankly easier — way to test your app that will improve your workflow and catch more bugs.
 
 ### Testing Atoms
 
@@ -115,7 +115,7 @@ it('increments the counter', () => {
 
 OK, let's break this down.
 
-First, notice that the connected component is the only module being tested. Even so, the test covers every line of code in the action creator, reducer, and component. **By testing a molecule, you are indirectly testing its atoms.** There's no need to test the atoms individually as long as you cover every code path in the molecule test.
+First, notice that the connected component is the only module being tested. Even so, the test covers every line of code in the action creator, reducer, and component. There's no need to test these elements individually as long as the connected component test covers every code path. **By testing a molecule, you are indirectly testing its atoms.** 
 
 More importantly, this test verifies the connections between atoms. For example, the test breaks if the component's `onClick` prop is not mapped to the `incrementCounter` action creator or if the reducer fails to handle the `INCREMENT_COUNTER` action.
 
