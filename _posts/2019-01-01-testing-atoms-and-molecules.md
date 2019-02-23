@@ -121,7 +121,7 @@ More importantly, this test verifies the connections between atoms. For example,
 
 Next, notice that this test uses a real Redux store instead of [redux-mock-store](https://github.com/dmitry-zaets/redux-mock-store). **Using a real Redux store effectively closes the loop between UI event (input) and UI update (output).** In other words, you can fire an event (click, keypress, etc.) then assert that the UI is updated to reflect some new state. With a mock store, you can only assert that actions are dispatched.
 
-Why does this matter? Since this test isn't concerned with _how_ the UI is updated, you can easily refactor the atoms without breaking the test. The elements inside the component — its reducer and action creator — are just implementation details.
+Why does this matter? Since this test isn't concerned with _how_ the UI is updated, you can easily refactor the atoms without breaking the test. The elements inside the connected component (its reducer, action creator, etc.) are just implementation details.
 
 > Many people assume integration tests are necessarily broad in scope, while they can be more effectively done with a narrower scope.<br>[@martinfowler](https://twitter.com/martinfowler)
 
