@@ -117,7 +117,7 @@ it('increments the counter', () => {
 
 OK, let's break this down.
 
-First, notice that the connected component is the only module being tested. Even so, the test covers every line of code in the other modules. There's no need to test these elements individually as long as the connected component test covers every code execution path. **By testing a molecule, you are indirectly testing its atoms.** 
+First, notice that the connected component is the only module being tested. Even so, the test covers every line of code in the other modules. There's no need to test the other modules individually as long as the connected component test covers every code execution path. **By testing a molecule, you are indirectly testing its atoms.** 
 
 More importantly, this test verifies the connections between atoms. For example, the test breaks if the component's `onClick` prop is not mapped to the `incrementCounter` action creator or if the reducer fails to handle the `INCREMENT_COUNTER` action.
 
