@@ -17,6 +17,8 @@ So what's wrong with testing components, action creators, selectors, and reducer
 
 First of all, testing these elements in isolation doesn’t guarantee that they will work together. For example, a unit test for an [action creator](https://redux.js.org/recipes/writing-tests#action-creators) asserts that an action is created but doesn't verify that the action is ever dispatched. Similarly, a unit test for a [reducer](https://redux.js.org/recipes/writing-tests#reducers) asserts that a new state is returned for a given action but doesn’t verify that the component UI is updated to reflect the new state. There's a disconnect.
 
+![Passing unit tests, sinking ship]({{ site.baseurl }}/images/unit-tests.jpg)
+
 Second, because these tests require you to mock other parts of the system, you lose confidence in the integration between what you’re testing and the dependency being mocked. For instance, the Redux docs recommend using [redux-mock-store](https://github.com/dmitry-zaets/redux-mock-store) to test async action creators. A mock store _looks_ like a real Redux store, but unlike a real store, its state is completely static. It allows you to verify that certain actions are dispatched but there's no telling how those actions will transform the state of your application when a real store is used.
 
 Finally, these tests are so narrow in scope that it makes refactoring nearly impossible. Any small change to the code in these elements requires the tests to be updated. This slows down development and increases the chance of introducing new bugs.
