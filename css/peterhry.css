@@ -136,6 +136,12 @@ pre code:after {
   content: normal;
 }
 
+hr {
+  border: none;
+  height: 1px;
+  background: #808080;
+}
+
 /**
  * Logo
  */
