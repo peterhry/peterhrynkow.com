@@ -1,6 +1,6 @@
 What do we do when content created for a desktop website needs to fit on a smartphone screen? The temptation might be to create another set of content for smartphones. But what about tablets, laptops, and other devices that fall between a desktop and phone? When you consider the overhead of managing content for each class of device, it’s clear that we need a better approach.
 
-This year I was lucky enough to attend an Event Apart in San Francisco and a [presentation by Karen McGrane](http://aneventapart.com/news/post/aea-video-karen-mcgrane-adapting-ourselves-to-adaptive-content) confirmed some of my thoughts on this subject, mainly that we should be able to create content once and publish it everywhere.
+This year I was lucky enough to attend An Event Apart in San Francisco and a [presentation by Karen McGrane](http://aneventapart.com/news/post/aea-video-karen-mcgrane-adapting-ourselves-to-adaptive-content) confirmed some of my thoughts on this subject, mainly that we should be able to create content once and publish it everywhere.
 
 McGrane calls it adaptive content. The goal of this approach is to think of content as reusable “chunks”, not pages, and to describe it with metadata.
 
