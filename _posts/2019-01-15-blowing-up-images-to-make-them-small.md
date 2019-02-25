@@ -91,5 +91,4 @@ This technique is great for reducing the file size of background images which of
 
 So the next time you're about to export a big background image from Photoshop or Sketch — give this technique a try — you might be surprised how well it works.
 
-Next up: [Firebase + Create React App](https://peterhrynkow.com/firebase/2018/08/01/firebase-with-create-react-app.html)
 
