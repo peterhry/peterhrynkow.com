@@ -9,11 +9,11 @@ icon: 🔬
 
 I come across a lot of React-Redux apps where components, action creators, selectors, and reducers are tested as separate units. Does this sound familiar? It shouldn’t come as a surprise that a lot of teams follow this approach since it’s what’s described in the [Redux docs](https://redux.js.org/recipes/writing-tests). But, there's a better way...
 
-In this post, I'll show you why this method is not only insufficient when it comes to ensuring the stability of your application, but also makes refactoring nearly impossible. I'll also show you a better — and frankly easier — way to test your app that will improve your workflow and catch more bugs.
+In this post, I'll show you why this method is not only insufficient when it comes to ensuring the stability of your application, but also makes refactoring nearly impossible. I'll also show you a better, and frankly easier, way to test your app that will catch more bugs and at the same time improve your workflow.
 
 ### Testing Atoms
 
-So what's wrong with testing components, action creators, selectors, and reducers separately?
+So what's the problem with testing components, action creators, selectors, and reducers separately?
 
 First of all, testing these elements in isolation doesn’t guarantee that they will work together. For example, a unit test for an [action creator](https://redux.js.org/recipes/writing-tests#action-creators) asserts that an action is created but doesn't verify that the action is ever dispatched. Similarly, a unit test for a [reducer](https://redux.js.org/recipes/writing-tests#reducers) asserts that a new state is returned for a given action but doesn’t verify that the component UI is updated to reflect the new state. There's a disconnect.
 
