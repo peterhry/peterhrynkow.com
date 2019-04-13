@@ -8,7 +8,7 @@ icon: 🔥
 
 ![Firebase + Create React App Logo]({{ site.baseurl }}/images/logo-firebase-cra.svg){:class="inline-img"}
 
-Earlier this year, my team and I built and deployed our first production Firebase app. It was a lot of fun and we learned a ton about the platform. For our project, we needed to build a web-based chat client that would allow users to interact with market research bots in realtime.
+Earlier this year, my team and I built and deployed our first production Firebase app. It was a lot of fun and along the way we learned a ton about the platform. For our project, we needed to build a web-based chat client that would allow users to interact with market research bots in realtime.
 
 Firebase was the perfect fit. We used the Realtime Database to synchronize and push data to connected clients, Cloud Functions to process messages on the backend, and Firebase Hosting to serve the app.
 
