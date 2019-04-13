@@ -5,7 +5,7 @@ date: 2019-01-13 00:00:00
 categories: [performance]
 icon: 🔥
 ---
-Normally, raster images look distorted or pixelated when enlarged — especially if they contain graphics or text — but the technique I'm about to show you is all about blowing up tiny images and the results might surprise you.
+Raster images normally look distorted or pixelated when enlarged — especially if they contain graphics or text — but the technique I'm about to show you is all about blowing up tiny images and the results might just surprise you.
 
 Let’s say you want to use this image as a full page background on your website:
 
