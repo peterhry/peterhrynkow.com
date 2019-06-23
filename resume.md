@@ -6,7 +6,7 @@ title: "Resume"
 
 ## Work history 
 
-Rival Technologies
-Software Engineering Manager
-Nov 2019 - Present
+### Rival Technologies
+_Software Engineering Manager_<br>
+Nov 2019 - Present<br>
 Responsibilities: Coaching and mentoring team members, career development, recruiting, team motivation.
