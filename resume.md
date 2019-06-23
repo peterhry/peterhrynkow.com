@@ -10,11 +10,11 @@ title: "Resume"
 _Software Engineering Manager_<br>
 Nov 2019 - Present<br>
 Responsibilities:
-- Coaching and mentoring the dev team
-- career development
-- recruiting 
-- team motivation
-- liaising with the product owner, UX director, and QA lead to ensure alignment on features being delivered each sprint
+- Coaching and mentoring the development team
+- Career development
+- Recruiting, phone screens, and interviews
+- Team motivation
+- Liaising with the product owner, UX director, and QA lead to ensure alignment on features being delivered each sprint
 - Scoping technical work for each epic
-- developing POCs
-- overseeing all development work.
+- Developing POCs
+- Overseeing all development work
