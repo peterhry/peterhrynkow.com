@@ -2,7 +2,7 @@
 title: "Resume"
 ---
 
-# Peter Hrynkow is a tech leader with a passion for building digital products that users fall in love with. His diverse background in design, technology, and marketing, allows him to communicate at all levels of an organization.
+# Peter Hrynkow is a tech leader with a passion for building digital products that users fall in love with. His diverse experience in design, technology, and marketing, allows him to communicate at all levels of an organization.
 
 ## Work history 
 
@@ -15,8 +15,7 @@ Responsibilities:
 - Career development and planning
 - Recruiting, phone screens, and interviews
 - Liaising with the product owner, UX director, and QA lead to ensure alignment on features being delivered each sprint
-- Scoping technical work and developing POCs
-- Overseeing development work
+- Scoping and overseeing all development work
 
 ## Technology experience 
 
