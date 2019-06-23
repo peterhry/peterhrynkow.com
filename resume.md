@@ -14,9 +14,10 @@ Responsibilities:
 - Defining roles and responsibilities
 - Career development and planning
 - Recruiting, phone screens, and interviews
-- Championing a culture of excellence within the development team
+- Championing a culture of excellence and accountability within the development team
 - Liaising with the product owner, design director, and QA lead to ensure alignment on features being delivered each sprint
 - Scoping, documenting, and overseeing development work
+- Serving as Scrum master during our development sprints
 
 **Rival Technologies**<br>
 _Senior Software Engineer_<br>
@@ -24,7 +25,8 @@ Jan 2018 - Nov 2018<br>
 
 Responsibilities:
 - Prepared technical design documentation for new and existing features
-- Designed and built a web-based chat client application using **Firebase**
+- Designed and built a web-based chat client using **React** and **Firebase**
+- Led the front-end development team in delivering high-quality code each sprint
 - 
 
 
@@ -35,3 +37,5 @@ JavaScript, Node.js, CSS, React, Angular, Polymer, Jest, Cypress, REST, GraphQL,
 ## Current Interests
 
 Event Sourcing, CQRS, 
+
+
