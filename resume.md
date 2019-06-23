@@ -13,7 +13,7 @@ _Software Engineering Manager_<br>
 Nov 2018 - Present<br>
 Responsibilities:
 - Scoping, documenting, and overseeing development work
-- Serving as Scrum Master during our development sprints
+- Serving as Scrum Master during development sprints
 - Coaching, mentoring, and motivating the development team
 - Championing a culture of excellence and accountability within the development team
 - Defining developer roles and responsibilities
