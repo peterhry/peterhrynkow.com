@@ -10,14 +10,16 @@ title: "Resume"
 _Software Engineering Manager_<br>
 Nov 2018 - Present<br>
 Responsibilities:
-- Coaching, mentoring, and motivating the development team
-- Defining roles and responsibilities
-- Career development and planning
-- Recruiting, phone screens, and interviews
-- Championing a culture of excellence and accountability within the development team
-- Liaising with the product owner, design director, and QA lead to ensure alignment on features being delivered each sprint
 - Scoping, documenting, and overseeing development work
-- Serving as Scrum master during our development sprints
+- Serving as Scrum Master during our development sprints
+- Coaching, mentoring, and motivating the development team
+interviews
+- Championing a culture of excellence and accountability within the development team
+- Defining developer roles and responsibilities
+- Career development and planning
+- Recruiting, phone screens, and 
+- Liaising with the product owner, design director, and QA lead to ensure alignment on features being delivered each sprint
+
 
 **Rival Technologies**<br>
 _Senior Software Engineer_<br>
