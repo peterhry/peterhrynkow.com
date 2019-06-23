@@ -9,5 +9,12 @@ title: "Resume"
 **Rival Technologies**<br>
 _Software Engineering Manager_<br>
 Nov 2019 - Present<br>
-Management duties include: Coaching and mentoring the dev team, career development, recruiting, and team motivation.
-Technical duties include: Scoping technical work for each epic; liaising with product owner, UX director, and QA lead to ensure alignment on features being delivered each sprint.
+Responsibilities:
+- Coaching and mentoring the dev team
+- career development
+- recruiting 
+- team motivation
+- liaising with the product owner, UX director, and QA lead to ensure alignment on features being delivered each sprint
+- Scoping technical work for each epic
+- developing POCs
+- overseeing all development work.
