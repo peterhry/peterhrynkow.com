@@ -14,11 +14,11 @@ Nov 2018 - Present
 
 Responsibilities:
 - Scoping, documenting, and overseeing development work
-- Serving as Scrum Master during development sprints
+- Serving as **Scrum Master** during development sprints
 - Coaching, mentoring, and motivating the development team
 - Championing a culture of excellence and accountability within the organization 
 - Defining developer roles and responsibilities
-- Career development and planning
+- Professional development, goal setting, and assessment
 - Recruiting, phone screens, and interviews
 - Liaising with the product owner, design director, and QA lead to ensure alignment on features being delivered each sprint
 
