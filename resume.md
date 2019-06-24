@@ -10,12 +10,13 @@ A life-long learner, Peter brings a diverse background in design, technology, an
 
 **Rival Technologies**<br>
 _Software Engineering Manager_<br>
-Nov 2018 - Present<br>
+Nov 2018 - Present
+
 Responsibilities:
 - Scoping, documenting, and overseeing development work
 - Serving as Scrum Master during development sprints
 - Coaching, mentoring, and motivating the development team
-- Championing a culture of excellence and accountability within the development team
+- Championing a culture of excellence and accountability within the organization 
 - Defining developer roles and responsibilities
 - Career development and planning
 - Recruiting, phone screens, and interviews
@@ -24,12 +25,21 @@ Responsibilities:
 
 **Rival Technologies**<br>
 _Senior Software Engineer_<br>
-Jan 2018 - Nov 2018<br>
+Jan 2018 - Nov 2018
 
 Responsibilities:
 - Prepared technical design documentation for new and existing features
 - Designed and built a web-based chat client using **React** and **Firebase**
 - Led the front-end development team in delivering high-quality code each sprint
+- Mentoring and coaching junior developers
+
+
+**Electronic Arts**<br>
+_Software Engineer II_<br>
+Nov 2014 - Jan 2018
+
+Responsibilities:
+- tbd
 
 
 ## Technology experience 
