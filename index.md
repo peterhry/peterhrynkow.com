@@ -4,7 +4,7 @@ title: "Home"
 
 # {{ site.description }}
 
-A life-long learner, Peter brings a diverse background in design, technology, and marketing that allows him to communicate at all levels of an organization.
+A lifelong learner, Peter brings a diverse background in design, technology, and marketing that allows him to communicate at all levels of an organization.
 
 <a href="{{ site.author.github }}">GitHub</a> •
 <a href="{{ site.author.twitter }}">Twitter</a> •
