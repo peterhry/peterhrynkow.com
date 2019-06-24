@@ -13,6 +13,7 @@ _Software Engineering Manager_<br>
 Nov 2018 - Present
 
 Responsibilities:
+
 - Scoping, documenting, and overseeing development work
 - Serving as **Scrum Master** during development sprints
 - Coaching, mentoring, and motivating the development team
@@ -28,9 +29,10 @@ _Senior Software Engineer_<br>
 Jan 2018 - Nov 2018
 
 Responsibilities:
-- Prepared technical design documentation for new and existing features
-- Designed and built a web-based chat client using **React** and **Firebase**
-- Led the front-end development team in delivering high-quality code each sprint
+
+- Preparing technical design documentation for new and existing features
+- Designing and building a web-based chat client using **React** and **Firebase**
+- Leading the front-end development team in delivering high-quality code each sprint
 - Mentoring and coaching junior developers
 
 
@@ -39,7 +41,12 @@ _Software Engineer II_<br>
 Nov 2014 - Jan 2018
 
 Responsibilities:
-- tbd
+
+- Developing websites and apps for Some of EA's most high profile games, including FIFA and Starwars Battlefront II
+- Leading JavaScript development on the team and participating in EA's JavaScript working group
+- Giving presentations on functional programming and other subjects
+- Contributing to the design and development of EA's network design system
+- Developing reusable components and libraries to streamline development across the team
 
 
 ## Technology experience 
