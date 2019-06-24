@@ -32,7 +32,7 @@ Responsibilities:
 
 - Preparing technical design documentation for new and existing features
 - Designing and building a web-based chat client using **React** and **Firebase**
-- Leading the front-end development team in delivering high-quality code each sprint
+- Leading the front-end development team in delivering high quality code each sprint
 - Mentoring and coaching junior developers
 
 
