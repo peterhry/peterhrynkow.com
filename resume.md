@@ -25,7 +25,7 @@ Responsibilities:
 
 
 **Rival Technologies**<br>
-_Senior Software Engineer_<br>
+_Senior Software Engineer, Team Lead_<br>
 Jan 2018 - Nov 2018
 
 Responsibilities:
