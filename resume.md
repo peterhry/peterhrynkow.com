@@ -2,7 +2,7 @@
 title: "Resume"
 ---
 
-# Peter Hrynkow is a dedicated tech leader with a passion for building digital products that users fall in love&nbsp;with. 
+# {{ site.description }}
 
 A lifelong learner, Peter brings a diverse background in design, technology, and marketing that allows him to communicate at all levels of an organization. 
 
