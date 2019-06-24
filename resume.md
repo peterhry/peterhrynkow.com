@@ -14,7 +14,7 @@ Nov 2018 - Present
 
 Responsibilities:
 
-- Scoping, documenting, and overseeing the development of major features
+- Scoping, documenting, and overseeing the development of a SaaS market research platform
 - Serving as **Scrum Master** during development sprints
 - Coaching, mentoring, and motivating the development team
 - Championing a culture of excellence and accountability within the organization 
