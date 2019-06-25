@@ -44,6 +44,12 @@ html {
   }
 }
 
+@media print {
+  html {
+    font-size: 12px;
+  }
+}
+
 body {
   color: #666;
   margin: 0;
