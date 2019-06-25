@@ -74,7 +74,7 @@ Responsibilities:
 
 ## Technology experience 
 
-JavaScript, Node.js, CSS, React, Angular, Polymer, Three.js, Jest, Cypress, REST, GraphQL, Postgres, Firebase, AWS, GCP
+JavaScript, Node.js, PHP, CSS, React, Angular, Polymer, Three.js, Jest, Cypress, REST, GraphQL, Postgres, Firebase, AWS, GCP
 
 ## Current interests
 
