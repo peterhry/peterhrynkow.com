@@ -2,6 +2,10 @@
 title: "Resume"
 ---
 
+Phone: (604) 767-2077<br>
+Email: peter@labwire.ca<br>
+LinkedIn: http://ca.linkedin.com/pub/peter-hrynkow
+
 # {{ site.description }}
 
 A lifelong learner, Peter brings a diverse background in design, technology, and marketing that allows him to communicate at all levels of an organization. 
