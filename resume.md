@@ -20,7 +20,7 @@ Nov 2018 - Present
 
 Responsibilities:
 
-- Scoping, documenting, and overseeing the development of software features
+- Scoping, documenting, and overseeing the development of features for a large SaaS platform
 - Coaching, mentoring, and motivating the development team as Scrum Master
 - Championing a culture of excellence and accountability within the organization 
 - Defining developer roles and responsibilities
@@ -60,7 +60,12 @@ Nov 2012 - Nov 2014
 
 Responsibilities:
 
-- tbd
+- Designing websites, apps, and games for brands like Sony PlayStation, Tic Tac, and Nokia
+- Preparing and presenting wireframes and user flows to clients 
+- Conducting hallway usability testing
+- Developing reusable code libraries
+- Promoting a mobile first ideology within the organization
+- Giving presentations on technical subjects
 
 **Noise Digital**<br>
 _Senior Interaction Developer_<br>
