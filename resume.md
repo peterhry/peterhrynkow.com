@@ -3,8 +3,8 @@ title: "Resume"
 ---
 
 Phone: (604) 767-2077<br>
-Email: peter@labwire.ca<br>
-LinkedIn: http://ca.linkedin.com/pub/peter-hrynkow
+Email: <a href="mailto: {{ site.email }}">{{ site.email }}</a><br>
+LinkedIn: <a href="{{ site.author.linkedin }}">{{ site.author.linkedin }}</a>
 
 # {{ site.description }}
 
