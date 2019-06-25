@@ -6,6 +6,12 @@ title: "Resume"
 
 A lifelong learner, Peter brings a diverse background in design, technology, and marketing that allows him to communicate at all levels of an organization. 
 
+## Key Strengths
+
+- Translating epics into elegant technical solutions that balance cost, complexity, and value to the business.
+
+- Coaching Scrum teams to work effectively and deliver high quality work each sprint.
+
 ## Work history 
 
 **Rival Technologies**<br>
@@ -15,7 +21,7 @@ Nov 2018 - Present
 Responsibilities:
 
 - Scoping, documenting, and overseeing the development of software features
-- Serving as **Scrum Master** during development sprints
+- Serving as **Scrum Master**
 - Coaching, mentoring, and motivating the development team
 - Championing a culture of excellence and accountability within the organization 
 - Defining developer roles and responsibilities
@@ -44,14 +50,33 @@ Responsibilities:
 
 - Developing websites and apps for some of EA's most high profile games, including FIFA and Starwars Battlefront II
 - Leading JavaScript development on the team and participating in EA's JavaScript working group
-- Giving presentations on functional programming and other subjects
+- Giving presentations on functional programming, and other subjects
 - Contributing to the design and development of EA's network design system
 - Developing reusable components and libraries to streamline development across the team
+- Mentoring junior developers
+
+**Noise Digital**<br>
+_Technical Lead, UX Lead_<br>
+Nov 2012 - Nov 2014
+
+Responsibilities:
+
+- tbd
+
+**Noise Digital**<br>
+_Senior Interaction Developer_<br>
+Nov 2007 - Nov 2012
+
+Responsibilities:
+
+- tbd
+
+
 
 
 ## Technology experience 
 
-JavaScript, Node.js, CSS, React, Angular, Polymer, Jest, Cypress, REST, GraphQL, Postgres, Firebase, AWS, GCP
+JavaScript, Node.js, CSS, React, Angular, Polymer, Three.js, Jest, Cypress, REST, GraphQL, Postgres, Firebase, AWS, GCP
 
 ## Current Interests
 
