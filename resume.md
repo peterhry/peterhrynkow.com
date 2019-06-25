@@ -2,16 +2,16 @@
 title: "Resume"
 ---
 
+# {{ site.description }}
+
 Phone: (604) 767-2077<br>
 Email: <a href="mailto: {{ site.email }}">{{ site.email }}</a><br>
 LinkedIn: <a href="{{ site.author.linkedin }}">{{ site.author.linkedin | replace: "https://", "" }}</a><br>
 GitHub: <a href="{{ site.author.github }}">{{ site.author.github | replace: "https://", "" }}</a>
 
-# {{ site.description }}
-
-A lifelong learner, Peter brings a diverse background in design, technology, and marketing that allows him to communicate at all levels of an organization. 
-
 ## Key strengths
+
+- A lifelong learner, Peter brings a diverse background in design, technology, and marketing that allows him to communicate at all levels of an organization. 
 
 - Translating epics into elegant technical solutions that balance cost, complexity, and value to the business.
 
