@@ -24,7 +24,7 @@ Responsibilities:
 - Coaching, mentoring, and motivating the development team as Scrum Master
 - Championing a culture of excellence and accountability within the organization 
 - Defining developer roles and responsibilities
-- Conducting career development, goal setting, and assessments
+- Conducting career development discussions, goal setting exercises, and assessments
 - Recruiting, conducting phone screens, and interviews
 - Liaising with the product owner, design director, and QA lead to ensure alignment on features being delivered each sprint
 
