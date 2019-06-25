@@ -20,7 +20,7 @@ Nov 2018 - Present
 
 Responsibilities:
 
-- Scoping, documenting, and overseeing the development of features for a large SaaS platform
+- Scoping, documenting, and overseeing the development of features for a large and complex data platform
 - Coaching, mentoring, and motivating the development team as Scrum Master
 - Championing a culture of excellence and accountability within the organization 
 - Defining developer roles and responsibilities
