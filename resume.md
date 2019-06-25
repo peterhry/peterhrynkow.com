@@ -4,7 +4,7 @@ title: "Resume"
 
 Phone: (604) 767-2077<br>
 Email: <a href="mailto: {{ site.email }}">{{ site.email }}</a><br>
-LinkedIn: <a href="{{ site.author.linkedin }}">{{ site.author.linkedin }}</a>
+LinkedIn: <a href="{{ site.author.linkedin }}">{{ site.author.linkedin|replace "http://" : "" }}</a>
 
 # {{ site.description }}
 
