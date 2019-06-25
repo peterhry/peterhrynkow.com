@@ -49,7 +49,7 @@ Responsibilities:
 
 - Developing websites and apps for some of EA's most high profile games, including FIFA and Starwars Battlefront II
 - Leading JavaScript development on the team and participating in EA's JavaScript working group
-- Giving presentations on functional programming, and other subjects
+- Giving presentations on functional programming and other subjects
 - Contributing to the design and development of EA's network design system
 - Developing reusable components and libraries to streamline development across the team
 - Mentoring junior developers
