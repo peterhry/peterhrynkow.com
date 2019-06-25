@@ -6,7 +6,7 @@ title: "Resume"
 
 A lifelong learner, Peter brings a diverse background in design, technology, and marketing that allows him to communicate at all levels of an organization. 
 
-## Key Strengths
+## Key strengths
 
 - Translating epics into elegant technical solutions that balance cost, complexity, and value to the business.
 
@@ -56,7 +56,7 @@ Responsibilities:
 
 **Noise Digital**<br>
 _Technical Lead, UX Lead_<br>
-Nov 2012 - Nov 2014
+Nov 2007 - Nov 2014
 
 Responsibilities:
 
@@ -67,22 +67,11 @@ Responsibilities:
 - Promoting a mobile first ideology within the organization
 - Giving presentations on technical subjects
 
-**Noise Digital**<br>
-_Senior Interaction Developer_<br>
-Nov 2007 - Nov 2012
-
-Responsibilities:
-
-- tbd
-
-
-
-
 ## Technology experience 
 
 JavaScript, Node.js, CSS, React, Angular, Polymer, Three.js, Jest, Cypress, REST, GraphQL, Postgres, Firebase, AWS, GCP
 
-## Current Interests
+## Current interests
 
 Event Sourcing, CQRS, DDD
 
