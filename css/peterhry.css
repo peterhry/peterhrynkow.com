@@ -191,6 +191,12 @@ hr {
   padding-top: var(--ms1);
 }
 
+@media print {
+  .site-footer {
+    display: none;
+  }
+}
+
 .site-footer-credits {
   color: #999;
 }
