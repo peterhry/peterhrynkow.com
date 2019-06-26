@@ -13,7 +13,7 @@ GitHub: <a href="{{ site.author.github }}">{{ site.author.github | replace: "htt
 
 - Peter brings a diverse background in design, technology, and marketing that allows him to communicate at all levels of an organization. 
 - A creative problem solver, Peter is skilled at translating epics into elegant technical solutions that balance cost, complexity, and value to the business.
-- A teacher and mentor, Peter's ideas have been featured in popular blogs and books, including _Practical SVG_ by Chris Coyier.
+- A teacher and mentor, Peter's ideas have been featured in popular blogs and books, including [_Practical SVG_](https://abookapart.com/products/practical-svg) by Chris Coyier.
 
 ## Work history 
 
