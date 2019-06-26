@@ -31,7 +31,7 @@ Responsibilities:
 - Recruiting, conducting phone screens and interviews
 - Liaising with the product owner, design director, and QA lead to ensure alignment on features being delivered each sprint
 
- <div style="page-break: always;"></div>
+ <div style="page-break: always;">&nbsp;</div>
 
 **Rival Technologies**<br>
 _Senior Software Engineer, Team Lead_<br>
