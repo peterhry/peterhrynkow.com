@@ -76,6 +76,6 @@ JavaScript, Node.js, PHP, CSS, React, Angular, Polymer, Three.js, Jest, Cypress,
 
 ## Current interests
 
-Event Sourcing, CQRS, DDD
+Leadership, team building, agile methodologies, Event Storming, Event Sourcing, CQRS, DDD
 
 
