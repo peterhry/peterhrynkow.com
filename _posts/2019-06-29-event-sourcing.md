@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Event Sourcing - You're Doing it Wrong"
+title: "Event Sourcing: You’re Doing it Wrong"
 date: 2019-06-29 00:00:00
 categories: [event-sourcing]
 ---
