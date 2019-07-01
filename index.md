@@ -14,7 +14,7 @@ title: "Home"
 <ul class="article-list">
   <li><a href="https://circletype.labwire.ca">CircleType.js</a></li>
 </ul>
-## Words
+## Writing
 
 <ul class="article-list">
   {% for post in site.posts %}
