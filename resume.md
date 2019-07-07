@@ -24,7 +24,8 @@ Nov 2018 - Present
 Responsibilities:
 
 - Scoping, documenting, and overseeing the development of features for a complex customer intelligence platform 
-- Coaching, mentoring, and motivating the development team as Scrum Master
+- Coaching, mentoring, and motivating an 8-person development team
+- Facilitating sprint events and driving continuous improvement as Scrum Master
 - Championing a culture of excellence and accountability within the organization 
 - Defining developer roles and responsibilities
 - Conducting career development discussions, goal setting exercises, and assessments
