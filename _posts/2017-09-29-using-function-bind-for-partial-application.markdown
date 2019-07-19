@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Practical Application in Action"
+title:  "Partial Application in Action"
 date:   2017-09-29 00:00:00
 categories: [functional-programming]
 ---
