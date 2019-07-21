@@ -53,9 +53,9 @@ Some argue that accessibility is an afterthought in most frameworks. Even if tha
 
 ## Frameworks provide a common vocabulary
 
-After using a framework for a while, you start to speak its language. Components, props, state — these mean the same thing in any React project (I hope). That means a new hire with React experience should be able to ramp-up quickly on any React project. 
+After using a framework for a while, you start speaking its language. Components, props, state — these mean the same thing in any React project. This improves team communication and helps new team members ramp-up quickly.
 
-An app built with plain old JavaScript will take longer to ramp up on because it doesn’t follow conventions.
+On the other hand, an app built with plain old JavaScript will take longer to ramp up on because it doesn’t follow conventions.
 
 ## Frameworks have opinions
 
