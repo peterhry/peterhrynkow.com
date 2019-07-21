@@ -1,12 +1,11 @@
 ---
 layout: post
-title: "4 Reasons You Shouldn't Use a JavaScript Framework"
+title: "Why You Should Use a JavaScript Framework"
 date: 2019-07-13 00:00:00
 categories: [programming]
 ---
 
-Lately I've noticed some folks on Twitter who reject the use of JavaScript frameworks. Hi They insist that frameworks are overly-complicated, bloated, and unnecessary. They claim that "Vanilla JS" is all you need to build a web application these days. Here are some examples:
-
+Lately I've noticed some folks on Twitter who insist that JavaScript frameworks are overly-complicated, bloated, and unnecessary. They claim that “Vanilla JS” is all you need to build a web application these days. Here are some examples:
 
 
 The backlash against frameworks and libraries for web development is in some ways understandable. 
@@ -15,12 +14,10 @@ That may be true in some cases. Using React to build a personal blog might be ov
 
 
 
-The tooling required for transpiling and bundling, can make getting into web development today feel overwhelming. 
+I get it, tooling required for transpiling and bundling, can make getting into web development today feel overwhelming. 
 
 For some projects, a framework is overkill. I wouldn't recommend Angular for a blog.
 
-
-A few days ago I posted a tweet that created a bit of a stir:
 
 > I don't bother with frameworks, I just use vanilla JavaScript.
 
@@ -39,19 +36,26 @@ While I sympathize with people who are frustrated with the complex tooling that 
 
 ## Frameworks provide battle-tested solutions to common problems 
 
-This allows teams to focus on delivering valuable features instead of wasting time reinventing solutions to problems that have already been solved. For example, by using Next.js, a team can focus on building a new analytics dashboard instead of implementing client-side routing and universal rendering from scratch.
+By using a framework, a team can focus on delivering valuable features instead of wasting time reinventing the wheel. For example, Next.js comes out of the box with features like server-side rendering, code splitting, and client-side routing.
+
+By building on top of these solutions, a team can focus on building that new analytics dashboard instead of wasting time debugging 
+
 
 ## Frameworks guide best-practices for security 
 
-Many frameworks have built-in protection against cross-site scripting (XSS). React for example, warns developers who try to render untrusted markup. The framework provides a baseline of security so that a Junior developer with no knowledge of XSS is less likely to shoot themselves in the foot. With Vanilla JS, this layer of protection doesn't exist. All it takes is an inexperienced dev to set `innerHTML` with some contaminated markup and, boom, you've put your users at risk.
+Many frameworks provide a layer of protection against cross-site scripting (XSS). For instance, React uses automatic escaping to prevent developers from rendering untrusted HTML in the DOM. It's not bulletproof but it means that someone with no knowledge of XSS is less likely to shoot themselves in the foot. 
+
+With Vanilla JS, this layer of protection doesn't exist. All it takes is an inexperienced developer to set `innerHTML` with some contaminated markup and 💥 you just got pwned.
 
 ## Frameworks guide best-practices for accessibility 
 
-create-react-app comes with an eslint config that checks your code for common accessibility issues. While this doesn't guarantee AAA accessibility conformance, it helps to point developers in the right direction.
+create-react-app comes with an eslint config that checks your code for common accessibility issues. While this doesn't guarantee AAA accessibility conformance, it at least points developers in the right direction.
 
 ## Frameworks provide a common vocabulary
 
-After using a framework for a while, you start to speak its language. Components, props, state — these mean the same thing in any React project (I hope). That means a new hire with React experience should be able to ramp-up quickly on any React project. In contrast, an app built with plain old JavaScript might take longer to ramp up on because it doesn’t follow conventions.
+After using a framework for a while, you start to speak its language. Components, props, state — these mean the same thing in any React project (I hope). That means a new hire with React experience should be able to ramp-up quickly on any React project. 
+
+An app built with plain old JavaScript might take longer to ramp up on because it doesn’t follow conventions.
 
 ## Frameworks have opinions
 
