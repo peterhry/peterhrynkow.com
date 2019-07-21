@@ -36,10 +36,7 @@ While I sympathize with people who are frustrated with the complex tooling that 
 
 ## Frameworks and libraries provide battle-tested solutions to common problems 
 
-Server-side rendering, code splitting, client-side routing — these are solved problems. If your team is spending time on these problems then
-
-By using off-the-shelf solutions, your team can focus on delivering valuable features instead of wasting time reinventing the wheel.
-
+Server-side rendering, templating, routing — these aren’t easy problems to solve but they aren’t new either. Smart people have spent thousands of hours working on these problems. The frameworks and libraries they developed as a result, have been tested for performance, security, cross-browser compatibility, and accessibility. And guess what? They’re free! So why not take advantage of that? By using a framework or library, your team can focus on delivering valuable features instead of wasting time reinventing the wheel.
 
 ## Frameworks guide best-practices for security 
 
@@ -49,7 +46,12 @@ With Vanilla JS, this layer of protection doesn't exist. All it takes is an inex
 
 ## Frameworks guide best-practices for accessibility 
 
-create-react-app comes with an eslint config that checks your code for common accessibility issues. While this doesn't guarantee AAA accessibility conformance, it at least points developers in the right direction.
+Most frameworks provide guidelines for accessibility. There are also add-ons for Ember that help improve a11y. Create React App even comes with an eslint config that checks your code for common accessibility issues. While this doesn't guarantee AAA accessibility conformance, it at least points developers in the right direction. 
+
+Some argue that accessibility is an afterthought in most frameworks. Even if that’s true, an afterthought is better than no thought at all. A project built with Vanilla JS provides no guidance for accessibility. You’re on your own. For inexperienced teams who
+
+[React a11y Guidelines](https://reactjs.org/docs/accessibility.html)
+[Ember a11y Guidelines](https://guides.emberjs.com/release/reference/accessibility-guide/)
 
 ## Frameworks provide a common vocabulary
 
