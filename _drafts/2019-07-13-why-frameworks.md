@@ -5,6 +5,8 @@ date: 2019-07-13 00:00:00
 categories: [programming]
 ---
 
+Recently I was asked why using a framework like React, Angular and Vue.js is better than Vanilla JavaScript.
+
 Lately I've noticed some folks on Twitter who insist that developers learn Vanilla JavaScript before using a framework. Some go as far as saying that JavaScript frameworks are unnecessary and that Vanilla JavaScript is all you need to build a web application these days. 
 
 The backlash against frameworks and libraries for web development is in some ways understandable.
@@ -32,19 +34,19 @@ While I sympathize with people who are frustrated with the complex tooling that 
 
 ## Frameworks and libraries provide battle-tested solutions to common problems 
 
-Server-side rendering, templating, routing — these aren’t easy problems to solve but they aren’t new either. Smart people have spent thousands of hours working on these problems. The frameworks and libraries they developed as a result, have been tested for things like security, cross-browser support, and accessibility. And guess what? They’re free! So why not take advantage of that? By using a framework or library, your team can focus on delivering valuable features instead of wasting time reinventing the wheel.
+Server-side rendering, templating, routing — these aren’t easy problems to solve but they aren’t new either. Smart people have spent thousands of hours working on these problems. The frameworks and libraries they developed, as a result, have been tested for things like security, cross-browser support, and performance. And guess what? They’re free! So why not take advantage of that? By using a framework or library, your team can focus on delivering valuable features instead of wasting time reinventing the wheel.
 
 ## Frameworks guide best-practices for security 
 
-Many frameworks provide a layer of protection against cross-site scripting (XSS). For instance, React uses automatic escaping to prevent developers from rendering untrusted HTML in the DOM. It's not bulletproof but it means a developer with no knowledge of XSS is less likely to shoot themselves in the foot. 
+Many frameworks provide a layer of protection against cross-site scripting (XSS). For instance, React uses automatic escaping to prevent developers from rendering untrusted HTML in the DOM. It's not bulletproof but it means that a developer with no knowledge of XSS is less likely to shoot themselves in the foot. 
 
-With Vanilla JS, this layer of protection doesn't exist. All it takes is an inexperienced developer to set `innerHTML` with some contaminated markup and 💥 you just got pwned.
+With Vanilla JavaScript, this layer of protection doesn't exist. All it takes is an inexperienced developer to set `innerHTML` with some contaminated markup and 💥 you just got pwned.
 
 ## Frameworks guide best-practices for accessibility 
 
 In addition to written guidelines, most frameworks provide plugins or tooling to improve accessibility. For example, Create React App comes with an eslint config that checks your code for common accessibility issues. While this doesn't guarantee AAA accessibility conformance, it at least points developers in the right direction. 
 
-Some argue that accessibility is an afterthought in most frameworks. Even if that’s true, an afterthought is better than no thought at all. A project built with Vanilla JavaScript provides no guidelines or tooling for accessibility. That might be fine if you’re an a11y expert but what about the rest of your team?
+Some argue that accessibility is an afterthought in most frameworks. Even if that’s true, an afterthought is still better than no thought at all. A project built with Vanilla JavaScript provides no guidelines or tooling for accessibility. That might be fine if you’re an a11y expert but what about the rest of your team?
 
 [React a11y Guidelines](https://reactjs.org/docs/accessibility.html)
 [Ember a11y Guidelines](https://guides.emberjs.com/release/reference/accessibility-guide/)
