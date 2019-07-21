@@ -40,15 +40,17 @@ Server-side rendering, templating, routing — these aren’t easy problems to s
 
 ## Frameworks guide best-practices for security 
 
-Many frameworks provide a layer of protection against cross-site scripting (XSS). For instance, React uses automatic escaping to prevent developers from rendering untrusted HTML in the DOM. It's not bulletproof but it means that someone with no knowledge of XSS is less likely to shoot themselves in the foot. 
+Many frameworks provide a layer of protection against cross-site scripting (XSS). For instance, React uses automatic escaping to prevent developers from rendering untrusted HTML in the DOM. It's not bulletproof but it means that junior developer with no knowledge of XSS is less likely to shoot themselves in the foot. 
 
 With Vanilla JS, this layer of protection doesn't exist. All it takes is an inexperienced developer to set `innerHTML` with some contaminated markup and 💥 you just got pwned.
 
 ## Frameworks guide best-practices for accessibility 
 
-Most frameworks provide guidelines for accessibility. There are also add-ons for Ember that help improve a11y. Create React App even comes with an eslint config that checks your code for common accessibility issues. While this doesn't guarantee AAA accessibility conformance, it at least points developers in the right direction. 
+Most frameworks provide guidelines for accessibility. 
 
-Some argue that accessibility is an afterthought in most frameworks. Even if that’s true, an afterthought is better than no thought at all. A project built with Vanilla JS provides no guidance for accessibility. You’re on your own. For inexperienced teams who
+Create React App comes with an eslint config that checks your code for common accessibility issues. While this doesn't guarantee AAA accessibility conformance, it at least points developers in the right direction. 
+
+Some argue that accessibility is an afterthought in most frameworks. Even if that’s true, an afterthought is better than no thought at all. A project built with Vanilla JS provides no guidance for accessibility. You’re on your own. That might be fine if you’re an accessibility expert but what about the rest of your team?
 
 [React a11y Guidelines](https://reactjs.org/docs/accessibility.html)
 [Ember a11y Guidelines](https://guides.emberjs.com/release/reference/accessibility-guide/)
