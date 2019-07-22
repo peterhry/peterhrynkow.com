@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Why Vanilla JavaScript Doesn't Cut it"
+title: "Why Vanilla JavaScript Doesn’t Cut it"
 date: 2019-07-13 00:00:00
 categories: [javascript]
 ---
