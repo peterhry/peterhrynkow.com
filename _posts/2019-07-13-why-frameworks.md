@@ -13,7 +13,7 @@ Server-side rendering, templating, routing — these aren’t easy problems to s
 
 ### Frameworks guide best practices for security 
 
-Many frameworks provide a layer of protection against cross-site scripting (XSS). For instance, React uses automatic escaping to prevent developers from rendering untrusted HTML in the DOM. It's not bulletproof but it means that a developer with no knowledge of XSS is less likely to shoot themselves in the foot. 
+Many frameworks provide a layer of protection against cross-site scripting (XSS). For instance, React uses automatic escaping to [prevent developers from rendering untrusted HTML in the DOM](https://reactjs.org/docs/dom-elements.html#dangerouslysetinnerhtml). It's not bulletproof but it means that a developer with no knowledge of XSS is less likely to shoot themselves in the foot. 
 
 With vanilla JavaScript, this layer of protection doesn't exist. All it takes is an inexperienced developer to set `innerHTML` with some contaminated markup and 💥 you just got pwned.
 
