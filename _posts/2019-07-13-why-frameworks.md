@@ -11,13 +11,13 @@ Recently, I was asked why using a framework or library like React, Angular, or V
 
 Server-side rendering, templating, routing — these aren’t easy problems to solve but they aren’t new either. Smart people have spent thousands of hours working on these problems. The frameworks and libraries they've produced as a result have been tested for things like security, browser compatibility, and performance. So why not stand on the shoulders of giants? By using a framework or library, your team can focus on delivering valuable features instead of wasting time and money reinventing the wheel.
 
-### Frameworks guide best-practices for security 
+### Frameworks guide best practices for security 
 
 Many frameworks provide a layer of protection against cross-site scripting (XSS). For instance, React uses automatic escaping to prevent developers from rendering untrusted HTML in the DOM. It's not bulletproof but it means that a developer with no knowledge of XSS is less likely to shoot themselves in the foot. 
 
 With vanilla JavaScript, this layer of protection doesn't exist. All it takes is an inexperienced developer to set `innerHTML` with some contaminated markup and 💥 you just got pwned.
 
-### Frameworks guide best-practices for accessibility 
+### Frameworks guide best practices for accessibility 
 
 In addition to written guidelines, most frameworks provide plugins or tooling to improve accessibility. For example, Create React App comes with an eslint config that checks your code for common accessibility issues. While this doesn't guarantee AAA accessibility conformance, it at least points developers in the right direction. 
 
