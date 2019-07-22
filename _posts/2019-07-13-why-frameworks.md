@@ -19,7 +19,7 @@ With vanilla JavaScript, this layer of protection doesn't exist. All it takes is
 
 ### Frameworks guide best practices for accessibility 
 
-In addition to written guidelines, most frameworks provide plugins or tooling to improve accessibility. For example, Create React App comes with an eslint config that checks your code for common accessibility issues. While this doesn't guarantee AAA accessibility conformance, it at least points developers in the right direction. 
+In addition to written guidelines, most frameworks provide plugins or tooling to improve accessibility. For example, Create React App comes with an [eslint config](https://github.com/facebook/create-react-app/blob/master/packages/eslint-config-react-app/README.md#accessibility-checks) that checks your code for common accessibility issues. While this doesn't guarantee AAA accessibility conformance, it at least points developers in the right direction. 
 
 Some argue that accessibility is an afterthought in most frameworks. Even if that’s true, **an afterthought is still better than no thought at all.** 😎
 
