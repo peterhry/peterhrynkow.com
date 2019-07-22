@@ -5,7 +5,7 @@ date: 2019-07-13 00:00:00
 categories: [javascript]
 ---
 
-Recently, I was asked why using a framework or library like React, Angular, or Vue.js is better than vanilla JavaScript. Here's my take:
+Recently, I was asked why using a framework or library like React, Angular, or Vue.js is better than vanilla JavaScript. Some folks claim JavaScript frameworks are unnecessary and that platform APIs are all you need to build an application these days. Here's why they're wrong:
 
 ### Frameworks and libraries provide battle-tested solutions to common problems 
 
