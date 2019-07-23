@@ -9,7 +9,7 @@ Recently, I was asked why using a framework or library like React, Angular, or V
 
 ### Frameworks and libraries provide battle-tested solutions to common problems 
 
-Server-side rendering, templating, routing — these aren’t easy problems to solve but they aren’t new either. Smart people have spent thousands of hours working on these problems. The frameworks and libraries they've produced as a result have gone through rounds of bug fixes. They’ve also been tested for things like security, browser compatibility, and performance. So why not stand on the shoulders of giants? By using a framework or library, your team can focus on delivering valuable features instead of reinventing the wheel with vanilla JavaScript.
+Server-side rendering, templating, routing — these aren’t easy problems to solve but they aren’t new either. Smart people have spent thousands of hours working on these problems. The frameworks and libraries they've produced as a result have gone through rounds of bug fixes and testing for things like security, browser compatibility, and performance. So why not stand on the shoulders of giants? By using a framework or library, your team can focus on delivering valuable features instead of reinventing the wheel with vanilla JavaScript.
 
 ### Frameworks guide best practices for security 
 
