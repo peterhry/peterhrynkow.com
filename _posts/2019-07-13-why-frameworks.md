@@ -5,11 +5,11 @@ date: 2019-07-13 00:00:00
 categories: [javascript]
 ---
 
-Recently, I was asked why using a framework or library like React, Angular, or Vue.js is better than vanilla JavaScript. Some folks claim JavaScript frameworks are unnecessary and that platform APIs are all you need to build an application these days. Here's why they're wrong:
+Recently, I was asked why using a framework or library like React, Angular, or Vue.js is better than vanilla JavaScript. Some folks claim [JavaScript frameworks are unnecessary](https://dev.to/gypsydave5/why-you-shouldnt-use-a-web-framework-3g24) and that platform APIs are all you need to build an application these days. Here's why they're wrong:
 
 ### Frameworks and libraries provide battle-tested solutions to common problems 
 
-Server-side rendering, templating, routing — these aren’t easy problems to solve but they aren’t new either. Smart people have spent thousands of hours working on these problems. The frameworks and libraries they've produced as a result have been tested for things like security, browser compatibility, and performance. So why not stand on the shoulders of giants? By using a framework or library, your team can focus on delivering valuable features instead of wasting time and money reinventing the wheel.
+Server-side rendering, templating, routing — these aren’t easy problems to solve but they aren’t new either. Smart people have spent thousands of hours working on these problems. The frameworks and libraries they've produced as a result have been tested for things like security, browser compatibility, and performance. So why not stand on the shoulders of giants? By using a framework or library, your team can focus on delivering valuable features instead of reinventing the wheel with vanilla JavaScript.
 
 ### Frameworks guide best practices for security 
 
@@ -38,6 +38,6 @@ Think about the features you could have been building while you were busy debugg
 
 ### Frameworks have opinions
 
-The are so many ways to develop a modern web application that starting a project from scratch is overwhelming. How should your files be organized? How should your build scripts be configured? Opinionated frameworks like Ember make these decisions for you. That way your team can focus on what’s most important: building a great product.
+The are so many ways to develop a modern web application that starting a project with vanilla JavaScript can lead to decision paralysis. How should your files be organized? How should your build scripts be configured? Opinionated frameworks like Ember make these decisions for you. That way your team can focus on what’s most important: building a great product.
 
 
