@@ -32,9 +32,9 @@ After using a framework for a while, you start to speak its language. Components
 
 ### Frameworks are inevitable
 
-There is a tipping point in most software projects where if you didn't start with a framework, you inevitably start building one by accident. As you add more features, complexity creeps in and you start generalizing areas of your code. Keep doing that for a while and what you end up with is something that looks like a framework.
+There is a tipping point in most software projects where if you didn't start with a framework, you inevitably start building one by accident. As you add more features, complexity creeps in and you start generalizing areas of your code. Keep doing that for a while and what you end up with is something that looks like a framework but with more bugs and less documentation than something off the shelf.
 
-Think about the features you could have been building while you were busy debugging that DOM manipulation code. Again, using frameworks and libraries allows you to focus on valuable features instead of reinventing the wheel.
+Think about the features you could have been building while you were busy debugging that DOM manipulation code. Again, using a framework allows you to focus on valuable features instead of reinventing the wheel.
 
 ### Frameworks have opinions
 
