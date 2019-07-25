@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "The Perils of Snapshot Testing"
+title: "The Perils of Jest Snapshot Testing"
 date: 2019-01-07 00:00:00
 categories: [testing]
 icon: 🧠
