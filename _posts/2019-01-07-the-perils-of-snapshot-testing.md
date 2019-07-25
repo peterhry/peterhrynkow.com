@@ -6,7 +6,7 @@ categories: [testing]
 icon: 🧠
 ---
 
-According to the [Jest docs](https://jestjs.io/docs/en/snapshot-testing), snapshot tests are useful whenever you want to make sure your UI does not change unexpectedly. That sounds great in theory, but in this post, I will demonstrate some of the pain points and risks associated with snapshot testing.
+According to the [Jest docs](https://jestjs.io/docs/en/snapshot-testing), snapshot tests are useful whenever you want to make sure your UI does not change unexpectedly. That sounds great in theory, but in this post, I will demonstrate why snapshot tests are more trouble than they're worth.
 
 Say you have a simple button component:
 
@@ -85,5 +85,5 @@ it('renders correctly', () => {
 })
 ```
 
-The test above is explicit. It verifies that the link contains the correct text and that its `href` and `target` values are correct. This method requires a little more forethought but eliminates the burden and risk of manually reviewing snapshots down the road.
+The test above is explicit. It verifies that the link contains the correct text and that its `href` and `target` values are correct. This method requires a little more forethought but eliminates the risk that comes with manually reviewing snapshot diffs.
 
