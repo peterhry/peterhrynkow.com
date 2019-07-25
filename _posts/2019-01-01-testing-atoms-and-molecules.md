@@ -9,7 +9,7 @@ icon: 🔬
 
 I come across a lot of React-Redux apps where components, action creators, selectors, and reducers are tested as separate units. Does this sound familiar? It shouldn’t come as a surprise that a lot of teams follow this approach since it’s what’s described in the [Redux docs](https://redux.js.org/recipes/writing-tests). But, there's a better way...
 
-In this post, I'll show you why this method is not only insufficient when it comes to ensuring the stability of your application, but also makes refactoring nearly impossible. I'll also show you a better, and frankly easier, way to test your app that will catch more bugs and at the same time improve your workflow.
+In this post, I'll show you why the standard approach for testing React-Redux apps is insufficient and makes refactoring more difficult. I'll also show you a better, and frankly easier, way to test your app that will catch more bugs and make refactoring a breeze.
 
 ### Testing Atoms
 
@@ -21,7 +21,7 @@ First of all, testing these elements in isolation doesn’t guarantee that they 
 
 Second, because these tests require you to mock other parts of the system, you lose confidence in the integration between what you’re testing and the dependency being mocked. For instance, the Redux docs recommend using [redux-mock-store](https://github.com/dmitry-zaets/redux-mock-store) to test async action creators. A mock store _looks_ like a real Redux store, but unlike a real store, its state is completely static. It allows you to verify that certain actions are dispatched but there's no telling how those actions will transform the state of your application when a real store is used.
 
-Finally, these tests are so low-level that it makes refactoring nearly impossible. Any small change to the code in these elements requires the tests to be updated. This slows down development and increases the chance of introducing new bugs.
+Finally, these tests are so granular that it makes refactoring very difficult. A small change to the code in one of these elements often requires the tests to be updated. This slows down development and increases the chance of introducing new bugs.
 
 This is an example of what I call testing the _atoms_ in your application. Knowing that these tiny chunks of code work in isolation is great, but if you want to be confident that they work together, you should be testing the _molecules_.
 
@@ -81,7 +81,7 @@ export default connect(
 
 The component in this example renders a button element that increments a counter when clicked.
 
-Here’s what the test looks like:
+Here’s what the molecule test looks like:
 
 ```jsx
 import {createStore} from 'redux'
@@ -129,14 +129,13 @@ Why does this matter? Since this test isn't concerned with _how_ the UI is updat
 
 [@martinfowler](https://twitter.com/martinfowler)
 
-Integration tests like this one give you more confidence in the stability of your application because they verify the connections between smaller units of code. So instead of writing a unit test for every atom in your application, zoom out a bit, and write some integration tests for the molecules.
+Narrow integration tests like this one give you more confidence in the stability of your application because they verify the connections between smaller units of code. So instead of writing a unit test for every atom in your application, zoom out a bit, and write some integration tests for the molecules.
 
 > Write tests. Not too many. Mostly integration.
 
 [@rauchg](https://twitter.com/rauchg)
 
-There are scenarios where unit tests are still appropriate (shared libraries, modules
-published to npm, etc.) but for testing the overall behaviour of your application, integration tests are more likely to catch problems.
+There are plenty of scenarios where unit tests make sense (shared libraries, TDD, etc.) but for testing the overall behaviour of your application, integration tests are more likely to catch problems.
 
 <!--Quick side note:
 
