@@ -9,7 +9,7 @@ icon: 🔬
 
 I come across a lot of React-Redux apps where components, action creators, selectors, and reducers are tested as separate units. Does this sound familiar? It shouldn’t come as a surprise that a lot of teams follow this approach since it’s what’s described in the [Redux docs](https://redux.js.org/recipes/writing-tests). But, there's a better way...
 
-In this post, I'll show you why the standard approach for testing React-Redux apps is insufficient and makes refactoring more difficult. I'll also show you a better, and frankly easier, way to test your app that will catch more bugs and make refactoring a breeze.
+In this post, I'll show you why the standard approach for testing React-Redux apps is insufficient and makes refactoring more difficult. I'll also show you an easier way to test your app that will catch more bugs and make refactoring a breeze.
 
 ### Testing Atoms
 
@@ -149,5 +149,6 @@ For unit and integration tests, I like [react-testing-library](https://github.co
 
 - Unit tests don't cover the connections between components, action creators, selectors, and reducers. 
 - Integration tests give you more confidence in the stability of your application because they verify the relationships between units of code.
-- Integration tests don't have to be wide in scope. You can use them to test the connection between just a handful of modules. 
 - Testing a connected component from the UI allows you to easily refactor its implementation
+- Integration tests don't have to be wide in scope. You can use them to test the connection between just a handful of modules. 
+
