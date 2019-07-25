@@ -89,6 +89,6 @@ When the downsampled image is enlarged, the browser uses an [interpolation algor
 
 This technique is great for reducing the file size of background images which often contain less detail. It's also great for rendering lightweight, scalable mesh gradients — something you can't do with SVG or CSS. Mesh gradients were originally planned for SVG 2.0 but [the feature has since been removed](http://libregraphicsworld.org/blog/entry/gradient-meshes-and-hatching-to-be-removed-from-svg-2-0) from the spec.
 
-So the next time you're about to export a big background image from Photoshop or Sketch — give this technique a try — you might be surprised how well it works.
+So the next time you're about to export a big background image from Photoshop or Sketch, give this technique a try, you might be surprised how well it works.
 
 
