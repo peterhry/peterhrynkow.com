@@ -15,7 +15,7 @@ In this post, I'll show you why the standard approach for testing React-Redux ap
 
 So what's the problem with testing components, action creators, selectors, and reducers separately?
 
-First of all, testing these elements in isolation doesn’t guarantee that they will work together. For example, a unit test for an [action creator](https://redux.js.org/recipes/writing-tests#action-creators) asserts that an action is created but doesn't verify that the action is ever dispatched. Similarly, a unit test for a [reducer](https://redux.js.org/recipes/writing-tests#reducers) asserts that a new state is returned for a given action but doesn’t verify that the component UI is updated to reflect the new state. There's a disconnect.
+First, testing these elements in isolation doesn’t guarantee that they will work together. For example, a unit test for an [action creator](https://redux.js.org/recipes/writing-tests#action-creators) asserts that an action is created but doesn't verify that the action is ever dispatched. Similarly, a unit test for a [reducer](https://redux.js.org/recipes/writing-tests#reducers) asserts that a new state is returned for a given action but doesn’t verify that the component UI is updated to reflect the new state. There's a disconnect.
 
 ![Passing unit tests, sinking ship]({{ site.baseurl }}/images/unit-tests.jpg)
 
