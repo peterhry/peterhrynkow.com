@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "How to Create Lightweight, Scalable Raster Images"
+title: "Hacking Image Interpolation for Fun and Profit"
 date: 2019-01-13 00:00:00
 categories: [performance]
 icon: 🔥
