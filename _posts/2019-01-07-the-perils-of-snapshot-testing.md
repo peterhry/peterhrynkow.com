@@ -33,7 +33,7 @@ it('renders correctly', () => {
 
 Wow, that was easy. Now any change to the component’s rendered output will cause the test to fail. Sounds great, right?
 
-Well, let me give you a scenario where things go off the rails. Say you decide to add a new attribute `target` but accidentally name it `traget`.
+Well, let me give you a scenario where things go off the rails pretty quick. Say you decide to add a new attribute `target` but make a typo and call it `traget`.
 
 ```jsx
 const Button = ({href, target, children}) => (
@@ -65,9 +65,9 @@ After a while, engineers begin to experience something I call _snapshot fatigue_
 
 ### Do You Even Need a Snapshot?
 
-A good test should prevent you from accidentally breaking your component's API. By creating a snapshot test, you're essentially declaring that your component's _entire_ rendered output is part of its API. In some cases that might be what you want but I'd argue that it makes adding new features and refactoring painful.
+A good test should prevent you from accidentally breaking your component's API. By creating a snapshot test, you're essentially declaring that your component's _entire_ rendered output is part of its API and should never change. In some cases that might be what you want but usually a component has some specific functionality that you want to test, and freezing its entire rendered output makes it a pain to add refactor and add new features.
 
-As an alternative you can identify the elements of your component's UI that are critical to its function and test those specifically.
+Alternatively, you can identify the elements of your component's UI that are critical to its behaviour and test those specifically.
 
 ```jsx
 import React from 'react'
@@ -85,5 +85,6 @@ it('renders correctly', () => {
 })
 ```
 
-The test above is explicit. It verifies that the link contains the correct text and that its `href` and `target` values are correct. This method requires a little more forethought but eliminates the risk that comes with manually reviewing snapshot diffs.
+The test above is explicit. It verifies that the link contains the correct text and that its `href` and `target` values are correct. So long as these values don't change, the component should function as expected. 
 
+This method requires a little more forethought but eliminates the burden and risk of manually reviewing snapshot diffs over time. It also allows you to refactor the component to your heart's content so long as those specific values don't change.
