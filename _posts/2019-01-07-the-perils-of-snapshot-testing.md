@@ -65,7 +65,7 @@ After a while, engineers begin to experience something I call _snapshot fatigue_
 
 ### Do You Even Need a Snapshot?
 
-A good test should prevent you from accidentally breaking your component's API. By creating a snapshot test, you're essentially declaring that your component's _entire_ rendered output is part of its API and should never change. In some cases that might be what you want but usually a component has some specific functionality that you want to test, and freezing its entire rendered output makes it a pain to add refactor and add new features.
+A good test should prevent you from accidentally breaking your component's API. By creating a snapshot test, you're essentially declaring that your component's _entire_ rendered output is part of its API and should never change. In some cases that might be what you want but usually a component has some specific functionality that you want to test, and freezing its entire rendered output makes it a pain to refactor and add new features.
 
 Alternatively, you can identify the elements of your component's UI that are critical to its behaviour and test those specifically.
 
