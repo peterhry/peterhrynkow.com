@@ -1,11 +1,11 @@
 ---
 layout: post
-title: "Vanilla JavaScript Doesn’t Cut it"
+title: "Why Use a JavaScript Framework"
 date: 2019-07-13 00:00:00
 categories: [javascript]
 ---
 
-Recently, I was asked why using a framework or library like React, Angular, or Vue.js is better for building web apps than vanilla JavaScript. Some folks claim that [JavaScript frameworks are unnecessary](https://dev.to/gypsydave5/why-you-shouldnt-use-a-web-framework-3g24) and that [platform APIs are all you need](https://gomakethings.com/javascript-frameworks-are-better-for-accessibility-and-other-myths/) to build a web app these days. Here's why they're wrong:
+Recently, I was asked why using a framework or library like React, Angular, or Vue.js is better for building web apps than vanilla JavaScript. Here are my thoughts:
 
 ### Frameworks and libraries provide battle-tested solutions to common problems 
 
@@ -39,5 +39,3 @@ Think about the features you could have been building while you were busy debugg
 ### Frameworks have opinions
 
 The are so many ways to develop a modern web application that starting a project with vanilla JavaScript can lead to decision paralysis. How should your files be organized? How should your build scripts be configured? Opinionated frameworks like Ember make these decisions for you. That way your team can focus on what’s most important: building a great product.
-
-
