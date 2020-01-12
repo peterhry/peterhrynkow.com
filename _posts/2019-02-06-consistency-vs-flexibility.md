@@ -1,11 +1,11 @@
 ---
 layout: post
-title: "Composing Children in React"
+title: "Rendering Children in React"
 date: 2019-02-06 00:00:00
 categories: [api]
 ---
 
-When designing components in React, there are a number of different ways to render child elements. You could require the consumer to supply an array of child elements or allow the consumer to compose child elements using the `children` prop. There are other, more advanced approaches as well, so which one should you use? When I'm faced with this decision, I like to ask myself this question: How flexible does my component need to be? Let's look at a few different options with different levels of flexibility.
+When designing components in React, there are a number of different ways to render child elements. You could require the consumer to supply an array representing child elements or allow the consumer to compose child elements using the `children` prop. There are other, more advanced approaches as well. Let's look at a few different options.
 
 #### Array or object prop
 
