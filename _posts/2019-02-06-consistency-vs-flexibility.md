@@ -5,7 +5,7 @@ date: 2019-02-06 00:00:00
 categories: [api]
 ---
 
-When designing components in React, there are a number of different ways to render child elements. Some approaches are more flexible than others. Let's look at a few options.
+There are a number of different ways to render child elements in React, and when it comes to component design, some solutions are more flexible than others. Let's look at a few options.
 
 #### Array or object prop
 
