@@ -11,7 +11,7 @@ There are a number of different ways to render child elements in React, and when
 
 Flexibility: 🧘‍♂️
 
-Using an `array` or `object` prop to render child elements is the least flexible option because the component itself controls the type of children that are rendered and their props. This approach is suitable for component libraries that prioritize consistency over flexibility because the component controls all aspects of rendering.
+Using an `array` or `object` prop to render child elements is the least flexible option because the component itself controls the type of children that are rendered and their props. This approach might be suitable for components that prioritize consistency over flexibility because the component controls all aspects of rendering.
 
 Here the component is saying: **Just give me the data — I'll take care of rendering the children.**
 
@@ -85,4 +85,4 @@ See also: [Inversion of Control](https://en.wikipedia.org/wiki/Inversion_of_cont
 
 #### Which approach is best?
 
-It depends whether your component library prioritizes consistency or flexibility. If you want to lock-down the design and behaviour of your components then an `array` prop might be best. If you want to provide your users with ultimate flexibility, then go for a render prop.
+It depends whether your component  prioritizes consistency or flexibility. If you want to lock-down the design and behaviour of your component then an `array` prop might be best. If you want to provide the consumer with ultimate flexibility, then go for a render prop.
