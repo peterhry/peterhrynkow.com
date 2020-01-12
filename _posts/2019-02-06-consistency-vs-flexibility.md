@@ -1,17 +1,11 @@
 ---
 layout: post
-title: "Component API Flexibility in React"
+title: "Composing Children in React"
 date: 2019-02-06 00:00:00
 categories: [api]
 ---
 
-Pattern libraries, component-based design systems — whatever you want to call them — it’s no secret that they improve user experience by increasing visual and functional consistency. Most designers will tell you that consistency is a key design principle, so how much flexibility, if any, should be afforded to users who want to customize the components in your design system?
-
-In this post I will discuss an area of component API design where the balance between consistency and flexibility comes into play. The approach you take will likely depend on the level of flexibility you intend to provide.
-
-### Child Composition
-
-In React, there are several ways to compose child elements. Some solutions provide the consumer with more flexibility than others. Let's look at a few options.
+When designing components in React, there are a number of different ways to render child elements. You could require the consumer to supply an array of child elements or allow the consumer to compose child elements using the `children` prop. There are other, more advanced approaches as well, so which one should you use? When I'm faced with this decision, I like to ask myself this question: How flexible does my component need to be? Let's look at a few different options with different levels of flexibility.
 
 #### Array or object prop
 
