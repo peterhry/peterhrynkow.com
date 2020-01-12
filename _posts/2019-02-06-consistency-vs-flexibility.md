@@ -33,9 +33,9 @@ In this example, the consumer provides an array of items and the `Tabs` componen
 
 #### Children Prop
 
-Flexibility: 🧘‍♂️ 🧘‍♂️ 🧘‍♂️
+Flexibility: 🧘‍♂️ 🧘‍♂️
 
-Using the `children` prop to compose child elements is idiomatic in React. This approach is a bit more flexible because it lets the consumer render the children. However, the result is a tight coupling between the component and its children. For the component to control its children, they must expose the necessary props or interface.
+Using the `children` prop to compose child elements is idiomatic in React. This approach is a bit more flexible because it allows the consumer to decide how to render the children. However, the result is a tight coupling between the component and its children. For the component to control its children, they must expose the necessary props.
 
 Here the component is saying: **Give me the children and I'll slot them in somewhere. Just make sure they expose the required props so I can set them**.
 
@@ -57,7 +57,7 @@ In this example, the consumer wants to use `FancyTab` components instead of `Tab
 
 #### Render Prop
 
-Flexibility: 🧘‍♂️ 🧘‍♂️ 🧘‍♂️ 🧘‍♂️ 🧘‍♂️
+Flexibility: 🧘‍♂️ 🧘‍♂️ 🧘‍♂️
 
 Using a render prop to compose child elements is an advanced pattern that delegates all aspects of rendering to the consumer. Furthermore, it results in a loose coupling between the component and its children, allowing the consumer to render children with an otherwise incompatible API.
 
