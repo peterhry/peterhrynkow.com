@@ -5,7 +5,7 @@ date: 2019-02-06 00:00:00
 categories: [api]
 ---
 
-When designing components in React, there are a number of different ways to render child elements. You could require the consumer to supply an array prop and let the component decide what to render or allow the consumer to compose child elements using the `children` prop. There are other, more advanced approaches as well. Let's look at a few different options.
+When designing components in React, there are a number of different ways to render child elements. Some approaches are more flexible than others. Let's look at a few options.
 
 #### Array or object prop
 
