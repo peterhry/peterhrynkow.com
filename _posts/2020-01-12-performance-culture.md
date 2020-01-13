@@ -5,7 +5,7 @@ date: 2020-01-12 00:00:00
 categories: [performance]
 ---
 
-Web performance is hard, especially on teams with varying levels of expertise and knowledge about optimization. Here are some ideas for creating a performance culture on your team:
+Building a performant web application at scale is hard, especially when the people on your team have varying levels of performance expertise. Here are some ideas for creating a performance culture on your team:
 
 ### Focus on Targets
 
