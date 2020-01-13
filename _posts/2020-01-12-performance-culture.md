@@ -5,11 +5,11 @@ date: 2020-01-12 00:00:00
 categories: [performance]
 ---
 
-Building a performant web application at scale is hard, especially when the people on your team have varying levels of performance expertise. Here are some ideas for creating a performance culture on your team:
+Building a performant web application at scale is hard, especially when your team has a mix of different skill levels. Here are some ideas for creating a performance culture on your team:
 
 ### Focus on Targets
 
-Get your team to focus on performance targets (e.g. scrolling at 60 FPS, 3s TTI, etc.). Break these targets down into manageable milestones (e.g improve scrolling to 40, 50, 55 FPS) and challenge your team to reach them. 
+Get your team to focus on performance targets (e.g. scrolling at 60 FPS, 3s TTI, etc.), break these targets down into manageable milestones (e.g improve scrolling to 40, 50, 55 FPS), and challenge your team to reach them. 
 
 ### Find ways to measure
 
