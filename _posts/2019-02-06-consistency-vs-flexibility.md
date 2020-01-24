@@ -35,7 +35,7 @@ In this example, the consumer provides an array of items and the `Tabs` componen
 
 Flexibility: 🧘‍♂️ 🧘‍♂️
 
-Using the `children` prop to compose child elements is idiomatic in React. This approach is a bit more flexible because it allows the consumer to decide how to render the children. However, the result is a tight coupling between the component and its children. For the component to control its children, they must expose the necessary props.
+Using the `children` prop to compose child elements is idiomatic in React. This approach is a bit more flexible because it allows the consumer to decide how to render the children. However, the result is a tight coupling between the component and its children. In order for the component to control its children, they must expose the necessary props.
 
 Here the component is saying: **Give me the children and I'll slot them in somewhere. Just make sure they expose the required props so I can set them**.
 
