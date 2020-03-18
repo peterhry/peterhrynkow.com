@@ -18,7 +18,7 @@
 }
 
 html {
-  font-family: 'raleway', 'Merriweather', sans-serif;
+  font-family: 'Merriweather', sans-serif;
   -webkit-font-smoothing: antialiased;
   -webkit-text-size-adjust: none;
   font-size: calc(16px + (20 - 16) * (100vw - 320px) / (768 - 320));
