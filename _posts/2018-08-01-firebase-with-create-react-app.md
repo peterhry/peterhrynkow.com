@@ -72,15 +72,11 @@ You might be wondering about that `/__` directory. Since this path only exists i
 
 ```js
 {
-  "proxy": {
-    "/__": {
-      "target": "http://localhost:4000"
-    }
-  }
+  "proxy": "http://localhost:4000"
 }
 ```
 
-The [proxy](https://github.com/facebook/create-react-app/blob/master/packages/react-scripts/template/README.md#proxying-api-requests-in-development) field tells the React development server to proxy any unknown requests to the target URL. With this entry in place, the React development server will proxy any request that contains `/__`to the Firebase Hosting emulator running on port 4000.
+The [proxy](https://create-react-app.dev/docs/proxying-api-requests-in-development/) field tells the React development server to proxy any unknown requests to the target URL. With this entry in place, the React development server will proxy any request that contains `/__`to the Firebase Hosting emulator running on port 4000.
 
 
 ### Calling Firebase Functions from your app
