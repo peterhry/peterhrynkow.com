@@ -11,31 +11,23 @@ GitHub: <a href="{{ site.author.github }}">{{ site.author.github | replace: "htt
 
 ## Strengths
 
-- Breaking down complex problems and generating elegant technical solutions that balance cost, effort, and value to the business
+- Breaking down complex problems and delivering elegant solutions that balance cost, effort, and value to the business
 - Motivating engineers, recognizing their strengths, and coaching them to reach their potential.
-- Focusing engineering teams on the right problems and challenging them to deliver solutions with the greatest customer value — even when it means going out of their comfort zone.
-
+- Focusing engineering teams on the right problems, challenging them to think bigger and deliver solutions that customers love.
 ## Work history 
 
 **Electronic Arts**<br>
 _Software Engineering Manager_<br>
 Aug 2019 - Present
 
-Leading the EA App performance and reliability strategy
-- Working across teams and disciplines to define and execute performance and reliability SLOs 
-- Leading our engineering team to implement synthetic and RUM performance monitoring including custom RUM frame rate monitoring
-- Working with our Data team to design to build custom dashboards and alerting with New Relic and Grafana
-
-Team Management
+Responsibilities:
 - Managing two scrum teams including two other people managers
 - Hiring and onboarding software engineers
 - Conducting 1:1s, career development discussions, and providing feedback and coaching
-- Shaping our engineering culture
-
-Tech Strategy
-- Defining OKRs and planning the technical roadmap
-- Working with our tech leads to drive tech initiatives and set standards for technical quality
-
+- Defining technical OKRs and working with other leaders to plan our product roadmap
+- Working with our tech leads to drive initiatives, set standards for technical quality, and shape our engineering culture
+- Leading our engineering team to implement synthetic and RUM performance monitoring including a novel solution for measuring frame rate in the field
+- Working with our Data team to design to build custom dashboards and alerting with New Relic and Grafana
 
 
 
