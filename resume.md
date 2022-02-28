@@ -10,11 +10,9 @@ Web: <a href="{{ site.author.url }}">{{ site.author.url | replace: "https://", "
 LinkedIn: <a href="{{ site.author.linkedin }}">{{ site.author.linkedin | replace: "https://", "" }}</a><br>
 GitHub: <a href="{{ site.author.github }}">{{ site.author.github | replace: "https://", "" }}</a>
 
-## Strengths
+## Overview
 
-- Breaking down complex problems and delivering elegant solutions that balance cost and effort
-- Motivating engineers, recognizing their strengths, and coaching them to reach their potential
-- Focusing engineering teams on the right problems, challenging them to think bigger and deliver solutions that customers love
+Peter is a pragmatic engineering leader with a knack for motivating engineers, recognizing their strengths, and coaching them to reach their potential. He is adept at focusing teams on the right problems, challenging them to think bigger and deliver solutions that blow customer away.
 
 ## Work history 
 
