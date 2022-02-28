@@ -30,15 +30,13 @@ Responsibilities:
 - Working with our Data team to design to build custom dashboards and alerting with New Relic and Grafana
 
 
-
-
 **Rival Technologies**<br>
 _Software Engineering Manager_<br>
 Nov 2018 - Aug 2019
 
 Responsibilities:
 
-- Scoping, documenting, and overseeing the development of features for a complex customer intelligence platform 
+- Scoping, documenting, and overseeing feature development for a complex customer intelligence platform 
 - Coaching, mentoring, and motivating an 8-person development team
 - Facilitating sprint events and driving continuous improvement as Scrum Master
 - Defining developer roles and responsibilities
@@ -82,7 +80,7 @@ Responsibilities:
 - Preparing and presenting wireframes and user flows to clients 
 - Conducting hallway usability testing
 - Developing reusable code libraries
-- Promoting a mobile first ideology within the organization
+- Championing a mobile first strategy within the organization
 - Giving presentations on technical subjects
 
 
