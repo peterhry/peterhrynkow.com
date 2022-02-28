@@ -12,7 +12,7 @@ GitHub: <a href="{{ site.author.github }}">{{ site.author.github | replace: "htt
 
 ## Overview
 
-Peter is a pragmatic engineering leader with a knack for motivating engineers, recognizing their strengths, and coaching them to reach their potential. He is adept at focusing teams on the right problems, challenging them to think bigger and deliver solutions that blow customer away.
+Peter is a pragmatic engineering leader with a knack for motivating engineers, recognizing their strengths, and coaching them to reach their potential. He is adept at focusing teams on the right problems, challenging them to think bigger and deliver solutions that blow customers away.
 
 ## Work history 
 
