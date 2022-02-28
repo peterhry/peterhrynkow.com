@@ -12,7 +12,7 @@ GitHub: <a href="{{ site.author.github }}">{{ site.author.github | replace: "htt
 
 ## Strengths
 
-- Breaking down complex problems and delivering elegant solutions that balance cost, effort, and value to the business
+- Breaking down complex problems and delivering elegant solutions that balance cost and effort
 - Motivating engineers, recognizing their strengths, and coaching them to reach their potential
 - Focusing engineering teams on the right problems, challenging them to think bigger and deliver solutions that customers love
 
