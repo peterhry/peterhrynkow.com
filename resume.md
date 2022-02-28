@@ -12,7 +12,7 @@ GitHub: <a href="{{ site.author.github }}">{{ site.author.github | replace: "htt
 ## Strengths
 
 - Breaking down complex problems and generating elegant technical solutions that balance cost, effort, and value to the business
-- Motivating engineers, recognizing their strengths, and coaching them to reach their full potential.
+- Motivating engineers, recognizing their strengths, and coaching them to reach their potential.
 - Focusing engineering teams on the right problems and challenging them to deliver solutions with the greatest customer value — even when it means going out of their comfort zone.
 
 ## Work history 
@@ -21,17 +21,20 @@ GitHub: <a href="{{ site.author.github }}">{{ site.author.github | replace: "htt
 _Software Engineering Manager_<br>
 Aug 2019 - Present
 
-Leading the EA App performance and relibility strategy
+Leading the EA App performance and reliability strategy
 - Working across teams and disciplines to define and execute performance and reliability SLOs 
 - Leading our engineering team to implement synthetic and RUM performance monitoring including custom RUM frame rate monitoring
 - Working with our Data team to design to build custom dashboards and alerting with New Relic and Grafana
 
 Team Management
-- Managing 8 engineers, including 2 people managers
-- Recruiting, hiring and onboarding software engineers
-- Conducting 1:1s with my team, providing feedback and coaching
-- Conducting career development discussions, goal setting exercises, and assessments
+- Managing two scrum teams including two other people managers
+- Hiring and onboarding software engineers
+- Conducting 1:1s, career development discussions, and providing feedback and coaching
+- Shaping our engineering culture
 
+Tech Strategy
+- Defining OKRs and planning the technical roadmap
+- Working with our tech leads to drive tech initiatives and set standards for technical quality
 
 
 
