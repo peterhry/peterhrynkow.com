@@ -12,8 +12,9 @@ GitHub: <a href="{{ site.author.github }}">{{ site.author.github | replace: "htt
 ## Strengths
 
 - Breaking down complex problems and delivering elegant solutions that balance cost, effort, and value to the business
-- Motivating engineers, recognizing their strengths, and coaching them to reach their potential.
-- Focusing engineering teams on the right problems, challenging them to think bigger and deliver solutions that customers love.
+- Motivating engineers, recognizing their strengths, and coaching them to reach their potential
+- Focusing engineering teams on the right problems, challenging them to think bigger and deliver solutions that customers love
+
 ## Work history 
 
 **Electronic Arts**<br>
@@ -44,7 +45,6 @@ Responsibilities:
 - Recruiting, hiring and onboarding software engineers
 - Liaising with the product owner, design director, and QA lead to ensure alignment on features being delivered each sprint
 
- <div style="page-break-before: always; display: none">\pagebreak</div>
 
 **Rival Technologies**<br>
 _Senior Software Engineer, Team Lead_<br>
@@ -83,16 +83,11 @@ Responsibilities:
 - Championing a mobile first strategy within the organization
 - Giving presentations on technical subjects
 
-
-Writing:
-[_Practical SVG_](https://abookapart.com/products/practical-svg) by Chris Coyier.
-
-
 ## Technology experience 
 
 JavaScript, Node.js, PHP, CSS, React, Angular, Polymer, Three.js, Jest, Cypress, REST, GraphQL, Postgres, Firebase, AWS, GCP, Grafana, New Relic
 
 ## Current interests
 
-Leadership, team building, agile methodologies, Event Storming, Event Sourcing, CQRS, DDD
+Leadership, team building, agile methodologies, Event Storming, Event Sourcing, CQRS
 
