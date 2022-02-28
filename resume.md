@@ -24,7 +24,7 @@ Aug 2019 - Present
 Leading the EA App performance and relibility strategy
 - Working across teams and disciplines to define and execute performance and reliability SLOs 
 - Leading our engineering team to implement synthetic and RUM performance monitoring including custom RUM frame rate monitoring
-- Working with our Data team to design to build custom dashboards and alerting with New Relic and Graphana
+- Working with our Data team to design to build custom dashboards and alerting with New Relic and Grafana
 
 Team Management
 - Managing 8 engineers, including 2 people managers
@@ -97,7 +97,7 @@ Writing:
 
 ## Technology experience 
 
-JavaScript, Node.js, PHP, CSS, React, Angular, Polymer, Three.js, Jest, Cypress, REST, GraphQL, Postgres, Firebase, AWS, GCP, Graphana, New Relic
+JavaScript, Node.js, PHP, CSS, React, Angular, Polymer, Three.js, Jest, Cypress, REST, GraphQL, Postgres, Firebase, AWS, GCP, Grafana, New Relic
 
 ## Current interests
 
