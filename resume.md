@@ -12,7 +12,7 @@ GitHub: <a href="{{ site.author.github }}">{{ site.author.github | replace: "htt
 
 ## Overview
 
-Peter is a pragmatic engineering leader with a knack for motivating engineers, recognizing their strengths, and coaching them to reach their potential. He is adept at focusing teams on the right problems while challenging them to think bigger and deliver solutions that go above and&nbsp;beyond.
+Peter is a pragmatic engineering leader with exceptional skills in motivating engineers, recognizing their strengths, and coaching them to reach their potential. He is adept at focusing teams on the right problems while challenging them to think bigger and deliver solutions that go further.
 
 ## Work history 
 
@@ -27,7 +27,7 @@ Responsibilities:
 - Defining technical OKRs and working with other leaders to plan our product roadmap
 - Working with our tech leads to drive initiatives, set standards for technical quality, and shape our engineering culture
 - Leading our engineering team to implement synthetic and RUM performance monitoring including a novel solution for measuring frame rate in the field
-- Working with our Data team to design to build custom dashboards and alerting with New Relic and Grafana
+- Working with our Data team to design and build custom dashboards and alerting with New Relic and Grafana
 
 
 **Rival Technologies**<br>
