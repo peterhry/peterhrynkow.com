@@ -54,7 +54,7 @@ html {
 body {
   color: #666;
   margin: 0;
-  padding: 0;
+  padding: var(--ms5) 0;
 }
 
 a {
@@ -176,7 +176,6 @@ hr {
  */
 .main-content {
   margin: 0 auto;
-  padding: var(--ms5) 0;
   max-width: 768px;
   word-wrap: break-word;
   width: 87%;
