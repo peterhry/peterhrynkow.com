@@ -53,8 +53,7 @@ html {
 
 body {
   color: #666;
-  margin: 0;
-  padding: var(--ms5) 0;
+  margin: var(--ms5) 0;
 }
 
 a {
