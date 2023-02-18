@@ -18,7 +18,7 @@ title: "Home"
 
 <ul class="article-list" hx-boost="true">
   {% for post in site.posts %}
-    <li><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a><br>{{ post.date | date_to_string }}</li>
+    <li><a href="{{ post.url }}">{{ post.title }}</a><br>{{ post.date | date_to_string }}</li>
   {% endfor %}
 </ul>
 
