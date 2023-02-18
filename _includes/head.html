@@ -18,7 +18,10 @@
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-1581384-19"></script>
   
   <script src="https://unpkg.com/htmx.org@1.8.5"></script>
-  <script>htmx.config.scrollBehavior = 'auto'</script>
+  <script>
+    htmx.config.scrollBehavior = 'auto';
+    htmx.config.defaultSettleDelay = 0;
+  </script>
 
   <script>
     window.dataLayer = window.dataLayer || [];
