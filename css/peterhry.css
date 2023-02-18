@@ -175,7 +175,6 @@ hr {
  * Main content
  */
 .main-content {
-  border: 1px solid #ccc;
   margin: 0 auto;
   padding: var(--ms5) 0;
   max-width: 768px;
