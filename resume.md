@@ -16,9 +16,24 @@ Peter is a pragmatic engineering leader with exceptional skills in motivating en
 
 ## Work history 
 
+
+
+**Electronic Arts**<br>
+_Senior Manager, Software Engineering_<br>
+Jun 2022 - Present
+
+Responsibilities:
+
+- Managed a team of 8 engineers across various teams and projects, providing coaching and mentoring to support their career development and growth.
+- Oversaw delivery and execution for our Live Service Core team, ensuring adequate staffing and effective work delivery to achieve our targets.
+- Designed and implemented an SLO capability for the EA App, enabling the Live Service team to prioritize reliability improvements and monitor platform issues impacting player experience.
+- Directed OKR and technical roadmap planning for the SPA team, scheduling tasks and conducting regular meetings to track progress and adjust delivery timelines.
+- Spearheaded an engineering-driven automation initiative within the SPA team, transitioning from QV-owned tools to a new stack owned and maintained by SPA engineers. This included implementing Storybook automation for React components and a unique solution for monitoring SLO changes during SPA canary rollouts.
+
+
 **Electronic Arts**<br>
 _Software Engineering Manager_<br>
-Aug 2019 - Present
+Aug 2019 - Jun 2022
 
 Responsibilities:
 - Managing two scrum teams including two other people managers
