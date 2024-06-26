@@ -27,6 +27,7 @@ Responsibilities:
 - Managed a team of 8 engineers across various teams and projects, providing coaching and mentoring to support their career development and growth.
 - Oversaw delivery and execution for our Live Service Core team, ensuring adequate staffing and effective work delivery to achieve our targets.
 - Designed and implemented an SLO capability for the EA App, enabling the Live Service team to prioritize reliability improvements and monitor platform issues impacting player experience.
+- Led the core team to meet our critical SLOs resulting in a 200% reduction in game acquisition error rate and a 150% reduction in game download errors.
 - Directed OKR and technical roadmap planning for the SPA team, scheduling tasks and conducting regular meetings to track progress and adjust delivery timelines.
 - Spearheaded an engineering-driven automation initiative within the SPA team, transitioning from QV-owned tools to a new stack owned and maintained by SPA engineers. This included implementing Storybook automation for React components and a unique solution for monitoring SLO changes during SPA canary rollouts.
 
