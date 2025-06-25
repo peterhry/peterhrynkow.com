@@ -3,9 +3,9 @@
 
   {% include head.html %}
 
-  <body>
+  <body hx-swap="innerHTML show:top">
     <section class="main-content">
-      <a href="{{ site.baseurl }}/">
+      <a href="{{ site.baseurl }}/" hx-boost="true">
         <img
           src="{{ site.baseurl }}/images/logo.svg"
           class="logo">
