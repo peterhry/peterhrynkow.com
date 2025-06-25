@@ -12,81 +12,80 @@ GitHub: <a href="{{ site.author.github }}">{{ site.author.github | replace: "htt
 
 ## Overview
 
-Peter is a pragmatic engineering leader with exceptional skills in motivating engineers, recognizing their strengths, and coaching them to reach their potential. He is adept at focusing teams on the right problems while challenging them to think bigger and deliver solutions that go further.
+**Senior Engineering Leader – E-commerce & Live Service Platforms**  
+Squamish, BC • peter@labwire.ca • [peterhrynkow.com](https://peterhrynkow.com) • LinkedIn  
 
-## Work history 
+—
 
-**Electronic Arts**<br>
-_Software Engineering Manager_<br>
-Aug 2019 - Present
+## Summary  
+Experienced engineering leader with a strong track record building and scaling large-scale digital platforms. I bring deep expertise in live-service and e-commerce systems, team building, and engineering strategy. I work closely with cross-functional partners to shape technical direction, improve reliability, and deliver meaningful customer and business outcomes.
 
-Responsibilities:
-- Managing two scrum teams including two other people managers
-- Hiring and onboarding software engineers
-- Conducting 1:1s, career development discussions, and providing feedback and coaching
-- Defining technical OKRs and working with other leaders to plan our product roadmap
-- Working with our tech leads to drive initiatives, set standards for technical quality, and shape our engineering culture
-- Leading our engineering team to implement synthetic and RUM performance monitoring including a novel solution for measuring frame rate in the field
-- Working with our Data team to design and build custom dashboards and alerting with New Relic and Grafana
+—
 
+## Core Strengths  
+- Engineering leadership and team growth  
+- Live-service & e-commerce systems  
+- Technical roadmap planning and execution  
+- Site reliability, monitoring, and observability  
+- Frontend architecture and design systems  
+- Cross-functional collaboration (Product, Design, Data)  
+- Developer experience and automation  
 
-**Rival Technologies**<br>
-_Software Engineering Manager_<br>
-Nov 2018 - Aug 2019
+—
 
-Responsibilities:
+## Experience  
 
-- Scoping, documenting, and overseeing feature development for a complex customer intelligence platform 
-- Coaching, mentoring, and motivating an 8-person development team
-- Facilitating sprint events and driving continuous improvement as Scrum Master
-- Defining developer roles and responsibilities
-- Conducting career development discussions, goal setting exercises, and assessments
-- Recruiting, hiring and onboarding software engineers
-- Liaising with the product owner, design director, and QA lead to ensure alignment on features being delivered each sprint
+### Senior Engineering Manager  
+**Electronic Arts – EA App Platform**  
+*2022 – Present | Vancouver, BC*  
+- Lead the Core team responsible for EA App’s frontend platform, shared services, and live-service reliability.  
+- Work across engineering, product, and operations to define technical priorities and align them with product goals.  
+- Helped establish SLOs and observability practices that brought more visibility into app health and customer experience.  
+- Championed efforts to modernize automation and testing strategies, giving feature teams more confidence in releases.  
+- Provide coaching and mentorship to engineers and engineering managers, with a focus on autonomy and growth.
 
+### Engineering Manager  
+**Electronic Arts – EA App Platform**  
+*2019 – 2022*  
+- Managed two development teams building client features and shared components for EA’s PC game platform.  
+- Worked with senior product and design leaders to define quarterly roadmaps and prioritize engineering work.  
+- Led frontend reliability efforts, introducing production monitoring (RUM, synthetic testing) and performance benchmarks.  
+- Partnered with the data team to improve instrumentation, helping product teams make better evidence-based decisions.
 
-**Rival Technologies**<br>
-_Senior Software Engineer, Team Lead_<br>
-Jan 2018 - Nov 2018
+### Engineering Manager  
+**Rival Technologies**  
+*2018 – 2019*  
+- Built and led a new team focused on Rival’s customer engagement platform.  
+- Set up hiring, onboarding, and delivery practices from the ground up.  
+- Collaborated with design and product leads to scope work and deliver key milestones.  
+- Introduced continuous delivery practices and team retrospectives to support a culture of learning and iteration.
 
-Responsibilities:
+### Senior Software Engineer & Team Lead  
+**Rival Technologies**  
+*2018*  
+- Owned architecture and implementation of a chat-style web application built with React and Firebase.  
+- Led frontend development and helped establish reusable patterns and component libraries.  
+- Supported junior developers through code reviews, pair programming, and technical guidance.
 
-- Preparing technical design documentation for new and existing features
-- Designing and building a web-based chat client using **React** and **Firebase**
-- Leading the front-end development team in delivering high quality code each sprint
-- Mentoring and coaching junior developers
+### Software Engineer II  
+**Electronic Arts**  
+*2014 – 2018*  
+- Delivered key frontend experiences across multiple game titles and services.  
+- Co-led EA’s JavaScript Guild, advocating for modern frontend practices and tooling.  
+- Helped define and implement EA’s cross-title design system used by multiple game teams.
 
+### Technical & UX Lead  
+**Noise Digital**  
+*2007 – 2014*  
+- Led development of interactive digital campaigns for global brands including Sony, PlayStation, Nokia, and Tic Tac.  
+- Championed responsive design and accessibility early in the mobile transition era.  
+- Delivered technical workshops for clients and led internal UX reviews and code standards efforts.
 
-**Electronic Arts**<br>
-_Software Engineer II_<br>
-Nov 2014 - Jan 2018
+—
 
-Responsibilities:
-
-- Developing websites and apps for some of EA's most high profile games including FIFA and Starwars Battlefront II
-- Leading JavaScript development on the team and participating in EA's JavaScript working group
-- Contributing to the design and development of EA's network design system
-- Developing reusable components and libraries to streamline development across the team
-- Mentoring junior developers
-
-**Noise Digital**<br>
-_Technical Lead, UX Lead_<br>
-Nov 2007 - Nov 2014
-
-Responsibilities:
-
-- Designing websites, apps, and games for brands like Sony PlayStation, Tic Tac, and Nokia
-- Preparing and presenting wireframes and user flows to clients 
-- Conducting hallway usability testing
-- Developing reusable code libraries
-- Championing a mobile first strategy within the organization
-- Giving presentations on technical subjects
-
-## Technology experience 
-
-JavaScript, Node.js, PHP, CSS, React, Angular, Polymer, Three.js, Jest, Cypress, REST, GraphQL, Postgres, Firebase, AWS, GCP, Grafana, New Relic
-
-## Current interests
-
-Leadership, team building, agile methodologies, Event Storming, Event Sourcing, CQRS
-
+## Technical Toolkit  
+- **Languages:** JavaScript, TypeScript, Node.js, CSS  
+- **Frameworks:** React, Next.js, Angular
+- **DevOps/Monitoring:** Grafana, New Relic  
+- **Practices:** Agile, Scrum, CI/CD, Event Sourcing, SLOs  
+- **Platforms:** AWS, GCP, Firebase
