@@ -7,12 +7,10 @@ title: "Resume"
 **Senior Engineering Leader – E-commerce & Live Service Platforms**  
 Squamish, BC • peter@labwire.ca • [peterhrynkow.com](https://peterhrynkow.com) • LinkedIn  
 
-—
 
 ## Summary
 Experienced engineering leader with a strong track record building and scaling large-scale digital platforms. I bring deep expertise in live-service and e-commerce systems, team building, and engineering strategy. I work closely with cross-functional partners to shape technical direction, improve reliability, and deliver meaningful customer and business outcomes.
 
-—
 
 ## Core Strengths
 - Engineering leadership and team growth  
@@ -23,7 +21,6 @@ Experienced engineering leader with a strong track record building and scaling l
 - Cross-functional collaboration (Product, Design, Data)  
 - Developer experience and automation  
 
-—
 
 ##Experience
 
