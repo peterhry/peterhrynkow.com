@@ -9,12 +9,12 @@ Squamish, BC • peter@labwire.ca • [peterhrynkow.com](https://peterhrynkow.co
 
 —
 
-**Summary**  
+## Summary
 Experienced engineering leader with a strong track record building and scaling large-scale digital platforms. I bring deep expertise in live-service and e-commerce systems, team building, and engineering strategy. I work closely with cross-functional partners to shape technical direction, improve reliability, and deliver meaningful customer and business outcomes.
 
 —
 
-**Core Strengths**  
+## Core Strengths
 - Engineering leadership and team growth  
 - Live-service & e-commerce systems  
 - Technical roadmap planning and execution  
@@ -25,9 +25,9 @@ Experienced engineering leader with a strong track record building and scaling l
 
 —
 
-**Experience**
+##Experience
 
-**Electronic Arts**  
+Electronic Arts
 *Senior Engineering Manager – EA App Platform*  
 *2022 – Present | Vancouver, BC*  
 - Lead the Core team responsible for EA App’s frontend platform, shared services, and live-service reliability.  
