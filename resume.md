@@ -1,6 +1,6 @@
-—
+---
 title: “Resume”
-—
+---
 
 # Peter Hrynkow
 
@@ -24,7 +24,7 @@ Experienced engineering leader with a strong track record building and scaling l
 ## Experience
 
 **Electronic Arts**  
-Senior Engineering Manager – EA App Platform  
+Senior Engineering Manager – EA App   
 2022 – Present  
 - Lead the Core team responsible for EA App’s frontend platform, shared services, and live-service reliability.  
 - Work across engineering, product, and operations to define technical priorities and align them with product goals.  
@@ -33,7 +33,7 @@ Senior Engineering Manager – EA App Platform
 - Provide coaching and mentorship to engineers and engineering managers, with a focus on autonomy and growth.
 
 **Electronic Arts**  
-Engineering Manager – EA Desktop  
+Engineering Manager – EA App  
 2019 – 2022  
 - Managed two development teams building client features and shared components for EA’s PC game platform.  
 - Worked with senior product and design leaders to define quarterly roadmaps and prioritize engineering work.  
