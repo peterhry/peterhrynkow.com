@@ -5,8 +5,7 @@ title: "Resume"
 # Peter Hrynkow
   
 **Senior Engineering Leader – E-commerce & Live Service Platforms**  
-Squamish, BC • peter@labwire.ca • [peterhrynkow.com](https://peterhrynkow.com) • LinkedIn  
-
+Squamish, BC • peter@labwire.ca • [peterhrynkow.com](https://peterhrynkow.com)
 
 ## Summary
 Experienced engineering leader with a strong track record building and scaling large-scale digital platforms. I bring deep expertise in live-service and e-commerce systems, team building, and engineering strategy. I work closely with cross-functional partners to shape technical direction, improve reliability, and deliver meaningful customer and business outcomes.
@@ -41,7 +40,7 @@ Electronic Arts
 - Led frontend reliability efforts, introducing production monitoring (RUM, synthetic testing) and performance benchmarks.  
 - Partnered with the data team to improve instrumentation, helping product teams make better evidence-based decisions.
 
-**Rival Technologies**  
+Rival Technologies
 *Engineering Manager*  
 *2018 – 2019 | Vancouver, BC*  
 - Built and led a new team focused on Rival’s customer engagement platform.  
