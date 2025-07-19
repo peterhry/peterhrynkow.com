@@ -38,7 +38,7 @@ or as an `<img>` element:
 Here is the result:
 
 <a href="{{ site.baseurl }}/images/32x18.png">
-  <img src="{{ site.baseurl }}/images/32x18.png" style="width: 100%; height auto;" />
+  <img src="{{ site.baseurl }}/images/32x18.png" style="width: 100%; height: auto;" />
 </a>
 `32x18.png (1443 bytes)`
 
@@ -55,7 +55,7 @@ Here is another example:
 Notice how this image has a bit more detail than the previous one. In this case, the small image will need to be a bit larger `(128x72)` to capture the detail. Finding the right size takes some experimenting.
 
 <a href="{{ site.baseurl }}/images/128x72.png">
-  <img src="{{ site.baseurl }}/images/128x72.png" style="width: 100%; height auto;" />
+  <img src="{{ site.baseurl }}/images/128x72.png" style="width: 100%; height: auto;" />
 </a>
 `128x72.png (7 KB)`
 
@@ -67,7 +67,7 @@ This technique is also suitable for blurred background photos — the kind you t
 `1920x1080-4.jpg (199 KB)`
 
 <a href="{{ site.baseurl }}/images/256x144-4.jpg">
-  <img src="{{ site.baseurl }}/images/256x144-4.jpg" style="width: 100%; height auto;" />
+  <img src="{{ site.baseurl }}/images/256x144-4.jpg" style="width: 100%; height: auto;" />
 </a>
 `256x144-4.jpg (10 KB)`
 
@@ -78,7 +78,7 @@ Before you get too excited, this technique does have one limitation. It works we
 <img src="{{ site.baseurl }}/images/1920x1080-3.jpg" />
 `1920x1080-3.jpg (337 KB)`
 
-<img src="{{ site.baseurl }}/images/128x72-2.png" style="width: 100%; height auto;" />
+<img src="{{ site.baseurl }}/images/128x72-2.png" style="width: 100%; height: auto;" />
 `128x72-2.png (21 KB)`
 
 ### What’s going on here?
