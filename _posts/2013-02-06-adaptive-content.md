@@ -8,7 +8,7 @@ McGrane calls it adaptive content. The goal of this approach is to think of cont
 
 [@studip101](https://twitter.com/studip101)
 
-Metadata describes the structure of content. It tells you what’s important, when it happened, where it happened, and what’s related. Metadata for a blog post might include things like the author, date, tags, and related media. All of this information describes the content without necessarily dictating its appearance. This abstraction allows the same content to be presentented in a variery of ways. Apps and websites that consume the content can use the attached metadata as a guide for how it should be displayed.
+Metadata describes the structure of content. It tells you what’s important, when it happened, where it happened, and what’s related. Metadata for a blog post might include things like the author, date, tags, and related media. All of this information describes the content without necessarily dictating its appearance. This abstraction allows the same content to be presented in a variety of ways. Apps and websites that consume the content can use the attached metadata as a guide for how it should be displayed.
 
 McGrane also suggests that content should be written for reuse. It’s not just about different devices, though. We often want our content to appear on more than one page, on another website, or on social networks like twitter and Facebook. Instead of truncating content to fit, we should offer it in multiple sizes that work in different contexts. An example would be an excerpt that appears in a side bar.
 
