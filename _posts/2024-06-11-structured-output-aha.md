@@ -5,7 +5,7 @@ date: 2024-06-11 00:00:00
 categories: [ai, llm]
 ---
 
-For months I tried to tame large language models with elaborate system prompts. The result was fragile: tiny edits would change behavior, tests were hard to write, and every new requirement ballooned the prompt. The aha moment came when I flipped the problem around and asked the model to **produce structured output** instead of free text.
+For weeks I tried to tame LLM agents with elaborate system prompts. The result was fragile: tiny edits would change behavior, tests were hard to write, and every new requirement ballooned the prompt. The aha moment came when I flipped the problem around and asked the model to **produce structured output** instead of free text.
 
 ### The brittle prompt phase
 
