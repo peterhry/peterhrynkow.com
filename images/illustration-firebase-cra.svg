@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" role="img" aria-labelledby="title desc">
+  <title id="title">Sketch of Firebase and React dev servers running together</title>
+  <desc id="desc">A laptop talks to a Firebase cloud and a React dev server with arrows showing proxied traffic.</desc>
+  <rect width="1200" height="675" rx="24" fill="#f8f4ec"/>
+  <g stroke="#2f2a2f" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none">
+    <rect x="180" y="210" width="260" height="200" rx="22" fill="#fefcf6"/>
+    <rect x="470" y="120" width="260" height="160" rx="22" fill="#fefcf6"/>
+    <rect x="770" y="210" width="250" height="200" rx="22" fill="#fefcf6"/>
+    <path d="M200 360h220l-30 48c-4 6-10 9-16 9H246c-6 0-12-3-16-9z" fill="#d9e7ff"/>
+    <path d="M530 190l38-80 38 80" fill="#fde6d2"/>
+    <path d="M560 190l8 42-38 18"/>
+    <path d="M620 190l-10 38 34 20"/>
+    <path d="M824 260c38-36 110-36 148 0 38 36 38 94 0 130-18 17-42 26-74 26s-56-9-74-26c-38-36-38-94 0-130z" fill="#dff4d7"/>
+    <path d="M244 262h130v78H244z" fill="#f2f7ff"/>
+  </g>
+  <g stroke="#f08c42" stroke-width="4" stroke-linecap="round" fill="none">
+    <path d="M440 250c34-26 58-34 100-38"/>
+    <path d="M440 320c34 22 78 30 120 30"/>
+    <path d="M730 250c-34-26-58-34-100-38"/>
+    <path d="M730 320c-34 22-78 30-120 30"/>
+    <path d="M600 350v130" stroke-dasharray="12 12"/>
+    <path d="M560 482h80"/>
+  </g>
+  <g fill="#2f2a2f" font-family="'Permanent Marker', 'Marker Felt', sans-serif" font-size="28" opacity="0.85">
+    <text x="230" y="252">React dev</text>
+    <text x="514" y="112">Firebase</text>
+    <text x="826" y="252">Hosting &amp; functions</text>
+    <text x="520" y="520">proxy /__</text>
+  </g>
+</svg>

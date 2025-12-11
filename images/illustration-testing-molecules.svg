@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" role="img" aria-labelledby="title desc">
+  <title id="title">Sketch of atoms combining into a molecule test</title>
+  <desc id="desc">Small nodes labeled component, actions, reducer link into a molecule that is tested end-to-end.</desc>
+  <rect width="1200" height="675" rx="24" fill="#f8f4ec"/>
+  <g stroke="#2f2a2f" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="#fefcf6">
+    <circle cx="280" cy="210" r="60"/>
+    <circle cx="280" cy="380" r="60"/>
+    <circle cx="480" cy="295" r="60"/>
+    <rect x="680" y="200" width="300" height="210" rx="26" fill="#d9e7ff"/>
+    <rect x="706" y="226" width="248" height="158" rx="22" fill="#fefcf6" stroke="#2f2a2f"/>
+  </g>
+  <g stroke="#f08c42" stroke-width="4" stroke-linecap="round" fill="none">
+    <path d="M336 242l80 48"/>
+    <path d="M336 348l80-48"/>
+    <path d="M540 295h140"/>
+    <path d="M830 410v52" stroke-dasharray="10 10"/>
+  </g>
+  <g fill="#2f2a2f" font-family="'Permanent Marker', 'Marker Felt', sans-serif" font-size="26" opacity="0.86">
+    <text x="242" y="214">component</text>
+    <text x="244" y="386">actions</text>
+    <text x="448" y="300">reducer</text>
+    <text x="758" y="276">connected</text>
+    <text x="758" y="308">component</text>
+    <text x="726" y="452">real store + UI</text>
+  </g>
+</svg>

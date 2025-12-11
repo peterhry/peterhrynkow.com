@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" role="img" aria-labelledby="title desc">
+  <title id="title">Sketch of snapshot pitfalls</title>
+  <desc id="desc">A camera frame catching bugs and valid changes with a reviewer deciding what to keep.</desc>
+  <rect width="1200" height="675" rx="24" fill="#f8f4ec"/>
+  <g stroke="#2f2a2f" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none">
+    <rect x="200" y="150" width="320" height="240" rx="24" fill="#d9e7ff"/>
+    <rect x="230" y="182" width="260" height="176" rx="18" fill="#fefcf6"/>
+    <path d="M260 232l64 52 54-38 62 62"/>
+    <circle cx="460" cy="188" r="30" fill="#fde6d2"/>
+    <rect x="650" y="210" width="320" height="210" rx="26" fill="#fefcf6"/>
+    <rect x="680" y="238" width="260" height="156" rx="18" fill="#dff4d7" stroke="#f08c42"/>
+    <path d="M700 252l76 58 74-54 56 62"/>
+    <path d="M240 450c38-28 102-28 140 0s38 74 0 102-102 28-140 0-38-74 0-102z" fill="#fefcf6"/>
+    <path d="M780 450c38-28 102-28 140 0s38 74 0 102-102 28-140 0-38-74 0-102z" fill="#fefcf6"/>
+  </g>
+  <g stroke="#f08c42" stroke-width="4" stroke-linecap="round" fill="none">
+    <path d="M520 270h100"/>
+    <path d="M600 320c-4 34 12 74 32 96"/>
+    <path d="M320 470h40m-20-20v40"/>
+    <path d="M860 470h40m-20-20v40"/>
+  </g>
+  <g fill="#2f2a2f" font-family="'Permanent Marker', 'Marker Felt', sans-serif" font-size="26" opacity="0.86">
+    <text x="252" y="466">valid change</text>
+    <text x="764" y="466">bug caught</text>
+    <text x="700" y="216">snapshot diff</text>
+  </g>
+</svg>

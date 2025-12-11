@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" role="img" aria-labelledby="title desc">
+  <title id="title">Sketch of tiny gradient scaled to full background</title>
+  <desc id="desc">A small pixel card magnified into a full screen with smooth gradients and interpolation arrows.</desc>
+  <rect width="1200" height="675" rx="24" fill="#f8f4ec"/>
+  <g stroke="#2f2a2f" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none">
+    <rect x="200" y="200" width="180" height="120" rx="16" fill="#fde6d2"/>
+    <rect x="460" y="140" width="520" height="320" rx="26" fill="#d9e7ff"/>
+    <rect x="490" y="170" width="460" height="260" rx="22" fill="#dff4d7" stroke="#2f2a2f"/>
+    <path d="M230 230c60-50 140-50 200 0" stroke="#f08c42"/>\n    <path d="M230 250c60 22 140 22 200 0" stroke="#2f2a2f" stroke-dasharray="10 10"/>\n    <path d="M520 200c80-64 220-64 300 0" stroke="#f08c42"/>\n    <path d="M520 228c100 34 220 34 320 0" stroke="#2f2a2f" stroke-dasharray="10 10"/>\n    <path d="M520 260c80 64 220 64 300 0" stroke="#f08c42"/>\n  </g>
+  <g stroke="#f08c42" stroke-width="4" stroke-linecap="round" fill="none">
+    <path d="M380 250c34 0 70 24 110 50"/>
+    <path d="M380 270c40 24 86 62 120 104"/>
+    <path d="M460 340l-34 60" stroke-dasharray="10 10"/>
+  </g>
+  <g fill="#2f2a2f" font-family="'Permanent Marker', 'Marker Felt', sans-serif" font-size="26" opacity="0.86">
+    <text x="206" y="192">32×18 png</text>
+    <text x="520" y="130">fullscreen background</text>
+    <text x="470" y="420">interpolation fills the gaps</text>
+  </g>
+</svg>

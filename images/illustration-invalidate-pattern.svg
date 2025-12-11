@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" role="img" aria-labelledby="title desc">
+  <title id="title">Sketch of invalidate pattern</title>
+  <desc id="desc">Width and height setters funnel into a single render tick via requestAnimationFrame.</desc>
+  <rect width="1200" height="675" rx="24" fill="#f8f4ec"/>
+  <g stroke="#2f2a2f" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="#fefcf6">
+    <rect x="200" y="200" width="220" height="110" rx="18" fill="#d9e7ff"/>
+    <rect x="200" y="360" width="220" height="110" rx="18" fill="#d9e7ff"/>
+    <rect x="540" y="260" width="220" height="170" rx="22" fill="#fefcf6"/>
+    <rect x="820" y="240" width="140" height="210" rx="18" fill="#fde6d2"/>
+    <path d="M560 300h180v90H560z" fill="#dff4d7"/>
+  </g>
+  <g stroke="#f08c42" stroke-width="4" stroke-linecap="round" fill="none">
+    <path d="M420 256c42-14 84-12 120 10"/>
+    <path d="M420 416c42 14 84 12 120-10"/>
+    <path d="M760 340c18-12 38-18 60-18"/>
+    <path d="M860 360v42" stroke-dasharray="10 10"/>
+    <path d="M540 430c-6 24-10 42-10 60"/>
+  </g>
+  <g fill="#2f2a2f" font-family="'Permanent Marker', 'Marker Felt', sans-serif" font-size="26" opacity="0.86">
+    <text x="230" y="232">setWidth()</text>
+    <text x="224" y="392">setHeight()</text>
+    <text x="580" y="254">_invalidate()</text>
+    <text x="582" y="336">schedule render</text>
+    <text x="844" y="228">_render()</text>
+    <text x="826" y="472">next frame</text>
+  </g>
+</svg>

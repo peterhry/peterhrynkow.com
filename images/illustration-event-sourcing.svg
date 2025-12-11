@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" role="img" aria-labelledby="title desc">
+  <title id="title">Sketch of event streams without heavy read models</title>
+  <desc id="desc">Multiple thin event streams feed a live query instead of a bulky read model rebuild.</desc>
+  <rect width="1200" height="675" rx="24" fill="#f8f4ec"/>
+  <g stroke="#2f2a2f" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="#fefcf6">
+    <rect x="220" y="200" width="200" height="240" rx="20" fill="#d9e7ff"/>
+    <rect x="520" y="160" width="180" height="320" rx="22" fill="#fefcf6"/>
+    <rect x="800" y="220" width="180" height="200" rx="20" fill="#dff4d7"/>
+    <path d="M250 240h140v60H250z" fill="#fefcf6"/>
+    <path d="M250 320h140v60H250z" fill="#fefcf6"/>
+    <path d="M250 400h140v60H250z" fill="#fefcf6"/>
+    <path d="M550 200h120v60H550z" fill="#fde6d2"/>
+    <path d="M550 280h120v60H550z" fill="#fde6d2"/>
+    <path d="M550 360h120v60H550z" fill="#fde6d2"/>
+  </g>
+  <g stroke="#f08c42" stroke-width="4" stroke-linecap="round" fill="none">
+    <path d="M420 240c40-10 80-10 120 0"/>
+    <path d="M420 320c40-10 80-10 120 0"/>
+    <path d="M420 400c40-10 80-10 120 0"/>
+    <path d="M700 260c30-8 66-12 100-8"/>
+    <path d="M700 340c30 8 66 12 100 8"/>
+    <path d="M700 300c30 0 66 0 100 0"/>
+  </g>
+  <g fill="#2f2a2f" font-family="'Permanent Marker', 'Marker Felt', sans-serif" font-size="24" opacity="0.86">
+    <text x="236" y="188">small event streams</text>
+    <text x="538" y="144">fast replays</text>
+    <text x="812" y="212">live query</text>
+    <text x="818" y="456">avoid heavy read models</text>
+  </g>
+</svg>

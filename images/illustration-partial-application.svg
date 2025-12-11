@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" role="img" aria-labelledby="title desc">
+  <title id="title">Sketch of partial application flowing through functions</title>
+  <desc id="desc">A function box receives one fixed argument and outputs a simplified function that maps across requests.</desc>
+  <rect width="1200" height="675" rx="24" fill="#f8f4ec"/>
+  <g stroke="#2f2a2f" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none">
+    <rect x="200" y="210" width="230" height="140" rx="18" fill="#fefcf6"/>
+    <rect x="500" y="180" width="230" height="170" rx="18" fill="#fefcf6"/>
+    <rect x="800" y="170" width="200" height="190" rx="20" fill="#fefcf6"/>
+    <path d="M230 250h170v70H230z" fill="#d9e7ff"/>
+    <path d="M530 230h170v70H530z" fill="#fde6d2"/>
+    <path d="M834 220h132v68H834z" fill="#dff4d7"/>
+    <circle cx="220" cy="400" r="38" fill="#fefcf6"/>
+    <circle cx="600" cy="400" r="38" fill="#fefcf6"/>
+    <circle cx="970" cy="400" r="38" fill="#fefcf6"/>
+  </g>
+  <g stroke="#f08c42" stroke-width="4" stroke-linecap="round" fill="none">
+    <path d="M430 280c24 0 50-12 70-26"/>
+    <path d="M700 256c32-2 62-16 78-36"/>
+    <path d="M180 400h60"/>
+    <path d="M560 400h60"/>
+    <path d="M940 400h60"/>
+    <path d="M310 280c-4 32 6 64 32 94"/>
+    <path d="M610 270c-2 36 12 76 34 96"/>
+  </g>
+  <g fill="#2f2a2f" font-family="'Permanent Marker', 'Marker Felt', sans-serif" font-size="28" opacity="0.82">
+    <text x="230" y="276">add(a, b)</text>
+    <text x="536" y="246">bind(a=10)</text>
+    <text x="846" y="262">addTen(b)</text>
+    <text x="196" y="408">inputs</text>
+    <text x="570" y="408">map()</text>
+    <text x="946" y="408">results</text>
+  </g>
+</svg>
