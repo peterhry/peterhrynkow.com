@@ -5,13 +5,11 @@ date:   2017-08-24 00:00:00
 categories: [performance]
 ---
 
-Nowadays, you can’t have a discussion about component-based software design without mentioning React, but the idea of building apps with components was around long before Facebook. 
+You can’t talk about component-based software design without mentioning React, but the idea of building apps with components predates Facebook by a long shot. My first exposure was in 2003 when Macromedia shipped an MX component library with Flash MX.
 
-My first exposure to components was in 2003 when the engineers at Macromedia shipped a component library called MX components with Flash MX. 
+Flash’s engineers came up with clever patterns for improving component rendering performance. One such pattern is the “invalidate pattern,” which you see everywhere in modern components.
 
-Say what you will about Flash but the engineers at Macromedia came up with some clever patterns for improving a component’s rendering performance. One such pattern is called the “invalidate pattern” and you see it everywhere in today’s modern components.
-
-Say you have an object that controls the width and height of an element. It exposes some methods `setWidth` and `setHeight`. Each time one of these methods is called, the dimensions of the element are set.
+Say you have an object that controls the width and height of an element. It exposes `setWidth` and `setHeight`. Each time one of these methods is called, the dimensions of the element are set immediately.
 
 ```js
 class MyClass {
@@ -43,9 +41,9 @@ instance.setHeight(200);
 // _render called twice.
 ```
 
-The problem with this code is that the `_render` method is called twice, once for `setWidth`, and once for `setHeight`. It would be more efficient if `_render` was called just once, _after_ `setWidth` and `setHeight` have both been called.
+The problem is that `_render` runs twice—once for `setWidth`, and once for `setHeight`. It would be more efficient if `_render` ran once _after_ both setters were called.
 
-To solve this, we can debounce calls to `_render` using `requestAnimationFrame`.
+To solve this, debounce calls to `_render` using `requestAnimationFrame`.
 
 ```js
 class MyClass {
@@ -85,6 +83,6 @@ instance.setHeight(200);
 // _render called once.
 ```
 
-When `setWidth` is called, the `_invalidate` function schedules a call to `_render` in the next frame. When `setHeight` is called immediately after, the scheduled call to `_render` is cancelled and replaced with a new scheduled call to `_render`.
+When `setWidth` is called, `_invalidate` schedules a call to `_render` in the next frame. When `setHeight` is called immediately after, the scheduled call is cancelled and replaced with a new one. Rendering now happens once per animation frame, no matter how many setters fire.
 
-The [debounce](https://lodash.com/docs/4.17.4#debounce) function from lodash would have worked here, too, except that it uses `setTimeout` under the hood. Since the `_render` function changes CSS properties like `width` and `height`, using `requestAnimationFrame` allows the browser to better optimize these updates.
+You could use lodash’s [debounce](https://lodash.com/docs/4.17.4#debounce) here too, but because `_render` manipulates layout properties, `requestAnimationFrame` gives the browser more opportunity to optimize these updates.

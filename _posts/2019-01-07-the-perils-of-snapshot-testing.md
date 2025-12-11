@@ -6,7 +6,7 @@ categories: [testing]
 icon: 🧠
 ---
 
-According to the [Jest docs](https://jestjs.io/docs/en/snapshot-testing), snapshot tests are useful whenever you want to make sure your UI does not change unexpectedly. That sounds great in theory, but in this post, I will demonstrate why snapshot tests are more trouble than they're worth.
+According to the [Jest docs](https://jestjs.io/docs/en/snapshot-testing), snapshot tests help ensure your UI doesn’t change unexpectedly. That sounds great, but in practice snapshot tests can create more noise than signal. Here’s why.
 
 Say you have a simple button component:
 
@@ -31,9 +31,9 @@ it('renders correctly', () => {
 })
 ```
 
-Wow, that was easy. Now any change to the component’s rendered output will cause the test to fail. Sounds great, right?
+Now any change to the component’s rendered output will cause the test to fail. Sounds great, right?
 
-Well, let me give you a scenario where things go off the rails pretty quick. Say you decide to add a new attribute `target` but make a typo and call it `traget`.
+Consider what happens when you add a new attribute `target` but mistype it as `traget`:
 
 ```jsx
 const Button = ({href, target, children}) => (
@@ -41,33 +41,27 @@ const Button = ({href, target, children}) => (
 )
 ```
 
-In your mind, you already expect the test to fail, since by adding a new attribute, you've changed the component's rendered output. In haste, you review the diff but fail to notice the typo. After updating the snapshot you commit your changes and push them to GitHub.
-
-Now you have a snapshot test that passes but makes the wrong assertion about your component's rendered output. WTF just happened?
+You expect the test to fail, since the rendered output changed. In haste you skim the diff, miss the typo, and update the snapshot anyway. Now you have a passing test that asserts the wrong output. WTF just happened?
 
 ### Sorting the Catch
 
-When a snapshot test fails, you have to manually review each change and decide whether it's a bug or a valid change. This process is tedious and prone to human error, especially when there are lots of changes to review.
+When a snapshot test fails, you must review each change and decide whether it’s a bug or a valid update. That review is tedious and error-prone, especially when lots of changes pile up.
 
 ![Files]({{ site.baseurl }}/images/fish.jpg)
 
-Snapshot testing is sort of like fishing with a giant net. There's a certain kind of fish you want to catch (bugs), but you end up catching a lot of other stuff, too (valid changes). The hard part is sorting the catch and deciding what to keep and what to throw back.
+Snapshot testing is like fishing with a giant net. You want bugs, but you also catch plenty of valid changes. Sorting the catch—deciding what to keep and what to throw back—is the hard part. The risk is updating a snapshot because you assume the change is correct, when in fact it’s a bug.
 
-The risk is that you update a snapshot thinking a change was valid when it was in fact a bug.
-
-Things get worse if you use [jest-styled-components](https://github.com/styled-components/jest-styled-components) because it stores your component's style rules with the snapshot. That means having to review every line of CSS that changes, too.
+Things get worse with [jest-styled-components](https://github.com/styled-components/jest-styled-components), which stores style rules with the snapshot. Now you’re reviewing every line of changing CSS, too.
 
 ### Snapshot Fatigue
 
-Snapshot tests are easy to create, requiring almost no forethought. That's because they place all of the cognitive burden on the reviewer.
-
-After a while, engineers begin to experience something I call _snapshot fatigue_ and start blindly updating failed snapshots without reviewing them. Once that happens, your snapshot tests are pretty much useless.
+Snapshot tests are easy to create because they push all the cognitive load to the reviewer. After a while engineers experience _snapshot fatigue_ and start blindly updating failed snapshots without reviewing them. At that point the tests are useless.
 
 ### Do You Even Need a Snapshot?
 
-A good test should prevent you from accidentally breaking your component's API. By creating a snapshot test, you're essentially declaring that your component's _entire_ rendered output is part of its API and should never change. In some cases that might be what you want but usually a component has some specific functionality that you want to test, and freezing its entire rendered output makes it a pain to refactor and add new features.
+A good test prevents you from accidentally breaking a component’s API. By creating a snapshot test, you’re essentially declaring that the component’s _entire_ rendered output is part of its API and should never change. Sometimes that’s true, but usually a component has specific behaviors you care about. Freezing its entire output makes refactoring painful.
 
-Alternatively, you can identify the elements of your component's UI that are critical to its behaviour and test those specifically.
+Instead, identify the UI elements that are critical to behavior and test those explicitly.
 
 ```jsx
 import React from 'react'
@@ -85,6 +79,6 @@ it('renders correctly', () => {
 })
 ```
 
-The test above is explicit. It verifies that the link contains the correct text and that its `href` and `target` values are correct. So long as these values don't change, the component should function as expected. 
+This test is explicit. It verifies that the link contains the correct text and that its `href` and `target` values are correct. As long as those values don’t change, the component should function as expected.
 
-This method requires a little more forethought but eliminates the burden and risk of manually reviewing snapshot diffs over time. It also allows you to refactor the component to your heart's content so long as those specific values don't change.
+The method requires more thought upfront but eliminates the burden and risk of manually reviewing snapshot diffs over time. It also lets you refactor freely as long as those specific values stay intact.

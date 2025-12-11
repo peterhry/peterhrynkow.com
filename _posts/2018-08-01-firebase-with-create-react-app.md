@@ -6,30 +6,23 @@ categories: [firebase]
 icon: 🔥
 ---
 
-![Firebase + Create React App Logo]({{ site.baseurl }}/images/logo-firebase-cra.svg){:class="inline-img"}
+Earlier this year my team built and shipped its first production Firebase app. We needed a web-based chat client where users could interact with market research bots in real time. Firebase was the perfect fit: the Realtime Database kept clients in sync, Cloud Functions processed messages, and Firebase Hosting served the app.
 
-Earlier this year, my team built and deployed its first production Firebase app. It was a lot of fun and we learned a ton about the platform along the way. For our project, we needed to build a web-based chat client that would allow users to interact with market research bots in realtime.
-
-Firebase was the perfect fit. We used the Realtime Database to synchronize and push data to connected clients, Cloud Functions to process messages on the backend, and Firebase Hosting to serve the app.
-
-On the client-side, we chose [Create React App](https://github.com/facebook/create-react-app) for its simplicity and preconfigured tooling. Combining Firebase with Create React App is pretty straightforward but it can be tricky to get local development working correctly. Here’s how we did it.
-
+On the client side we chose [Create React App](https://github.com/facebook/create-react-app) for its simple, batteries-included tooling. Combining the two is straightforward, but getting local development right can be tricky. Here’s the recipe that worked for us.
 
 ### Dev servers
 
-Assuming you plan to use Firebase Functions and Firebase Hosting, you’ll want to run the Create React App development server in parallel with the Firebase emulator. This allows you to emulate your HTTP Firebase Functions and Firebase Hosting environment while you develop your React app.
+If you plan to use Firebase Functions and Firebase Hosting, run the Create React App dev server **alongside** the Firebase emulator. That way you can emulate HTTP functions and hosting while your React app runs in dev mode.
 
-Here’s how to run the two servers in parallel:
-
-First, install `npm-run-all` as a dev dependency:
+Install `npm-run-all` to orchestrate both servers:
 ```sh
 yarn add --dev npm-run-all
 ```
 
-Now, add these scripts to your `package.json` file:
+Add these scripts to `package.json`:
 ```js
 {
-  "scripts:": {
+  "scripts": {
     "dev": "run-p --race dev:firebase dev:react",
     "dev:firebase": "firebase serve -p 4000",
     "dev:react": "react-scripts start"
@@ -37,15 +30,13 @@ Now, add these scripts to your `package.json` file:
 }
 ```
 
-Now you can fire up both servers at the same time by running `yarn dev`. Your React app can be viewed at [http://localhost:3000](http://localhost:3000) while your Firebase project is emulated on port 4000.
-
-If you're wondering how these two pieces fit together, stay with me for a bit. In the next section it should start to make sense.
+Run `yarn dev` to start both. React stays on [http://localhost:3000](http://localhost:3000) while the Firebase project is emulated on port 4000. The `--race` flag ensures either process exiting will stop the other so you don’t end up with orphaned servers.
 
 ### Implicit initialization
 
-When deploying your app to Firebase Hosting, I highly recommend using [implicit initialization](https://firebase.google.com/docs/web/setup#sdk_imports_and_implicit_initialization). Doing so eliminates the need to manually configure the SDK for each environment (staging, production, etc.)
+When deploying to Firebase Hosting, use [implicit initialization](https://firebase.google.com/docs/web/setup#sdk_imports_and_implicit_initialization). It removes the need to juggle environment-specific configs.
 
-So instead of doing this for each environment:
+Instead of manually configuring each environment:
 ```xml
 <script src="https://www.gstatic.com/firebasejs/5.3.0/firebase.js"></script>
 <script>
@@ -58,17 +49,17 @@ So instead of doing this for each environment:
     messagingSenderId: "<SENDER_ID>",
   })
 </script>
-
 ```
-Just load the auto-configured scripts from the hosting environment:
+
+Just load the auto-configured scripts from Firebase Hosting:
 ```xml
 <script src="/__/firebase/5.3.0/firebase.js"></script>
 <script src="/__/firebase/init.js"></script>
 ```
 
-Once deployed to Firebase Hosting, your app will be automatically configured for the target project environment.
+Once deployed, the app is automatically configured for its host project.
 
-You might be wondering about that `/__` directory. Since this path only exists in the Firebase Hosting environment, you’ll need to tell the React development server how to handle these requests. Just add this entry to your `package.json` file:
+You might be wondering about that `/__` directory. Because it only exists in the Firebase Hosting environment, tell the React dev server how to proxy those requests locally by adding this to `package.json`:
 
 ```js
 {
@@ -76,14 +67,11 @@ You might be wondering about that `/__` directory. Since this path only exists i
 }
 ```
 
-The [proxy](https://create-react-app.dev/docs/proxying-api-requests-in-development/) field tells the React development server to proxy any unknown requests to the target URL. With this entry in place, the React development server will proxy any request that contains `/__`to the Firebase Hosting emulator running on port 4000.
-
+The [proxy](https://create-react-app.dev/docs/proxying-api-requests-in-development/) setting sends unknown requests to the target URL. Any request containing `/__` now reaches the Firebase Hosting emulator running on port 4000.
 
 ### Calling Firebase Functions from your app
 
-At some point you might want to call an HTTP Firebase Function from your React app. Since the function URL is different for each environment, you might be tempted to store the URLs in a config file, but Firebase Hosting provides a more elegant solution.
-
-In your `firebase.json` file, you can configure a rewrite directive that points to the HTTP Firebase function of your choice:
+If you call an HTTP Firebase Function from React, you might be tempted to store environment-specific URLs. A cleaner option is to configure a rewrite in `firebase.json` that exposes the function behind a friendly path:
 
 ```js
 {
@@ -102,16 +90,15 @@ In your `firebase.json` file, you can configure a rewrite directive that points 
     ]
   }
 }
-
 ```
 
-Now your app can make a request to `/myFunction` and the Firebase Hosting environment will map the request to the correct Firebase Function.
+Now your app can call `/myFunction` and Firebase Hosting will route it to the correct backend.
 
 ```js
 const myData = await fetch('/myFunction')
 ```
 
-But wait, for the rewrite to work locally, you’ll need to add another entry to the `proxy` field in your `package.json` file:
+To make that rewrite work locally, expand the proxy entry in `package.json`:
 
 ```js
   "proxy": {
@@ -124,7 +111,7 @@ But wait, for the rewrite to work locally, you’ll need to add another entry to
   }
 ```
 
-Now the React development server will know what to do with that request. This approach works fine but if you plan to add more functions in the future, a more scalable solution might look something like this:
+This approach works, but if you plan to add more functions, a scalable version might look like this:
 
 ```js
   "proxy": {
@@ -137,6 +124,4 @@ Now the React development server will know what to do with that request. This ap
   }
 ```
 
-Now any request that starts with `/functions` will be proxied to the Firebase Hosting emulator.
-
-
+Any request starting with `/functions` now reaches the emulator, keeping local development predictable while matching production routing.

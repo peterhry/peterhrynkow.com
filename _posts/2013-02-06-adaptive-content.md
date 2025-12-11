@@ -1,21 +1,28 @@
-What do we do when content created for a desktop website needs to fit on a smartphone screen? The temptation might be to create another set of content for smartphones. But what about tablets, laptops, and other devices that fall between a desktop and phone? When you consider the overhead of managing content for each class of device, it’s clear that we need a better approach.
+---
+layout: post
+title: "Adaptive content everywhere"
+date: 2013-02-06 00:00:00
+categories: [content]
+---
 
-This year I was lucky enough to attend An Event Apart in San Francisco and a [presentation by Karen McGrane](http://aneventapart.com/news/post/aea-video-karen-mcgrane-adapting-ourselves-to-adaptive-content) confirmed some of my thoughts on this subject, mainly that we should be able to create content once and publish it everywhere.
+What do we do when content created for a desktop website needs to fit on a smartphone screen? The temptation might be to create a second set of articles just for phones. But what about tablets, laptops, and all the devices in between? Maintaining versions for each form factor quickly becomes impossible, so we need a better approach.
 
-McGrane calls it adaptive content. The goal of this approach is to think of content as reusable “chunks”, not pages, and to describe it with metadata.
+At An Event Apart in San Francisco, a [presentation by Karen McGrane](http://aneventapart.com/news/post/aea-video-karen-mcgrane-adapting-ourselves-to-adaptive-content) reinforced this idea: we should create content once and publish it everywhere.
+
+McGrane calls it adaptive content. Instead of thinking in pages, we think in reusable chunks that are richly described with metadata.
 
 > “Metadata is the new art direction”
 
 [@studip101](https://twitter.com/studip101)
 
-Metadata describes the structure of content. It tells you what’s important, when it happened, where it happened, and what’s related. Metadata for a blog post might include things like the author, date, tags, and related media. All of this information describes the content without necessarily dictating its appearance. This abstraction allows the same content to be presentented in a variery of ways. Apps and websites that consume the content can use the attached metadata as a guide for how it should be displayed.
+Metadata describes the structure of content: what matters, when it happened, where it happened, and what it’s related to. For a blog post, that might include the author, date, tags, related media, and even the allowed summary lengths. All of this describes the content without dictating its appearance, letting the same material be presented in a variety of layouts. Consumer apps and websites can rely on the metadata to make smart decisions about hierarchy and placement.
 
-McGrane also suggests that content should be written for reuse. It’s not just about different devices, though. We often want our content to appear on more than one page, on another website, or on social networks like twitter and Facebook. Instead of truncating content to fit, we should offer it in multiple sizes that work in different contexts. An example would be an excerpt that appears in a side bar.
+McGrane also suggests writing content with reuse in mind. It’s not just about devices; the same article may appear on another page, partner sites, or social networks. Instead of truncating text in arbitrary ways, offer purposeful versions: a tweet-sized hook, a short excerpt for sidebars, and a full version for detail pages. Those deliberate cuts make the piece clearer in every context.
 
 > “Truncation is not a content strat...”
 
 [@karenmcgrane](https://twitter.com/karenmcgrane)
 
-The qualities that make content adaptive also make it distributable and easy to work with. Without writing a ton of code, developers can fetch content from an API and format it for different platforms. NPR (National Public Radio) has seen an eighty percent increase in page views since launching their own content API and many of their apps were developed in just a few weeks.
+The qualities that make content adaptive also make it distributable and easy to work with. Without writing much code, developers can fetch content from an API and render it differently per platform. NPR (National Public Radio) saw an 80% increase in page views after launching their content API, and many of their apps were built in just a few weeks because the content arrived ready to use.
 
-Being able to create content once and publish everywhere is an exciting prospect. With adaptive content we can reduce administrative overhead and be sure that our content is ready for any device.
+Creating content once and publishing it everywhere reduces overhead and ensures that every device—and every channel—gets a coherent, intentional experience.
