@@ -7,8 +7,6 @@ icon: 🔬
 
 ---
 
-![Sketch of atoms combining into a molecule test]({{ site.baseurl }}/images/illustration-testing-molecules.svg)
-
 I come across a lot of React-Redux apps where components, action creators, selectors, and reducers are tested as separate units. It’s a common practice—it’s even described in the [Redux docs](https://redux.js.org/recipes/writing-tests)—but there’s a better way.
 
 In this post, I'll show you why the standard approach for testing React-Redux apps is insufficient and makes refactoring harder. I’ll also show you an easier way to test your app that catches more bugs and keeps refactors safe.

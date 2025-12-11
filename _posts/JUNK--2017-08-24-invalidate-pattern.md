@@ -5,8 +5,6 @@ date:   2017-08-24 00:00:00
 categories: [performance]
 ---
 
-![Sketch of invalidate pattern]({{ site.baseurl }}/images/illustration-invalidate-pattern.svg)
-
 You can’t talk about component-based software design without mentioning React, but the idea of building apps with components predates Facebook by a long shot. My first exposure was in 2003 when Macromedia shipped an MX component library with Flash MX.
 
 Flash’s engineers came up with clever patterns for improving component rendering performance. One such pattern is the “invalidate pattern,” which you see everywhere in modern components.

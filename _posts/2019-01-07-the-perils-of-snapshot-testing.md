@@ -6,8 +6,6 @@ categories: [testing]
 icon: 🧠
 ---
 
-![Sketch of snapshot pitfalls]({{ site.baseurl }}/images/illustration-snapshot-testing.svg)
-
 According to the [Jest docs](https://jestjs.io/docs/en/snapshot-testing), snapshot tests help ensure your UI doesn’t change unexpectedly. That sounds great, but in practice snapshot tests can create more noise than signal. Here’s why.
 
 Say you have a simple button component:

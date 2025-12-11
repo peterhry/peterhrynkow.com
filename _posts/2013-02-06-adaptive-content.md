@@ -5,8 +5,6 @@ date: 2013-02-06 00:00:00
 categories: [content]
 ---
 
-![Sketch of adaptive content flowing to multiple devices]({{ site.baseurl }}/images/illustration-adaptive-content.svg)
-
 What do we do when content created for a desktop website needs to fit on a smartphone screen? The temptation might be to create a second set of articles just for phones. But what about tablets, laptops, and all the devices in between? Maintaining versions for each form factor quickly becomes impossible, so we need a better approach.
 
 At An Event Apart in San Francisco, a [presentation by Karen McGrane](http://aneventapart.com/news/post/aea-video-karen-mcgrane-adapting-ourselves-to-adaptive-content) reinforced this idea: we should create content once and publish it everywhere.

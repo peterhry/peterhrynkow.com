@@ -6,8 +6,6 @@ categories: [performance]
 icon: 🔥
 ---
 
-![Sketch of tiny gradient scaled to full background]({{ site.baseurl }}/images/illustration-upscaled-gradients.svg)
-
 Raster images normally look distorted or pixelated when enlarged—especially if they contain graphics or text. The technique below is about blowing up tiny images, and the results might surprise you.
 
 Let’s say you want to use this image as a full page background on your website:

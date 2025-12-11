@@ -7,8 +7,6 @@ icon: 🔥
 permalink: how-to-compress-a-png-like-a-jpeg/
 ---
 
-![Sketch of masking a photo with an alpha layer]({{ site.baseurl }}/images/illustration-svg-png-shrink.svg)
-
 Wouldn’t it be great if you could get the compression of a JPEG with the transparency of a PNG? You can, with a little layering trick I used while working on the new<a href="http://sapporobeer.ca" target="_blank"> Sapporo Beer website.</a>
 
 ![Saporro Beer]({{ site.baseurl }}/images/sapporo.jpg)

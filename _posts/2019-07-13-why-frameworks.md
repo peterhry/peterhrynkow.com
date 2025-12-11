@@ -5,8 +5,6 @@ date: 2019-07-13 00:00:00
 categories: [javascript]
 ---
 
-![Sketch of framework building blocks]({{ site.baseurl }}/images/illustration-why-frameworks.svg)
-
 Recently, I was asked why using a framework or library like React, Angular, or Vue.js is better for building web apps than vanilla JavaScript. Here are the reasons I keep coming back to.
 
 ### Frameworks and libraries provide battle-tested solutions to common problems

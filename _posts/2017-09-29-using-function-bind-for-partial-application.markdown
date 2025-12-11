@@ -5,8 +5,6 @@ date:   2017-09-29 00:00:00
 categories: [functional-programming]
 ---
 
-![Sketch of partial application flowing through functions]({{ site.baseurl }}/images/illustration-partial-application.svg)
-
 Have you ever called the same function with the same argument over and over again? There’s a simple technique that reduces this repetition: [partial application](https://en.wikipedia.org/wiki/Partial_application).
 
 Say you have a function that adds two numbers:

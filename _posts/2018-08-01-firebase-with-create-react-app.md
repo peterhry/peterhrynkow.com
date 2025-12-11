@@ -6,8 +6,6 @@ categories: [firebase]
 icon: 🔥
 ---
 
-![Sketch of Firebase and React dev servers running together]({{ site.baseurl }}/images/illustration-firebase-cra.svg)
-
 Earlier this year my team built and shipped its first production Firebase app. We needed a web-based chat client where users could interact with market research bots in real time. Firebase was the perfect fit: the Realtime Database kept clients in sync, Cloud Functions processed messages, and Firebase Hosting served the app.
 
 On the client side we chose [Create React App](https://github.com/facebook/create-react-app) for its simple, batteries-included tooling. Combining the two is straightforward, but getting local development right can be tricky. Here’s the recipe that worked for us.

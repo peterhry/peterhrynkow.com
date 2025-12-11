@@ -5,8 +5,6 @@ date: 2024-06-11 00:00:00
 categories: [ai, llm]
 ---
 
-![Sketch of structured output contract]({{ site.baseurl }}/images/illustration-structured-output.svg)
-
 For weeks I tried to tame LLM agents with elaborate system prompts. The result was fragile: tiny edits would change behavior, tests were hard to write, and every new requirement ballooned the prompt. The aha moment came when I flipped the problem and asked the model to **produce structured output** instead of free text.
 
 ### The brittle prompt phase
