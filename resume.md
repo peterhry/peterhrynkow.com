@@ -66,6 +66,6 @@ Technical & UX Lead
 - **Languages:** JavaScript, TypeScript, CSS  
 - **Frameworks:** React, Next.js, Angular  
 - **DevOps/Monitoring:** Grafana, New Relic  
-- **AI/Automation:** LLMs, RAG, retrieval pipelines, n8n
+- **AI/Automation:** OpenAI API, Anthropic API, RAG, pgvector, retrieval pipelines, n8n
 - **Practices:** Agile, Scrum, CI/CD, Event Sourcing, Event Driven Architecture, SLOs
 - **Platforms:** AWS, GCP, Node.js, Firebase, Vercel, Supabase
