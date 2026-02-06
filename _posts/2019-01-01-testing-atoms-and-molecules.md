@@ -7,7 +7,9 @@ icon: 🔬
 
 ---
 
-I come across a lot of React-Redux apps where components, action creators, selectors, and reducers are tested as separate units. It’s a common practice—it’s even described in the [Redux docs](https://redux.js.org/recipes/writing-tests)—but there’s a better way.
+**Update:** The approach described in this post is now the [recommended way to test](https://redux.js.org/usage/writing-tests) in the official Redux docs.
+
+I come across a lot of React-Redux apps where components, action creators, selectors, and reducers are tested as separate units. It's a common practice—it's even described in the [Redux docs](https://web.archive.org/web/20190108083439/https://redux.js.org/recipes/writing-tests) (archived)—but there's a better way.
 
 In this post, I'll show you why the standard approach for testing React-Redux apps is insufficient and makes refactoring harder. I’ll also show you an easier way to test your app that catches more bugs and keeps refactors safe.
 
@@ -15,7 +17,7 @@ In this post, I'll show you why the standard approach for testing React-Redux ap
 
 So what's the problem with testing components, action creators, selectors, and reducers separately?
 
-First, testing these elements in isolation doesn’t guarantee that they work together. A unit test for an [action creator](https://redux.js.org/recipes/writing-tests#action-creators) asserts that an action is created but doesn't verify that the action is ever dispatched. A unit test for a [reducer](https://redux.js.org/recipes/writing-tests#reducers) asserts that a new state is returned but doesn’t verify that the UI updates to reflect it. There’s a disconnect.
+First, testing these elements in isolation doesn’t guarantee that they work together. A unit test for an [action creator](https://web.archive.org/web/20190108083439/https://redux.js.org/recipes/writing-tests#action-creators) asserts that an action is created but doesn't verify that the action is ever dispatched. A unit test for a [reducer](https://web.archive.org/web/20190108083439/https://redux.js.org/recipes/writing-tests#reducers) asserts that a new state is returned but doesn’t verify that the UI updates to reflect it. There’s a disconnect.
 
 ![Passing unit tests, sinking ship]({{ site.baseurl }}/images/unit-tests.jpg)
 
