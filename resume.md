@@ -23,7 +23,7 @@ Experienced engineering leader with a track record of building and scaling platf
 ## Experience
 
 **Electronic Arts**  
-Senior Engineering Manager – EA App   
+Technical Director – EA App   
 2022 – Present  
 - Architected and deployed a RAG knowledge base and orchestration system across the department, enabling teams to "chat with docs" and removing barriers to finding information.
 - Led department-wide adoption of n8n, onboarding 10+ team members who went on to build merge request review automation, knowledge base pipelines, and RAG tooling.
