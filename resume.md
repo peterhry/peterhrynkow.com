@@ -38,7 +38,6 @@ Engineering Manager – EA App
 - Built shared frontend components and services used across EA's PC game platform by multiple feature teams.
 - Introduced production monitoring infrastructure (RUM, synthetic testing) and performance benchmarks that became the standard for frontend reliability.
 - Partnered with the data team to build instrumentation pipelines, giving product teams the data they needed for evidence-based decisions.
-- Worked with senior product and design leaders to define quarterly roadmaps and prioritize engineering work.
 
 **Rival Technologies**
 Senior Software Engineer → Engineering Manager
@@ -53,7 +52,7 @@ Software Engineer – Web
 2014 – 2018  
 - Delivered frontend experiences for FIFA, UFC, and Star Wars Battlefront.  
 - Co-led EA’s JavaScript Guild, advocating for modern frontend practices and tooling.  
-- Helped define and implement EA’s cross-title design system used by multiple game teams.
+- Defined and implemented EA's cross-title design system used by multiple game teams.
 
 **Noise Digital**  
 Technical & UX Lead  
@@ -64,9 +63,9 @@ Technical & UX Lead
 
 ## Technical Toolkit
 
-- **Languages:** JavaScript, TypeScript, Node.js, CSS  
+- **Languages:** JavaScript, TypeScript, CSS  
 - **Frameworks:** React, Next.js, Angular  
 - **DevOps/Monitoring:** Grafana, New Relic  
 - **AI/Automation:** LLMs, RAG, retrieval pipelines, n8n
 - **Practices:** Agile, Scrum, CI/CD, Event Sourcing, Event Driven Architecture, SLOs
-- **Platforms:** AWS, GCP, Firebase, Vercel, Supabase
+- **Platforms:** AWS, GCP, Node.js, Firebase, Vercel, Supabase
