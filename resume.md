@@ -30,6 +30,8 @@ Senior Engineering Manager – EA App
 - Work across engineering, product, and operations to define technical priorities and align them with product goals.  
 - Helped establish SLOs and observability practices that brought more visibility into app health and customer experience.  
 - Championed efforts to modernize automation and testing strategies, giving feature teams more confidence in releases.  
+- Developed and deployed a RAG knowledge base and orchestration system across the department to remove barriers to finding information and enable "chatting with docs."
+- Developed fully-automated canary rollouts to improve release safety and reduce manual deployment overhead.
 - Provide coaching and mentorship to engineers and engineering managers, with a focus on autonomy and growth.
 
 **Electronic Arts**  
@@ -74,5 +76,6 @@ Technical & UX Lead
 - **Languages:** JavaScript, TypeScript, Node.js, CSS  
 - **Frameworks:** React, Next.js, Angular  
 - **DevOps/Monitoring:** Grafana, New Relic  
-- **Practices:** Agile, Scrum, CI/CD, Event Sourcing, SLOs  
+- **AI/Automation:** LLMs, RAG, n8n
+- **Practices:** Agile, Scrum, CI/CD, Event Sourcing, Event Driven Architecture, SLOs
 - **Platforms:** AWS, GCP, Firebase
