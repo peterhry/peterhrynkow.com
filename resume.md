@@ -78,4 +78,4 @@ Technical & UX Lead
 - **DevOps/Monitoring:** Grafana, New Relic  
 - **AI/Automation:** LLMs, RAG, retrieval pipelines, n8n
 - **Practices:** Agile, Scrum, CI/CD, Event Sourcing, Event Driven Architecture, SLOs
-- **Platforms:** AWS, GCP, Firebase, Vercel
+- **Platforms:** AWS, GCP, Firebase, Vercel, Supabase
