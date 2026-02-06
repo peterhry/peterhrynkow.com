@@ -28,7 +28,7 @@ Technical Director – EA App
 - Architected and deployed a RAG knowledge base that unified scattered knowledge sources into a searchable vector store, enabling teams across the department to "chat with docs."
 - Led department-wide adoption of n8n, onboarding 10+ team members who went on to build merge request review automation, knowledge base pipelines, and RAG tooling.
 - Built fully-automated canary rollouts and testing patterns, establishing reusable deployment infrastructure adopted across feature teams.
-- Led the Core team responsible for EA App's frontend platform, shared services, and live-service reliability.
+- Led the Core team responsible for EA App's frontend platform, shared services, and live-service reliability, serving 35M daily active users.
 - Defined SLOs and observability practices that brought visibility into app health and customer experience across engineering and operations.
 - Provided coaching and mentorship to engineers and engineering managers, with a focus on autonomy and growth.
 
