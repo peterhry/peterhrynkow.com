@@ -9,7 +9,7 @@ Squamish, BC • [peter@labwire.ca](mailto:peter@labwire.ca) • [peterhrynkow.c
 
 ## Summary
 
-Experienced engineering leader with a track record of building and scaling platforms and AI-powered systems. I enjoy taking loosely defined problems, finding the right technical approach, and shipping solutions that make entire teams more productive — from RAG knowledge bases and orchestration systems to automated deployment pipelines. I work closely with product, operations, and engineering partners to shape technical direction and raise the bar on how we build software.
+Experienced engineering leader with a track record of building and scaling platforms and AI-powered systems. I enjoy taking loosely defined problems, finding the right technical approach, and shipping solutions that make entire teams more productive. I work closely with product, operations, and engineering partners to shape technical direction and raise the bar on how we build software.
 
 ## Core Strengths
 
@@ -25,10 +25,10 @@ Experienced engineering leader with a track record of building and scaling platf
 **Electronic Arts**  
 Technical Director – EA App   
 2022 – Present  
-- Architected and deployed a RAG knowledge base that unified scattered knowledge sources into a searchable vector store, enabling teams across the department to "chat with docs."
+- Architected and deployed a RAG knowledge base that ingested and unified dozens of scattered knowledge sources, enabling teams across the department to "chat with docs."
 - Led department-wide adoption of n8n, onboarding 10+ team members who went on to build merge request review automation, knowledge base pipelines, and RAG tooling.
 - Built fully-automated canary rollouts and testing patterns, establishing reusable deployment infrastructure adopted across feature teams.
-- Led the Core team responsible for EA App's frontend platform, shared services, and live-service reliability.
+- Led the Core team responsible for EA App's frontend platform, shared services, and live-service reliability, serving 35M daily active users.
 - Defined SLOs and observability practices that brought visibility into app health and customer experience across engineering and operations.
 - Provided coaching and mentorship to engineers and engineering managers, with a focus on autonomy and growth.
 
@@ -66,6 +66,6 @@ Technical & UX Lead
 - **Languages:** JavaScript, TypeScript, CSS  
 - **Frameworks:** React, Next.js, Angular  
 - **DevOps/Monitoring:** Grafana, New Relic  
-- **AI/Automation:** OpenAI API, Anthropic API, RAG, pgvector, n8n
+- **AI/Automation:** OpenAI API, Anthropic API, RAG, n8n
 - **Practices:** Agile, Scrum, CI/CD, Event Sourcing, Event Driven Architecture, SLOs
 - **Platforms:** AWS, GCP, Node.js, Firebase, Vercel, Supabase
