@@ -9,7 +9,7 @@ Squamish, BC • [peter@labwire.ca](mailto:peter@labwire.ca) • [peterhrynkow.c
 
 ## Summary
 
-Experienced engineering leader with a track record of building and scaling large-scale platforms and AI-powered internal systems. I enjoy taking loosely defined problems, finding the right technical approach, and shipping solutions that make entire teams more productive — from RAG knowledge bases and orchestration systems to automated deployment pipelines. I work closely with product, operations, and engineering partners to shape technical direction and raise the bar on how we build software.
+Experienced engineering leader with a track record of building and scaling large-scale platforms and AI-powered systems. I enjoy taking loosely defined problems, finding the right technical approach, and shipping solutions that make entire teams more productive — from RAG knowledge bases and orchestration systems to automated deployment pipelines. I work closely with product, operations, and engineering partners to shape technical direction and raise the bar on how we build software.
 
 ## Core Strengths
 
