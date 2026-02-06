@@ -4,32 +4,34 @@ title: “Resume”
 
 # Peter Hrynkow
 
-**Senior Engineering Leader – E-commerce & Live Service Platforms**  
+**Senior Engineering Leader – AI Systems, Internal Tools & Developer Productivity**  
 Squamish, BC • [peter@labwire.ca](mailto:peter@labwire.ca) • [peterhrynkow.com](https://peterhrynkow.com)
 
 ## Summary
 
-Experienced engineering leader with a strong track record building and scaling large-scale digital platforms. I bring deep expertise in live-service and e-commerce systems, team building, and engineering strategy. I work closely with cross-functional partners to shape technical direction, improve reliability, and deliver meaningful customer and business outcomes.
+Experienced engineering leader with a track record of building and scaling large-scale platforms and AI-powered systems. I enjoy taking loosely defined problems, finding the right technical approach, and shipping solutions that make entire teams more productive — from RAG knowledge bases and orchestration systems to automated deployment pipelines. I work closely with product, operations, and engineering partners to shape technical direction and raise the bar on how we build software.
 
 ## Core Strengths
 
-- Engineering leadership and team growth  
-- Live-service & e-commerce systems  
-- Technical roadmap planning and execution  
-- Site reliability, monitoring, and observability  
-- Frontend architecture and design systems  
-- Cross-functional collaboration (Product, Design, Data)  
-- Developer experience and automation  
+- AI systems, LLM-powered tools, and automation
+- Internal platforms and developer productivity
+- Engineering leadership and team growth
+- Working across Product, Ops, and Engineering to align on direction
+- Building patterns and standards that other teams can build on
+- Site reliability, observability, and SLOs
+- Moving fast from prototype to production  
 
 ## Experience
 
 **Electronic Arts**  
 Senior Engineering Manager – EA App   
 2022 – Present  
-- Lead the Core team responsible for EA App’s frontend platform, shared services, and live-service reliability.  
-- Work across engineering, product, and operations to define technical priorities and align them with product goals.  
-- Helped establish SLOs and observability practices that brought more visibility into app health and customer experience.  
-- Championed efforts to modernize automation and testing strategies, giving feature teams more confidence in releases.  
+- Architected and deployed a RAG knowledge base and orchestration system across the department, enabling teams to "chat with docs" and removing barriers to finding information.
+- Developed fully-automated canary rollouts, establishing reusable deployment patterns adopted across feature teams.
+- Established automation and testing patterns that gave feature teams more confidence and velocity in releases.
+- Defined SLOs and observability practices that brought visibility into app health and customer experience across engineering and operations.
+- Work across engineering, product, and operations to identify high-impact problems and define clear technical paths forward.
+- Lead the Core team responsible for EA App's frontend platform, shared services, and live-service reliability.
 - Provide coaching and mentorship to engineers and engineering managers, with a focus on autonomy and growth.
 
 **Electronic Arts**  
@@ -74,5 +76,6 @@ Technical & UX Lead
 - **Languages:** JavaScript, TypeScript, Node.js, CSS  
 - **Frameworks:** React, Next.js, Angular  
 - **DevOps/Monitoring:** Grafana, New Relic  
-- **Practices:** Agile, Scrum, CI/CD, Event Sourcing, SLOs  
-- **Platforms:** AWS, GCP, Firebase
+- **AI/Automation:** LLMs, RAG, retrieval pipelines, n8n
+- **Practices:** Agile, Scrum, CI/CD, Event Sourcing, Event Driven Architecture, SLOs
+- **Platforms:** AWS, GCP, Firebase, Vercel
