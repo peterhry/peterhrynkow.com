@@ -25,7 +25,7 @@ Experienced engineering leader with a track record of building and scaling platf
 **Electronic Arts**  
 Technical Director – EA App   
 2022 – Present  
-- Architected and deployed a RAG knowledge base and orchestration system across the department, enabling teams to "chat with docs" and removing barriers to finding information.
+- Architected and deployed a RAG knowledge base that unified scattered knowledge sources into a searchable vector store, enabling teams across the department to "chat with docs."
 - Led department-wide adoption of n8n, onboarding 10+ team members who went on to build merge request review automation, knowledge base pipelines, and RAG tooling.
 - Built fully-automated canary rollouts and testing patterns, establishing reusable deployment infrastructure adopted across feature teams.
 - Led the Core team responsible for EA App's frontend platform, shared services, and live-service reliability.
