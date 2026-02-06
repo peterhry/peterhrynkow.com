@@ -16,7 +16,6 @@ Experienced engineering leader with a track record of building and scaling platf
 - AI enablement, LLM-powered tools, and automation
 - Platform engineering and developer productivity
 - Engineering leadership and team growth
-- Cross-functional alignment across Product, Ops, and Engineering
 - Reusable patterns and standards that scale across teams
 - Site reliability, observability, and SLOs  
 
