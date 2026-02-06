@@ -13,7 +13,7 @@ Experienced engineering leader with a track record of building and scaling large
 
 ## Core Strengths
 
-- AI systems, LLM-powered tools, and automation
+- AI enablement, LLM-powered tools, and automation
 - Platform engineering and developer productivity
 - Engineering leadership and team growth
 - Working across Product, Ops, and Engineering to align on direction
