@@ -9,28 +9,28 @@ Squamish, BC • [peter@labwire.ca](mailto:peter@labwire.ca) • [peterhrynkow.c
 
 ## Summary
 
-Experienced engineering leader with a track record of building and scaling large-scale platforms and AI-powered internal systems. I bring deep expertise in turning ambiguous cross-functional needs into well-scoped technical solutions — from RAG knowledge bases and agentic orchestration systems to automated deployment pipelines. I work closely with cross-functional partners to shape technical direction, establish engineering standards, and improve developer productivity across the organization.
+Experienced engineering leader with a track record of building and scaling large-scale platforms and AI-powered internal systems. I enjoy taking loosely defined problems, finding the right technical approach, and shipping solutions that make entire teams more productive — from RAG knowledge bases and orchestration systems to automated deployment pipelines. I work closely with product, operations, and engineering partners to shape technical direction and raise the bar on how we build software.
 
 ## Core Strengths
 
-- AI systems, agentic workflows, and automation architecture
-- Internal tools and developer productivity
+- AI systems, LLM-powered tools, and automation
+- Internal platforms and developer productivity
 - Engineering leadership and team growth
-- Cross-functional influence (Product, Ops, Engineering leadership)
-- Establishing engineering standards and reusable patterns
+- Working across Product, Ops, and Engineering to align on direction
+- Building patterns and standards that other teams can build on
 - Site reliability, observability, and SLOs
-- Strategic prototyping and rapid iteration  
+- Moving fast from prototype to production  
 
 ## Experience
 
 **Electronic Arts**  
 Senior Engineering Manager – EA App   
 2022 – Present  
-- Architected and deployed a RAG knowledge base with agentic orchestration across the department, enabling teams to "chat with docs" and removing barriers to finding information.
+- Architected and deployed a RAG knowledge base and orchestration system across the department, enabling teams to "chat with docs" and removing barriers to finding information.
 - Developed fully-automated canary rollouts, establishing reusable deployment patterns adopted across feature teams.
 - Established automation and testing patterns that gave feature teams more confidence and velocity in releases.
 - Defined SLOs and observability practices that brought visibility into app health and customer experience across engineering and operations.
-- Work across engineering, product, and operations to turn ambiguous cross-functional needs into well-scoped technical priorities.
+- Work across engineering, product, and operations to identify high-impact problems and define clear technical paths forward.
 - Lead the Core team responsible for EA App's frontend platform, shared services, and live-service reliability.
 - Provide coaching and mentorship to engineers and engineering managers, with a focus on autonomy and growth.
 
@@ -76,6 +76,6 @@ Technical & UX Lead
 - **Languages:** JavaScript, TypeScript, Node.js, CSS  
 - **Frameworks:** React, Next.js, Angular  
 - **DevOps/Monitoring:** Grafana, New Relic  
-- **AI/Automation:** LLMs, RAG, agentic orchestration, retrieval pipelines, n8n
+- **AI/Automation:** LLMs, RAG, retrieval pipelines, n8n
 - **Practices:** Agile, Scrum, CI/CD, Event Sourcing, Event Driven Architecture, SLOs
 - **Platforms:** AWS, GCP, Firebase, Vercel
