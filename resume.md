@@ -27,7 +27,7 @@ Experienced engineering leader with a track record of building and scaling large
 Senior Engineering Manager – EA App   
 2022 – Present  
 - Architected and deployed a RAG knowledge base and orchestration system across the department, enabling teams to "chat with docs" and removing barriers to finding information.
-- Led department-wide adoption of n8n, onboarding team members and enabling them to build their own workflows at scale.
+- Led department-wide adoption of n8n, onboarding 10+ team members who went on to build merge request review automation, knowledge base pipelines, and team channel help agents.
 - Developed fully-automated canary rollouts, establishing reusable deployment patterns adopted across feature teams.
 - Established automation and testing patterns that gave feature teams more confidence and velocity in releases.
 - Defined SLOs and observability practices that brought visibility into app health and customer experience across engineering and operations.
