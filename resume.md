@@ -26,13 +26,13 @@ Experienced engineering leader with a track record of building and scaling large
 **Electronic Arts**  
 Senior Engineering Manager – EA App   
 2022 – Present  
-- Architect and maintain a RAG knowledge base and orchestration system across the department, enabling teams to "chat with docs" and removing barriers to finding information.
-- Lead department-wide adoption of n8n, onboarding 10+ team members who go on to build merge request review automation, knowledge base pipelines, and RAG tooling.
-- Build fully-automated canary rollouts and testing patterns, establishing reusable deployment infrastructure adopted across feature teams.
-- Define SLOs and observability practices that bring visibility into app health and customer experience across engineering and operations.
-- Work across engineering, product, and operations to identify high-impact problems and define clear technical paths forward.
-- Lead the Core team responsible for EA App's frontend platform, shared services, and live-service reliability.
-- Provide coaching and mentorship to engineers and engineering managers, with a focus on autonomy and growth.
+- Architected and deployed a RAG knowledge base and orchestration system across the department, enabling teams to "chat with docs" and removing barriers to finding information.
+- Led department-wide adoption of n8n, onboarding 10+ team members who went on to build merge request review automation, knowledge base pipelines, and RAG tooling.
+- Built fully-automated canary rollouts and testing patterns, establishing reusable deployment infrastructure adopted across feature teams.
+- Defined SLOs and observability practices that brought visibility into app health and customer experience across engineering and operations.
+- Worked across engineering, product, and operations to identify high-impact problems and define clear technical paths forward.
+- Led the Core team responsible for EA App's frontend platform, shared services, and live-service reliability.
+- Provided coaching and mentorship to engineers and engineering managers, with a focus on autonomy and growth.
 
 **Electronic Arts**  
 Engineering Manager – EA App  
