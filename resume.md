@@ -9,17 +9,16 @@ Squamish, BC • [peter@labwire.ca](mailto:peter@labwire.ca) • [peterhrynkow.c
 
 ## Summary
 
-Experienced engineering leader with a track record of building and scaling large-scale platforms and AI-powered systems. I enjoy taking loosely defined problems, finding the right technical approach, and shipping solutions that make entire teams more productive — from RAG knowledge bases and orchestration systems to automated deployment pipelines. I work closely with product, operations, and engineering partners to shape technical direction and raise the bar on how we build software.
+Experienced engineering leader with a track record of building and scaling platforms and AI-powered systems. I enjoy taking loosely defined problems, finding the right technical approach, and shipping solutions that make entire teams more productive — from RAG knowledge bases and orchestration systems to automated deployment pipelines. I work closely with product, operations, and engineering partners to shape technical direction and raise the bar on how we build software.
 
 ## Core Strengths
 
 - AI enablement, LLM-powered tools, and automation
 - Platform engineering and developer productivity
 - Engineering leadership and team growth
-- Working across Product, Ops, and Engineering to align on direction
-- Building patterns and standards that other teams can build on
-- Site reliability, observability, and SLOs
-- Moving fast from prototype to production  
+- Cross-functional alignment across Product, Ops, and Engineering
+- Reusable patterns and standards that scale across teams
+- Site reliability, observability, and SLOs  
 
 ## Experience
 
@@ -29,9 +28,8 @@ Senior Engineering Manager – EA App
 - Architected and deployed a RAG knowledge base and orchestration system across the department, enabling teams to "chat with docs" and removing barriers to finding information.
 - Led department-wide adoption of n8n, onboarding 10+ team members who went on to build merge request review automation, knowledge base pipelines, and RAG tooling.
 - Built fully-automated canary rollouts and testing patterns, establishing reusable deployment infrastructure adopted across feature teams.
-- Defined SLOs and observability practices that brought visibility into app health and customer experience across engineering and operations.
-- Worked across engineering, product, and operations to identify high-impact problems and define clear technical paths forward.
 - Led the Core team responsible for EA App's frontend platform, shared services, and live-service reliability.
+- Defined SLOs and observability practices that brought visibility into app health and customer experience across engineering and operations.
 - Provided coaching and mentorship to engineers and engineering managers, with a focus on autonomy and growth.
 
 **Electronic Arts**  
@@ -53,7 +51,7 @@ Senior Software Engineer → Engineering Manager
 **Electronic Arts**  
 Software Engineer – Web  
 2014 – 2018  
-- Delivered key frontend experiences across multiple game titles and services.  
+- Delivered frontend experiences for FIFA, UFC, and Star Wars Battlefront.  
 - Co-led EA’s JavaScript Guild, advocating for modern frontend practices and tooling.  
 - Helped define and implement EA’s cross-title design system used by multiple game teams.
 
