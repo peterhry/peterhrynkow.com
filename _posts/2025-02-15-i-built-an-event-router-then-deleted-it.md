@@ -5,7 +5,9 @@ date: 2025-02-15 00:00:00
 categories: [architecture]
 ---
 
-In late January, I committed a custom event processing system. An event emitter, a task scheduler, an email sender -- over a dozen modules for routing and orchestrating everything that happens after a booking is created. I documented all of it across five markdown files totaling over 4,000 lines.
+I'm building a rental platform. When a booking is created, a lot needs to happen: confirmation emails, calendar events, reminders. All of that orchestration was handled by n8n, a visual workflow tool. It worked fine.
+
+In late January, I decided I could do better and committed a custom event processing system. An event emitter, a task scheduler, an email sender -- over a dozen modules for routing and orchestrating everything that happens after a booking is created. I documented all of it across five markdown files totaling over 4,000 lines.
 
 Six days later, I committed "back to n8n!!!" with three exclamation marks. Two days after that, I deleted all of it. Over 3,000 lines of application code, gone.
 
