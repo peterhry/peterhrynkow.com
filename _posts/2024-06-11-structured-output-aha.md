@@ -5,11 +5,11 @@ date: 2024-06-11 00:00:00
 categories: [ai, llm]
 ---
 
-For weeks I tried to tame LLM agents with elaborate system prompts. The result was fragile: tiny edits would change behavior, tests were hard to write, and every new requirement ballooned the prompt. The aha moment came when I flipped the problem and asked the model to **produce structured output** instead of free text.
+When I started building with LLM agents, my first instinct was to control behavior through the system prompt. It worked—until the prompt got long enough that small edits had unpredictable side effects. Tests were brittle, and every new requirement made the prompt harder to maintain. The breakthrough came when I stopped engineering prompts and started engineering **structured output**.
 
 ### The brittle prompt phase
 
-My early attempts relied on giant system messages packed with rules—voice, steps, edge cases, fallback copy. A typical prompt looked something like this:
+The natural starting point was a system message packed with rules—voice, steps, edge cases, fallback copy. A typical prompt looked something like this:
 
 ```
 You are a task management assistant. When the user asks you to
