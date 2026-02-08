@@ -5,7 +5,7 @@ date: 2025-02-01 00:00:00
 categories: [ai, architecture]
 ---
 
-I've spent the last several months building a multi-tenant SaaS platform from scratch. The kind where every customer needs slightly different data models, different forms, different workflows. The kind that, done wrong, turns into an unmaintainable mess of `if customer === 'acme'` branches.
+I've spent the last several months building a multi-tenant SaaS platform from scratch. The kind where every customer needs slightly different data models, different forms, different workflows. The kind that, done wrong, turns into an unmaintainable mess of `if (tenant.type === 'yoga_studio')` branches.
 
 Early on, I made a decision that shaped everything that followed: **JSON Schema would be the single source of truth for validation, UI generation, and runtime behavior.** Not just for API validation. For *everything*.
 
