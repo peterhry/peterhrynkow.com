@@ -5,7 +5,7 @@ date: 2025-02-15 00:00:00
 categories: [architecture]
 ---
 
-I'm building a rental platform. When a booking is created, a lot needs to happen: confirmation emails, calendar events, reminders. All of that orchestration was handled by n8n, a visual workflow tool. It worked fine.
+I'm building a multi-tenant SaaS platform. When a booking is created, a lot needs to happen: confirmation emails, calendar events, reminders. All of that orchestration was handled by n8n, a visual workflow tool, and it worked fine.
 
 In late January, I decided I could do better and committed a custom event processing system. An event emitter, a task scheduler, an email sender -- over a dozen modules for routing and orchestrating everything that happens after a booking is created. I documented all of it across five markdown files totaling over 4,000 lines.
 
