@@ -121,4 +121,4 @@ Sometimes the best engineering decision is `git rm -r`.
 
 ---
 
-*This is Part 3 of a three-part series. [Part 1](/blog/01-schema-driven-platforms.md) covered schema-driven architecture. [Part 2](/blog/02-ai-generates-configuration-not-code.md) covered using AI for configuration generation. This post covered knowing when to delete your own work.*
+*This is Part 3 of a three-part series. [Part 1]({% post_url 2025-02-01-schema-driven-platforms %}) covered schema-driven architecture. [Part 2]({% post_url 2025-02-08-ai-generates-configuration-not-code %}) covered using AI for configuration generation. This post covered knowing when to delete your own work.*

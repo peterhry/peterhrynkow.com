@@ -13,7 +13,7 @@ This distinction -- configuration vs. code -- is the difference between AI as a 
 
 ## The Setup: Why Configuration Generation Works
 
-In [Part 1](/blog/01-schema-driven-platforms.md), I described building a schema-driven platform where every domain model, form, and settings page is defined by JSON schemas. Adding a new capability to the platform means authoring a bundle of JSON files that conform to a meta-schema.
+In [Part 1]({% post_url 2025-02-01-schema-driven-platforms %}), I described building a schema-driven platform where every domain model, form, and settings page is defined by JSON schemas. Adding a new capability to the platform means authoring a bundle of JSON files that conform to a meta-schema.
 
 The interesting property of this architecture is that **the output space is fully constrained.** An LLM generating a capability bundle can only produce:
 - JSON Schema objects with specific property types
@@ -102,4 +102,4 @@ This is harder than initial generation because it requires understanding the exi
 
 ---
 
-*This is Part 2 of a three-part series. [Part 1](/blog/01-schema-driven-platforms.md) covered schema-driven platform architecture. Part 3 covers what I learned from building a custom event-driven architecture, then deleting it.*
+*This is Part 2 of a three-part series. [Part 1]({% post_url 2025-02-01-schema-driven-platforms %}) covered schema-driven platform architecture. [Part 3]({% post_url 2025-02-15-i-built-an-event-router-then-deleted-it %}) covers what I learned from building a custom event-driven architecture, then deleting it.*

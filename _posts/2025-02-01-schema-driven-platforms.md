@@ -85,4 +85,4 @@ If you're evaluating this pattern for your own platform:
 
 ---
 
-*This is Part 1 of a three-part series on building AI-enabled SaaS platforms. Next up: using generative AI to produce validated product configuration at onboarding time.*
+*This is Part 1 of a three-part series on building AI-enabled SaaS platforms. Next up: [using generative AI to produce validated product configuration at onboarding time]({% post_url 2025-02-08-ai-generates-configuration-not-code %}).*
