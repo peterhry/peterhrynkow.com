@@ -5,7 +5,9 @@ date: 2025-02-08 00:00:00
 categories: [ai, architecture]
 ---
 
-There's a pattern emerging in how teams use generative AI that I think is fundamentally misguided: using LLMs to generate application code, deploying it, and hoping the tests catch the problems.
+There's a wave of "app generators" promising that anyone -- not just developers -- can describe what they want and get a working application. The pitch is compelling, but the reality is that these tools generate application code with few guardrails. The output is deployed and you hope the tests catch the problems -- assuming tests even exist.
+
+My concern isn't with developers using AI to write code. That's a productivity tool with a human in the loop who understands what's being produced. The problem is when code generation is the *product*, aimed at end users who can't review what the AI wrote and have no way to verify it's correct.
 
 I took a different approach. In the platform I've been building, **AI generates validated configuration -- not executable code.** The configuration is mechanically validated against strict schemas before it ever touches production. If the AI produces something invalid, it's a schema error, not a production incident.
 
