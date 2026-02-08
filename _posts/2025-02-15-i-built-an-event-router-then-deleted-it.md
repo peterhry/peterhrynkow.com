@@ -5,9 +5,9 @@ date: 2025-02-15 00:00:00
 categories: [architecture]
 ---
 
-In late January, I committed a file called `event_router_system.sql`. It created an `event` table, an `event_attempt` table, a processing queue, deduplication logic, and a retry system. I wrote an event emitter, an event processor, a task scheduler, a calendar integration, an email sender, and an action resolver. I documented all of it across five markdown files totaling over 4,000 lines.
+In late January, I committed a custom event processing system. An event emitter, a task scheduler, an email sender -- over a dozen modules for routing and orchestrating everything that happens after a booking is created. I documented all of it across five markdown files totaling over 4,000 lines.
 
-Six days later, I committed "back to n8n!!!" with three exclamation marks. Two days after that, I deleted every event processing file, every handler, every scheduler, and all five documentation files. Over 3,000 lines of application code, gone.
+Six days later, I committed "back to n8n!!!" with three exclamation marks. Two days after that, I deleted all of it. Over 3,000 lines of application code, gone.
 
 This is the story of what I built, why I deleted it, and what I learned about the difference between good architecture and appropriate architecture.
 
