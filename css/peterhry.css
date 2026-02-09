@@ -126,15 +126,11 @@ img {
   max-width: 100%;
 }
 
-.highlighter-rouge {
-  border-radius: 4px;
-  overflow: hidden;
-}
-
 pre {
   -webkit-overflow-scrolling: touch;
   overflow: auto;
   padding: 1rem;
+  border-radius: 4px;
 }
 
 code {
