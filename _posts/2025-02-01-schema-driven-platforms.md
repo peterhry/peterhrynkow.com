@@ -91,7 +91,7 @@ Schema-driven development inverts the traditional value hierarchy. Engineers tre
 
 As AI gets better at generating implementations within constraints, the engineering skill that compounds isn't writing code -- it's defining the boundaries that make correct output *inevitable*. The architect who defines a rigorous meta-schema is making thousands of future implementation decisions in advance. That's leverage. That's what staff-plus engineering actually looks like.
 
-Most engineers will resist this shift because writing constraints feels less creative than writing implementations. I get it -- I spent a decade finding satisfaction in elegant code. But the most impactful thing I built this year wasn't an application. It was a 1,600-line JSON Schema document that makes applications *unnecessary*.
+Most engineers will resist this shift because writing constraints feels less creative than writing implementations. I resisted it too. But the most impactful thing I built this year wasn't an application. It was a 1,600-line JSON Schema document that makes applications *unnecessary*.
 
 ---
 
