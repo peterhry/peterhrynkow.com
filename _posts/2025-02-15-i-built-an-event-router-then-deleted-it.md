@@ -37,7 +37,7 @@ The system had five major components:
 
 Events were immutable and replayable. Handlers were isolated and testable. Attempt tracking gave complete observability. Deduplication prevented double-processing. It was, by any technical measure, well-designed.
 
-I was proud of it.
+And it came together fast. I leaned heavily on AI coding assistants for this build -- the emitter, the processor, the scheduler, all produced and iterated quickly. What might have taken two weeks of solo work compressed into days. I was proud of the system and the velocity.
 
 ## Why I Deleted It
 
@@ -95,7 +95,7 @@ What I ended up with is a hybrid that plays to each tool's strength:
 
 **4. Match your abstraction level to your stage.** A custom event-driven architecture makes sense at scale, with a dedicated infrastructure team. For an early-stage product with one developer, it's over-engineering of the highest order. I knew this. I built it anyway because it was intellectually satisfying. The three exclamation marks in that commit message were aimed at myself.
 
-**5. AI-assisted development makes this mistake easier.** I used AI coding assistants extensively during this period. They made building the event system *fast* -- the emitter, the processor, the scheduler, all produced and iterated quickly. The speed was intoxicating. But AI assistants optimize for the task you give them, not for whether the task should exist. The easier it is to build complex systems, the more discipline you need to ask "should I?"
+**5. AI coding tools are most dangerous in senior hands, not junior ones.** The conventional wisdom is that AI assistants are risky for junior engineers who can't evaluate the output. This experience convinced me it's the opposite. Remember the velocity I mentioned? The AI produced genuinely good code -- well-typed, well-structured, idiomatic. That was the problem. A junior engineer generating messy code with AI would have hit friction quickly: things wouldn't compose, they'd get stuck, they'd ask for help. I generated a clean, well-architected system that *worked perfectly* and shouldn't have existed. AI didn't undermine my engineering judgment -- it outran it. Ironically, the low cost of producing this code made deleting it easy -- had I hand-written it over two weeks, the sunk cost instinct would have been far worse. But that's exactly the trap: AI removes the friction that normally forces you to question whether a project is worth continuing. When building is nearly free, you don't stop to ask "should I?" until you're already done. The industry worries about AI generating bad code. The more insidious risk is AI generating *good* code so fast that experienced engineers never hit the natural pause where judgment kicks in.
 
 ## The Meta-Lesson
 

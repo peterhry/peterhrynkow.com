@@ -83,6 +83,16 @@ If you're evaluating this pattern for your own platform:
 
 **JSON Schema + JSONB + generic UI = a platform that scales by configuration, not code.** That's the real unlock. Not any single technology, but the discipline of keeping domain meaning out of your core and expressing it entirely in validated, renderable schemas.
 
+## The Bigger Shift
+
+Building this platform surfaced an uncomfortable truth that I think the profession hasn't reckoned with: **the future of software engineering looks more like writing constraints than writing implementations.**
+
+Schema-driven development inverts the traditional value hierarchy. Engineers treat schemas as "just configuration" -- boring, unglamorous, not "real engineering." But in a schema-driven system, the schema is more valuable than any code that interprets it. Code is increasingly replaceable -- by AI, by new frameworks, by rewrites. My schemas encode product decisions, business rules, and domain constraints that represent months of hard-won understanding. They're the durable artifact. The platform code that renders and validates against them could be rewritten in a weekend.
+
+As AI gets better at generating implementations within constraints, the engineering skill that compounds isn't writing code -- it's defining the boundaries that make correct output *inevitable*. The architect who defines a rigorous meta-schema is making thousands of future implementation decisions in advance. That's leverage.
+
+Most engineers will resist this shift because writing constraints feels less creative than writing implementations. I resisted it too. But the most impactful thing I built this year wasn't an application. It was a 1,600-line JSON Schema document that makes applications *unnecessary*.
+
 ---
 
 *This is Part 1 of a three-part series on building AI-enabled SaaS platforms. Next up: [using generative AI to produce validated product configuration at onboarding time]({% post_url 2025-02-08-ai-generates-configuration-not-code %}).*
