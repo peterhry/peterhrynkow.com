@@ -89,7 +89,7 @@ Building this platform surfaced an uncomfortable truth that I think the professi
 
 Schema-driven development inverts the traditional value hierarchy. Engineers treat schemas as "just configuration" -- boring, unglamorous, not "real engineering." But in a schema-driven system, the schema is more valuable than any code that interprets it. Code is increasingly replaceable -- by AI, by new frameworks, by rewrites. My schemas encode product decisions, business rules, and domain constraints that represent months of hard-won understanding. They're the durable artifact. The platform code that renders and validates against them could be rewritten in a weekend.
 
-As AI gets better at generating implementations within constraints, the engineering skill that compounds isn't writing code -- it's defining the boundaries that make correct output *inevitable*. The architect who defines a rigorous meta-schema is making thousands of future implementation decisions in advance. That's leverage. That's what staff-plus engineering actually looks like.
+As AI gets better at generating implementations within constraints, the engineering skill that compounds isn't writing code -- it's defining the boundaries that make correct output *inevitable*. The architect who defines a rigorous meta-schema is making thousands of future implementation decisions in advance. That's leverage. That's what senior engineering actually looks like.
 
 Most engineers will resist this shift because writing constraints feels less creative than writing implementations. I resisted it too. But the most impactful thing I built this year wasn't an application. It was a 1,600-line JSON Schema document that makes applications *unnecessary*.
 
