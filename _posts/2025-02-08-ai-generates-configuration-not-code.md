@@ -96,7 +96,15 @@ This is the pattern I'd advocate for any team looking to integrate generative AI
 
 The goal isn't to use AI to write your platform. It's to design your platform so that AI can configure it safely.
 
-Here's the uncomfortable implication that most of the industry is ignoring: **AI code generation products are racing toward commodity, while AI configuration generation builds compounding advantage.** Code generation gets less differentiated over time -- as models improve, everyone's AI-generated code converges in quality, and the code itself becomes interchangeable. Configuration generation is the opposite. Every generation tests and refines the meta-schema. Every schema revision makes future generations more accurate. The constraint system *is* the moat. The companies pouring resources into "AI writes your app" are building on a foundation that erodes with each model improvement. The ones building rigorous constraint systems that AI can safely populate are accumulating structural advantage that compounds. The industry is fixated on making AI generate code faster. The real leverage is making code unnecessary by encoding product decisions as validated configuration. Speed of generation is a parlor trick. Speed of *verification* is the bottleneck that actually matters -- and configuration generation reduces verification to a mechanical check.
+## The Uncomfortable Industry Implication
+
+There's a consequence of this architecture that I think most of the industry is ignoring: **AI code generation products are racing toward commodity, while AI configuration generation builds compounding advantage.**
+
+Consider the trajectories. Code generation gets less differentiated over time -- as models improve, everyone's AI-generated code converges in quality. The code itself becomes interchangeable. If your product is "AI writes your app," every foundation model improvement erodes your position, because your competitors get the same improvement for free.
+
+Configuration generation runs in the opposite direction. Every generation tests and refines the meta-schema. Every schema revision makes future generations more accurate. The constraint system *is* the moat -- and it's a moat that deepens with use rather than eroding with time.
+
+The industry is fixated on making AI generate code faster. But speed of generation was never the bottleneck. The bottleneck is *verification* -- knowing that what the AI produced is correct. Code generation leaves verification as a human problem: review, test, monitor, hope. Configuration generation reduces verification to a mechanical check that runs in milliseconds. That's not an incremental improvement. It's a category difference.
 
 ## What's Next
 
