@@ -6,7 +6,7 @@ categories: [performance]
 icon: 🔥
 ---
 
-> **Updated September 2026:** This technique still works, but the web has changed a lot since I first wrote this post in 2019. Modern image formats, responsive images, and layered CSS gradients are often better options. I've updated the post to explain when this trick is still useful and when to use something else.
+> **Updated September 2026:** This technique still works, but the web has changed a lot since I first wrote this post in 2019. Modern image formats and responsive image delivery make it even more useful in some cases, while also giving us better options when image detail matters.
 
 Raster images normally look distorted or pixelated when enlarged, especially if they contain graphics or text. But there is an important exception: images that contain very little high-frequency detail.
 
@@ -121,41 +121,21 @@ For actual photographs, illustrations, screenshots, product imagery, or anything
 
 ### What I would use today
 
-This trick is still useful, but it is no longer the first thing I would reach for in every case.
+The core technique is still useful today, especially for arbitrary low-detail artwork that you want to preserve exactly rather than recreate procedurally.
 
-#### 1. Layered CSS gradients for simple abstract backgrounds
+#### 1. Tiny AVIF, WebP, or PNG images for low-detail artwork
 
-Modern CSS can approximate many mesh-gradient-style designs by combining several radial gradients:
+If you have a smooth abstract background, a mesh-style gradient, a heavily blurred photograph, soft lighting, or any other image where most of the visual information is low-frequency, aggressive downsampling is still a strong option.
 
-```css
-.hero {
-  background:
-    radial-gradient(at 20% 20%, #7c3aed, transparent 55%),
-    radial-gradient(at 80% 25%, #06b6d4, transparent 55%),
-    radial-gradient(at 65% 80%, #ec4899, transparent 55%),
-    #111827;
-}
-```
-
-This is resolution-independent and requires no image request at all.
-
-If the artwork can be described cleanly with a few gradients, CSS is usually the better option.
-
-#### 2. Tiny AVIF or WebP images for arbitrary smooth artwork
-
-CSS becomes awkward when a designer gives you a complex background with irregular color placement, subtle texture, noise, blur, or unusual blending.
-
-That is where this technique is still especially useful.
-
-Instead of reverse-engineering the artwork into a pile of CSS gradients, just sample it at a tiny resolution and let the browser scale it back up.
+The important advantage is that the source artwork can be anything. You do not need to reproduce the image with CSS or describe it mathematically. You simply sample the original image at a much lower resolution and let the browser interpolate between those samples.
 
 A useful way to think about this is:
 
 > Don't model the function. Sample the function.
 
-For smooth visual fields, a `64x36`, `128x72`, or similarly tiny AVIF/WebP asset may be all you need, even when the image will eventually cover a 4K display.
+For smooth visual fields, a `64x36`, `128x72`, or similarly tiny AVIF, WebP, or PNG asset may be all you need, even when the image will eventually cover a 4K display.
 
-#### 3. Responsive images for real image content
+#### 2. Responsive images for real image content
 
 For images where detail matters, use `srcset`, `sizes`, and modern formats so the browser can choose an appropriately sized asset:
 
@@ -192,10 +172,10 @@ If the full-resolution version would not provide any meaningful visual improveme
 
 ### So, is this still useful?
 
-Yes, but I would describe the technique more narrowly today.
+Yes. I would describe the technique more narrowly today, but not less enthusiastically.
 
 It is not a general image optimization strategy. It is **extreme downsampling for intentionally low-detail imagery**.
 
-Use CSS gradients when the artwork can be expressed simply. Use responsive AVIF/WebP images when detail matters. But when you have arbitrary smooth artwork or a heavily blurred background, a comically tiny raster image stretched across the screen can still be one of the cheapest ways to render it.
+For arbitrary smooth artwork, mesh-style gradients, soft lighting, or heavily blurred photographs, a comically tiny raster image stretched across the screen can still be one of the cheapest ways to render the original look faithfully.
 
-The core idea from 2019 still holds up: **if the visual information in an image is predominantly low-frequency, its pixel dimensions do not need to match its display dimensions.**
+When detail matters, use responsive images. When it does not, the core idea from 2019 still holds up: **if the visual information in an image is predominantly low-frequency, its pixel dimensions do not need to match its display dimensions.**
